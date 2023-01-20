@@ -12,7 +12,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 
 ## Categories
 
-### General Web & Networking Projects
+### <ins>General Web & Networking Projects</ins>
 
 1. FTP Client
 2. HTTP Server ✓
