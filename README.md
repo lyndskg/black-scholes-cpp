@@ -7,7 +7,7 @@ I'm hoping to gain some more experience with languages I'm currently weak at (or
 ## Progress (1/98)
 I created this repository on 1/20/2023.
 
-<ins>Latest Update:</ins>
+<ins>__Latest Update__</ins>:
 As of January 20th, 2023, I have completed 1 out of the 98 projects listed below.
 
 ## Categories
