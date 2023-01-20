@@ -29,7 +29,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 12. Animated Navigation Toggle
 13. Country Lookup using IP address
 
-### Bots
+### <ins>Bots</ins>
 
 14. Chatbot
 15. Slack Bot
@@ -37,7 +37,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 17. Messenger Bot
 18. WhatsApp Butler
 
-### Software & Apps
+### <ins>Software & Apps</ins>
 
 19. Quiz App
 20. Firewall
@@ -66,7 +66,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 43. Library Management System
 44. Relational Database Management System
 
-### Artificial Intelligence and Machine Learning
+### <ins>Artificial Intelligence and Machine Learning</ins>
 
 45. Face Tracking
 46. Spam Classifier
@@ -79,7 +79,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 53. Movie Recommendation System
 54. Audio to Sign Language Translator
 
-### Theoretical Computer Science
+### <ins>Theoretical Computer Science</ins>
 
 55. Build an OS
 56. Shuffle Deck
@@ -91,7 +91,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 62. Version Control System
 63. Code a Programming Lnaguage
 
-### Cryptography
+### <ins>Cryptography</ins>
 
 64. Codec Software
 65. Password Manager
@@ -99,7 +99,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 67. Folder Encrypter/Locker
 68. Password Strength Checker
 
-### Simulations, Games, and Game AI
+### <ins>Simulations, Games, and Game AI</ins>
 
 69. Pong
 70. Pong AI
@@ -122,7 +122,7 @@ As of January 20th, 2023, I have completed 1 out of the 98 projects listed below
 87. Character Generator
 88. Conway's Game of Life
 
-### Miscellaneous
+### <ins>Miscellaneous</ins>
 
 89. Deal Finder
 90. Expense Tracker
