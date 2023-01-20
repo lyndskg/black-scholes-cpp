@@ -2,7 +2,7 @@
 
 Inspired by [aceking007's GitHub post](https://github.com/aceking007/100ProjectsOfCode), I'll be attempting to program all 98 of the 100 projects I could identify from their list -- using a variety of different languages (especially ones I'm not as familiar with!!). 
 
-I'm hoping to gain some more experience with languages I'm currently weak at programming in (or have never even used), get some general practice my coding skills, and increase the breadth of my overall coding expertise through completing such a diverse array of projects.
+I'm hoping to gain some more experience with languages I'm currently weak at (or have never used), get some general coding practice to refresh and reinforce my understanding of fundamental computer science concepts, and increase the breadth of my overall coding expertise via completing such a diverse array of projects.
 
 ## Progress 
 I started this repository on 1/20/2023.
