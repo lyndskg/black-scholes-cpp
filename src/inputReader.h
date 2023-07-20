@@ -3,7 +3,6 @@
 //  black-scholes
 //
 //  Created by lyndskg on 7/18/23.
-//
 
 #ifndef inputReader_h
 #define inputReader_h
@@ -24,50 +23,12 @@ class blackScholesModel; // Forward declaration of blackScholesModel class
 
 class inputReader {
   private:
+    double underlyingPrice;
 /*-------- HELPER FUNCTION VARIABLES (readDoubleInput, readOptionType) -----------*/
     string input;
     bool validInput;
     int i; 
-    
-/*------------------------------  HELPER FUNCTIONS  -------------------------------*/
-    
-    /* Reads a double input value from the user with validation.
-       It prompts the user with the provided prompt string and reads a line of input.
-       It attempts to convert the input to a double value using stod().
-       If the conversion is successful and there are no trailing characters after the number,
-       the function returns the validated double value.
-       If the input is invalid, it displays an error message and prompts the user
-       to enter a valid number. */
-    //
-    // @param prompt: The prompt string displayed to the user.
-    // @return: The validated double value entered by the user.
-    //
-    // Time complexity: O(1)
-    // Space complexity: O(1)
-    double readDoubleInput(const string& prompt);
-
-    
-    /* Reads an option type input from the user with validation.
-       Prompts the user to enter an option type (either 'C' or 'P') and validates the input.
-       It ensures that the input is a single character and is either 'C' or 'P' (case-insensitive).
-       The function keeps prompting the user until a valid option type is entered. */
-    //
-    // @param prompt: The prompt message to display for the user
-    // @return: The validated option type entered by the user, represented as a char ('C' or 'P').
-    //
-    // Time complexity: O(1)
-    // Space complexity: O(1)
-    char readOptionType(const string& prompt);
-    
-    
-    // Validates and sets the input values for the blackScholesModel.
-    //
-    // Time complexity: O(1)
-    // Space complexity: O(1)
-    bool validateAndSetInputValues(blackScholesModel& model, double underlyingPrice, double strikePrice,
-                                   double timeToExpiration, double riskFreeRate, double volatility, char optionType);
-    
-    
+        
   public:
 /*------------------------------ CONSTRUCTORS  -------------------------------*/
     
@@ -117,6 +78,13 @@ class inputReader {
     //
     // TODO: IMPLEMENT
     void readInputFromAPI(blackScholesModel& model);
+
+    // Validates and sets the input values for the blackScholesModel.
+    //
+    // Time complexity: O(1)
+    // Space complexity: O(1)
+    bool validateAndSetInputValues(blackScholesModel& model, double underlyingPrice, double strikePrice,
+                                   double timeToExpiration, double riskFreeRate, double volatility, char optionType);
     
 }; // class InputReader
 
