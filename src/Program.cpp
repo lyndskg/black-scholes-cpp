@@ -13,13 +13,29 @@
 
 using namespace std;
 
+// Define the fast_io lambda function
+void fast_io_initializer() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+} // fast_io_initializer()
+
+// Initialize the fast_io variable as a function pointer
+void (*fast_io)() = fast_io_initializer;
+
 // ----------------------------------------------------------------------------
 //              "Program" Class Member Function Implementations
 // ----------------------------------------------------------------------------
 
 /*------------------------------  CONSTRUCTORS  ------------------------------*/
 // Default constructor.
-Program::Program() : inputMode("") {}
+Program::Program() : inputMode("") {
+    // To speed up I/O
+    static auto fast_io = []() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+        return nullptr;
+    }();
+}
 
 
 /*--------------------------- KEY MEMBER FUNCTIONS  ---------------------------*/
@@ -104,20 +120,23 @@ void Program::launchAlgo(blackScholesModel* model) {
     // User input:
     if (inputMode == "USER") {
         inputReader.readInputFromUser(*model);
-    }
+    } // if 
+        
     // File input:
     else if (inputMode == "FILE") {
         string filename = "option_GS_df.csv";
         inputReader.readInputFromFile(*model, filename);
-    }
+    } // elif
+        
     // Database input:
     else if (inputMode == "DB") {
         inputReader.readInputFromDB(*model);
-    }
+    } // elif
+        
     // External data feed (e.g. API) input:
     else if (inputMode == "API") {
         inputReader.readInputFromAPI(*model);
-    } // if-...-elif
+    } // ...-elif
     
     cerr << "Error: invalid or non-existing mode.\n"; // Display error message.
     exit(-1); // Terminate program with error code.
@@ -127,23 +146,22 @@ void Program::launchAlgo(blackScholesModel* model) {
 
 // Reads and validates the input mode from the user.
 string Program::readInputMode() {
-    string mode = inputMode;
-    
     while (true) {
-        cout << "Enter input mode (USER, FILE, DB, API): ";
+        cout << "Enter input mode (USER, FILE, DB, API): \n";
         cin >> inputMode;
 
-        // Convert inputMode to uppercase for case-insensitive comparison
+        // Convert inputMode to uppercase for case-insensitive comparison.
         transform(inputMode.begin(), inputMode.end(), inputMode.begin(), ::toupper);
 
-        // Validate the input mode
+        // If input is valid:
         if (inputMode == "USER" || inputMode == "FILE" ||
             inputMode == "DB" || inputMode == "API") {
             return inputMode; // inputMode is valid
+        // If input is invalid:
         } else {
-            cout << "Invalid input mode. Please try again.\n";
-            // Clear the input buffer in case of invalid input
-            cin.clear();
+            cout << "Invalid input mode. Please try again.\n"; // Display error message.
+            
+            cin.clear(); // Clear the input buffer.
             cin.ignore(MAX_BUFFER_SIZE, '\n');
         } // if-else
     } // while
