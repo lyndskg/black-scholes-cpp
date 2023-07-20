@@ -12,6 +12,12 @@
 
 using namespace std;
 
+// Declare the fast_io lambda function
+extern void fast_io_initializer();
+
+// Declare the fast_io variable as a function pointer
+extern void (*fast_io)();
+
 // ----------------------------------------------------------------------------
 //                      "Program" Class Declarations
 // ----------------------------------------------------------------------------
