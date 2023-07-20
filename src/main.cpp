@@ -6,6 +6,7 @@
 
 #include <iomanip>
 #include <limits>
+#include <iostream>
 
 #include "Program.h"
 #include "inputReader.h"
@@ -21,11 +22,13 @@ using namespace std;
 //                              Program Driver
 // ----------------------------------------------------------------------------
 
-constexpr int MAX_BUFFER_SIZE = 10000; // Choose an appropriately large value.
-
-
 int main(int argc, char* argv[]) {
-    // To speed up I/O
+    // Call the fast_io function to speed up I/O.
+    fast_io();
+
+    constexpr int MAX_BUFFER_SIZE = 10000; // Choose an appropriately large value.
+
+    // To further speed up I/O.
     ios_base::sync_with_stdio(false);
     xcode_redirect(argc, argv);
     
@@ -33,18 +36,17 @@ int main(int argc, char* argv[]) {
     cout << setprecision(20);  // Always show 20 decimal places
     cout << fixed; // Disable scientific notation for large numbers
     
-    int iter = 1; // Track # of times algo has been run.
-    
-    
+    char choice;
+    const string prompt = "Do you want to continue playing with the algorithm? (Y/N): ";
+
     // Create an instance of the Program.
     Program program;
     program.get_options(argc, argv);
     
-    char choice;
-    const string prompt = "Do you want to continue playing with the algorithm? (Y/N): ";
-    
     // Main loop to run the algorithm as many times as user desires.
-    do {
+    bool terminateProgram = false;
+    int iter = 1; // Track # of times algo has been run.
+    while (!terminateProgram) {
         // Reinitialize input mode based on user's specifications.
         program.inputMode = program.readInputMode();
         
@@ -56,7 +58,7 @@ int main(int argc, char* argv[]) {
         double optionPrice = model.calculateOptionPrice();
         
         // Display the calculated option price.
-        cout << "Calculated option price: " << optionPrice << endl;
+        cout << "Calculated option price: " << optionPrice << '\n';
         
         // Loop until the user provides a valid choice.
         while (true) {
@@ -66,23 +68,26 @@ int main(int argc, char* argv[]) {
             // Ignore any remaining characters in the input buffer.
             cin.ignore(MAX_BUFFER_SIZE, '\n');
             
-            // Check if the user's input is a valid choice.
-            if (choice == 'Y' || choice == 'y' || choice == 'N' || choice == 'n') {
-                break; // Exit the loop and end the program.
+            if (choice == 'Y' || choice == 'y') {
+                break; // Continue to main loop
+            } else if (choice == 'N' || choice == 'n') {
+                terminateProgram = true; // Set the flag to terminate the program
+                break;
             } // if
             
             // Display error message for invalid choice.
-            cout << "Invalid choice. Please enter either Y/y or N/n.\n";
-            
-            iter++; // Increment count variable.
+            cerr << "Invalid choice. Please enter either Y/y or N/n.\n";
         } // while
         
-    } while (choice == 'Y' || choice == 'y'); // do-while
+        iter++; // Increment count variable.
     
-    // Display goodbye message.
-    cout << "Algorithm was ran " << iter << " times.\n";
-    cout << "Exiting the program. Goodbye!\n";
+    } // while
     
+    if (terminateProgram) {
+        // Display goodbye message.
+        cout << "Algorithm was ran " << iter << " times.\n";
+        cout << "Exiting the program. Goodbye!\n";
+    } // if 
     
     return 0; // Exit the program successfully.
     
