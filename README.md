@@ -45,6 +45,7 @@
 4. Testing and debugging. 
 5. Finishing optionGreeksModel class implementations.
 6. Implementing more advanced functionalities: implied volatility (IV), Heston model, Monte Carlo, etc.
+7. Figure out oneMKL shit for hestonModel
 
 ## Optimizations:
 1. Check all #includes and using directives.
@@ -54,6 +55,7 @@
 5. In the main driver function in main.cpp, should an instance of blackScholesModel using the custom ctor initializing all pricing input variables be used instead of having to use the same getter methods in the driver itself?
 6. In function "double blackScholesModel::normalCDF()", a more efficient approximation can be used. 
 7. In function "inputReader::readInputFromUser()", should validation be accomplished using its two current helper functions or via validateAndSetInputValues()?
+8. For Intel MKL library, use C or Fortran interface?
 
 ## Bug fixes:
 1. In function "Program::get_options()", in the default case (i.e. no options are flagged), should figure out how to print invalid command-line argument (int option) to stderr (cerr) for debugging purposes.
