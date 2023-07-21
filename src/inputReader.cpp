@@ -3,24 +3,28 @@
 //  black-scholes
 //
 //  Created by lyndskg on 7/18/23.
-//
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <string>
-#include <cmath>
-#include <vector>
 #include <stdexcept> // For exception handling
-#include <limits> // For numeric_limits
+#include <string>
 #include <curl/curl.h> // Example library for making HTTP requests
 // Include necessary database libraries
 
-#include "csv.h" // Include the csv-parser library header
+#ifdef _WIN32
+#include <conio.h>
+#else
+#include <cstdio>
+#endif
+
 #include "blackScholesModel.h"
 #include "inputReader.h"
 
 using namespace std;
 
+// Include the declaration of the fast_io function
+extern void fast_io();
 
 
 // Serves as a callback for receiving the API response during an HTTP request.
@@ -30,181 +34,97 @@ using namespace std;
 // Space complexity: O(1)
 size_t responseCallback(void* contents, size_t size, size_t nmemb, string* response);
 
+
 // ----------------------------------------------------------------------------
-//                   "inputReader" Class Helper Functions
+//            "inputReader" Class Member Function Implementations
 // ----------------------------------------------------------------------------
+/*------------------------------ CONSTRUCTORS  -------------------------------*/
 
-// Reads a double input value from the user with validation.
-double inputReader::readDoubleInput(const string& prompt) {
-    double inputVal = 0.0; // Initialize inputVal to zero.
-    input = ""; // Initialize input to empty string.
-    
-    validInput = false; // Flag to track valid input.
-
-    i = 50; // Count variable to prevent infinite loops.
-    // Continue looping until valid input is received.
-    while (!validInput && i) {
-        cout << prompt;
-        getline(cin, input); // Read a line of input from the user.
-
-        try {
-            size_t pos;
-            inputVal = stod(input, &pos); // Attempt to convert the input to a
-                                          // double value using stod().
-
-            // Check if there are any trailing characters.
-            if (pos == input.length()) {
-                validInput = true; // Set the flag to indicate valid input.
-                return inputVal;
-            } // if
-            
-             cerr << "Invalid input. Please enter a valid number.\n";
-            
-        } catch (const exception& e) {
-            cerr << "Error: " << e.what() << "! \n" << "Invalid input."
-                 << " Please enter a valid number.\n";
-        } // try-catch
-        
-        --i; // Decrement count variable.
-    } // while
-    
-    exit(-1); // Terminates the program with an error code.
-} // readDoubleInput()
-
-
-// Reads an option type input from the user with validation.
-char inputReader::readOptionType(const string& prompt) {
-    char optionType = '\0';  // Initialize optionType to an empty value.
-    // optionType = blackScholesModel::getOptionType();
-    input = "";
-    
-    validInput = false; // Flag to track valid input.
-    
-    i = 50; // Count variable to prevent infinite loops.
-    
-    // Continue looping until valid input is received.
-    while (!validInput && i) {
-        cout << prompt; // Prompt the user for input.
-        getline(cin, input);
-
-        // Convert the input to uppercase for case-insensitive comparison.
-        transform(input.begin(), input.end(), input.begin(), ::toupper);
-
-        // Check if the input is a single character, and is either 'C' or 'P'
-        if (input.length() == 1 && (input[0] == 'C' || input[0] == 'P')) {
-            validInput = true;  // Set the flag to indicate valid input.
-            optionType = input[0]; // Set the option type to the valid input.
-            return optionType;
-        } else {
-            cerr << "Invalid input. Please enter either 'C' or 'P'.\n"; // Invalid input message.
-        } // if-else
-        
-        --i; // Decrement count variable.
-    } // while
-
-    exit(-1); // Terminates the program with an error code.
-} // readOptionType()
+// Default constructor.
+inputReader::inputReader() {
+    // Call fast_io to optimize I/O speed
+    fast_io();
+} // inputReader()
 
 
 // Validates and sets the input values for the blackScholesModel.
 bool inputReader::validateAndSetInputValues(blackScholesModel& model, double underlyingPrice,
                                             double strikePrice, double timeToExpiration,
                                             double riskFreeRate, double volatility,
-                                            char optionType) {
-    // Validate the retrieved input values
-    
-    // Check if the underlying price is positive:
-    if (underlyingPrice <= 0.0) {
-        throw runtime_error("Invalid underlying price: must be greater than 0.");
+                                            const string& optionType) {
+    // If the retrieved input values are valid:
+    if (underlyingPrice <= 0.0 || strikePrice <= 0.0 || timeToExpiration <= 0.0 ||
+        riskFreeRate < 0.0 || volatility < 0.0 || (optionType != "C" && optionType != "P")) {
+        throw runtime_error("Invalid input values.");
+        
         return false;
-    }
-
-    // Check if strike price is positive:
-    if (strikePrice <= 0.0) {
-        throw runtime_error("Invalid strike price: must be greater than 0.");
-        return false;
-    }
-
-    // Check if time to expiration is positive:
-    if (timeToExpiration <= 0.0) {
-        throw runtime_error("Invalid time to expiration: must be greater than 0.");
-        return false;
-    }
-
-    // Check if risk-free rate is non-negative:
-    if (riskFreeRate < 0.0) {
-        throw runtime_error("Invalid risk-free rate: must be non-negative.");
-        return false;
-    }
-
-    // Check if volatility is non-negative:
-    if (volatility < 0.0) {
-        throw runtime_error("Invalid volatility: must be non-negative.");
-        return false;
-    }
-
-    // Check if option type is valid ('C' for call or 'P' for put):
-    if (optionType != 'C' && optionType != 'P') {
-        throw runtime_error("Invalid option type: must be 'C' or 'P'.");
-        return false;
-    }
-    
-    // Additional consistency validations:
-    if (strikePrice > underlyingPrice) {
+        
+    // If the retrieved input values are invalid:
+    } else if (strikePrice > underlyingPrice) {
         throw runtime_error("Strike price cannot be greater than underlying price.");
+        
         return false;
-    }
+    } // if-elif
     
-    // Set the validated input values:
+    // Convert optionType to OptionType enum
+   blackScholesModel::OptionType convertedOptionType;
+    
+   if (optionType == "C") {
+       convertedOptionType = blackScholesModel::OptionType::CALL;
+   } else if (optionType == "P") {
+       convertedOptionType = blackScholesModel::OptionType::PUT;
+   } else {
+       throw runtime_error("Invalid option type.");
+   } // if-elif-else
+    
+    // Set the validated input values
     model.setUnderlyingPrice(underlyingPrice);
     model.setStrikePrice(strikePrice);
     model.setTTE(timeToExpiration);
     model.setRFR(riskFreeRate);
     model.setVolatility(volatility);
-    model.setOptionType(optionType);
+    model.setOptionType(convertedOptionType);
     
     return true;
 } // validateAndSetInputValues()
 
 
-// Serves as a callback for receiving the API response during an HTTP request.
-size_t responseCallback(void* contents, size_t size, size_t nmemb, string* response) {
-    // Calculate the total size of the response data.
-    size_t totalSize = size * nmemb;
-    
-    // Append the received data to the response string.
-    response->append(static_cast<char*>(contents), totalSize);
-    
-    return totalSize;
-} // responseCallback()
-
-
-// ----------------------------------------------------------------------------
-//            "inputReader" Class Member Function Implementations
-// ----------------------------------------------------------------------------
-
-// Default constructor.
-inputReader::inputReader() {}
-
-
 // Reads input values from the user interactively.
-void inputReader::readInputFromUser(blackScholesModel& model) {
+bool inputReader::readInputFromUser(blackScholesModel& model) {
+    double underlyingPrice, strikePrice, timeToExpiration,
+           riskFreeRate, volatility;
+    string optionType;
+    
+    // Disable synchronization with standard C and C++ streams
+    ios_base::sync_with_stdio(false);
+    
+    // Read the input values directly into variables, avoiding unnecessary function calls.
+    cout << "Enter the underlying price: ";
+    cin >> underlyingPrice;
+    
+    cout << "Enter the strike price: ";
+    cin >> strikePrice;
+    
+    cout << "Enter the time to expiration: ";
+    cin >> timeToExpiration;
+    
+    cout << "Enter the risk-free rate: ";
+    cin >> riskFreeRate;
+    
+    cout << "Enter the volatility: ";
+    cin >> volatility;
+    
+    cout << "Enter the option type (C for call, P for put): ";
+    cin >> optionType;
+    
     try {
-        // Prompt user via the CLI
-        cout << "Please enter the following input values:\n";
-
-        // Set the values in the blackScholesModel object
-        model.setUnderlyingPrice(readDoubleInput("Underlying Price: "));
-        model.setStrikePrice(readDoubleInput("Strike Price: "));
-        model.setTTE(readDoubleInput("Time to Expiration: "));
-        model.setRFR(readDoubleInput("Risk-Free Rate: "));
-        model.setVolatility(readDoubleInput("Volatility: "));
-        model.setOptionType(readOptionType("Option Type (C/P): "));
-
-        cout << "Input values entered successfully." << endl;
+        validateAndSetInputValues(model, underlyingPrice, strikePrice,
+                                  timeToExpiration, riskFreeRate, volatility, optionType);
+        return true;
         
     } catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
+        cerr << "Error: " << e.what() << '\n';
+        return false;
     } // try-catch
     
 } // readInputFromUser()
@@ -215,7 +135,6 @@ void inputReader::readInputFromUser(blackScholesModel& model) {
 // NOTE: CURRENTLY ONLY SUPPORTS CSV.
 // TODO: Support .JSON input files.
 void inputReader::readInputFromFile(blackScholesModel& model, const string& filename) {
-    
     // Open the input file.
     ifstream inputFile(filename);
     
@@ -306,21 +225,36 @@ void inputReader::readInputFromDB(blackScholesModel& model) {
         double retrievedTimeToExpiration = 0.0;
         double retrievedRiskFreeRate = 0.0;
         double retrievedVolatility = 0.0;
-        char retrievedOptionType = 'C';
+        string retrievedOptionType = "C";
         
         // Handle any exceptions that may occur during database operations
         // throw std::runtime_error("Failed to connect to the database.");
         
         // Validate and set the retrieved input values
-        if (validateAndSetInputValues(model, retrievedUnderlyingPrice, retrievedStrikePrice, retrievedTimeToExpiration, retrievedRiskFreeRate, retrievedVolatility, retrievedOptionType)) {
+        if (validateAndSetInputValues(model, retrievedUnderlyingPrice, retrievedStrikePrice,
+                                      retrievedTimeToExpiration, retrievedRiskFreeRate,
+                                      retrievedVolatility, retrievedOptionType)) {
             cout << "Input values retrieved from the database.\n";
         } // if
     
     } catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
+        cerr << "Error: " << e.what() << '\n';
     } // try-catch
     
 } // readInputFromDB()
+
+
+
+// Serves as a callback for receiving the API response during an HTTP request.
+size_t responseCallback(void* contents, size_t size, size_t nmemb, string* response) {
+    // Calculate the total size of the response data.
+    size_t totalSize = size * nmemb;
+    
+    // Append the received data to the response string.
+    response->append(static_cast<char*>(contents), totalSize);
+    
+    return totalSize;
+} // responseCallback()
 
 
 // Reads input values from an API by making an HTTP request.
@@ -359,10 +293,11 @@ void inputReader::readInputFromAPI(blackScholesModel& model) {
             double retrievedTimeToExpiration = 30.0;
             double retrievedRiskFreeRate = 0.05;
             double retrievedVolatility = 0.2;
-            char retrievedOptionType = 'C';
+            string retrievedOptionType = "C'";
             
             // Validate and set the retrieved input values.
-            if (validateAndSetInputValues(model, retrievedUnderlyingPrice, retrievedStrikePrice, retrievedTimeToExpiration, retrievedRiskFreeRate,
+            if (validateAndSetInputValues(model, retrievedUnderlyingPrice, retrievedStrikePrice,
+                                          retrievedTimeToExpiration, retrievedRiskFreeRate,
                                           retrievedVolatility, retrievedOptionType)) {
                 cout << "Input values retrieved from the API.\n";
             } // if
@@ -385,3 +320,63 @@ void inputReader::readInputFromAPI(blackScholesModel& model) {
     } // if-else
      
 } // readInputFromAPI()
+
+
+
+//    // Use getchar_unlocked() for platform-specific efficient input
+//#ifdef _WIN32
+//    cout << "Enter the option type (C for call, P for put): ";
+//    optionType = getch();
+//#else
+//    cout << "Enter the option type (C for call, P for put): ";
+//    char c;
+//    while ((c = getchar_unlocked()) <= ' ')
+//        ;
+//    optionType += c;
+//#endif
+    
+//    // Perform input validation inline without separate helper functions
+//    if (!validateAndSetInputValues(model, underlyingPrice, strikePrice,
+//                                   timeToExpiration, riskFreeRate, volatility, static_cast<string>(optionType))) {
+//        throw runtime_error("Invalid input.");
+//        return false;
+//    } // if
+//
+//    // Set the validated input values directly in the blackScholesModel object
+//    model.setUnderlyingPrice(underlyingPrice);
+//    model.setStrikePrice(strikePrice);
+//    model.setTTE(timeToExpiration);
+//    model.setRFR(riskFreeRate);
+//    model.setVolatility(volatility);
+//    model.setOptionType(optionType[0]);
+//
+//    return true;
+//} // readInputFromUser()
+//
+//
+//    try {
+//        // Prompt user via the CLI
+//        cout << "Please enter the following input values:\n";
+//
+//
+////
+////        string input;
+////
+////        cout << "Underlying Price: \n";
+////        getline(cin, input);
+//
+//        // Set the values in the blackScholesModel object
+//        model.setUnderlyingPrice(readDoubleInput("Underlying Price: "));
+//        model.setStrikePrice(readDoubleInput("Strike Price: "));
+//        model.setTTE(readDoubleInput("Time to Expiration: "));
+//        model.setRFR(readDoubleInput("Risk-Free Rate: "));
+//        model.setVolatility(readDoubleInput("Volatility: "));
+//        model.setOptionType(readOptionType("Option Type (C/P): "));
+//
+//        cout << "Input values entered successfully." << endl;
+//
+//    } catch (const exception& e) {
+//        cerr << "Error: " << e.what() << endl;
+//    } // try-catch
+//
+//} // readInputFromUser()
