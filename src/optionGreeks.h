@@ -156,6 +156,6 @@ class optionGreeks : public virtual blackScholesModel {
   private:
     // Private member variables and helper functions
 
-}; // optionGreeks
+}; // class optionGreeks
 
 #endif /* optionGreeks_h */
