@@ -202,7 +202,7 @@ class optionGreeksModel : public optionGreeks, public virtual blackScholesModel 
     //
     // Time complexity: O(1)
     // Space complexity: O(1)
-    const double& optionGreeksModel::getOptionPriceIv() const;
+    const double& getOptionPriceIv() const;
         
     // Getter method for the Gamma-adjusted option price using the Black-Scholes model.
     //
@@ -269,12 +269,13 @@ class optionGreeksModel : public optionGreeks, public virtual blackScholesModel 
     
     
 protected:
+    // TODO: Implement protected class member variables.
     
 private:
 // ----------------------------------------------------------------------------
 //                  "optionGreeks" Member Variables
 // ----------------------------------------------------------------------------
-//*------------------- adjusted option Greeks variables  ---------------------*//
+//*------------------ adjusted option Greeks variables  --------------------*//
     mutable double ivAdjustedDelta_;
     mutable double gammaAdjustedDelta_;
     mutable double vegaAdjustedDelta_;
