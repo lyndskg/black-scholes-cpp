@@ -1,0 +1,468 @@
+!===============================================================================
+! Copyright 2008-2022 Intel Corporation.
+!
+! This software and the related documents are Intel copyrighted  materials,  and
+! your use of  them is  governed by the  express license  under which  they were
+! provided to you (License).  Unless the License provides otherwise, you may not
+! use, modify, copy, publish, distribute,  disclose or transmit this software or
+! the related documents without Intel's prior written permission.
+!
+! This software and the related documents  are provided as  is,  with no express
+! or implied  warranties,  other  than those  that are  expressly stated  in the
+! License.
+!===============================================================================
+
+!  Content:
+!      Intel(R) oneAPI Math Kernel Library (oneMKL) FORTRAN interface for BLAS-like
+!      extensions
+!*******************************************************************************
+
+      INTERFACE
+      subroutine MKL_SIMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, AB, lda, ldb, stride, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb, stride, batch_size
+      real               alpha
+      real               AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DIMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, AB, lda, ldb, stride, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb, stride, batch_size
+      double precision   alpha
+      double precision   AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_CIMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, AB, lda, ldb, stride, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb, stride, batch_size
+      complex            alpha
+      complex            AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZIMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, AB, lda, ldb, stride, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb, stride, batch_size
+      double complex     alpha
+      double complex     AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_CIMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, AB_array, lda_array,                &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer   rows_array(*), cols_array(*)
+      complex          alpha_array(*)
+      integer(KIND=C_INTPTR_T) AB_array(*)
+      integer   lda_array(*), ldb_array(*)
+      integer   group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SIMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, AB_array, lda_array,                &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer    rows_array(*), cols_array(*)
+      real          alpha_array(*)
+      integer(KIND=C_INTPTR_T) AB_array(*)
+      integer    lda_array(*), ldb_array(*)
+      integer    group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZIMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, AB_array, lda_array,                &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer    rows_array(*), cols_array(*)
+      double complex          alpha_array(*)
+      integer(KIND=C_INTPTR_T) AB_array(*)
+      integer    lda_array(*), ldb_array(*)
+      integer    group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DIMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, AB_array, lda_array,                &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer   rows_array(*), cols_array(*)
+      double precision          alpha_array(*)
+      integer(KIND=C_INTPTR_T) AB_array(*)
+      integer    lda_array(*), ldb_array(*)
+      integer    group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SOMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, A, lda, stridea, B, ldb, strideb, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      integer            stridea, strideb, batch_size
+      real               alpha
+      real               A( * )
+      real               B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DOMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, A, lda, stridea, B, ldb, strideb, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      integer            stridea, strideb, batch_size
+      double precision   alpha
+      double precision   A( * )
+      double precision   B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_COMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, A, lda, stridea, B, ldb, strideb, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      integer            stridea, strideb, batch_size
+      complex            alpha
+      complex            A( * )
+      complex            B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZOMATCOPY_BATCH_STRIDED ( ordering, trans, rows,          &
+     &cols, alpha, A, lda, stridea, B, ldb, strideb, batch_size )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      integer            stridea, strideb, batch_size
+      double complex     alpha
+      double complex     A( * )
+      double complex     B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_COMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, A_array, lda_array, B_array,        &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer            rows_array(*), cols_array(*)
+      complex            alpha_array(*)
+      integer(KIND=C_INTPTR_T) A_array(*)
+      integer            lda_array(*)
+      integer(KIND=C_INTPTR_T) B_array(*)
+      integer            ldb_array(*)
+      integer            group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SOMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, A_array, lda_array, B_array,        &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer            rows_array(*), cols_array(*)
+      real               alpha_array(*)
+      integer(KIND=C_INTPTR_T) A_array(*)
+      integer            lda_array(*)
+      integer(KIND=C_INTPTR_T) B_array(*)
+      integer            ldb_array(*)
+      integer            group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZOMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, A_array, lda_array, B_array,        &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer            rows_array(*), cols_array(*)
+      double complex     alpha_array(*)
+      integer(KIND=C_INTPTR_T) A_array(*)
+      integer            lda_array(*)
+      integer(KIND=C_INTPTR_T) B_array(*)
+      integer            ldb_array(*)
+      integer            group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DOMATCOPY_BATCH ( ordering, trans_array,                  &
+     &rows_array, cols_array, alpha_array, A_array, lda_array, B_array,        &
+     &ldb_array, group_count, group_size )
+      use, intrinsic :: ISO_C_BINDING
+      character*1        ordering
+      character*1        trans_array(*)
+      integer            rows_array(*), cols_array(*)
+      double precision   alpha_array(*)
+      integer(KIND=C_INTPTR_T) A_array(*)
+      integer            lda_array(*)
+      integer(KIND=C_INTPTR_T) B_array(*)
+      integer            ldb_array(*)
+      integer            group_count, group_size(*)
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SOMATADD_BATCH_STRIDED ( ordering, transa, transb,        &
+     &rows, cols, alpha, A, lda, stridea, beta, B, ldb, strideb,               &
+     &C, ldc, stridec, batch_size )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      integer            stridea, strideb, stridec, batch_size
+      real               alpha, beta
+      real               A( * )
+      real               B( * )
+      real               C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DOMATADD_BATCH_STRIDED ( ordering, transa, transb,        &
+     &rows, cols, alpha, A, lda, stridea, beta, B, ldb, strideb,               &
+     &C, ldc, stridec, batch_size )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      integer            stridea, strideb, stridec, batch_size
+      double precision   alpha, beta
+      double precision   A( * )
+      double precision   B( * )
+      double precision   C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_COMATADD_BATCH_STRIDED ( ordering, transa, transb,        &
+     &rows, cols, alpha, A, lda, stridea, beta, B, ldb, strideb,               &
+     &C, ldc, stridec, batch_size )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      integer            stridea, strideb, stridec, batch_size
+      complex            alpha, beta
+      complex            A( * )
+      complex            B( * )
+      complex            C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZOMATADD_BATCH_STRIDED ( ordering, transa, transb,        &
+     &rows, cols, alpha, A, lda, stridea, beta, B, ldb, strideb,               &
+     &C, ldc, stridec, batch_size )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      integer            stridea, strideb, stridec, batch_size
+      double complex     alpha, beta
+      double complex     A( * )
+      double complex     B( * )
+      double complex     C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SIMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &AB, lda, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      real               alpha
+      real               AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DIMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &AB, lda, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      double precision   alpha
+      double precision   AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_CIMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &AB, lda, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      complex            alpha
+      complex            AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZIMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &AB, lda, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      double complex     alpha
+      double complex     AB( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SOMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &A, lda, B, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      real               alpha
+      real               A( * )
+      real               B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DOMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &A, lda, B, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      double precision   alpha
+      double precision   A( * )
+      double precision   B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_COMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &A, lda, B, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      complex            alpha
+      complex            A( * )
+      complex            B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZOMATCOPY ( ordering, trans, rows, cols, alpha,           &
+     &A, lda, B, ldb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, ldb
+      double complex     alpha
+      double complex     A( * )
+      double complex     B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SOMATCOPY2 ( ordering, trans, rows, cols, alpha,          &
+     &A, lda, stridea, B, ldb, strideb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, stridea, ldb, strideb
+      real               alpha
+      real               A( * )
+      real               B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DOMATCOPY2 ( ordering, trans, rows, cols, alpha,          &
+     &A, lda, stridea, B, ldb, strideb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, stridea, ldb, strideb
+      double precision   alpha
+      double precision   A( * )
+      double precision   B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_COMATCOPY2 ( ordering, trans, rows, cols, alpha,          &
+     &A, lda, stridea, B, ldb, strideb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, stridea, ldb, strideb
+      complex            alpha
+      complex            A( * )
+      complex            B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZOMATCOPY2 ( ordering, trans, rows, cols, alpha,          &
+     &A, lda, stridea, B, ldb, strideb )
+      character*1        ordering, trans
+      integer            rows, cols, lda, stridea, ldb, strideb
+      double complex     alpha
+      double complex     A( * )
+      double complex     B( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_SOMATADD ( ordering, transa, transb, rows, cols,          &
+     &alpha, A, lda, beta, B, ldb, C, ldc )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      real               alpha, beta
+      real               A( * )
+      real               B( * )
+      real               C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_DOMATADD ( ordering, transa, transb, rows, cols,          &
+     &alpha, A, lda, beta, B, ldb, C, ldc )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      double precision   alpha, beta
+      double precision   A( * )
+      double precision   B( * )
+      double precision   C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_COMATADD ( ordering, transa, transb, rows, cols,          &
+     &alpha, A, lda, beta, B, ldb, C, ldc )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      complex            alpha, beta
+      complex            A( * )
+      complex            B( * )
+      complex            C( * )
+      END
+      END INTERFACE
+
+      INTERFACE
+      subroutine MKL_ZOMATADD ( ordering, transa, transb, rows, cols,          &
+     &alpha, A, lda, beta, B, ldb, C, ldc )
+      character*1        ordering, transa, transb
+      integer            rows, cols, lda, ldb, ldc
+      double complex     alpha, beta
+      double complex     A( * )
+      double complex     B( * )
+      double complex     C( * )
+      END
+      END INTERFACE
+
+!*******************************************************************************
