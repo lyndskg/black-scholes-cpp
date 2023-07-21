@@ -3,6 +3,7 @@
 //  black-scholes
 //
 //  Created by lyndskg on 7/18/23.
+//
 
 #ifndef inputReader_h
 #define inputReader_h
@@ -24,18 +25,18 @@ class blackScholesModel; // Forward declaration of blackScholesModel class
 class inputReader {
   private:
     double underlyingPrice;
-/*-------- HELPER FUNCTION VARIABLES (readDoubleInput, readOptionType) -----------*/
+/*------------------------ HELPER FUNCTION VARIABLES ---------------------------*/
     string input;
     bool validInput;
     int i; 
-        
-  public:
-/*------------------------------ CONSTRUCTORS  -------------------------------*/
     
+  public:
+/*-------------------------------- CONSTRUCTORS  ---------------------------------*/
+        
     // Default constructor.
     inputReader();
-  
     
+
 /*------------------------ KEY MEMBER FUNCTIONS  -----------------------------*/
    
     // Reads input values from the user interactively.
@@ -46,7 +47,7 @@ class inputReader {
     // Space complexity: O(1)
     //
     // TODO: Use validateAndSetInputValues()? 
-    void readInputFromUser(blackScholesModel& model);
+    bool readInputFromUser(blackScholesModel& model);
     
     
     // Reads input parameters from a file (e.g. JSON or CSV).
@@ -78,13 +79,15 @@ class inputReader {
     //
     // TODO: IMPLEMENT
     void readInputFromAPI(blackScholesModel& model);
-
+    
+    
     // Validates and sets the input values for the blackScholesModel.
     //
     // Time complexity: O(1)
     // Space complexity: O(1)
-    bool validateAndSetInputValues(blackScholesModel& model, double underlyingPrice, double strikePrice,
-                                   double timeToExpiration, double riskFreeRate, double volatility, char optionType);
+    bool validateAndSetInputValues(blackScholesModel& model, double underlyingPrice,
+                                   double strikePrice, double timeToExpiration, double riskFreeRate,
+                                   double volatility, const string& optionType);
     
 }; // class InputReader
 
