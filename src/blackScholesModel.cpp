@@ -8,6 +8,7 @@
 #include <iostream> // For cerr functionality.
 #include <string>
 #include <numbers>
+#include <cassert>
 
 #include "blackScholesModel.h"
 
@@ -22,43 +23,45 @@ using namespace std;
 /*------------------------------  CONSTRUCTORS  ------------------------------*/
 // Default constructor.
 blackScholesModel::blackScholesModel() {
-    underlyingPrice = getUnderlyingPrice();
-    strikePrice = getStrikePrice();
-    riskFreeRate = getRFR();
-    timeToExpiration = getTTE();
-    volatility = getVolatility();
-    optionType = getOptionType();
+    // Initialize member variables directly.
+    underlyingPrice = 0.0;
+    strikePrice = 0.0;
+    riskFreeRate = 0.0;
+    timeToExpiration = 0.0;
+    volatility  = 0.0;
+    optionType = OptionType::CALL; // Set a default value
 }
 
+// Custom constructor for optionGreeks derived class.
+blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice,
+                                     double riskFreeRate, double timeToExpiration,
+                                     double volatility) :
+        underlyingPrice(underlyingPrice), strikePrice(strikePrice),
+        riskFreeRate(riskFreeRate), timeToExpiration(timeToExpiration),
+        volatility(volatility), optionType(OptionType::CALL) {
+            
+            // Calculate and store intermediate variables.
+            d1_ = calculateD1(underlyingPrice, strikePrice, timeToExpiration, riskFreeRate, volatility);
+            d2_ = calculateD2(underlyingPrice, strikePrice, timeToExpiration, riskFreeRate, volatility);
+            K_ = calculateK(d1_);
+}
 
-//// Custom constructor for optionGreeks derived class.
-//blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice, double timeToExpiration,
-//                                     double riskFreeRate, double volatility) {
-//    // Initialize intermediate variable "d".
-//    d_ = calculateD1(underlyingPrice, strikePrice, timeToExpiration, riskFreeRate, volatility);
-//
-//    // Calculate and store intermediate variable "K".
-//    K_ = calculateK(d_);
-//}
 
 // Custom constructor for general usage.
 //
 // Initializes all member functions used in the pricing formula via getter methods.
+// TODO: Finish 
 blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice, double riskFreeRate,
-                                     double timeToExpiration, double volatility) :
-        underlyingPrice(getUnderlyingPrice()), strikePrice(getStrikePrice()),
-        riskFreeRate(getRFR()), timeToExpiration(getTTE()),
-        volatility(getVolatility()) {
-            d1_ = getD1();
-            d2_ = getD2();
-            
-            // Initialize intermediate variable "d".
-            d_ = calculateD1(underlyingPrice, strikePrice, timeToExpiration, riskFreeRate, volatility);
-            
-            // Calculate and store intermediate variable "K".
-            K_ = calculateK(d_);
-        }
-
+                  double timeToExpiration, double volatility, OptionType optionType) :
+        underlyingPrice(underlyingPrice), strikePrice(strikePrice),
+        riskFreeRate(riskFreeRate), timeToExpiration(timeToExpiration),
+        volatility(volatility), optionType(OptionType::CALL) {
+        
+            // Calculate and store intermediate variables.
+            d1_ = calculateD1(underlyingPrice, strikePrice, timeToExpiration, riskFreeRate, volatility);
+            d2_ = calculateD2(underlyingPrice, strikePrice, timeToExpiration, riskFreeRate, volatility);
+            K_ = calculateK(d1_);
+}
 
 /*------------------------------ KEY MEMBER FUNCTIONS  ------------------------------*/
 /*------------------------------       { math }        ------------------------------*/
@@ -73,14 +76,16 @@ double blackScholesModel::calculateOptionPrice() {
     // Calculate the option price based on the option type (i.e. 'Call' vs. 'Put').
     switch (optionType) {
         // If the option type is 'C' (call):
-        case 'C':
+        case OptionType::CALL:
             // Calculate and return the call option price using the Black-Scholes formula.
-            return underlyingPrice * normalCDF(d1_) - strikePrice * exp(-riskFreeRate * timeToExpiration) * normalCDF(d2_);
+            return underlyingPrice * normalCDF(d1_) - strikePrice
+                    * exp(-riskFreeRate * timeToExpiration) * normalCDF(d2_);
             
         // If the option type is 'P' (put):
-        case 'P':
+        case OptionType::PUT:
             // Calculate and return the put option price using the Black-Scholes formula.
-            return strikePrice * exp(-riskFreeRate * timeToExpiration) * normalCDF(-d2_) - underlyingPrice * normalCDF(-d1_);
+            return strikePrice * exp(-riskFreeRate * timeToExpiration)
+                    * normalCDF(-d2_) - underlyingPrice * normalCDF(-d1_);
             
         // If neither option type is specified:
         default:
@@ -106,12 +111,14 @@ double blackScholesModel::normalCDF(double d) const {
     double K = getK(); // Access the stored value of 'K' from the member variable 'K_'.
     
     // Calculate the approximation of the CDF based on the coefficients and intermediate values.
-    double result = 1.0 - 1.0 / sqrt(2 * numbers::pi) * exp(-L * L / 2.0) * (a[0] * K + a[1] * K * K + a[2] * pow(K, 3.0) + a[3] * pow(K, 4.0) + a[4] + pow(K, 5.0));
+    double result = 1.0 - 1.0 / sqrt(2 * numbers::pi) * exp(-L * L / 2.0)
+                    * (a[0] * K + a[1] * K * K + a[2] * pow(K, 3.0) + a[3] * pow(K, 4.0) + a[4] + pow(K, 5.0));
     
     // Return the result based on the sign of 'd'.
     return d < 0 ? 1.0 - result : result; // Should ternary operator be used here? Or if-else statement (below)?
     
-    // The ternary operator is used to return 1.0 minus the result if 'd' is negative, or the result itself if 'd' is non-negative.
+    // The ternary operator is used to return 1.0 minus the result if 'd' is negative, or the result
+    // itself if 'd' is non-negative.
     // Alternatively, an if-else statement can be used to achieve the same result.
     
 } // normalCDF()
@@ -121,8 +128,8 @@ double blackScholesModel::normalCDF(double d) const {
 double blackScholesModel::calculateD1(double underlyingPrice, double strikePrice,
                                       double timeToExpiration,double riskFreeRate,
                                       double volatility) const {
-    double numerator = log(underlyingPrice / strikePrice) + (riskFreeRate +
-                                                             0.5 * volatility * volatility) * timeToExpiration;
+    double numerator = log(underlyingPrice / strikePrice)
+                        + (riskFreeRate + 0.5 * volatility * volatility) * timeToExpiration;
     double denominator = volatility * sqrt(timeToExpiration);
     
     double d1 = numerator / denominator;
@@ -132,7 +139,6 @@ double blackScholesModel::calculateD1(double underlyingPrice, double strikePrice
     
     return d1;
 } // calculateD1()
-
 
 
 // Calculate the intermediate variable 'd2'.
@@ -193,7 +199,7 @@ void blackScholesModel::setVolatility(const double& value) {
 
 
 // Setter method for the option type of the Black-Scholes model.
-void blackScholesModel::setOptionType(const char& value) {
+void blackScholesModel::setOptionType(const OptionType& value) {
     optionType = value;
 } // setOptionType()
 
@@ -249,7 +255,7 @@ const double& blackScholesModel::getVolatility() const {
 
 
 // Getter method for the option type of the Black-Scholes model.
-const char& blackScholesModel::getOptionType() const {
+blackScholesModel::OptionType blackScholesModel::getOptionType() const {
     return optionType;
 } // getOptionType()
 
