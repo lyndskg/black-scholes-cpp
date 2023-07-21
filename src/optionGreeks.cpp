@@ -4,8 +4,8 @@
 //
 //  Created by lyndskg on 7/18/23.
 
-
 #include <cmath>
+#include <cassert>
 
 #include "optionGreeks.h"
 #include "blackScholesModel.h"
