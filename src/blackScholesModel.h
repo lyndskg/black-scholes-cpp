@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include <algorithm>
 
+#include "inputReader.h"
+
 using namespace std;
 
 
@@ -18,7 +20,62 @@ using namespace std;
 // ----------------------------------------------------------------------------
 
 class blackScholesModel {
+  // Accessible by derived/friend classes:
+  protected:
+    
+    enum OptionType {
+        CALL,
+        PUT
+    } optionType;
+    
+// ----------------------------------------------------------------------------
+//                  "blackScholesModel" Member Variables
+// ----------------------------------------------------------------------------
+//*--Variables used directly as input values in the Black-Scholes formula.--*/
+    double underlyingPrice;
+    double strikePrice;
+    double timeToExpiration;
+    double riskFreeRate;
+    double volatility;
+// const string& optionType;
+
+    
+//*------------- Intermediate variables in pricing functions. ---------------*//
+    mutable double d1_;
+    mutable double d2_;
+    
+    mutable double d_;
+    
+    mutable double K_; // For normalCDF() calculations.
+
+    
+/*------------------------------  HELPER FUNCTIONS  -------------------------------*/
+        
+    // Calculates the intermediate variable 'd1'.
+    //
+    // Time complexity: O(1)
+    // Space complexity: O(1)
+    double calculateD1(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const;
+
+
+    // Calculates the intermediate variable 'd2'.
+    //
+    // Time complexity: O(1)
+    // Space complexity: O(1)
+    double calculateD2(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const;
+
+
+    // Calculates the intermediate variable 'K'.
+    //
+    // Time complexity: O(1)
+    // Space complexity: O(1)
+    double calculateK(double d) const;
+    
+    
+        
   public:
+    // Friend class declaration.
+    friend class inputReader;
 /*------------------------------  CONSTRUCTORS  ------------------------------*/
     
     // Default constructor.
@@ -34,7 +91,7 @@ class blackScholesModel {
     //
     // Initializes all member functions used in the pricing formula via getter methods.
     blackScholesModel(double underlyingPrice, double strikePrice, double riskFreeRate,
-                      double timeToExpiration, double volatility, char optionType);
+                      double timeToExpiration, double volatility, OptionType optionType);
     
     
 /*------------------------------ KEY MEMBER FUNCTIONS  ------------------------------*/
@@ -99,7 +156,7 @@ class blackScholesModel {
     //
     // Time complexity: O(1)
     // Space complexity: O(1)
-    void setOptionType(const char& value);
+    void setOptionType(const OptionType& value);
     
     
     // Setter method for intermediate variable 'd1' of the Black-Scholes model.
@@ -164,7 +221,7 @@ class blackScholesModel {
     //
     // Time complexity: O(1)
     // Space complexity: O(1)
-    const char& getOptionType() const;
+    OptionType getOptionType() const;
     
     
     // Getter method for the intermediate variable d1 of the Black-Scholes model.
@@ -186,56 +243,6 @@ class blackScholesModel {
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getK() const;
-    
-
-  // Accessible by derived classes:
-  protected:
-/*------------------------------  HELPER FUNCTIONS  -------------------------------*/
-        
-    // Calculates the intermediate variable 'd1'.
-    //
-    // Time complexity: O(1)
-    // Space complexity: O(1)
-    double calculateD1(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const;
-    
-    
-    // Calculates the intermediate variable 'd2'.
-    //
-    // Time complexity: O(1)
-    // Space complexity: O(1)
-    double calculateD2(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const;
-    
-
-    // Calculates the intermediate variable 'K'.
-    //
-    // Time complexity: O(1)
-    // Space complexity: O(1)
-    double calculateK(double d) const;
-    
-    
-// ----------------------------------------------------------------------------
-//                  "blackScholesModel" Member Variables
-// ----------------------------------------------------------------------------
-//*--Variables used directly as input values in the Black-Scholes formula.--*//
-    double underlyingPrice;
-    double strikePrice;
-    double timeToExpiration;
-    double riskFreeRate;
-    double volatility;
-    char optionType;
-    
-    //    enum OptionContractType {
-    //        Call = 1,
-    //        Put = 2
-    //    };
-    
-//*------------- Intermediate variables in pricing functions. ---------------*//
-    mutable double d1_;
-    mutable double d2_;
-    
-    mutable double d_;
-    
-    mutable double K_; // For normalCDF() calculations.
     
 }; // class blackScholesModel
 
