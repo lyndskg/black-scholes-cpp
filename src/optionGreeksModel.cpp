@@ -6,11 +6,15 @@
 //
 
 #include <iostream>
+#include <cassert>
 
 #include "optionGreeksModel.h"
 #include "optionGreeks.h"
 
 using namespace std;
+
+// Include the declaration of the fast_io function
+extern void fast_io();
 
 // ----------------------------------------------------------------------------
 //            "optionGreeksModel" Class Member Function Implementations
@@ -18,13 +22,18 @@ using namespace std;
 /*------------------------------  CONSTRUCTORS  ------------------------------*/
 
 // Default constructor.
-optionGreeksModel::optionGreeksModel() : optionGreeks(), blackScholesModel() {}
+optionGreeksModel::optionGreeksModel() : optionGreeks(), blackScholesModel() {
+    // Call fast_io to optimize I/O speed
+    fast_io();
+}
 
 
 // Custom constructor.
 optionGreeksModel::optionGreeksModel(double underlyingPrice, double strikePrice, double riskFreeRate,
                                      double timeToExpiration, double volatility) :
     optionGreeks(underlyingPrice, strikePrice, riskFreeRate, timeToExpiration, volatility) {
+    // Call fast_io to optimize I/O speed
+    fast_io();
         
     // TODO: Parameterized constructor implementation.
 }
