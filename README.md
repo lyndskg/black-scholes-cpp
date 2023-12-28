@@ -268,11 +268,11 @@ Going beyond the basic implementation, this project showcases an array of advanc
 > - **QuantLib (Optional):**
   - `QuantLib` provides tools for quantitative finance, including derivative pricing and risk management.
 #### <em>Testing, Mocking, and Quality Assurance</em>:
-> - **Google Test (for Unit Testing):**
+>> - **Google Test (for Unit Testing):**
   - `Google Test` is a widely used testing framework for `C++`. It supports test fixtures, test discovery, and various assertions.
-> - **Google Mock (for Mocking):**
+>> - **Google Mock (for Mocking):**
   - `Google Mock` is a framework for creating mock classes and performing mock-based testing.
-> - **Clang Static Analyzer (Optional):**
+>> - **Clang Static Analyzer (Optional):**
   - `Clang Static Analyzer` is a powerful tool for static code analysis, helping to identify potential issues in the code.
 
 ### <ins>Database</ins>:
