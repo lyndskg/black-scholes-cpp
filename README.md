@@ -22,7 +22,7 @@
           <li><a href="#curr">Current Notes and Issues</a></li>
         </ul>
       </li>
-      <li><a href="#stackz">Currently Used Tech Stacks</a></li>
+      <li><a href="#tech">Currently Used Tech Stack</a></li>
       <li><a href="devenv">Development Environment</a></li>
       <li><a href="#uiux">UI/UX Implementation Details</a></li>
       <li><a href="io">Potential I/O Specifications</a>
@@ -36,7 +36,6 @@
     <summary><strong><em>II: Implementation Details</em></strong></summary>
     <ol>
       <li><a href="#tech">Technologies and Programming Languages</a></li>
-      <li><a href="#stackz">Currently Used Tech Stacks</a></li>
       <li><a href="devenv">Development Environment</a></li>
       <li>
         <a href="#map">Roadmap</a>
@@ -120,7 +119,7 @@
 
 
 <details>
-  <summary>Current Tech Stacks &nbsp; [<a href="#stackz">view more details</a>]</p>
+  <summary>Current Tech Stack &nbsp; [<a href="#tech">view more details</a>]</p>
   </summary>
 </details>
 
@@ -235,11 +234,6 @@ Going beyond the basic implementation, this project showcases an array of advanc
 
 <a name="tech"></a>
 ## Technologies and Programming Languages
-
-<a name="stackz"></a>
-### Currently Used Tech Stack(s): 
-
-## Tech Stack for Black-Scholes Model Implementation
 
 ### Programming Language:
 
