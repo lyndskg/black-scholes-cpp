@@ -279,46 +279,97 @@ __6. <ins>Logging and Documentation</ins>:__
 ---------------------
 
 <a name="map"></a>
+
 ## Roadmap
 
+### Phase 1: Research and Understanding (Estimated Time: 15 hours)
+1. Study Black-Scholes Model (5 hours):
+- Dive into academic papers, online resources, and books to understand the mathematical foundations of the Black-Scholes model.
+- Familiarize yourself with the Black-Scholes formula, its assumptions, and risk-neutral pricing.
+2. Explore Additional Concepts (5 hours):
+- Delve into option Greeks (delta, gamma, vega, theta, rho), implied volatility, and the Heston model.
+- Gather insights from advanced topics such as calibration procedures, Monte Carlo simulation, and sensitivity analysis.
+3. Resource Review (5 hours):
+- Explore online tutorials, courses, and books recommended in the project description.
+- Investigate GitHub repositories like QuantLib for practical implementations.
+- Summarize key learnings and resources for quick reference.
 
-**Week 1-2: Research and In-Depth Planning**
+### Phase 2: Project Setup and Planning (Estimated Time: 10 hours)
+1. Define Project Structure (3 hours):
+- Plan a directory structure for your project (e.g., src, include, test, docs).
+- Decide on file naming conventions and coding standards.
+2. Identify Main Components (3 hours):
+- List the main components/modules required for the Black-Scholes model, option Greeks, and Heston model integration.
+- Define interfaces between components.
+3. Setup Version Control (4 hours):
+- Initialize a Git repository for version control.
+- Create a .gitignore file to exclude unnecessary files.
+- Commit the initial project structure.
 
-- Immerse yourself in GraphQL principles, dissecting query structure and response formats.
-- Gain a deep understanding of the Investopedia trading game API, exploring available endpoints and data structures.
-- Define project scope, objectives, and success criteria.
-- Craft a meticulous roadmap, delineating architectural considerations and design strategies.
 
-**Week 3-4: Architectural Blueprint**
+### Phase 3: Basic Implementation (Estimated Time: 30 hours)
+1. Implement Black-Scholes Basics (15 hours):
+- Implement the Black-Scholes formula for European options in the "src" directory.
+- Develop necessary formulas and calculations for option pricing.
+2. User Input Handling (8 hours):
+- Implement user input functionality for option parameters.
+- Validate and sanitize user inputs to ensure correctness.
+3. File Input Handling (7 hours):
+- Develop functions to read option parameters from external files (e.g., CSV).
+- Handle errors gracefully and provide meaningful error messages.
 
-- Architect a modular and scalable library design, encompassing modules for query construction, request dispatch, response processing, and error handling.
-- Define the class hierarchy and data models, aligning them with GraphQL paradigms.
-- Select appropriate third-party libraries for HTTP communication and GraphQL parsing.
 
-**Week 5-6: Core Functionality Implementation**
+### Phase 4: Advanced Features (Estimated Time: 40 hours)
+1. Option Greeks Calculation (15 hours):
+- Extend the implementation to calculate option Greeks: delta, gamma, vega, theta, and rho.
+- Ensure accurate and efficient calculations.
+2. Enhanced Black-Scholes Pricing Models (15 hours):
+- Implement implied volatility calculation in the Black-Scholes model.
+- Incorporate Heston model equations for pricing.
+3. Calibration Procedure (10 hours):
+- Develop a calibration procedure to estimate Heston model parameters based on market data.
+- Implement optimization algorithms (e.g., gradient descent) for parameter fine-tuning.
 
-- Develop core mechanisms for sending GraphQL requests to the Investopedia API, emphasizing robustness and efficiency.
-- Concentrate on programmatically generating complex and valid GraphQL queries.
-- Establish an elegant error-handling framework to gracefully manage unforeseen scenarios.
+### Phase 5: Additional Features (Estimated Time: 35 hours)
+1. Volatility Surface Calculation (15 hours):
+- Implement functions to calculate the implied volatility surface using the Heston model.
+- Visualize the surface using plotting libraries (e.g., Matplotlib).
+2. Monte Carlo Simulation (10 hours):
+- Develop Monte Carlo simulation for generating random paths based on the Heston model.
+- Ensure realistic simulations for both asset price and volatility.
+3. Historical Volatility Analysis (10 hours):
+- Integrate functionality to calculate historical volatility based on historical price data.
+- Implement data analysis tools for insights.
 
-**Week 7-8: Response Handling and User Interaction**
+### Phase 6: Testing and Validation (Estimated Time: 20 hours)
+1. Unit Testing (10 hours):
+- Implement comprehensive unit tests for each component.
+- Use a testing framework (e.g., Google Test) to automate tests.
+2. Validation (10 hours):
+- Validate the entire program against established pricing models.
+- Compare results with known Black-Scholes and Heston model outcomes.
 
-- Implement comprehensive mechanisms for parsing and processing diverse responses from the API.
-- Construct an intuitive and user-centric interface that abstracts the intricacies of GraphQL operations.
-- Enable developers to tailor queries to specific needs and seamlessly manage authentication tokens.
 
-**Week 9-10: Comprehensive Documentation and Debugging Strategies**
+### Phase 7: Documentation and Optimization (Estimated Time: 20 hours)
+1. Create README and Documentation (10 hours):
+- Document the project overview, features, and usage in the README.
+- Write detailed documentation for each feature, including examples.
+2. Code Comments (5 hours):
+- Add comments to your code for clarity and context.
+- Ensure that the codebase is well-documented for future reference.
+3. Optimization (5 hours):
+- Optimize the performance of the option pricing calculations.
+- Document performance improvements achieved.
 
-- Produce thorough documentation covering both technical intricacies and practical usage of the library.
-- Address common pitfalls, provide troubleshooting techniques, and offer practical debugging strategies.
-- Augment the documentation with annotated code examples, illustrative diagrams, and real-world scenarios.
+### Phase 8: Visualization and Finalization (Estimated Time: 15 hours)
+1. Visualizations (10 hours):
+- Enhance the project with visualizations using plotting libraries.
+- Plot option prices, implied volatility surfaces, Greeks, or other relevant metrics.
+2. Finalize Documentation (5 hours):
+- Review and finalize all project documentation.
+- Ensure consistency and completeness.
 
-**Week 11-12: Rigorous Testing, Refinement, and Packaging**
-
-- Subject the library to rigorous testing across various usage scenarios, ensuring robustness and performance.
-- Incorporate feedback from testing phases to enhance code quality and optimize performance.
-- Package the library for distribution, accompanied by well-structured installation instructions and usage guidelines.
-
+### Phase 9: Share and Showcase (Estimated Time: 10 hours)
 
 
 &nbsp;
