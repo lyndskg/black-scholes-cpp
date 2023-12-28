@@ -239,41 +239,92 @@ Going beyond the basic implementation, this project showcases an array of advanc
 <a name="stackz"></a>
 ### Currently Used Tech Stack(s): 
 
-__1. <ins>Backend</ins>: (Data Processing and Business Logic)__
-`C++` as the core programming language for library development.
-- Utilize object-oriented programming principles for modular and extensible code.
-- Incorporate `C++ Standard Library` features for foundational functionalities.
+## Tech Stack for Black-Scholes Model Implementation
 
-__2. <ins>APIs, Frameworks, and Libraries</ins>:__
+### Programming Language:
 
-1. libcurl: A versatile library for HTTP communication, vital for sending requests to the Investopedia trading game API.
-2. WebSocket++: A C++ library for WebSocket communication, facilitating real-time data streaming and interactivity.
-3. RapidJSON: A fast JSON parser and generator for C++, pivotal for parsing API responses.
-4. Boost: Utilize Boost libraries for various utilities and enhancements.
-5. Catch2: A C++ unit testing framework for robust testing.
-   
-__3. <ins>Web APIs and HTTP Communication</ins>:__
+- **C++:**
+  - C++ remains the primary language for its efficiency and performance in numerical computations.
 
-- Utilize libcurl to establish communication with the Investopedia API endpoints.
-- Incorporate WebSocket++ to establish WebSocket connections for real-time data streaming and interactivity.
-- Craft HTTP GET/POST requests with appropriate headers and parameters to interact with the API.
-- Leverage libcurl's features for efficient data transmission and response handling.
+### Build System:
 
-**4. <ins>Error Handling and Logging</ins>:**
-- Implement a comprehensive error-handling mechanism that covers various scenarios.
-- Utilize exception handling in C++ to gracefully manage errors and provide informative error messages.
-- Incorporate logging mechanisms to track crucial interactions, debugging information, and error occurrences.
-      
-**5. <ins>Testing, Mocking, and Quality Assurance</ins>:**
-- Employ the Catch2 testing framework for unit testing and regression testing.
-- Design unit tests to validate individual functions and components of the library.
-- Consider implementing mocks or fakes for API responses and WebSocket data during testing to simulate different scenarios.
-  
-__6. <ins>Logging and Documentation</ins>:__
-- Integrate a logging library (e.g., Boost.Log) to record library interactions, requests, responses, and WebSocket data.
-- Document code comprehensively using inline comments to explain complex functions and processes.
-- Create an extensive documentation guide, covering library installation, usage, troubleshooting, and contributing guidelines.
-- Provide sample code snippets and practical examples to guide developers through different aspects of the library.
+- **CMake:**
+  - CMake facilitates the building and compilation of your C++ project. It's widely used and supports various platforms.
+
+### Backend:
+
+- **RESTful API (Optional):**
+  - Design a RESTful API to expose your option pricing functionalities. This allows for easy integration with different platforms and technologies.
+
+### Libraries and Frameworks:
+
+- **Boost C++ Libraries:**
+  - Boost libraries for C++ offer utilities and functionalities that can enhance your project.
+
+- **QuantLib (Optional):**
+  - QuantLib provides tools for quantitative finance, including derivative pricing and risk management.
+
+### Web APIs and HTTP Communication:
+
+- **cpp-httplib (for HTTP server):**
+  - A C++ library for creating HTTP servers, enabling communication with your application via HTTP.
+
+### Database:
+
+- **SQLite:**
+  - SQLite is a lightweight, embedded database that can be used for local storage of option parameters.
+
+### Error Handling and Logging:
+
+- **spdlog:**
+  - spdlog is a fast C++ logging library that can be used for error handling and logging. It provides various logging sinks and is easy to configure.
+
+### Testing, Mocking, and Quality Assurance:
+
+- **Google Test (for Unit Testing):**
+  - Google Test is a widely used testing framework for C++. It supports test fixtures, test discovery, and various assertions.
+
+- **Google Mock (for Mocking):**
+  - Google Mock is a framework for creating mock classes and performing mock-based testing.
+
+- **Clang Static Analyzer (Optional):**
+  - Clang Static Analyzer is a powerful tool for static code analysis, helping to identify potential issues in the code.
+
+### API Documentation:
+
+- **Swagger/OpenAPI (Optional):**
+  - Swagger or OpenAPI can be used to document your RESTful API. It provides a standardized way to describe and document APIs.
+
+- **Doxygen:**
+  - Doxygen can generate documentation from your code comments. It's especially useful for documenting functions, classes, and project structure.
+
+### Frontend (Optional):
+
+- **Web Interface (HTML/CSS/JavaScript):**
+  - If you plan to create a web-based interface for interacting with your application, standard web technologies can be used.
+
+### Continuous Integration:
+
+- **Travis CI or GitHub Actions:**
+  - Setting up continuous integration ensures that your project is automatically built and tested whenever changes are pushed to the repository.
+
+### Dependency Management:
+
+- **Conan or vcpkg:**
+  - Use a dependency manager like Conan or vcpkg to manage external libraries and ensure consistent builds across different environments.
+
+### Containerization (Optional):
+
+- **Docker:**
+  - Docker can be used to containerize your application, making it easy to deploy and run in different environments.
+
+### Considerations:
+
+- **Ensure Security:**
+  - If dealing with sensitive financial data, consider implementing secure coding practices and encryption.
+
+- **Community Support:**
+  - Regularly check for updates and community support for the chosen technologies to ensure a sustainable and maintainable project.
 
 
 ---------------------
