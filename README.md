@@ -238,86 +238,86 @@ Going beyond the basic implementation, this project showcases an array of advanc
 ### Programming Language:
 
 - **C++:**
-  - C++ remains the primary language for its efficiency and performance in numerical computations.
+>  - `C++` remains the primary language for its efficiency and performance in numerical computations.
 
 ### Build System:
 
 - **CMake:**
-  - CMake facilitates the building and compilation of your C++ project. It's widely used and supports various platforms.
+>  - `CMake` facilitates the building and compilation of this `C++`project. It's widely used and supports various platforms.
 
 ### Backend:
 
 - **RESTful API (Optional):**
-  - Design a RESTful API to expose your option pricing functionalities. This allows for easy integration with different platforms and technologies.
+>  - Design a RESTful API to expose your option pricing functionalities. This allows for easy integration with different platforms and technologies.
 
 ### Libraries and Frameworks:
 
-- **Boost C++ Libraries:**
-  - Boost libraries for C++ offer utilities and functionalities that can enhance your project.
+> - **Boost C++ Libraries:**
+  - `Boost` libraries for `C++` offer utilities and functionalities that can enhance your project.
 
-- **QuantLib (Optional):**
-  - QuantLib provides tools for quantitative finance, including derivative pricing and risk management.
+> - **QuantLib (Optional):**
+  - `QuantLib` provides tools for quantitative finance, including derivative pricing and risk management.
 
 ### Web APIs and HTTP Communication:
 
-- **cpp-httplib (for HTTP server):**
-  - A C++ library for creating HTTP servers, enabling communication with your application via HTTP.
+> - **`cpp-httplib` (for HTTP server):**
+  - A `C++` library for creating HTTP servers, enabling communication with your application via HTTP.
 
 ### Database:
 
-- **SQLite:**
-  - SQLite is a lightweight, embedded database that can be used for local storage of option parameters.
+> - **SQLite:**
+  - `SQLite` is a lightweight, embedded database that can be used for local storage of option parameters.
 
 ### Error Handling and Logging:
 
-- **spdlog:**
-  - spdlog is a fast C++ logging library that can be used for error handling and logging. It provides various logging sinks and is easy to configure.
+> - **spdlog:**
+  - `spdlog` is a fast `C++` logging library that can be used for error handling and logging. It provides various logging sinks and is easy to configure.
 
 ### Testing, Mocking, and Quality Assurance:
 
-- **Google Test (for Unit Testing):**
-  - Google Test is a widely used testing framework for C++. It supports test fixtures, test discovery, and various assertions.
+> - **Google Test (for Unit Testing):**
+  - `Google Test` is a widely used testing framework for `C++`. It supports test fixtures, test discovery, and various assertions.
 
-- **Google Mock (for Mocking):**
-  - Google Mock is a framework for creating mock classes and performing mock-based testing.
+> - **Google Mock (for Mocking):**
+  - `Google Mock` is a framework for creating mock classes and performing mock-based testing.
 
-- **Clang Static Analyzer (Optional):**
-  - Clang Static Analyzer is a powerful tool for static code analysis, helping to identify potential issues in the code.
+> - **Clang Static Analyzer (Optional):**
+  - `Clang Static Analyzer` is a powerful tool for static code analysis, helping to identify potential issues in the code.
 
 ### API Documentation:
 
-- **Swagger/OpenAPI (Optional):**
-  - Swagger or OpenAPI can be used to document your RESTful API. It provides a standardized way to describe and document APIs.
+> - **`Swagger`/`OpenAPI` (Optional):**
+  - `Swagger` or `OpenAPI` can be used to document your RESTful API. It provides a standardized way to describe and document APIs.
 
-- **Doxygen:**
-  - Doxygen can generate documentation from your code comments. It's especially useful for documenting functions, classes, and project structure.
+> - **`Doxygen`:**
+  - `Doxygen` can generate documentation from your code comments. It's especially useful for documenting functions, classes, and project structure.
 
 ### Frontend (Optional):
 
-- **Web Interface (HTML/CSS/JavaScript):**
+> - **Web Interface (HTML/CSS/JavaScript):**
   - If you plan to create a web-based interface for interacting with your application, standard web technologies can be used.
 
 ### Continuous Integration:
 
-- **Travis CI or GitHub Actions:**
+> - **`Travis CI` or `GitHub Actions`:**
   - Setting up continuous integration ensures that your project is automatically built and tested whenever changes are pushed to the repository.
 
 ### Dependency Management:
 
-- **Conan or vcpkg:**
+> - **`Conan` or `vcpkg`:**
   - Use a dependency manager like Conan or vcpkg to manage external libraries and ensure consistent builds across different environments.
 
 ### Containerization (Optional):
 
-- **Docker:**
-  - Docker can be used to containerize your application, making it easy to deploy and run in different environments.
+> - **`Docker`:**
+  - `Docker` can be used to containerize your application, making it easy to deploy and run in different environments.
 
 ### Considerations:
 
-- **Ensure Security:**
+> - **Ensure Security:**
   - If dealing with sensitive financial data, consider implementing secure coding practices and encryption.
 
-- **Community Support:**
+> - **Community Support:**
   - Regularly check for updates and community support for the chosen technologies to ensure a sustainable and maintainable project.
 
 
@@ -428,42 +428,8 @@ Going beyond the basic implementation, this project showcases an array of advanc
 <a name="impl"></a>
 ## Project Implementation Guide
 
-1. **<ins>Getting Started</ins>:**
-> 1. Familiarize yourself with the GraphQL specification and the basics of making GraphQL requests. 
-> 2. Understand the GraphQL protocol, including schema definition, query language, and response format.
-> 3. Study existing GraphQL libraries and clients to gain insights into their design and implementation.
-> 4. Implement the necessary components to handle GraphQL queries and responses in your C++ library.
-> 5. Explore existing GraphQL libraries in C++ for inspiration. 
-> 6. Design and implement a library that abstracts away the complexities of working with GraphQL.
-2. **<ins>Optimization</ins>:**
-> - Optimize the library for efficiency and speed when handling GraphQL requests and responses.
-> - Implement techniques such as caching, query optimization, or parallel request processing.
-> - Measure and document the performance improvements achieved.
-3. **<ins>Documentation</ins>:**
-> - Create a README file that explains the library's purpose, features, and usage. 
-> - Document the library's API usage, supported features, and code examples to assist users.
-> - Consider providing sample applications or tutorials that showcase the library's capabilities.
-> - Provide code examples and document the library's API.
-> - Consider writing technical documentation or blog posts to showcase your library and explain its benefits and usage.
 
-
-
-1. **Getting Started:** Configure your development environment, encompassing the chosen IDE and requisite libraries.
-
-2. **Library Blueprint:** Design classes and functions aligned with GraphQL principles and efficient API integration.
-
-3. **HTTP Communication:** Employ libraries such as libcurl to establish robust communication channels with the Investopedia API.
-
-4. **Query Construction:** Create flexible and expressive functions, empowering users to craft intricate GraphQL queries with ease.
-
-5. **Response Processing:** Design adaptable parsing mechanisms to extract pertinent data from the API's complex responses.
-
-6. **Error Management:** Engineer an elegant error-handling mechanism, offering meaningful feedback to developers.
-
-7. **User-Friendly Interface:** Develop an ergonomic interface that empowers users to interact with the library sans GraphQL intricacies.
-
-8. **Debugging Strategies:** Elaborate on potential challenges, providing systematic debugging strategies in your documentation.
-
+// TO DO // 
 
 &nbsp;
 
@@ -493,17 +459,7 @@ Processed API responses, distilled data, informative error messages.
 <a name="flow"></a>
 ## Basic Workflow Guide
 
-1. Familiarize yourself with the GraphQL specification and the basics of making GraphQL requests. 
-2. Understand the GraphQL protocol, including schema definition, query language, and response format.
-3. Study existing GraphQL libraries and clients to gain insights into their design and implementation.
-4. Implement the necessary components to handle GraphQL queries and responses in your C++ library.
-5. Explore existing GraphQL libraries in C++ for inspiration. 
-6. Design and implement a library that abstracts away the complexities of working with GraphQL.
-
-
-1. Integrate the "graphQLOL" library into your C++ project.
-   
-2. Leverage the library's functions to construct GraphQL queries, dispatch requests, and proficiently handle responses.
+// TO DO // 
 
 
 &nbsp; 
