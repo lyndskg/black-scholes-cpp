@@ -339,7 +339,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 
 ## Roadmap
 
-### Phase 1: Research and Understanding (Estimated Time: 15 hours)
+### <ins>Phase 1: Research and Understanding</ins> (Estimated Time: 15 hours)
 1. Study Black-Scholes Model (5 hours):
 - Dive into academic papers, online resources, and books to understand the mathematical foundations of the Black-Scholes model.
 - Familiarize yourself with the Black-Scholes formula, its assumptions, and risk-neutral pricing.
@@ -351,7 +351,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Investigate GitHub repositories like QuantLib for practical implementations.
 - Summarize key learnings and resources for quick reference.
 
-### Phase 2: Project Setup and Planning (Estimated Time: 10 hours)
+### <ins>Phase 2: Project Setup and Planning</ins> (Estimated Time: 10 hours)
 1. Define Project Structure (3 hours):
 - Plan a directory structure for your project (e.g., src, include, test, docs).
 - Decide on file naming conventions and coding standards.
