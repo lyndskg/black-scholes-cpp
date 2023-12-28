@@ -247,56 +247,50 @@ Going beyond the basic implementation, this project showcases an array of advanc
 <a name="tech"></a>
 ## Technologies and Programming Languages
 
-### Programming Language:
+### <ins>Programming Language</ins>:
 
 - **C++:**
 >  - `C++` remains the primary language for its efficiency and performance in numerical computations.
 
-### Build System:
+### <ins>Build System</ins>:
 
 - **CMake:**
 >  - `CMake` facilitates the building and compilation of this `C++`project. It's widely used and supports various platforms.
 
-### Backend:
+### <ins>Backend</ins>:
 
 - **RESTful API (Optional):**
 >  - Design a RESTful API to expose your option pricing functionalities. This allows for easy integration with different platforms and technologies.
 
-### Libraries and Frameworks:
-
+### <ins>Libraries and Frameworks</ins>:
 > - **Boost C++ Libraries:**
   - `Boost` libraries for `C++` offer utilities and functionalities that can enhance your project.
-
 > - **QuantLib (Optional):**
   - `QuantLib` provides tools for quantitative finance, including derivative pricing and risk management.
+#### <em>Testing, Mocking, and Quality Assurance</em>:
+> - **Google Test (for Unit Testing):**
+  - `Google Test` is a widely used testing framework for `C++`. It supports test fixtures, test discovery, and various assertions.
+> - **Google Mock (for Mocking):**
+  - `Google Mock` is a framework for creating mock classes and performing mock-based testing.
+> - **Clang Static Analyzer (Optional):**
+  - `Clang Static Analyzer` is a powerful tool for static code analysis, helping to identify potential issues in the code.
 
-### Web APIs and HTTP Communication:
-
-> - **`cpp-httplib` (for HTTP server):**
-  - A `C++` library for creating HTTP servers, enabling communication with your application via HTTP.
-
-### Database:
-
+### <ins>Database</ins>:
 > - **SQLite:**
   - `SQLite` is a lightweight, embedded database that can be used for local storage of option parameters.
 
-### Error Handling and Logging:
+
+### <ins>Web APIs and HTTP Communication</ins>:
+> - **`cpp-httplib` (for HTTP server):**
+  - A `C++` library for creating HTTP servers, enabling communication with your application via HTTP.
+
+### <ins>Error Handling and Logging</ins>:
 
 > - **spdlog:**
   - `spdlog` is a fast `C++` logging library that can be used for error handling and logging. It provides various logging sinks and is easy to configure.
 
-### Testing, Mocking, and Quality Assurance:
 
-> - **Google Test (for Unit Testing):**
-  - `Google Test` is a widely used testing framework for `C++`. It supports test fixtures, test discovery, and various assertions.
-
-> - **Google Mock (for Mocking):**
-  - `Google Mock` is a framework for creating mock classes and performing mock-based testing.
-
-> - **Clang Static Analyzer (Optional):**
-  - `Clang Static Analyzer` is a powerful tool for static code analysis, helping to identify potential issues in the code.
-
-### API Documentation:
+### <ins>API Documentation</ins>:
 
 > - **`Swagger`/`OpenAPI` (Optional):**
   - `Swagger` or `OpenAPI` can be used to document your RESTful API. It provides a standardized way to describe and document APIs.
@@ -304,31 +298,28 @@ Going beyond the basic implementation, this project showcases an array of advanc
 > - **`Doxygen`:**
   - `Doxygen` can generate documentation from your code comments. It's especially useful for documenting functions, classes, and project structure.
 
-### Frontend (Optional):
+### <ins>Frontend</ins> (Optional):
 
 > - **Web Interface (HTML/CSS/JavaScript):**
   - If you plan to create a web-based interface for interacting with your application, standard web technologies can be used.
 
-### Continuous Integration:
+### <ins>Continuous Integration</ins>:
 
 > - **`Travis CI` or `GitHub Actions`:**
   - Setting up continuous integration ensures that your project is automatically built and tested whenever changes are pushed to the repository.
 
-### Dependency Management:
+### <ins>Dependency Management</ins>:
 
 > - **`Conan` or `vcpkg`:**
-  - Use a dependency manager like Conan or vcpkg to manage external libraries and ensure consistent builds across different environments.
+  - Use a dependency manager like `Conan` or `vcpkg` to manage external libraries and ensure consistent builds across different environments.
 
-### Containerization (Optional):
-
+### <ins>Containerization</ins> (Optional):
 > - **`Docker`:**
   - `Docker` can be used to containerize your application, making it easy to deploy and run in different environments.
 
-### Considerations:
-
+### <ins>Considerations</ins>:
 > - **Ensure Security:**
   - If dealing with sensitive financial data, consider implementing secure coding practices and encryption.
-
 > - **Community Support:**
   - Regularly check for updates and community support for the chosen technologies to ensure a sustainable and maintainable project.
 
