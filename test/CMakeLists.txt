@@ -30,9 +30,6 @@ include(GoogleTest)
 gtest_discover_tests(run_tests run_tests)
 
 
-
-
-
 add_executable(blackScholesModelTest ../test/test_blackScholesModel.cpp)
 
 # Link the test executable against Google Test
