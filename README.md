@@ -166,21 +166,34 @@ Going beyond the basic implementation, this project showcases an array of advanc
 > - <ins>Rho</ins>: Illustrates the sensitivity of the option price to changes in the risk-free interest rate.
 
 
-3. **Implied Volatility Calculation**:  A function to calculate implied volatility, an important parameter in option pricing.
+3. **Implied Volatility Calculation**:
+> A function to calculate implied volatility, an important parameter in option pricing.
 
-4. **Heston Model Integration**: `black-scholes-cpp` is enhanced to incorporate equations from the Heston model, allowing for a more nuanced understanding of volatility dynamics.
+5. **Heston Model Integration**:
+> `black-scholes-cpp` is enhanced to incorporate equations from the Heston model, allowing for a more nuanced understanding of volatility dynamics.
 
-5. **Calibration Procedure for Heston Model**: The implementation includes a robust calibration procedure to estimate Heston model parameters based on market data. Calibration ensures that the model aligns with observed market prices, enhancing its predictive power.
+7. **Calibration Procedure for Heston Model**:
+> The implementation includes a robust calibration procedure to estimate Heston model parameters based on market data.
+> - Calibration ensures that the model aligns with observed market prices, enhancing its predictive power.
 
-6. **Volatility Surface Calculation**: `black-scholes-cpp` calculates the implied volatility surface using the Heston model, offering a comprehensive view of implied volatilities across various strike prices and maturities.
+9. **Volatility Surface Calculation**:
+> `black-scholes-cpp` calculates the implied volatility surface using the Heston model, offering a comprehensive view of implied volatilities across various strike prices and maturities.
 
-7. **Monte Carlo Simulation**: A sophisticated Monte Carlo simulation is implemented to generate random paths for both the underlying asset price and volatility based on the Heston model. This feature adds a layer of realism to the pricing model.
+11. **Monte Carlo Simulation**:
+> A sophisticated Monte Carlo simulation is implemented to generate random paths for both the underlying asset price and volatility based on the Heston model.
+> - This feature adds a layer of realism to the pricing model.
 
-8. **Historical Volatility Analysis**: Functionality is incorporated to calculate historical volatility based on historical price data. This analysis provides insights into the historical behavior of the underlying asset's volatility.
+13. **Historical Volatility Analysis**:
+> Functionality is incorporated to calculate historical volatility based on historical price data.
+> - This analysis provides insights into the historical behavior of the underlying asset's volatility.
 
-9. **Sensitivity Analysis**: The project extends its capabilities to perform sensitivity analysis using the Heston model. Exploring the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, allows users to assess the model's sensitivity to different market conditions.
+15. **Sensitivity Analysis**:
+> `black-scholes-cpp` extends its capabilities to perform sensitivity analysis using the Heston model.
+> - Exploring the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, allows users to assess the model's sensitivity to different market conditions.
 
-10. **Visualizations**: To enhance user understanding, the project incorporates visualizations using plotting libraries. Users can intuitively interpret option prices, implied volatility surfaces, Greeks, and other relevant metrics.
+16. **Visualizations**:
+> To enhance user understanding, `black-scholes-cpp` incorporates visualizations using plotting libraries.
+> Users can intuitively interpret option prices, implied volatility surfaces, Greeks, and other relevant metrics.
 
 
 &nbsp;
