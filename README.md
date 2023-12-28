@@ -212,10 +212,10 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - [x] ~~Fix Git VS issues w/ SSH/GPG keys (ed25519, RSA) and/or authentication w/ fine-grained PACs~~. ✓
 - [x] ~~Finalize high-level project structure (i.e. where driver goes, basic .cpp/.h division, basic class (and other high-level data structure) organization based on functionality).~~ ✓
 - [ ] Handle all inputModes.
-   a. User Input: Done, not tested.
-   b. File Input: Done, not tested.
-   c. Database Input: Haven't started, but know to use SQLite.
-   d. external market data feeds / APIs: Haven't started, but have cURL set up. Also using Alpha Vantage Rapid API and already have private key. "Just" need to figure out configuration.
+   a. **User Input**: Done, not tested.
+   b. **File Input**: Done, not tested.
+   c. **Database Input**: Haven't started, but know to use SQLite.
+   d. **External market data feeds / API**s: Haven't started, but have cURL set up. Also using Alpha Vantage Rapid API and already have private key. "Just" need to figure out configuration.
 - [ ] Begin TESTING AND DEBUGGING!
    - UNIT TESTS. NOW.
 - [ ] Optimizing code.
