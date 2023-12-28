@@ -276,23 +276,23 @@ Going beyond the basic implementation, this project showcases an array of advanc
 > - `SQLite` is a lightweight, embedded database that can be used for local storage of option parameters.
 
 
-### <ins>Web APIs and HTTP Communication</ins>: **`cpp-httplib` (for HTTP server):**
+### <ins>Web APIs and HTTP Communication</ins>: **`cpp-httplib` (for HTTP server)**
 > - A `C++` library for creating HTTP servers, enabling communication with your application via HTTP.
 
-### <ins>Error Handling and Logging</ins>:  **spdlog:**
-> - `spdlog` is a fast `C++` logging library that can be used for error handling and logging.
-  > - It provides various logging sinks and is easy to configure.
+### <ins>Error Handling and Logging</ins>:  **`spdlog`**
+- `spdlog` is a fast `C++` logging library that can be used for error handling and logging.
+> - It provides various logging sinks and is easy to configure.
 
 
 ### <ins>API Documentation</ins>:
-> - **`Swagger`/`OpenAPI` (Optional):**
-  - `Swagger` or `OpenAPI` can be used to document your RESTful API. It provides a standardized way to describe and document APIs.
-> - **`Doxygen`:**
-  - `Doxygen` can generate documentation from your code comments. It's especially useful for documenting functions, classes, and project structure.
+- **`Swagger`/`OpenAPI` (Optional):**
+> - `Swagger` or `OpenAPI` can be used to document your RESTful API. It provides a standardized way to describe and document APIs.
+- **`Doxygen`:**
+> - `Doxygen` can generate documentation from your code comments. It's especially useful for documenting functions, classes, and project structure.
 
 ### <ins>Frontend</ins> (Optional):
-> - **Web Interface (HTML/CSS/JavaScript):**
-  - If you plan to create a web-based interface for interacting with your application, standard web technologies can be used.
+- **Web Interface (HTML/CSS/JavaScript):**
+> - If you plan to create a web-based interface for interacting with your application, standard web technologies can be used.
 
 ### <ins>Continuous Integration</ins>: **`Travis CI` or `GitHub Actions`**
 > - Setting up continuous integration ensures that your project is automatically built and tested whenever changes are pushed to the repository.
