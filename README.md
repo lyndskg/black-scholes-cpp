@@ -259,10 +259,10 @@ Going beyond the basic implementation, this project showcases an array of advanc
   > -  This allows for easy integration with different platforms and technologies.
 
 ### <ins>Libraries and Frameworks</ins>:
-> - **`Boost` C++ Libraries:**
-  - `Boost` libraries for `C++` offer utilities and functionalities that can enhance your project.
-> - **`QuantLib` (Optional):**
-  - `QuantLib` provides tools for quantitative finance, including derivative pricing and risk management.
+- **`Boost` C++ Libraries:**
+>  - `Boost` libraries for `C++` offer utilities and functionalities that can enhance your project.
+- **`QuantLib` (Optional):**
+> - `QuantLib` provides tools for quantitative finance, including derivative pricing and risk management.
 #### <em>Testing, Mocking, and Quality Assurance</em>:
 >> - **`Google Test` (for Unit Testing):**
 >  - `Google Test` is a widely used testing framework for `C++`.
