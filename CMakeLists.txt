@@ -1,16 +1,37 @@
+# Top-level CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.14)
-project(black-scholes)
+project(black-scholes-cpp)
 
 # GoogleTest requires at least C++14
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Add the gtest directory
+add_subdirectory(gtest)
+
+# Add subdirectories
+add_subdirectory(src)
+add_subdirectory(test)
+
+# Add include directories
+include_directories(include/black-scholes-cpp)
+include_directories(include/third_party)
+
+# Include the 'docs' directory (for completeness, you may want to generate documentation using tools like Doxygen)
+include_directories(docs)
+
+# Add the main executable
+add_executable(black_scholes_cpp main.cpp)
+
+# Link libraries if necessary (e.g., libcurl, OneMKL)
+target_link_libraries(black_scholes_cpp curl OneMKL blackScholesLibrary)
+
+
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(bs blackScholesModel.cpp Program.cpp inputReader.cpp OutputWriter.cpp optionGreeks.cpp optionGreeksModel.cpp hestonModel.cpp)
 target_link_libraries(example gtest_main)
 add_test(NAME example_test COMMAND example)
-
 
 ########################################################################
 #
