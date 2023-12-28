@@ -139,7 +139,10 @@
 
 <a name="view"></a>
 ## Project Overview 
-`black-scholes-cpp` is a comprehensive C++ program designed to calculate the price of European options using the Black-Scholes formula. Going beyond the basic implementation, this project showcases an array of advanced features and enhancements, demonstrating a deep understanding of mathematical finance, numerical methods, and programming best practices.
+`black-scholes-cpp` is a comprehensive C++ program designed to calculate the price of European options using the Black-Scholes formula. 
+
+
+Going beyond the basic implementation, this project showcases an array of advanced features and enhancements, demonstrating a deep understanding of mathematical finance, numerical methods, and programming best practices.
 
 &nbsp;
 
