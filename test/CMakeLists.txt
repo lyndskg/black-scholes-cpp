@@ -1,4 +1,4 @@
-# tests/CMakeLists.txt
+# test/CMakeLists.txt
 
 # Collect test source files
 file(GLOB TEST_SOURCES "*.cpp")

@@ -9,10 +9,7 @@ black-scholes-cpp/           # Project root directory
 │   ├── troubleshooting.md           # Troubleshooting guide
 │   ├── contribution.md              # Contribution guidelines
 │   └── api_reference.md             # API reference documentation
-├── third_party/                 # Directory for third-party libraries
-│   ├── libcurl/                     # libcurl headers
-│   ├── websocketpp/                 # WebSocket++ headers
-│   └── rapidjson/                   # RapidJSON headers
+├── gtest/                       # Google Test framework
 ├── include/                     # Directory for header files
 │   ├── black-scholes-cpp/           # Project-specific header files
 │   │   ├── blackScholesModel.h          # Header file for blackScholesModel
@@ -25,6 +22,7 @@ black-scholes-cpp/           # Project root directory
 │   └── third_party/                # Header files for third-party libraries
 │       ├── libcurl/                     # libcurl headers
 │       ├── websocketpp/                 # WebSocket++ headers
+│       ├── oneMKL2/                     # OneMKL
 │       └── rapidjson/                   # RapidJSON headers
 ├── src/                        # Source code directory
 │   ├── blackScholesModel.cpp           # Source file for blackScholesModel

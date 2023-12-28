@@ -50,7 +50,7 @@ void Program::get_options(int argc, char* argv[]) {
                                 {"help", no_argument, nullptr, 'h'},       // Option: --help or -h
                                 {nullptr, no_argument, nullptr, '\0'}};    // End of options
     
-    // Loop over all of the options.
+    // Loop over all options.
     while ((option = getopt_long(argc, argv, "m:h", longOpts, &optIndex)) != -1) {
         switch (option) {
             // If the "mode" option is flagged:

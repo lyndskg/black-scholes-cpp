@@ -13,7 +13,7 @@
 #include "../include/black-scholes-cpp/hestonModel.h"
 #include "unit_test_framework.h"
 
-//#include "../include/oneMKL/mkl.h"
+#include "../oneMKL2/mkl.h"
 
 using namespace std;
 
