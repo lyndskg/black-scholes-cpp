@@ -6,42 +6,6 @@
 
 ## SIDE-NOTE: IS BACKTESTING THAT BIG OF A DEAL IN THE FUTURE?
 
-**<ins>TO-DO</ins>:**
-- [x] ~~Figure out how to rewrite Makefile~~ ✓
-- [x] ~~Re-install libcURL/cURL-openssl via Homebrew (incompatible w/ arm64?)~~ ✓
-- [x] ~~Review MAKEFILE documentation: esp $(LIBS), $(LDFLAGS), $(LXXFLAGS).~~ ✓
-- [x] ~~From CLI, understand exporting $(PATH)(s) to libcURL in root/.zshrc.~~ ✓
-- [x] ~~Fix Git VS issues w/ SSH/GPG keys (ed25519, RSA) and/or authentication w/ fine-grained PACs~~. ✓
-- [x] ~~Finalize high-level project structure (i.e. where driver goes, basic .cpp/.h division, basic class (and other high-level data structure) organization based on functionality).~~ ✓
-- [ ] Handle all inputModes.
-   a. User Input: Done, not tested.
-   b. File Input: Done, not tested.
-   c. Database Input: Haven't started, but know to use SQLite.
-   d. external market data feeds / APIs: Haven't started, but have cURL set up. Also using Alpha Vantage Rapid API and already have private key. "Just" need to figure out configuration.
-- [ ] Begin TESTING AND DEBUGGING!
-   - UNIT TESTS. NOW.
-- [ ] Optimizing code.
-   - Obv some shit will optimize a lot and take barely any time. Some shit will make zero-to-nil difference and take hours. Gotta prioritize.
-   - Optimization ideas listed below, but some of it is obvious throughout code.
-- [ ] Figure out what additional features to implement.
-   -  ~~option Greeks (calculating, setting, getting)~~ ✓
-   - ~~enhanced Black-Scholes pricing models incorporating option Greeks (constructor, calculating, setting, getting)~~ ✓
-   -  ~~enhanced Black-Scholes pricing models incorporating implied volatility (constructor, calculating, setting, getting)~~ ✓
-   - Heston model
-     - enhanced Black-Scholes pricing models incorporating Heston model equations
-     - calibration procedure to estimate the Heston model parameters based on market data
-     - volatility surface calculation: calculate the implied volatility surface using the Heston model
-        -  By solving the Heston model equations and comparing the model prices with market prices, you can derive the implied volatility at different strikes and maturities, thus constructing the volatility surface.
-      -  Greeks calculation: Enhance your project to calculate option Greeks, such as delta, gamma, vega, theta, and rho, using the Heston model.
-         - These measures provide valuable insights into the sensitivity of option prices to changes in underlying factors. You can use finite difference methods or other numerical techniques to estimate these sensitivities based on the Heston model equations.
-       - Monte Carlo Simulation: Implement Monte Carlo simulation to generate random paths for both the underlying asset price and volatility based on the Heston model.
-       - Historical Volatility Analysis: Incorporate functionality to calculate historical volatility based on historical price data. This can be useful for comparing the implied volatility from the Heston model with realized historical volatility. You can calculate rolling or weighted average volatilities to capture different time horizons.
-       - Sensitivity Analysis: Extend your project to perform sensitivity analysis using the Heston model. Explore the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, on option prices and Greeks. This analysis can help assess the model's sensitivity to different market conditions.
-       - Visualizations: Enhance your project by adding visualizations to present the results more intuitively. Plot option prices, implied volatility surfaces, Greeks, or other relevant metrics to provide a graphical representation of the Heston model outputs.
-   - Divided Difference approach
-- Perpetual American Options
-- Matrix Math
-
 <p align="center">
   <a href="https://www.linkedin.com/in/lyndsey791/">LinkedIn</a>  |  <a href="https://www.sorry-this-site-doesnt-exist-yet./">Website</a>  |     <a href="https://github.com/lyndskg/">GitHub</a>  |  <a href="#contact">Contact Info</a>
 </p>
@@ -244,11 +208,40 @@ To enhance user understanding, the project incorporates visualizations using plo
 <a name="curr"></a>
 ### <ins>Current Notes and/or Issues</ins>: 
 
-> Write
->
-> Stuff
-> 
-> Here
+- [x] ~~Figure out how to rewrite Makefile~~ ✓
+- [x] ~~Re-install libcURL/cURL-openssl via Homebrew (incompatible w/ arm64?)~~ ✓
+- [x] ~~Review MAKEFILE documentation: esp $(LIBS), $(LDFLAGS), $(LXXFLAGS).~~ ✓
+- [x] ~~From CLI, understand exporting $(PATH)(s) to libcURL in root/.zshrc.~~ ✓
+- [x] ~~Fix Git VS issues w/ SSH/GPG keys (ed25519, RSA) and/or authentication w/ fine-grained PACs~~. ✓
+- [x] ~~Finalize high-level project structure (i.e. where driver goes, basic .cpp/.h division, basic class (and other high-level data structure) organization based on functionality).~~ ✓
+- [ ] Handle all inputModes.
+   a. User Input: Done, not tested.
+   b. File Input: Done, not tested.
+   c. Database Input: Haven't started, but know to use SQLite.
+   d. external market data feeds / APIs: Haven't started, but have cURL set up. Also using Alpha Vantage Rapid API and already have private key. "Just" need to figure out configuration.
+- [ ] Begin TESTING AND DEBUGGING!
+   - UNIT TESTS. NOW.
+- [ ] Optimizing code.
+   - Obv some shit will optimize a lot and take barely any time. Some shit will make zero-to-nil difference and take hours. Gotta prioritize.
+   - Optimization ideas listed below, but some of it is obvious throughout code.
+- [ ] Figure out what additional features to implement.
+   -  ~~option Greeks (calculating, setting, getting)~~ ✓
+   - ~~enhanced Black-Scholes pricing models incorporating option Greeks (constructor, calculating, setting, getting)~~ ✓
+   -  ~~enhanced Black-Scholes pricing models incorporating implied volatility (constructor, calculating, setting, getting)~~ ✓
+   - Heston model
+     - enhanced Black-Scholes pricing models incorporating Heston model equations
+     - calibration procedure to estimate the Heston model parameters based on market data
+     - volatility surface calculation: calculate the implied volatility surface using the Heston model
+        -  By solving the Heston model equations and comparing the model prices with market prices, you can derive the implied volatility at different strikes and maturities, thus constructing the volatility surface.
+      -  Greeks calculation: Enhance your project to calculate option Greeks, such as delta, gamma, vega, theta, and rho, using the Heston model.
+         - These measures provide valuable insights into the sensitivity of option prices to changes in underlying factors. You can use finite difference methods or other numerical techniques to estimate these sensitivities based on the Heston model equations.
+       - Monte Carlo Simulation: Implement Monte Carlo simulation to generate random paths for both the underlying asset price and volatility based on the Heston model.
+       - Historical Volatility Analysis: Incorporate functionality to calculate historical volatility based on historical price data. This can be useful for comparing the implied volatility from the Heston model with realized historical volatility. You can calculate rolling or weighted average volatilities to capture different time horizons.
+       - Sensitivity Analysis: Extend your project to perform sensitivity analysis using the Heston model. Explore the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, on option prices and Greeks. This analysis can help assess the model's sensitivity to different market conditions.
+       - Visualizations: Enhance your project by adding visualizations to present the results more intuitively. Plot option prices, implied volatility surfaces, Greeks, or other relevant metrics to provide a graphical representation of the Heston model outputs.
+   - Divided Difference approach
+- Perpetual American Options
+- Matrix Math
 
    
 <p align="right">(<a href="#bs">back to top</a>)</p>
