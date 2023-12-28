@@ -2,7 +2,7 @@
 
 <h1 align="center">Black-Scholes</h1>
 
-<h4 align="center"><ins><strong><em>* a library for sending GraphQL queries and handling responses &mdash; packaged as a easy-to-use gui * </em></strong></ins></h4>
+<h4 align="center"><ins><strong><em>* a program that calculates the price of European options using the Black-Scholes formula * </em></strong></ins></h4>
 
 ## SIDE-NOTE: IS BACKTESTING THAT BIG OF A DEAL IN THE FUTURE?
 
