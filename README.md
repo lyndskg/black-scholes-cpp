@@ -35,13 +35,6 @@
   <details>
     <summary><strong><em>II: Implementation Details</em></strong></summary>
     <ol>
-      <li>
-        <a href="#view">Project Overview</a>
-        <ul>
-          <li><a href="#obj">Objectives</a></li>
-          <li><a href="#curr">Current Notes and Issues</a></li>
-        </ul>
-      </li>
       <li><a href="#tech">Technologies and Programming Languages</a></li>
       <li><a href="#stackz">Currently Used Tech Stacks</a></li>
       <li><a href="devenv">Development Environment</a></li>
