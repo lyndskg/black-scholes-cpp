@@ -7,8 +7,8 @@
 #include <iostream>
 #include <cassert>
 
-#include "optionGreeksModel.h"
-#include "optionGreeks.h"
+#include "../include/black-scholes-cpp/optionGreeksModel.h"
+#include "../include/black-scholes-cpp/optionGreeks.h"
 
 using namespace std;
 

@@ -10,7 +10,7 @@
 #include <cmath>
 #include <random>
 
-#include "hestonModel.h"
+#include "../include/black-scholes-cpp/hestonModel.h"
 #include "unit_test_framework.h"
 
 //#include "../include/oneMKL/mkl.h"

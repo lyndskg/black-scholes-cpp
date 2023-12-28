@@ -1,0 +1,51 @@
+black-scholes-cpp/
+├── docs/
+│   ├── hierarchy.gql	   # Project hierarchy guide
+│   ├── BuildNotes.txt	   # Build notes
+│   ├── index.md           # Project documentation index
+│   ├── installation.md    # Installation guide
+│   ├── usage.md           # Library usage guide
+│   ├── troubleshooting.md # Troubleshooting guide
+│   ├── contribution.md    # Contribution guidelines
+│   └── api_reference.md   # API reference documentation
+├── gtest/          # Google Test directory
+├── oneMKL2/        # OneMKL directory
+├── include/
+│   ├── black-scholes-cpp/
+│   │   ├── blackScholesModel.h     #
+│   │   ├── hestonModel.h           #
+│   │   ├── inputReader.h           #
+│   │   ├── optionGreeks.h          #
+│   │   ├── optionGreeksModel.h     #
+│   │   ├── outputWriter.h          #
+│   │   └── Program.h               #
+│   └── third_party/
+│       ├── libcurl/         # libcurl headers
+│       ├── websocketpp/     # WebSocket++ headers
+│       └── rapidjson/       # RapidJSON headers
+├── src/
+│   ├── blackScholesModel.cpp       #
+│   ├── hestonModel.cpp             #
+│   ├── inputReader.cpp             #
+│   ├── optionGreeks.cpp            #
+│   ├── optionGreeksModel.cpp       #
+│   ├── outputWriter.cpp            #
+│   ├── Program.cpp                 #
+│   └── CMakeLists.txt              # CMake configuration for src
+├── tests/
+│   ├── test_blackScholesModel.cpp   # Unit tests for blackScholesModel
+│   ├── test_Program.cpp             # Unit tests for Program
+│   ├── test_inputReader.cpp         # Unit tests for inputReader
+│   ├── test_outputWriter.cpp        # Unit tests for outputWriter
+│   ├── test_optionGreeks.cpp        # Unit tests for optionGreeks
+│   ├── test_optionGreeks.cpp        # Unit tests for optionGreeksModel
+│   ├── unit_test_framework.h        # Unit tests for optionGreeksModel
+│   └── CMakeLists.txt               # CMake configuration for tests
+├── .gitignore
+├── Makefile
+├── csv.h
+├── option_GS_df.csv
+├── main.cpp 		        # Main driver file
+├── CMakeLists.txt          # Top-level CMake configuration
+├── xcode_redirect.hpp
+└── README.md               # Project README file

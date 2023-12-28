@@ -8,11 +8,11 @@
 #include <limits>
 #include <iostream>
 
-#include "Program.h"
-#include "inputReader.h"
-#include "blackScholesModel.h"
-#include "optionGreeks.h"
-#include "optionGreeksModel.h"
+#include "include/black-scholes-cpp/Program.h"
+#include "include/black-scholes-cpp/inputReader.h"
+#include "include/black-scholes-cpp/blackScholesModel.h"
+#include "include/black-scholes-cpp/optionGreeks.h"
+#include "include/black-scholes-cpp/optionGreeksModel.h"
 
 #include "xcode_redirect.hpp"
 

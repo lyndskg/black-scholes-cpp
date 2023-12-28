@@ -18,8 +18,8 @@
 #include <cstdio>
 #endif
 
-#include "blackScholesModel.h"
-#include "inputReader.h"
+#include "../include/black-scholes-cpp/blackScholesModel.h"
+#include "../include/black-scholes-cpp/inputReader.h"
 
 using namespace std;
 

@@ -10,7 +10,7 @@
 #include <numbers>
 #include <cassert>
 
-#include "blackScholesModel.h"
+#include "../include/black-scholes-cpp/blackScholesModel.h"
 
 using namespace std;
 

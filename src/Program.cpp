@@ -7,9 +7,9 @@
 #include <iostream>
 #include <getopt.h>
 
-#include "Program.h"
-#include "inputReader.h"
-#include "blackScholesModel.h"
+#include "../include/black-scholes-cpp/Program.h"
+#include "../include/black-scholes-cpp/inputReader.h"
+#include "../include/black-scholes-cpp/blackScholesModel.h"
 
 using namespace std;
 

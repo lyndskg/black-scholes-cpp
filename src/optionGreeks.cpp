@@ -7,8 +7,8 @@
 #include <cmath>
 #include <cassert>
 
-#include "optionGreeks.h"
-#include "blackScholesModel.h"
+#include "../include/black-scholes-cpp/optionGreeks.h"
+#include "../include/black-scholes-cpp/blackScholesModel.h"
 
 
 // ----------------------------------------------------------------------------

@@ -7,7 +7,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "outputWriter.h"
+#include "../include/black-scholes-cpp/outputWriter.h"
 
 using namespace std;
 
