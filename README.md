@@ -334,15 +334,6 @@ __6. <ins>Logging and Documentation</ins>:__
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
----------------------
-<a name="todo"></a>
-### <ins>*To-Do List</ins>:*
-
-
-&nbsp;
-
-
-<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 
