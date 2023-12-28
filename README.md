@@ -76,12 +76,11 @@
       <li><a href="#install">Installation</a>
         <ul>
           <li><a href="#prereq">Prerequisites</a></li>
-          <li><a href="guide">User Installation Guide</a></li>
+          <li><a href="buildnrun">Build and Run</a></li>
         </ul>
       </li>
       <li><a href="usage">Usage</a></li>
       <li><a href="#sys">System Requirements</a></li>
-      <li><a href="#user">User Requirements</a></li>
     </ol>
   </details>
 -
@@ -90,7 +89,6 @@
     <ol>
       <a href="#view">Project Overview</a>
       <li><a href="#tech">Technologies and Programming Languages</a></li>
-      <li><a href="#stackz">Currently Used Tech Stacks</a></li>
       <li>
         <a href="misc">Miscellaneous</a>
           <ul>
@@ -471,32 +469,25 @@ Processed API responses, distilled data, informative error messages.
 <a name="prereq"></a>
 ### System Prerequisites:
 
-The library mandates a functional C++ compiler, pertinent libraries for HTTP communication, and consistent internet connectivity for API interaction.
+`black-scholes-cpp` mandates:
+- A functional C++ compiler compatible with C++14, and
+- required libraries installed (e.g., CURL for API access, SQLite for database interactions).
 
-<a name="preweb"></a>
-#### **Web App:**
+&nbsp; 
 
+<a name="buildnrun"></a>
+### Build and Run: 
+1. Clone the repository: 
+`git clone https://github.com/yourusername/black-scholes-project.git
+cd black-scholes-project`
+2. Build the project:
+`mkdir build && cd build
+cmake ..
+make`
+3. Run the program:
+`./black_scholes`
+4. Explore the different features and input modes provided by the program.
 
-
-
-<a name="predesk"></a>
-#### **Desktop App:**
-
-
-<a name="prefile"></a>
-> **<ins>File System Permissions (*Desktop App*)</ins>:**
-
-
-<a name="preaiml"></a>
-#### **Optional AI/ML Permissions:**
-
-
-<a name="leg"></a>
-#### **Legal and Copyright Compliance:**
-
-
-<a name="priv"></a>
-#### **Privacy and Data Security:**
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
