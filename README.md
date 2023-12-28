@@ -54,11 +54,10 @@
       <li>
         <a href="#view">Project Overview</a>
         <ul>
-          <li><a href="#obj">Objectives</a></li>
+          <li><a href="#feat">Key Features</a></li>
           <li><a href="#curr">Current Notes and Issues</a></li>
         </ul>
       </li>
-      <li><a href="#feat">Key Features</a></li>
       <li><a href="#stackz">Currently Used Tech Stacks</a></li>
       <li><a href="devenv">Development Environment</a></li>
       <li><a href="#uiux">UI/UX Implementation Details</a></li>
@@ -183,18 +182,62 @@
 
 <a name="view"></a>
 ## Project Overview 
-The Black-Scholes Model Implementation for Option Pricing project is a comprehensive C++ program designed to calculate the price of European options using the Black-Scholes formula. Going beyond the basic implementation, this project showcases an array of advanced features and enhancements, demonstrating a deep understanding of mathematical finance, numerical methods, and programming best practices.
+`black-scholes-cpp` is a comprehensive C++ program designed to calculate the price of European options using the Black-Scholes formula. Going beyond the basic implementation, this project showcases an array of advanced features and enhancements, demonstrating a deep understanding of mathematical finance, numerical methods, and programming best practices.
 
 &nbsp;
 
 
 ---------------------
 
-<a name="obj"></a>
-### <ins>Objectives</ins>:
+<a name="feat"></a>
+### <ins>Key Features</ins>:
+
+1. Input Modes
+The program supports various input modes to cater to diverse user needs:
+
+User Input: Users can interactively input option parameters through a command-line interface.
+File Input: Option parameters can be read from external files, providing flexibility and ease of data input.
+Database Input: Retrieve option parameters from a database, enabling integration with data storage systems.
+Market Data Feeds/APIs: Fetch real-time market data from external sources or APIs, ensuring dynamic and up-to-date pricing information.
+
+
+2. Option Greeks Calculation
+The implementation includes a sophisticated module for calculating option Greeks, providing insights into the sensitivity of option prices to various factors:
+
+Delta: Measures the sensitivity of the option price to changes in the underlying asset price.
+Gamma: Reflects the rate of change of delta concerning changes in the underlying asset price.
+Vega: Captures the sensitivity of the option price to changes in volatility.
+Theta: Represents the time decay of the option price.
+Rho: Illustrates the sensitivity of the option price to changes in the risk-free interest rate.
+
+
+3. Enhanced Black-Scholes Pricing Models
+The project extends the traditional Black-Scholes model with advanced features:
+
+Implied Volatility Calculation: A function to calculate implied volatility, an important parameter in option pricing.
+Heston Model Integration: The Black-Scholes model is enhanced to incorporate equations from the Heston model, allowing for a more nuanced understanding of volatility dynamics.
+4. Calibration Procedure for Heston Model
+The implementation includes a robust calibration procedure to estimate Heston model parameters based on market data. Calibration ensures that the model aligns with observed market prices, enhancing its predictive power.
+
+5. Volatility Surface Calculation
+The program calculates the implied volatility surface using the Heston model, offering a comprehensive view of implied volatilities across various strike prices and maturities.
+
+6. Monte Carlo Simulation
+A sophisticated Monte Carlo simulation is implemented to generate random paths for both the underlying asset price and volatility based on the Heston model. This feature adds a layer of realism to the pricing model.
+
+7. Historical Volatility Analysis
+Functionality is incorporated to calculate historical volatility based on historical price data. This analysis provides insights into the historical behavior of the underlying asset's volatility.
+
+8. Sensitivity Analysis
+The project extends its capabilities to perform sensitivity analysis using the Heston model. Exploring the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, allows users to assess the model's sensitivity to different market conditions.
+
+9. Visualizations
+To enhance user understanding, the project incorporates visualizations using plotting libraries. Users can intuitively interpret option prices, implied volatility surfaces, Greeks, and other relevant metrics.
 
 
 &nbsp;
+
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 
@@ -208,7 +251,7 @@ The Black-Scholes Model Implementation for Option Pricing project is a comprehen
 > Here
 
    
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 
@@ -303,7 +346,7 @@ __6. <ins>Logging and Documentation</ins>:__
 &nbsp;
 
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 <a name="todo"></a>
@@ -313,7 +356,7 @@ __6. <ins>Logging and Documentation</ins>:__
 &nbsp;
 
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 
@@ -359,7 +402,7 @@ __6. <ins>Logging and Documentation</ins>:__
 
 &nbsp;
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 <a name="io"></a>
@@ -382,15 +425,6 @@ Processed API responses, distilled data, informative error messages.
 
 
 ---------------------
-
-<a name="feat"></a>
-## Key Features
-
-
-
-<p align="right">(<a href="#graph">back to top</a>)</p>
-
----------------------
 <a name="flow"></a>
 ## Basic Workflow Guide
 
@@ -408,7 +442,7 @@ Processed API responses, distilled data, informative error messages.
 
 
 &nbsp; 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 
 
@@ -417,7 +451,7 @@ Processed API responses, distilled data, informative error messages.
 <a name="plus"></a>
 ## Future Enhancements:
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
   
@@ -454,7 +488,7 @@ The library mandates a functional C++ compiler, pertinent libraries for HTTP com
 <a name="priv"></a>
 #### **Privacy and Data Security:**
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ------
 
@@ -483,7 +517,7 @@ The library mandates a functional C++ compiler, pertinent libraries for HTTP com
 
 &nbsp;
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------
 
@@ -502,7 +536,7 @@ The library mandates a functional C++ compiler, pertinent libraries for HTTP com
 
 &nbsp;
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 <a name="appl"></a>
 ### Practical Applications:
@@ -510,7 +544,7 @@ The library mandates a functional C++ compiler, pertinent libraries for HTTP com
 
 &nbsp;
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 
@@ -523,7 +557,7 @@ The library mandates a functional C++ compiler, pertinent libraries for HTTP com
 Approximately 40-60 hours
 
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 
@@ -534,7 +568,7 @@ Approximately 40-60 hours
 > - **Architecture:** Apple arm64
 
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 <a name="give"></a>
@@ -546,7 +580,7 @@ We welcome contributions from the community to help improve `graphQLOL` and make
 - Donate: Highlight how donations will bolster continuous development, long-term maintenance, and the potential expansion of the library's scope.
 
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
 <a name="bye"></a>
@@ -556,7 +590,7 @@ We welcome contributions from the community to help improve `graphQLOL` and make
 
 Thank you for choosing `graphQLOL`, and let's embark on this journey of audio conversion excellence together.
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------------
 <a name="contact"></a>
@@ -567,7 +601,7 @@ Lyndsey Gu - [@lyndskg](https://twitter.com/lyndskg) - lyndsey.gu@gmail.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/lyndskg/graphQLOL)
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------------
 <a name="ack"></a>
@@ -586,7 +620,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/ly
 2. **Online resources:** GraphQL official documentation, `GraphQL` APIs and clients, `GraphQL` C/C++ Libraries
 3. **GitHub Repos**: `libgraphqlparser`, `cppgraphqlgen`
 
-<p align="right">(<a href="#graph">back to top</a>)</p>
+<p align="right">(<a href="#bs">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
