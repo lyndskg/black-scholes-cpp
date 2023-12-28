@@ -150,8 +150,8 @@
 ### <ins>Key Features</ins>:
 
 1. **Input Modes**: The program supports various input modes to cater to diverse user needs. 
-> <ins>User Input</ins>: Users can interactively input option parameters through a command-line interface.
-> File Input: Option parameters can be read from external files, providing flexibility and ease of data input.
+> - <ins>User Input</ins>: Users can interactively input option parameters through a command-line interface.
+> - <ins>File Input</ins>: Option parameters can be read from external files, providing flexibility and ease of data input.
 > Database Input: Retrieve option parameters from a database, enabling integration with data storage systems.
 > Market Data Feeds/APIs: Fetch real-time market data from external sources or APIs, ensuring dynamic and up-to-date pricing information.
 
