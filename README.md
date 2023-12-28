@@ -149,7 +149,7 @@
 <a name="feat"></a>
 ### <ins>Key Features</ins>:
 
-1. Input Modes
+1. **Input Modes**
 The program supports various input modes to cater to diverse user needs:
 
 User Input: Users can interactively input option parameters through a command-line interface.
@@ -158,7 +158,7 @@ Database Input: Retrieve option parameters from a database, enabling integration
 Market Data Feeds/APIs: Fetch real-time market data from external sources or APIs, ensuring dynamic and up-to-date pricing information.
 
 
-2. Option Greeks Calculation
+2. **Option Greeks Calculation**
 The implementation includes a sophisticated module for calculating option Greeks, providing insights into the sensitivity of option prices to various factors:
 
 Delta: Measures the sensitivity of the option price to changes in the underlying asset price.
@@ -168,7 +168,7 @@ Theta: Represents the time decay of the option price.
 Rho: Illustrates the sensitivity of the option price to changes in the risk-free interest rate.
 
 
-3. Enhanced Black-Scholes Pricing Models
+3. **Enhanced Black-Scholes Pricing Models**
 The project extends the traditional Black-Scholes model with advanced features:
 
 Implied Volatility Calculation: A function to calculate implied volatility, an important parameter in option pricing.
@@ -176,19 +176,19 @@ Heston Model Integration: The Black-Scholes model is enhanced to incorporate equ
 4. Calibration Procedure for Heston Model
 The implementation includes a robust calibration procedure to estimate Heston model parameters based on market data. Calibration ensures that the model aligns with observed market prices, enhancing its predictive power.
 
-5. Volatility Surface Calculation
+5. **Volatility Surface Calculation**
 The program calculates the implied volatility surface using the Heston model, offering a comprehensive view of implied volatilities across various strike prices and maturities.
 
-6. Monte Carlo Simulation
+6. **Monte Carlo Simulation**
 A sophisticated Monte Carlo simulation is implemented to generate random paths for both the underlying asset price and volatility based on the Heston model. This feature adds a layer of realism to the pricing model.
 
-7. Historical Volatility Analysis
+7. **Historical Volatility Analysis**
 Functionality is incorporated to calculate historical volatility based on historical price data. This analysis provides insights into the historical behavior of the underlying asset's volatility.
 
-8. Sensitivity Analysis
+8. **Sensitivity Analysis**
 The project extends its capabilities to perform sensitivity analysis using the Heston model. Exploring the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, allows users to assess the model's sensitivity to different market conditions.
 
-9. Visualizations
+9. **Visualizations**
 To enhance user understanding, the project incorporates visualizations using plotting libraries. Users can intuitively interpret option prices, implied volatility surfaces, Greeks, and other relevant metrics.
 
 
