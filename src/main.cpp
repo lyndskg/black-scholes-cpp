@@ -8,13 +8,13 @@
 #include <limits>
 #include <iostream>
 
-#include "include/black-scholes-cpp/Program.h"
-#include "include/black-scholes-cpp/inputReader.h"
-#include "include/black-scholes-cpp/blackScholesModel.h"
-#include "include/black-scholes-cpp/optionGreeks.h"
-#include "include/black-scholes-cpp/optionGreeksModel.h"
+#include "../include/black-scholes-cpp/Program.h"
+#include "../include/black-scholes-cpp/inputReader.h"
+#include "../include/black-scholes-cpp/blackScholesModel.h"
+#include "../include/black-scholes-cpp/optionGreeks.h"
+#include "../include/black-scholes-cpp/optionGreeksModel.h"
 
-#include "xcode_redirect.hpp"
+#include "../xcode_redirect.hpp"
 
 using namespace std;
 

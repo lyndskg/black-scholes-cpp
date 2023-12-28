@@ -16,3 +16,21 @@
 
 using namespace std;
 
+// Test the default constructor of blackScholesModel
+TEST(blackScholesModelTest, DefaultConstructor) {
+// Arrange
+blackScholesModel model;
+
+// Act (no action needed for a constructor)
+
+// Assert
+EXPECT_EQ(0.0, model.getUnderlyingPrice());
+EXPECT_EQ(0.0, model.getStrikePrice());
+EXPECT_EQ(0.0, model.getRiskFreeRate());
+EXPECT_EQ(0.0, model.getTimeToExpiration());
+EXPECT_EQ(0.0, model.getVolatility());
+EXPECT_EQ(OptionType::CALL, model.getOptionType());
+}
+
+// Add more tests as needed
+
