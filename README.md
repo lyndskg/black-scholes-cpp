@@ -304,10 +304,10 @@ Going beyond the basic implementation, this project showcases an array of advanc
 > - `Docker` can be used to containerize your application, making it easy to deploy and run in different environments.
 
 ### <ins>Considerations</ins>:
-> - **Ensure Security:**
-  - If dealing with sensitive financial data, consider implementing secure coding practices and encryption.
-> - **Community Support:**
-  - Regularly check for updates and community support for the chosen technologies to ensure a sustainable and maintainable project.
+- **Ensure Security:**
+> - If dealing with sensitive financial data, consider implementing secure coding practices and encryption.
+- **Community Support:**
+> - Regularly check for updates and community support for the chosen technologies to ensure a sustainable and maintainable project.
 
 
 ---------------------
