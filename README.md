@@ -364,7 +364,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Commit the initial project structure.
 
 
-### Phase 3: Basic Implementation (Estimated Time: 30 hours)
+### <ins>Phase 3: Basic Implementation</ins> (Estimated Time: 30 hours)
 1. Implement Black-Scholes Basics (15 hours):
 - Implement the Black-Scholes formula for European options in the "src" directory.
 - Develop necessary formulas and calculations for option pricing.
@@ -376,7 +376,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Handle errors gracefully and provide meaningful error messages.
 
 
-### Phase 4: Advanced Features (Estimated Time: 40 hours)
+### <ins>Phase 4: Advanced Feature</ins> (Estimated Time: 40 hours)
 1. Option Greeks Calculation (15 hours):
 - Extend the implementation to calculate option Greeks: delta, gamma, vega, theta, and rho.
 - Ensure accurate and efficient calculations.
@@ -387,7 +387,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Develop a calibration procedure to estimate Heston model parameters based on market data.
 - Implement optimization algorithms (e.g., gradient descent) for parameter fine-tuning.
 
-### Phase 5: Additional Features (Estimated Time: 35 hours)
+### <ins>Phase 5: Additional Features</ins> (Estimated Time: 35 hours)
 1. Volatility Surface Calculation (15 hours):
 - Implement functions to calculate the implied volatility surface using the Heston model.
 - Visualize the surface using plotting libraries (e.g., Matplotlib).
@@ -398,7 +398,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Integrate functionality to calculate historical volatility based on historical price data.
 - Implement data analysis tools for insights.
 
-### Phase 6: Testing and Validation (Estimated Time: 20 hours)
+### <ins>Phase 6: Testing and Validation</ins> (Estimated Time: 20 hours)
 1. Unit Testing (10 hours):
 - Implement comprehensive unit tests for each component.
 - Use a testing framework (e.g., Google Test) to automate tests.
@@ -407,7 +407,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Compare results with known Black-Scholes and Heston model outcomes.
 
 
-### Phase 7: Documentation and Optimization (Estimated Time: 20 hours)
+### <ins>Phase 7: Documentation and Optimization</ins> (Estimated Time: 20 hours)
 1. Create README and Documentation (10 hours):
 - Document the project overview, features, and usage in the README.
 - Write detailed documentation for each feature, including examples.
@@ -418,7 +418,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Optimize the performance of the option pricing calculations.
 - Document performance improvements achieved.
 
-### Phase 8: Visualization and Finalization (Estimated Time: 15 hours)
+### <ins>Phase 8: Visualization and Finalization</ins> (Estimated Time: 15 hours)
 1. Visualizations (10 hours):
 - Enhance the project with visualizations using plotting libraries.
 - Plot option prices, implied volatility surfaces, Greeks, or other relevant metrics.
@@ -426,7 +426,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Review and finalize all project documentation.
 - Ensure consistency and completeness.
 
-### Phase 9: Share and Showcase (Estimated Time: 10 hours)
+### <ins>Phase 9: Share and Showcase</ins> (Estimated Time: 10 hours)
 
 
 &nbsp;
