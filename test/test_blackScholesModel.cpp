@@ -5,18 +5,21 @@
 //  Created by lyndskg on 7/19/23.
 //
 
+#ifndef BLACK_SCHOLES_MODEL_TESTS_H
+#define BLACK_SCHOLES_MODEL_TESTS_H
+
 #include <stdio.h>
 #include <iostream>
 #include <cassert>
 
-#include "src/blackScholesModel.h"
 #include <gtest/gtest.h>
-#include "../src/blackScholesModel/blackScholesModel.cpp"  // Include the source file you want to test
-#include "unit_test_framework.h"
+#include "../include/black-scholes-cpp/blackScholesModel.h"
+#include "../src/blackScholesModel.cpp"
 
 using namespace std;
 
-// Test the default constructor of blackScholesModel
+
+// Test the default constructor of blackScholesModel.
 TEST(blackScholesModelTest, DefaultConstructor) {
 // Arrange
 blackScholesModel model;
@@ -26,11 +29,13 @@ blackScholesModel model;
 // Assert
 EXPECT_EQ(0.0, model.getUnderlyingPrice());
 EXPECT_EQ(0.0, model.getStrikePrice());
-EXPECT_EQ(0.0, model.getRiskFreeRate());
-EXPECT_EQ(0.0, model.getTimeToExpiration());
+EXPECT_EQ(0.0, model.getRFR());
+EXPECT_EQ(0.0, model.getTTE());
 EXPECT_EQ(0.0, model.getVolatility());
-EXPECT_EQ(OptionType::CALL, model.getOptionType());
+EXPECT_EQ(blackScholesModel::OptionType::CALL, model.getOptionType());
 }
 
 // Add more tests as needed
 
+
+#endif //BLACK_SCHOLES_MODEL_TESTS_H

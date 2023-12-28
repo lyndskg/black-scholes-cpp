@@ -11,7 +11,7 @@
 #include <string>
 
 #include <curl/curl.h>
-#include "csv.h"
+#include "../csv.h"
 #include "blackScholesModel.h"
 
 using namespace std;

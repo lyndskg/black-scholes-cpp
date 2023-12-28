@@ -6,12 +6,13 @@ find_package(GTest REQUIRED)
 # Add your gtest files
 # Specify the list of source files for your Google Test executable.
 set(TEST_SOURCES
-        test_blackScholesModel.cpp
-        test_Program.cpp
-        test_inputReader.cpp
-        test_outputWriter.cpp
-        test_optionGreeks.cpp
-        test_optionGreeksModel.cpp
+        ../test/test_blackScholesModel.cpp
+        ../test/test_Program.cpp
+        ../test/test_inputReader.cpp
+        ../test/test_outputWriter.cpp
+        ../test/test_optionGreeks.cpp
+        ../test/test_optionGreeksModel.cpp
+        gtest.h
         # Add more test files if needed
 )
 

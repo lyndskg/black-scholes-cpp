@@ -9,8 +9,7 @@
 #include <iostream>
 #include <cassert>
 
-#include "inputReader.h"
-#include "unit_test_framework.h"
+#include "../include/black-scholes-cpp/inputReader.h"
 
 using namespace std;
 

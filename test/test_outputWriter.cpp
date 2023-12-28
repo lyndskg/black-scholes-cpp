@@ -9,8 +9,7 @@
 #include <iostream>
 #include <cassert>
 
-#include "outputWriter.h"
-#include "unit_test_framework.h"
+#include "../include/black-scholes-cpp/outputWriter.h"
 
 using namespace std;
 

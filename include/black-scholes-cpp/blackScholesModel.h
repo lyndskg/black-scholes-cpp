@@ -4,8 +4,8 @@
 //
 //  Created by lyndskg on 7/12/23.
 
-#ifndef blackscholesmodel_h
-#define blackscholesmodel_h
+#ifndef blackScholesModel_h
+#define blackScholesModel_h
 
 #include <stdio.h>
 #include <algorithm>
@@ -20,14 +20,14 @@ using namespace std;
 // ----------------------------------------------------------------------------
 
 class blackScholesModel {
-  // Accessible by derived/friend classes:
-  protected:
-    
-    enum OptionType {
-        CALL,
-        PUT
-    } optionType;
-    
+//  // Accessible by derived/friend classes:
+//  protected:
+//
+//    enum OptionType {
+//        CALL,
+//        PUT
+//    } optionType;
+//
 // ----------------------------------------------------------------------------
 //                  "blackScholesModel" Member Variables
 // ----------------------------------------------------------------------------
@@ -74,8 +74,17 @@ class blackScholesModel {
     
         
   public:
+    enum OptionType {
+        CALL,
+        PUT
+    } optionType;
+
     // Friend class declaration.
     friend class inputReader;
+    friend class optionGreeks;
+    friend class optionGreeksModel;
+    friend class hestonModel;
+
 /*------------------------------  CONSTRUCTORS  ------------------------------*/
     
     // Default constructor.

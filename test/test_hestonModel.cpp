@@ -10,7 +10,6 @@
 #include <cassert>
 
 #include "hestonModel.h"
-#include "unit_test_framework.h"
 
 using namespace std;
 

@@ -9,6 +9,7 @@
 #include <sstream>
 #include <stdexcept> // For exception handling
 #include <string>
+#include "../include/third_party/fast_io/include/fast_io.h"
 #include <curl/curl.h> // Example library for making HTTP requests
 // Include necessary database libraries
 

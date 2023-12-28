@@ -8,7 +8,6 @@
 #include <iostream>
 #include <cassert>
 
-#include "optionGreeksModel.h"
-#include "unit_test_framework.h"
+#include "../include/black-scholes-cpp/optionGreeksModel.h"
 
 using namespace std;
