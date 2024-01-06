@@ -478,6 +478,7 @@ Processed API responses, distilled data, informative error messages.
 > - Use `brew install googletest` to install to your device via Homebrew.
 - The `Threads` package to handle threading-related functionality.
 > - Use `brew install --cask threads` to install to your device via Homebrew.
+- Be able to build, run, and debug using `CMake` of version `3.27` or higher.
 
 &nbsp; 
 
