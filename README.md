@@ -250,9 +250,11 @@ Going beyond the basic implementation, this project showcases an array of advanc
 ### <ins>Programming Language</ins>: **C++**
 >  - `C++` remains the primary language for its efficiency and performance in numerical computations.
 
-### <ins>Build System</ins>: **CMake**
+### <ins>Build System</ins>: **`CMake` and `Ninja`**
 >  - `CMake` facilitates the building and compilation of this `C++`project.
   >  - It's widely used and supports various platforms.
+>  - `Ninja` is a small build system automation tool for `C++` and `Python`, used as an alternative for `Make`.
+>  - In conjunction with `CMake`, `Ninja` runs builds as fast as possible.
 
 ### <ins>Backend</ins>: **RESTful API (Optional):**
 > - Design a RESTful API to expose your option pricing functionalities.
