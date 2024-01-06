@@ -488,15 +488,18 @@ Processed API responses, distilled data, informative error messages.
 <a name="buildnrun"></a>
 ### Build and Run: 
 1. Clone the repository: 
-`git clone https://github.com/yourusername/black-scholes-project.git
-cd black-scholes-project`
+> - 'git clone https://github.com/yourusername/black-scholes-project.git'
+> - 'cd black-scholes-project'
 2. Build the project:
-`mkdir build && cd build
-cmake ..
-make`
+> - `cmake -Bbuild-cmake -H. -GNinja`
+> - `cd build-cmake`
 3. Run the program:
-`./black_scholes`
+> -`cmake --build .`
 4. Explore the different features and input modes provided by the program.
+5. To clean the project, access the current build directory:
+> - `pwd` (Make sure you're in `build-cmake`; if not, `cd build-cmake`)
+> - `ninja -t clean`
+> - Repeat step 3 as needed.
 
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
