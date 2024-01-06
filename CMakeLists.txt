@@ -8,6 +8,9 @@ cmake_policy(SET CMP0146 OLD)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 
+# Set GTest root directory
+set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
+
 # Project configuration
 project(black-scholes-cpp VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64")
@@ -18,12 +21,12 @@ message(STATUS "C++ Compiler Flags: ${CMAKE_CXX_FLAGS}")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Locate the Google Test library
-find_package(GTest REQUIRED)
-
-if(NOT GTest_FOUND)
-    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
-endif()
+## Locate the Google Test library
+#find_package(GTest REQUIRED)
+#
+#if(NOT GTest_FOUND)
+#    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
+#endif()
 
 # Add subdirectories
 add_subdirectory(gtest)  # Assuming Google Test is in the 'gtest' directory
@@ -46,8 +49,8 @@ target_include_directories(blackScholesLibrary
 # Set compiler features
 target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 
-# Link against Threads library (if needed)
-target_link_libraries(blackScholesLibrary PRIVATE Threads::Threads)
+## Link against Threads library (if needed)
+#target_link_libraries(blackScholesLibrary PRIVATE Threads::Threads)
 
 # Add the main executable
 add_executable(black_scholes_cpp ${SOURCES})
@@ -70,11 +73,9 @@ target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 # Link against Google Test, blackScholesLibrary, Threads, and other necessary libraries
 target_link_libraries(black_scholes_cpp
         PRIVATE
-        GTest::GTest
-        GTest::Main
+        GTest::gtest_main
         blackScholesLibrary
         curl
-        Threads::Threads
 )
 
 # Optionally, enable CTest for running tests with 'make test'

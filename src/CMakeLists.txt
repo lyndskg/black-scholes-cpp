@@ -10,9 +10,6 @@ cmake_policy(SET CMP0144 OLD)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Locate the Google Test library
-find_package(GTest REQUIRED)
-
 # Add the include directories for Google Test
 include_directories(${GTEST_INCLUDE_DIRS})
 
@@ -26,10 +23,10 @@ include_directories(src)
 add_executable(bsm main.cpp)
 
 # Link against your library and Google Test
-target_link_libraries(bsm PRIVATE GTest::GTest GTest::Main blackScholesLibrary)
+target_link_libraries(bsm PRIVATE GTest::gtest_main blackScholesLibrary)
 
 # Include directories for the main application
 target_include_directories(bsm PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/black-scholes-cpp)
 
-# Link against the Threads library (if needed)
-target_link_libraries(bsm PRIVATE Threads::Threads)
+## Link against the Threads library (if needed)
+#target_link_libraries(bsm PRIVATE Threads::Threads)

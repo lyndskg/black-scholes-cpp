@@ -20,12 +20,22 @@ if(APPLE)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
 endif()
 
-# Find and include Google Test
-find_package(GTest REQUIRED)
+include(FetchContent)
+include(GoogleTest)
 
-if(NOT GTest_FOUND)
-    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
-endif()
+# Fetch GTest
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+FetchContent_MakeAvailable(googletest)
+
+## Find and include Google Test
+#find_package(GTest REQUIRED)
+#
+#if(NOT GTest_FOUND)
+#    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
+#endif()
 
 # Add a test executable
 add_executable(black_scholes_cpp_test
@@ -45,8 +55,7 @@ target_include_directories(black_scholes_cpp_test PRIVATE ${GTEST_INCLUDE_DIRS})
 # Link against Google Test, blackScholesLibrary, and other necessary libraries
 target_link_libraries(black_scholes_cpp_test
         PRIVATE
-        GTest::GTest
-        GTest::Main
+        GTest::gtest_main
         blackScholesLibrary
         curl
 )
