@@ -474,6 +474,9 @@ Processed API responses, distilled data, informative error messages.
 `black-scholes-cpp` mandates:
 - A functional C++ compiler compatible with C++14, and
 - required libraries installed (e.g., CURL for API access, SQLite for database interactions).
+- `GoogleTest` mocking and unit-testing library installed.
+> - Use `brew install googletest` to install to your device via Homebrew.
+- The `Threads` package to handle threading-related functionality.
 
 &nbsp; 
 
