@@ -1,10 +1,10 @@
 # CMakeLists.txt for the src directory
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.26)
 
-# Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0144 OLD)
+## Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
+#cmake_policy(SET CMP0144 OLD)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)
@@ -18,6 +18,7 @@ file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
 
 # Add the include directories for the main application
 include_directories(src)
+include_directories(include/black-scholes-cpp)
 
 # Add your main application files
 add_executable(bsm main.cpp)

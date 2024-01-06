@@ -171,9 +171,9 @@ INSTANTIATE_TYPED_TEST_SUITE_P(My, FooTest, MyTypes);
 
 #endif  // 0
 
-#include "gtest/internal/gtest-internal.h"
-#include "gtest/internal/gtest-port.h"
-#include "gtest/internal/gtest-type-util.h"
+#include "internal/gtest-internal.h"
+#include "internal/gtest-port.h"
+#include "internal/gtest-type-util.h"
 
 // Implements typed tests.
 
@@ -191,8 +191,7 @@ INSTANTIATE_TYPED_TEST_SUITE_P(My, FooTest, MyTypes);
 #define TYPED_TEST_SUITE(CaseName, Types, ...)                          \
   typedef ::testing::internal::GenerateTypeList<Types>::type            \
       GTEST_TYPE_PARAMS_(CaseName);                                     \
-  typedef ::testing::internal::NameGeneratorSelector<__VA_ARGS__>::type \
-  GTEST_NAME_GENERATOR_(CaseName)
+  typedef ::tesniNERATOR_(CaseName)
 
 #define TYPED_TEST(CaseName, TestName)                                        \
   static_assert(sizeof(GTEST_STRINGIFY_(TestName)) > 1,                       \

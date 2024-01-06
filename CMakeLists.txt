@@ -1,19 +1,21 @@
 # Top-level CMakeLists.txt
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.26)
 
-# Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0146 OLD)
+## Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
+#cmake_policy(SET CMP0146 OLD)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 
-# Set GTest root directory
-set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
+## Set GTest root directory
+#set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
 
 # Project configuration
 project(black-scholes-cpp VERSION 1.0 LANGUAGES CXX)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+
+set(CMAKE_OSX_DEPLOYMENT_TARGET "13.5" CACHE STRING "Minimum macOS version")
 
 message(STATUS "C++ Compiler Flags: ${CMAKE_CXX_FLAGS}")
 

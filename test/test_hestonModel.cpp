@@ -9,7 +9,7 @@
 #include <iostream>
 #include <cassert>
 
-#include "hestonModel.h"
+#include "../include/black-scholes-cpp/hestonModel.h"
 
 using namespace std;
 

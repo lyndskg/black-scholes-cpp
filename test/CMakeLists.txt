@@ -1,10 +1,10 @@
 # CMakeLists.txt for the test directory
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.26)
 
-# Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0144 OLD)
+## Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
+#cmake_policy(SET CMP0144 OLD)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
 
