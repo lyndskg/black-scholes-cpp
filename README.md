@@ -477,6 +477,7 @@ Processed API responses, distilled data, informative error messages.
 - `GoogleTest` mocking and unit-testing library installed.
 > - Use `brew install googletest` to install to your device via Homebrew.
 - The `Threads` package to handle threading-related functionality.
+> - Use `brew install --cask threads` to install to your device via Homebrew.
 
 &nbsp; 
 
