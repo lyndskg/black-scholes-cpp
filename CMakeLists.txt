@@ -1,20 +1,46 @@
 # Top-level CMakeLists.txt
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 
 # Project configuration
 project(black-scholes-cpp VERSION 1.0 LANGUAGES CXX)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64")
+
+# Set C++ standard to 20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Download and unpack Google Test at configure time
-# (Your existing Google Test configuration)
+# Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
+cmake_policy(SET CMP0144 NEW)
 
-# Add the gtest directory
-add_subdirectory(gtest)
+# Locate the Google Test library
+find_package(GTest REQUIRED)
+
+if(NOT GTest_FOUND)
+    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
+endif()
+
+# Find and link against the Threads package
+set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
+set(THREADS_PREFER_PTHREAD_FLAG TRUE)
+find_package(Threads REQUIRED)
+
+# Add the source files for the library
+add_library(blackScholesLibrary
+        src/blackScholesModel.cpp
+        src/hestonModel.cpp
+        src/inputReader.cpp
+        src/optionGreeks.cpp
+        src/optionGreeksModel.cpp
+        src/outputWriter.cpp
+        src/Program.cpp
+        src/main.cpp
+        # Add other source files as needed
+)
 
 # Add subdirectories
+add_subdirectory(gtest)  # Assuming Google Test is in the 'gtest' directory
 add_subdirectory(src)
 add_subdirectory(test)
 
@@ -22,52 +48,23 @@ add_subdirectory(test)
 add_executable(black_scholes_cpp src/main.cpp)
 
 # Add include directories
+include_directories(${GTEST_INCLUDE_DIRS})
 include_directories(black_scholes_cpp PRIVATE include/black-scholes-cpp)
 include_directories(black_scholes_cpp PRIVATE include/third_party)
 
-# Unit tests
-add_executable(bs
-        src/blackScholesModel.cpp
-        src/Program.cpp
-        src/inputReader.cpp
-        src/outputWriter.cpp
-        src/optionGreeks.cpp
-        src/optionGreeksModel.cpp
-        src/hestonModel.cpp)
-
-
-
-# Include the 'docs' directory (for completeness, you may want to generate documentation using tools like Doxygen)
-include_directories(docs)
-
-# Add the path to the fast_io source files
-include_directories(include/third_party/fast_io)
-
-# Add the fast_io source files to your project
-set(FAST_IO_SOURCES
-        path/to/fast_io/source/file1.cpp
-        path/to/fast_io/source/file2.cpp
-        # Add more files if needed
+# Include directories for the library
+target_include_directories(blackScholesLibrary
+        PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        # Add other include directories as needed
 )
 
-# Link libraries if necessary (e.g., libcurl, OneMKL)
-target_link_libraries(black_scholes_cpp curl blackScholesLibrary gtest_main)
-# target_link_libraries(oneMKL)
+# Set compiler features
+target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 
-# Set your compiler flags
-target_compile_options(black_scholes_cpp PRIVATE -std=gnu++20 -g)
+# Link against Google Test, libblackScholesLibrary, Threads, and other necessary libraries
+target_link_libraries(black_scholes_cpp PRIVATE GTest::GTest GTest::Main blackScholesLibrary curl Threads::Threads)
 
-# Add your other targets and configurations...
-
-# Custom target for cleaning
-add_custom_target(cleanup
-        COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}
-        COMMENT "Cleaning up..."
-)
-
-# Specify the location of your header files
-target_include_directories(black_scholes_cpp PRIVATE include/black-scholes-cpp)
-
-
-target_link_libraries(bs gtest_main)
-add_test(NAME bs_test COMMAND bs)
+# Optionally, enable CTest for running tests with 'make test'
+enable_testing()
+add_test(NAME black_scholes_cpp_test COMMAND black_scholes_cpp)

@@ -12,6 +12,7 @@ set(TEST_SOURCES
         ../test/test_outputWriter.cpp
         ../test/test_optionGreeks.cpp
         ../test/test_optionGreeksModel.cpp
+        ../test/gtest_main.cpp
         gtest.h
         # Add more test files if needed
 )
@@ -32,9 +33,14 @@ enable_testing()
 # Define a test with the name 'run_tests_gtest' that runs the 'run_tests_gtest' executable.
 add_test(NAME run_tests_gtest COMMAND run_tests_gtest)
 
+add_executable(blackScholesModelTest ${TEST_SOURCES})
+
+add_test(NAME blackScholesModelTest COMMAND DefaultConstructor)
+
 # Optionally, enable CTest for running tests with 'make test'
 # Include the GoogleTest module for integration with CTest.
 include(GoogleTest)
 
 # Discover tests using Google Test.
 gtest_discover_tests(run_tests_gtest)
+gtest_discover_tests(blackScholesModelTest)
