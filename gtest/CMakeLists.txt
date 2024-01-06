@@ -1,7 +1,7 @@
 # gtest/CMakeLists.txt
 
 # Locate the Google Test library
-find_package(GTest REQUIRED)
+#find_package(GTest REQUIRED)
 
 # Add your gtest files
 # Specify the list of source files for your Google Test executable.

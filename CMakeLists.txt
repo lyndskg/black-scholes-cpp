@@ -13,20 +13,27 @@ message(STATUS "C++ Compiler Flags: ${CMAKE_CXX_FLAGS}")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+
+FetchContent_MakeAvailable(googletest)
+
+# Set GTest root directory
 set(GTEST_ROOT gtest)
 
 # Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-#cmake_policy(SET CMP0144 NEW)
+cmake_policy(SET CMP0144 NEW)
 
-# Find and link against the Threads package
-find_package(Threads REQUIRED)
+## Locate the Google Test library
+#find_package(GTest REQUIRED)
 
-# Locate the Google Test library
-find_package(GTest REQUIRED)
+#if(NOT GTest_FOUND)
+#    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
+#endif()
 
-if(NOT GTest_FOUND)
-    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
-endif()
 
 # Add the source files for the library
 add_library(blackScholesLibrary
@@ -46,8 +53,14 @@ add_subdirectory(gtest)  # Assuming Google Test is in the 'gtest' directory
 add_subdirectory(src)
 add_subdirectory(test)
 
+# Collect source files
+file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
+
+# Optionally, enable CTest for running tests with 'make test'
+enable_testing()
+
 # Add the main executable
-add_executable(black_scholes_cpp src/main.cpp)
+add_executable(black_scholes_cpp ${SOURCES})
 
 # Add include directories
 include_directories(${GTEST_INCLUDE_DIRS})
@@ -65,10 +78,20 @@ target_include_directories(blackScholesLibrary
 target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 
 # Link against Google Test, blackScholesLibrary, Threads, and other necessary libraries
-target_link_libraries(black_scholes_cpp PRIVATE GTest::GTest GTest::Main blackScholesLibrary curl Threads::Threads)
+target_link_libraries(black_scholes_cpp
+        PRIVATE
+        GTest::GTest
+        GTest::Main
+        GTest::gtest_main
+        blackScholesLibrary
+        curl
+        Threads::Threads
+)
 
-# Optionally, enable CTest for running tests with 'make test'
-enable_testing()
+include(GoogleTest)
+
+gtest_discover_tests(black_scholes_cpp)
+
 add_test(NAME black_scholes_cpp_test COMMAND black_scholes_cpp)
 
 # Custom target for cleaning
