@@ -10,6 +10,9 @@ cmake_minimum_required(VERSION 3.26)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+include (${BSM_ROOT}/project-defaults.cmake)
+
 # Add the include directories for Google Test
 include_directories(${GTEST_INCLUDE_DIRS})
 
