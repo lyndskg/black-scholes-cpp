@@ -3,7 +3,19 @@
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.26)
 
-set(GTEST_ROOT gtest)
+# Set GTest root directory
+set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
+
+# assume built-in pthreads on MacOS
+IF(APPLE)
+    set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+    set(CMAKE_HAVE_THREADS_LIBRARY 1)
+    set(CMAKE_USE_WIN32_THREADS_INIT 0)
+    set(CMAKE_USE_PTHREADS_INIT 1)
+    set(THREADS_PREFER_PTHREAD_FLAG ON)
+ENDIF()
+
+find_package(Threads REQUIRED)
 
 # Find and include Google Test
 find_package(GTest REQUIRED)
@@ -14,14 +26,14 @@ endif()
 
 # Add a test executable
 add_executable(black_scholes_cpp_test
-        test/test_blackScholesModel.cpp
-        test/test_Program.cpp
-        test/test_inputReader.cpp
-        test/test_outputWriter.cpp
-        test/test_optionGreeks.cpp
-        test/test_optionGreeksModel.cpp
-        test/test_hestonModel.cpp
-        test/gtest_main.cpp
+        test_blackScholesModel.cpp
+        test_Program.cpp
+        test_inputReader.cpp
+        test_outputWriter.cpp
+        test_optionGreeks.cpp
+        test_optionGreeksModel.cpp
+        test_hestonModel.cpp
+        gtest_main.cpp
 )
 
 # Include directories for the test executable

@@ -1,5 +1,8 @@
 # gtest/CMakeLists.txt
 
+# Set GTest root directory
+set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
+
 # Locate the Google Test library
 #find_package(GTest REQUIRED)
 

@@ -21,32 +21,15 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-# Set GTest root directory
-set(GTEST_ROOT gtest)
-
 # Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0144 NEW)
+cmake_policy(SET CMP0146 NEW)
 
-## Locate the Google Test library
-#find_package(GTest REQUIRED)
+# Locate the Google Test library
+find_package(GTest REQUIRED)
 
-#if(NOT GTest_FOUND)
-#    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
-#endif()
-
-
-# Add the source files for the library
-add_library(blackScholesLibrary
-        src/blackScholesModel.cpp
-        src/hestonModel.cpp
-        src/inputReader.cpp
-        src/optionGreeks.cpp
-        src/optionGreeksModel.cpp
-        src/outputWriter.cpp
-        src/Program.cpp
-        src/main.cpp
-        # Add other source files as needed
-)
+if(NOT GTest_FOUND)
+    message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
+endif()
 
 # Add subdirectories
 add_subdirectory(gtest)  # Assuming Google Test is in the 'gtest' directory
@@ -56,16 +39,11 @@ add_subdirectory(test)
 # Collect source files
 file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
 
-# Optionally, enable CTest for running tests with 'make test'
-enable_testing()
-
-# Add the main executable
-add_executable(black_scholes_cpp ${SOURCES})
-
-# Add include directories
-include_directories(${GTEST_INCLUDE_DIRS})
-include_directories(black_scholes_cpp PRIVATE include/black-scholes-cpp)
-include_directories(black_scholes_cpp PRIVATE include/third_party)
+# Add the source files for the library
+add_library(blackScholesLibrary
+        ${SOURCES}
+        # Add other source files as needed
+)
 
 # Include directories for the library
 target_include_directories(blackScholesLibrary
@@ -77,6 +55,19 @@ target_include_directories(blackScholesLibrary
 # Set compiler features
 target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 
+# Add the main executable
+add_executable(black_scholes_cpp ${SOURCES})
+
+#  Add include directories for the main executable
+target_include_directories(black_scholes_cpp
+        PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${GTEST_INCLUDE_DIRS}
+        include/black-scholes-cpp
+        include/third_party
+        # Add other include directories as needed
+)
+
 # Link against Google Test, blackScholesLibrary, Threads, and other necessary libraries
 target_link_libraries(black_scholes_cpp
         PRIVATE
@@ -87,6 +78,9 @@ target_link_libraries(black_scholes_cpp
         curl
         Threads::Threads
 )
+
+# Optionally, enable CTest for running tests with 'make test'
+enable_testing()
 
 include(GoogleTest)
 
