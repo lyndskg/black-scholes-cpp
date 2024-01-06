@@ -3,6 +3,9 @@
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.26)
 
+# Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
+cmake_policy(SET CMP0144 OLD)
+
 # Project configuration
 project(black-scholes-cpp VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64")
@@ -12,17 +15,6 @@ message(STATUS "C++ Compiler Flags: ${CMAKE_CXX_FLAGS}")
 # Set C++ standard to 20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-include(FetchContent)
-FetchContent_Declare(
-        googletest
-        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
-)
-
-FetchContent_MakeAvailable(googletest)
-
-# Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0146 NEW)
 
 # Locate the Google Test library
 find_package(GTest REQUIRED)
@@ -40,10 +32,28 @@ add_subdirectory(test)
 file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
 
 # Add the source files for the library
-add_library(blackScholesLibrary
-        ${SOURCES}
-        # Add other source files as needed
+add_library(blackScholesLibrary ${SOURCES})
+
+# Add include directories for the library
+target_include_directories(blackScholesLibrary
+        PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        # Add other include directories as needed
 )
+
+# Set compiler features
+target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
+
+# Link against Threads library (if needed)
+target_link_libraries(blackScholesLibrary PRIVATE Threads::Threads)
+
+# Add the main executable
+add_executable(black_scholes_cpp ${SOURCES})
+
+# Add include directories
+include_directories(${GTEST_INCLUDE_DIRS})
+include_directories(black_scholes_cpp PRIVATE include/black-scholes-cpp)
+include_directories(black_scholes_cpp PRIVATE include/third_party)
 
 # Include directories for the library
 target_include_directories(blackScholesLibrary
@@ -55,25 +65,11 @@ target_include_directories(blackScholesLibrary
 # Set compiler features
 target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 
-# Add the main executable
-add_executable(black_scholes_cpp ${SOURCES})
-
-#  Add include directories for the main executable
-target_include_directories(black_scholes_cpp
-        PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${GTEST_INCLUDE_DIRS}
-        include/black-scholes-cpp
-        include/third_party
-        # Add other include directories as needed
-)
-
 # Link against Google Test, blackScholesLibrary, Threads, and other necessary libraries
 target_link_libraries(black_scholes_cpp
         PRIVATE
         GTest::GTest
         GTest::Main
-        GTest::gtest_main
         blackScholesLibrary
         curl
         Threads::Threads
@@ -81,7 +77,6 @@ target_link_libraries(black_scholes_cpp
 
 # Optionally, enable CTest for running tests with 'make test'
 enable_testing()
-
 include(GoogleTest)
 
 gtest_discover_tests(black_scholes_cpp)
