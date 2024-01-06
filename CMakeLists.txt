@@ -1,18 +1,26 @@
 # Top-level CMakeLists.txt
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.26)
 
 # Project configuration
 project(black-scholes-cpp VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=x86-64")
 
+message(STATUS "C++ Compiler Flags: ${CMAKE_CXX_FLAGS}")
+
 # Set C++ standard to 20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(GTEST_ROOT gtest)
+
 # Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0144 NEW)
+#cmake_policy(SET CMP0144 NEW)
+
+# Find and link against the Threads package
+set(THREADS_PREFER_PTHREAD_FLAG TRUE)
+find_package(Threads REQUIRED)
 
 # Locate the Google Test library
 find_package(GTest REQUIRED)
@@ -20,11 +28,6 @@ find_package(GTest REQUIRED)
 if(NOT GTest_FOUND)
     message(FATAL_ERROR "Google Test not found. Please make sure it is installed.")
 endif()
-
-# Find and link against the Threads package
-set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
-set(THREADS_PREFER_PTHREAD_FLAG TRUE)
-find_package(Threads REQUIRED)
 
 # Add the source files for the library
 add_library(blackScholesLibrary
