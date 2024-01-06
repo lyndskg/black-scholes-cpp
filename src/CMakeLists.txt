@@ -1,7 +1,7 @@
 # CMakeLists.txt for the src directory
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.27)
 
 # Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
 cmake_policy(SET CMP0144 OLD)

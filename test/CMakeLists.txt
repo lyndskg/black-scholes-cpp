@@ -1,13 +1,15 @@
 # CMakeLists.txt for the test directory
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.27)
 
 # Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
 cmake_policy(SET CMP0144 OLD)
 
-# Set GTest root directory
-set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
+set(CMAKE_VERBOSE_MAKEFILE on)
+
+## Set GTest root directory
+#set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
 
 # assume built-in pthreads on MacOS
 if(APPLE)

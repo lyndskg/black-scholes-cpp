@@ -1,10 +1,12 @@
 # Top-level CMakeLists.txt
 
 # Set the minimum required version of CMake
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.27)
 
 # Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-cmake_policy(SET CMP0144 OLD)
+cmake_policy(SET CMP0146 OLD)
+
+set(CMAKE_VERBOSE_MAKEFILE on)
 
 # Project configuration
 project(black-scholes-cpp VERSION 1.0 LANGUAGES CXX)
