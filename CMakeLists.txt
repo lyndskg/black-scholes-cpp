@@ -19,7 +19,6 @@ set(GTEST_ROOT gtest)
 #cmake_policy(SET CMP0144 NEW)
 
 # Find and link against the Threads package
-set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 find_package(Threads REQUIRED)
 
 # Locate the Google Test library
@@ -65,9 +64,15 @@ target_include_directories(blackScholesLibrary
 # Set compiler features
 target_compile_features(blackScholesLibrary PUBLIC cxx_std_20)
 
-# Link against Google Test, libblackScholesLibrary, Threads, and other necessary libraries
+# Link against Google Test, blackScholesLibrary, Threads, and other necessary libraries
 target_link_libraries(black_scholes_cpp PRIVATE GTest::GTest GTest::Main blackScholesLibrary curl Threads::Threads)
 
 # Optionally, enable CTest for running tests with 'make test'
 enable_testing()
 add_test(NAME black_scholes_cpp_test COMMAND black_scholes_cpp)
+
+# Custom target for cleaning
+add_custom_target(cleanup
+        COMMAND ${CMAKE_COMMAND} -P ${CMAKE_SOURCE_DIR}/cleanup.cmake
+        COMMENT "Cleaning build artifacts"
+)
