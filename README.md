@@ -476,9 +476,12 @@ Processed API responses, distilled data, informative error messages.
 - required libraries installed (e.g., CURL for API access, SQLite for database interactions),
 - `GoogleTest` mocking and unit-testing library installed,
 > - Use `brew install googletest` to install to your device via Homebrew.
-- the `Threads` package to handle threading-related functionality, and 
+- the `Threads` package to handle threading-related functionality, 
 > - Use `brew install --cask threads` to install to your device via Homebrew.
-- the ability to build, run, and debug using `CMake` of version `3.26` or higher.
+- the ability to build, run, and debug using `CMake` of version `3.26` or higher, and
+- the `Ninja` build system.
+> - Via Homebrew, install with the following command: `brew install ninja`.
+
 
 &nbsp; 
 
