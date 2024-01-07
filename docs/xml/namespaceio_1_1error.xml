@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespaceio_1_1error" kind="namespace" language="C++">
+    <compoundname>io::error</compoundname>
+    <innerclass refid="structio_1_1error_1_1base" prot="public">io::error::base</innerclass>
+    <innerclass refid="structio_1_1error_1_1can__not__open__file" prot="public">io::error::can_not_open_file</innerclass>
+    <innerclass refid="structio_1_1error_1_1duplicated__column__in__header" prot="public">io::error::duplicated_column_in_header</innerclass>
+    <innerclass refid="structio_1_1error_1_1escaped__string__not__closed" prot="public">io::error::escaped_string_not_closed</innerclass>
+    <innerclass refid="structio_1_1error_1_1extra__column__in__header" prot="public">io::error::extra_column_in_header</innerclass>
+    <innerclass refid="structio_1_1error_1_1header__missing" prot="public">io::error::header_missing</innerclass>
+    <innerclass refid="structio_1_1error_1_1integer__must__be__positive" prot="public">io::error::integer_must_be_positive</innerclass>
+    <innerclass refid="structio_1_1error_1_1integer__overflow" prot="public">io::error::integer_overflow</innerclass>
+    <innerclass refid="structio_1_1error_1_1integer__underflow" prot="public">io::error::integer_underflow</innerclass>
+    <innerclass refid="structio_1_1error_1_1invalid__single__character" prot="public">io::error::invalid_single_character</innerclass>
+    <innerclass refid="structio_1_1error_1_1line__length__limit__exceeded" prot="public">io::error::line_length_limit_exceeded</innerclass>
+    <innerclass refid="structio_1_1error_1_1missing__column__in__header" prot="public">io::error::missing_column_in_header</innerclass>
+    <innerclass refid="structio_1_1error_1_1no__digit" prot="public">io::error::no_digit</innerclass>
+    <innerclass refid="structio_1_1error_1_1too__few__columns" prot="public">io::error::too_few_columns</innerclass>
+    <innerclass refid="structio_1_1error_1_1too__many__columns" prot="public">io::error::too_many_columns</innerclass>
+    <innerclass refid="structio_1_1error_1_1with__column__content" prot="public">io::error::with_column_content</innerclass>
+    <innerclass refid="structio_1_1error_1_1with__column__name" prot="public">io::error::with_column_name</innerclass>
+    <innerclass refid="structio_1_1error_1_1with__errno" prot="public">io::error::with_errno</innerclass>
+    <innerclass refid="structio_1_1error_1_1with__file__line" prot="public">io::error::with_file_line</innerclass>
+    <innerclass refid="structio_1_1error_1_1with__file__name" prot="public">io::error::with_file_name</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceio_1_1error_1ac757e93a049ae7a5f23e522933de68e4" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int io::error::max_file_name_length</definition>
+        <argsstring></argsstring>
+        <name>max_file_name_length</name>
+        <qualifiedname>io::error::max_file_name_length</qualifiedname>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="71" column="11" bodyfile="include/black-scholes-cpp/csv.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceio_1_1error_1ae17181bae477fe72ddad096b6b1d6963" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int io::error::max_column_name_length</definition>
+        <argsstring></argsstring>
+        <name>max_column_name_length</name>
+        <qualifiedname>io::error::max_column_name_length</qualifiedname>
+        <initializer>= 63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="480" column="11" bodyfile="include/black-scholes-cpp/csv.h" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceio_1_1error_1a5a641f4f0837f4c94416e05461a62749" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int io::error::max_column_content_length</definition>
+        <argsstring></argsstring>
+        <name>max_column_content_length</name>
+        <qualifiedname>io::error::max_column_content_length</qualifiedname>
+        <initializer>= 63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="498" column="11" bodyfile="include/black-scholes-cpp/csv.h" bodystart="498" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="58" column="1"/>
+  </compounddef>
+</doxygen>

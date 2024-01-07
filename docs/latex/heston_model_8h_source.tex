@@ -1,0 +1,139 @@
+\doxysection{heston\+Model.\+h}
+\hypertarget{heston_model_8h_source}{}\label{heston_model_8h_source}\index{include/black-\/scholes-\/cpp/hestonModel.h@{include/black-\/scholes-\/cpp/hestonModel.h}}
+\mbox{\hyperlink{heston_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00002}00002\ \textcolor{comment}{//\ \ hestonModel.h}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00003}00003\ \textcolor{comment}{//\ \ black-\/scholes}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00005}00005\ \textcolor{comment}{//\ \ Created\ by\ lyndskg\ on\ 7/18/23.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ hestonModel\_h}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ hestonModel\_h}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{black_scholes_model_8h}{blackScholesModel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{option_greeks_model_8h}{optionGreeksModel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00017}00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00019}\mbox{\hyperlink{classheston_model}{00019}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classheston_model}{hestonModel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classoption_greeks_model}{optionGreeksModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00020}00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00021}00021\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}hestonModel"{}\ Class\ Declarations}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00023}00023\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00024}00024\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ CONSTRUCTORS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00025}\mbox{\hyperlink{classheston_model_af576f47dec82f7194857eb9c6a6a9a88}{00025}}\ \ \ \ \ \mbox{\hyperlink{classheston_model_af576f47dec82f7194857eb9c6a6a9a88}{hestonModel}}();}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00027}\mbox{\hyperlink{classheston_model_a31db3ecf3a964f0c5e76ff67c07f9d94}{00027}}\ \ \ \ \ \mbox{\hyperlink{classheston_model_a31db3ecf3a964f0c5e76ff67c07f9d94}{hestonModel}}(\textcolor{keywordtype}{double}\ underlyingPrice,\ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ riskFreeRate,}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timeToExpiration,\ \textcolor{keywordtype}{double}\ volatility,\ \textcolor{keywordtype}{double}\ V0,\ \textcolor{keywordtype}{double}\ kappa,}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ theta,\ \textcolor{keywordtype}{double}\ sigma,\ \textcolor{keywordtype}{double}\ rho,\ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{OptionType}}\ \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{optionType}});}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00030}00030\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00031}00031\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ KEY\ MEMBER\ FUNCTIONS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00032}00032\ \ \ \ \ \textcolor{comment}{/*\ Calculates\ the\ option\ price\ using\ the\ Heston\ model\ with\ stochastic\ volatility.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00033}00033\ \textcolor{comment}{\ \ \ \ \ \ \ It\ uses\ Euler\ discretization\ to\ approximate\ the\ variance\ process\ over\ time,}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \ \ \ and\ then\ calculates\ the\ option\ price\ based\ on\ the\ type\ of\ option\ (call\ or\ put)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ \ \ using\ the\ Black-\/Scholes\ formula\ with\ Heston\ volatility.*/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(num\_time\_steps)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00039}\mbox{\hyperlink{classheston_model_a1cf0105c384f0230a5be772448fdf172}{00039}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classheston_model_a1cf0105c384f0230a5be772448fdf172}{calculateOptionPrice}}();}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Function\ to\ generate\ a\ random\ number\ from\ a\ standard\ normal\ distribution}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00043}\mbox{\hyperlink{classheston_model_aef167d9d379654a8beb14ec6d203ac6f}{00043}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classheston_model_aef167d9d379654a8beb14ec6d203ac6f}{random\_normal}}();}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00046}00046\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ SETTER\ METHODS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00047}00047\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ V0.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00052}\mbox{\hyperlink{classheston_model_a2e6d404ef03d52e122e352c34888c6b8}{00052}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheston_model_a2e6d404ef03d52e122e352c34888c6b8}{setV0}}(\textcolor{keywordtype}{double}\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00053}00053\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ Kappa.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00059}\mbox{\hyperlink{classheston_model_a4848db442646d130eeae9ff724f12d56}{00059}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheston_model_a4848db442646d130eeae9ff724f12d56}{setKappa}}(\textcolor{keywordtype}{double}\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00060}00060\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00061}00061\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ Theta.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00066}\mbox{\hyperlink{classheston_model_a059a9012dbfd78f8f5cf69f8f8671566}{00066}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheston_model_a059a9012dbfd78f8f5cf69f8f8671566}{setTheta}}(\textcolor{keywordtype}{double}\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00067}00067\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ Sigma.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00073}\mbox{\hyperlink{classheston_model_a53771dbb5446a1a27d17f57d539f7028}{00073}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheston_model_a53771dbb5446a1a27d17f57d539f7028}{setSigma}}(\textcolor{keywordtype}{double}\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ Rho.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00079}00079\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00080}\mbox{\hyperlink{classheston_model_a7233e135813c494198e82379faa83e78}{00080}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheston_model_a7233e135813c494198e82379faa83e78}{setRho}}(\textcolor{keywordtype}{double}\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00082}00082\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00083}00083\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ GETTER\ METHODS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ V0.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00088}\mbox{\hyperlink{classheston_model_a4aa2b67ec78abe52c97a3c5150b008c0}{00088}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classheston_model_a4aa2b67ec78abe52c97a3c5150b008c0}{getV0}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00089}00089\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00090}00090\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ Kappa.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00095}\mbox{\hyperlink{classheston_model_ada21e2a6dd28261f2e9cb17068c5113f}{00095}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classheston_model_ada21e2a6dd28261f2e9cb17068c5113f}{getKappa}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00096}00096\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00097}00097\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ Theta.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00099}00099\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00100}00100\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00101}00101\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00102}\mbox{\hyperlink{classheston_model_ae11bc5e5a97b552a252e12ed5c565cd2}{00102}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classheston_model_ae11bc5e5a97b552a252e12ed5c565cd2}{getTheta}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00103}00103\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00104}00104\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ Sigma.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00106}00106\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00108}00108\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00109}\mbox{\hyperlink{classheston_model_abb30b0203ab3b41fe7d955325b3f72de}{00109}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classheston_model_abb30b0203ab3b41fe7d955325b3f72de}{getSigma}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00110}00110\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00111}00111\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ Rho.}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00116}\mbox{\hyperlink{classheston_model_ac8fb9ee4760d8b4af669c03d20b9874c}{00116}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classheston_model_ac8fb9ee4760d8b4af669c03d20b9874c}{getRho}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00118}00118\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00119}00119\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00120}00120\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}hestonModel"{}\ Member\ Variables}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00121}00121\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//\ Heston\ Model\ Parameters}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00123}00123\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ V0\_;\ \ \ \ \textcolor{comment}{//\ Initial\ volatility}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00124}00124\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ kappa\_;\ \textcolor{comment}{//\ Mean\ reversion\ speed}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00125}00125\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ theta\_;\ \textcolor{comment}{//\ Long-\/term\ mean\ volatility}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00126}00126\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ sigma\_;\ \textcolor{comment}{//\ Volatility\ of\ volatility}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ rho\_;\ \ \ \textcolor{comment}{//\ Correlation\ between\ asset\ price\ and\ volatility}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00128}00128\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00129}00129\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ num\_time\_steps\ =\ 252;\ \textcolor{comment}{//\ Number\ of\ time\ steps\ (assuming\ daily\ time\ steps)}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00131}00131\ \};\ \textcolor{comment}{//\ class\ hestonModel}}
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{heston_model_8h_source_l00133}00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ hestonModel\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

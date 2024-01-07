@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1throw__on__overflow" kind="struct" language="C++" prot="public">
+    <compoundname>io::throw_on_overflow</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1throw__on__overflow_1a0a59c1dc2ead1a9275c62885ec7545d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void io::throw_on_overflow::on_overflow</definition>
+        <argsstring>(T &amp;)</argsstring>
+        <name>on_overflow</name>
+        <qualifiedname>io::throw_on_overflow::on_overflow</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="758" column="27" bodyfile="include/black-scholes-cpp/csv.h" bodystart="758" bodyend="760"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1throw__on__overflow_1a2ae91b1ae3d655c16f7e6a7e9a1abd92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void io::throw_on_overflow::on_underflow</definition>
+        <argsstring>(T &amp;)</argsstring>
+        <name>on_underflow</name>
+        <qualifiedname>io::throw_on_overflow::on_underflow</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="762" column="27" bodyfile="include/black-scholes-cpp/csv.h" bodystart="762" bodyend="764"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="757" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="757" bodyend="765"/>
+    <listofallmembers>
+      <member refid="structio_1_1throw__on__overflow_1a0a59c1dc2ead1a9275c62885ec7545d2" prot="public" virt="non-virtual"><scope>io::throw_on_overflow</scope><name>on_overflow</name></member>
+      <member refid="structio_1_1throw__on__overflow_1a2ae91b1ae3d655c16f7e6a7e9a1abd92" prot="public" virt="non-virtual"><scope>io::throw_on_overflow</scope><name>on_underflow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

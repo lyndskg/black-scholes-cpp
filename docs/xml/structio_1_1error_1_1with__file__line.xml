@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1error_1_1with__file__line" kind="struct" language="C++" prot="public">
+    <compoundname>io::error::with_file_line</compoundname>
+    <derivedcompoundref refid="structio_1_1error_1_1escaped__string__not__closed" prot="public" virt="non-virtual">io::error::escaped_string_not_closed</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1integer__must__be__positive" prot="public" virt="non-virtual">io::error::integer_must_be_positive</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1integer__overflow" prot="public" virt="non-virtual">io::error::integer_overflow</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1integer__underflow" prot="public" virt="non-virtual">io::error::integer_underflow</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1invalid__single__character" prot="public" virt="non-virtual">io::error::invalid_single_character</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1line__length__limit__exceeded" prot="public" virt="non-virtual">io::error::line_length_limit_exceeded</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1no__digit" prot="public" virt="non-virtual">io::error::no_digit</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1too__few__columns" prot="public" virt="non-virtual">io::error::too_few_columns</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1too__many__columns" prot="public" virt="non-virtual">io::error::too_many_columns</derivedcompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structio_1_1error_1_1with__file__line_1a391298c37172bcdb83aeb3daf65d5a0e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int io::error::with_file_line::file_line</definition>
+        <argsstring></argsstring>
+        <name>file_line</name>
+        <qualifiedname>io::error::with_file_line::file_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="95" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structio_1_1error_1_1with__file__line_1a742ad5e6a169a7972c908f606a28ab4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::error::with_file_line::with_file_line</definition>
+        <argsstring>()</argsstring>
+        <name>with_file_line</name>
+        <qualifiedname>io::error::with_file_line::with_file_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="91" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1error_1_1with__file__line_1aa92778a81778abc676ec6ee9952bba8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::error::with_file_line::set_file_line</definition>
+        <argsstring>(int file_line)</argsstring>
+        <name>set_file_line</name>
+        <qualifiedname>io::error::with_file_line::set_file_line</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>file_line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="93" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::error::escaped_string_not_closed</label>
+        <link refid="structio_1_1error_1_1escaped__string__not__closed"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>io::error::integer_must_be_positive</label>
+        <link refid="structio_1_1error_1_1integer__must__be__positive"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>io::error::integer_overflow</label>
+        <link refid="structio_1_1error_1_1integer__overflow"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>io::error::integer_underflow</label>
+        <link refid="structio_1_1error_1_1integer__underflow"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io::error::invalid_single_character</label>
+        <link refid="structio_1_1error_1_1invalid__single__character"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>io::error::line_length_limit_exceeded</label>
+        <link refid="structio_1_1error_1_1line__length__limit__exceeded"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>io::error::no_digit</label>
+        <link refid="structio_1_1error_1_1no__digit"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>io::error::too_few_columns</label>
+        <link refid="structio_1_1error_1_1too__few__columns"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>io::error::too_many_columns</label>
+        <link refid="structio_1_1error_1_1too__many__columns"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>io::error::with_file_line</label>
+        <link refid="structio_1_1error_1_1with__file__line"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/black-scholes-cpp/csv.h" line="90" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="90" bodyend="96"/>
+    <listofallmembers>
+      <member refid="structio_1_1error_1_1with__file__line_1a391298c37172bcdb83aeb3daf65d5a0e" prot="public" virt="non-virtual"><scope>io::error::with_file_line</scope><name>file_line</name></member>
+      <member refid="structio_1_1error_1_1with__file__line_1aa92778a81778abc676ec6ee9952bba8c" prot="public" virt="non-virtual"><scope>io::error::with_file_line</scope><name>set_file_line</name></member>
+      <member refid="structio_1_1error_1_1with__file__line_1a742ad5e6a169a7972c908f606a28ab4e" prot="public" virt="non-virtual"><scope>io::error::with_file_line</scope><name>with_file_line</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

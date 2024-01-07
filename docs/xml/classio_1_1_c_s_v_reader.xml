@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1_c_s_v_reader" kind="class" language="C++" prot="public">
+    <compoundname>io::CSVReader</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <templateparamlist>
+      <param>
+        <type>unsigned</type>
+        <declname>column_count</declname>
+        <defname>column_count</defname>
+      </param>
+      <param>
+        <type>class trim_policy</type>
+        <defval><ref refid="structio_1_1trim__chars" kindref="compound">trim_chars</ref>&lt;&apos; &apos;, &apos;\t&apos;&gt;</defval>
+      </param>
+      <param>
+        <type>class quote_policy</type>
+        <defval><ref refid="structio_1_1no__quote__escape" kindref="compound">no_quote_escape</ref>&lt;&apos;,&apos;&gt;</defval>
+      </param>
+      <param>
+        <type>class overflow_policy</type>
+        <defval><ref refid="structio_1_1throw__on__overflow" kindref="compound">throw_on_overflow</ref></defval>
+      </param>
+      <param>
+        <type>class comment_policy</type>
+        <defval><ref refid="structio_1_1no__comment" kindref="compound">no_comment</ref></defval>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1_c_s_v_reader_1a26da3892b5c4606617d9daadc0886501" prot="private" static="no" mutable="no">
+        <type><ref refid="classio_1_1_line_reader" kindref="compound">LineReader</ref></type>
+        <definition>LineReader io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <qualifiedname>io::CSVReader::in</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1056" column="14" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1056" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_c_s_v_reader_1a48ab5773a4295f7969453838b4115e42" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::row[column_count]</definition>
+        <argsstring>[column_count]</argsstring>
+        <name>row</name>
+        <qualifiedname>io::CSVReader::row</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1058" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1058" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_c_s_v_reader_1a7b97f929cea543f83e61173ea435fdde" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::column_names[column_count]</definition>
+        <argsstring>[column_count]</argsstring>
+        <name>column_names</name>
+        <qualifiedname>io::CSVReader::column_names</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1059" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1059" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_c_s_v_reader_1a1a59e51b74c2d6056821a5e499379884" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::col_order</definition>
+        <argsstring></argsstring>
+        <name>col_order</name>
+        <qualifiedname>io::CSVReader::col_order</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1061" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1061" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1adbd58540654a862bc63868448349835f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>ColNames</declname>
+            <defname>ColNames</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::set_column_names</definition>
+        <argsstring>(std::string s, ColNames... cols)</argsstring>
+        <name>set_column_names</name>
+        <qualifiedname>io::CSVReader::set_column_names</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>ColNames...</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1064" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1064" bodyend="1067"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a48a56e02ae597ae3506e1b24dc0718ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::set_column_names</definition>
+        <argsstring>()</argsstring>
+        <name>set_column_names</name>
+        <qualifiedname>io::CSVReader::set_column_names</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1069" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1069" bodyend="1069"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1ada16395fbaedad5fcda248b50cd12da0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::parse_helper</definition>
+        <argsstring>(std::size_t)</argsstring>
+        <name>parse_helper</name>
+        <qualifiedname>io::CSVReader::parse_helper</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1147" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1147" bodyend="1147"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a97a2554085ff4258c023b5f8b224b5c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>ColType</declname>
+            <defname>ColType</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::parse_helper</definition>
+        <argsstring>(std::size_t r, T &amp;t, ColType &amp;... cols)</argsstring>
+        <name>parse_helper</name>
+        <qualifiedname>io::CSVReader::parse_helper</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>ColType &amp;...</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1150" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1150" bodyend="1165"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1abb95a0607cd9a32231daf62f8fc841ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::CSVReader</definition>
+        <argsstring>()=delete</argsstring>
+        <name>CSVReader</name>
+        <qualifiedname>io::CSVReader::CSVReader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1072" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a0507ac5abe201969a15df76795e13c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::CSVReader</definition>
+        <argsstring>(const CSVReader &amp;)=delete</argsstring>
+        <name>CSVReader</name>
+        <qualifiedname>io::CSVReader::CSVReader</qualifiedname>
+        <param>
+          <type>const <ref refid="classio_1_1_c_s_v_reader" kindref="compound">CSVReader</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1073" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a251282b8a9cdf6a2f8e4be8215ca1d27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classio_1_1_c_s_v_reader" kindref="compound">CSVReader</ref> &amp;</type>
+        <definition>CSVReader &amp; io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::operator=</definition>
+        <argsstring>(const CSVReader &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>io::CSVReader::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classio_1_1_c_s_v_reader" kindref="compound">CSVReader</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1074" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1adc9a15ffb046bfa61407d5b12ed0204c" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::CSVReader</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>CSVReader</name>
+        <qualifiedname>io::CSVReader::CSVReader</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1077" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1077" bodyend="1084"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a6be5e639c82112332fe527525ff4319a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::next_line</definition>
+        <argsstring>()</argsstring>
+        <name>next_line</name>
+        <qualifiedname>io::CSVReader::next_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1086" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1086" bodyend="1086"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1ac5ece4c73a35ce331cdd27e98587beda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>ColNames</declname>
+            <defname>ColNames</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::read_header</definition>
+        <argsstring>(ignore_column ignore_policy, ColNames... cols)</argsstring>
+        <name>read_header</name>
+        <qualifiedname>io::CSVReader::read_header</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1aa04154e5c37e292c5acc7533d28a9da7" kindref="member">ignore_column</ref></type>
+          <declname>ignore_policy</declname>
+        </param>
+        <param>
+          <type>ColNames...</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1089" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1089" bodyend="1110"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a78f8b6d773e1e07c5c1c078b75ba4eae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>ColNames</declname>
+            <defname>ColNames</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::set_header</definition>
+        <argsstring>(ColNames... cols)</argsstring>
+        <name>set_header</name>
+        <qualifiedname>io::CSVReader::set_header</qualifiedname>
+        <param>
+          <type>ColNames...</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1112" column="20" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1112" bodyend="1122"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1aaba91fff6faea12e451943e8d32a5a17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::has_column</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>has_column</name>
+        <qualifiedname>io::CSVReader::has_column</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1124" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1124" bodyend="1130"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a4096c1e43a4fba2b4f5ae21d047b5fbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::set_file_name</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>set_file_name</name>
+        <qualifiedname>io::CSVReader::set_file_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1132" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1132" bodyend="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a5f1dc083a8fa8661f5ecdcf6aebc7b24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::set_file_name</definition>
+        <argsstring>(const char *file_name)</argsstring>
+        <name>set_file_name</name>
+        <qualifiedname>io::CSVReader::set_file_name</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1136" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1136" bodyend="1136"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a40f4b2d96c12a1f3985a9cfb1c5a5eaa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::get_truncated_file_name</definition>
+        <argsstring>() const</argsstring>
+        <name>get_truncated_file_name</name>
+        <qualifiedname>io::CSVReader::get_truncated_file_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1138" column="14" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1138" bodyend="1140"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a1303bd6a2eb0d3d7c743212e52839ac4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::set_file_line</definition>
+        <argsstring>(unsigned file_line)</argsstring>
+        <name>set_file_line</name>
+        <qualifiedname>io::CSVReader::set_file_line</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>file_line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1142" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1142" bodyend="1142"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a065f805596018d1568b81152e6a22e0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::get_file_line</definition>
+        <argsstring>() const</argsstring>
+        <name>get_file_line</name>
+        <qualifiedname>io::CSVReader::get_file_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1144" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1144" bodyend="1144"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_c_s_v_reader_1a5ca6e99a0c31b29b8d0fd14c9ec70ea3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>ColType</declname>
+            <defname>ColType</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool io::CSVReader&lt; column_count, trim_policy, quote_policy, overflow_policy, comment_policy &gt;::read_row</definition>
+        <argsstring>(ColType &amp;... cols)</argsstring>
+        <name>read_row</name>
+        <qualifiedname>io::CSVReader::read_row</qualifiedname>
+        <param>
+          <type>ColType &amp;...</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1168" column="20" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1168" bodyend="1196"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="1054" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1054" bodyend="1197"/>
+    <listofallmembers>
+      <member refid="classio_1_1_c_s_v_reader_1a1a59e51b74c2d6056821a5e499379884" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>col_order</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a7b97f929cea543f83e61173ea435fdde" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>column_names</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1abb95a0607cd9a32231daf62f8fc841ab" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>CSVReader</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a0507ac5abe201969a15df76795e13c28" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>CSVReader</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1adc9a15ffb046bfa61407d5b12ed0204c" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>CSVReader</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a065f805596018d1568b81152e6a22e0c" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>get_file_line</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a40f4b2d96c12a1f3985a9cfb1c5a5eaa" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>get_truncated_file_name</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1aaba91fff6faea12e451943e8d32a5a17" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>has_column</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a26da3892b5c4606617d9daadc0886501" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>in</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a6be5e639c82112332fe527525ff4319a" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>next_line</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a251282b8a9cdf6a2f8e4be8215ca1d27" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>operator=</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1ada16395fbaedad5fcda248b50cd12da0" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>parse_helper</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a97a2554085ff4258c023b5f8b224b5c8" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>parse_helper</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1ac5ece4c73a35ce331cdd27e98587beda" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>read_header</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a5ca6e99a0c31b29b8d0fd14c9ec70ea3" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>read_row</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a48ab5773a4295f7969453838b4115e42" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>row</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1adbd58540654a862bc63868448349835f" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>set_column_names</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a48a56e02ae597ae3506e1b24dc0718ef" prot="private" virt="non-virtual"><scope>io::CSVReader</scope><name>set_column_names</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a1303bd6a2eb0d3d7c743212e52839ac4" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>set_file_line</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a4096c1e43a4fba2b4f5ae21d047b5fbc" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>set_file_name</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a5f1dc083a8fa8661f5ecdcf6aebc7b24" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>set_file_name</name></member>
+      <member refid="classio_1_1_c_s_v_reader_1a78f8b6d773e1e07c5c1c078b75ba4eae" prot="public" virt="non-virtual"><scope>io::CSVReader</scope><name>set_header</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

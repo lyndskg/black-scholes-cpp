@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1set__to__max__on__overflow" kind="struct" language="C++" prot="public">
+    <compoundname>io::set_to_max_on_overflow</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1set__to__max__on__overflow_1a770dee97a1ee55131163e6be8d4c0d9d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void io::set_to_max_on_overflow::on_overflow</definition>
+        <argsstring>(T &amp;x)</argsstring>
+        <name>on_overflow</name>
+        <qualifiedname>io::set_to_max_on_overflow::on_overflow</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="774" column="27" bodyfile="include/black-scholes-cpp/csv.h" bodystart="774" bodyend="779"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1set__to__max__on__overflow_1a812d316e2b23247df19ca83bfda90a59" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void io::set_to_max_on_overflow::on_underflow</definition>
+        <argsstring>(T &amp;x)</argsstring>
+        <name>on_underflow</name>
+        <qualifiedname>io::set_to_max_on_overflow::on_underflow</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="781" column="27" bodyfile="include/black-scholes-cpp/csv.h" bodystart="781" bodyend="783"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="773" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="773" bodyend="784"/>
+    <listofallmembers>
+      <member refid="structio_1_1set__to__max__on__overflow_1a770dee97a1ee55131163e6be8d4c0d9d" prot="public" virt="non-virtual"><scope>io::set_to_max_on_overflow</scope><name>on_overflow</name></member>
+      <member refid="structio_1_1set__to__max__on__overflow_1a812d316e2b23247df19ca83bfda90a59" prot="public" virt="non-virtual"><scope>io::set_to_max_on_overflow</scope><name>on_underflow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

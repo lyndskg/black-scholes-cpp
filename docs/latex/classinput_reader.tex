@@ -1,0 +1,75 @@
+\doxysection{input\+Reader Class Reference}
+\hypertarget{classinput_reader}{}\label{classinput_reader}\index{inputReader@{inputReader}}
+
+
+{\ttfamily \#include $<$input\+Reader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classinput_reader_a7c08c020024d761cbd33faca52fef7eb}{input\+Reader}} ()
+\item 
+bool \mbox{\hyperlink{classinput_reader_af254599e961a8ae1331735a621feac4f}{read\+Input\+From\+User}} (\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&model)
+\item 
+void \mbox{\hyperlink{classinput_reader_a14c0a5756f45060f15028b9e256b41ea}{read\+Input\+From\+File}} (\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&model, const string \&filename)
+\item 
+void \mbox{\hyperlink{classinput_reader_a290a42eeb5358f9b68f39d178b5948d0}{read\+Input\+From\+DB}} (\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&model)
+\item 
+void \mbox{\hyperlink{classinput_reader_a5d2940b07624435be940383f14bd599b}{read\+Input\+From\+API}} (\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&model)
+\item 
+bool \mbox{\hyperlink{classinput_reader_a5c95dd0db596a5179ab0272001d02b01}{validate\+And\+Set\+Input\+Values}} (\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&model, double underlying\+Price, double strike\+Price, double time\+To\+Expiration, double risk\+Free\+Rate, double volatility, const string \&option\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{input_reader_8h_source_l00025}{25}} of file \mbox{\hyperlink{input_reader_8h_source}{input\+Reader.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classinput_reader_a7c08c020024d761cbd33faca52fef7eb}\label{classinput_reader_a7c08c020024d761cbd33faca52fef7eb} 
+\index{inputReader@{inputReader}!inputReader@{inputReader}}
+\index{inputReader@{inputReader}!inputReader@{inputReader}}
+\doxysubsubsection{\texorpdfstring{inputReader()}{inputReader()}}
+{\footnotesize\ttfamily input\+Reader\+::input\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinput_reader_a5d2940b07624435be940383f14bd599b}\label{classinput_reader_a5d2940b07624435be940383f14bd599b} 
+\index{inputReader@{inputReader}!readInputFromAPI@{readInputFromAPI}}
+\index{readInputFromAPI@{readInputFromAPI}!inputReader@{inputReader}}
+\doxysubsubsection{\texorpdfstring{readInputFromAPI()}{readInputFromAPI()}}
+{\footnotesize\ttfamily void input\+Reader\+::read\+Input\+From\+API (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&}]{model }\end{DoxyParamCaption})}
+
+\Hypertarget{classinput_reader_a290a42eeb5358f9b68f39d178b5948d0}\label{classinput_reader_a290a42eeb5358f9b68f39d178b5948d0} 
+\index{inputReader@{inputReader}!readInputFromDB@{readInputFromDB}}
+\index{readInputFromDB@{readInputFromDB}!inputReader@{inputReader}}
+\doxysubsubsection{\texorpdfstring{readInputFromDB()}{readInputFromDB()}}
+{\footnotesize\ttfamily void input\+Reader\+::read\+Input\+From\+DB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&}]{model }\end{DoxyParamCaption})}
+
+\Hypertarget{classinput_reader_a14c0a5756f45060f15028b9e256b41ea}\label{classinput_reader_a14c0a5756f45060f15028b9e256b41ea} 
+\index{inputReader@{inputReader}!readInputFromFile@{readInputFromFile}}
+\index{readInputFromFile@{readInputFromFile}!inputReader@{inputReader}}
+\doxysubsubsection{\texorpdfstring{readInputFromFile()}{readInputFromFile()}}
+{\footnotesize\ttfamily void input\+Reader\+::read\+Input\+From\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&}]{model,  }\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+\Hypertarget{classinput_reader_af254599e961a8ae1331735a621feac4f}\label{classinput_reader_af254599e961a8ae1331735a621feac4f} 
+\index{inputReader@{inputReader}!readInputFromUser@{readInputFromUser}}
+\index{readInputFromUser@{readInputFromUser}!inputReader@{inputReader}}
+\doxysubsubsection{\texorpdfstring{readInputFromUser()}{readInputFromUser()}}
+{\footnotesize\ttfamily bool input\+Reader\+::read\+Input\+From\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&}]{model }\end{DoxyParamCaption})}
+
+\Hypertarget{classinput_reader_a5c95dd0db596a5179ab0272001d02b01}\label{classinput_reader_a5c95dd0db596a5179ab0272001d02b01} 
+\index{inputReader@{inputReader}!validateAndSetInputValues@{validateAndSetInputValues}}
+\index{validateAndSetInputValues@{validateAndSetInputValues}!inputReader@{inputReader}}
+\doxysubsubsection{\texorpdfstring{validateAndSetInputValues()}{validateAndSetInputValues()}}
+{\footnotesize\ttfamily bool input\+Reader\+::validate\+And\+Set\+Input\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}} \&}]{model,  }\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Expiration,  }\item[{double}]{risk\+Free\+Rate,  }\item[{double}]{volatility,  }\item[{const string \&}]{option\+Type }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/black-\/scholes-\/cpp/\mbox{\hyperlink{input_reader_8h}{input\+Reader.\+h}}\end{DoxyCompactItemize}

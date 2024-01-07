@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1detail_1_1_asynchronous_reader" kind="class" language="C++" prot="public">
+    <compoundname>io::detail::AsynchronousReader</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a6fd9551f8df07ec6a9ce32f8f33b362d" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;ByteSourceBase&gt; io::detail::AsynchronousReader::byte_source</definition>
+        <argsstring></argsstring>
+        <name>byte_source</name>
+        <qualifiedname>io::detail::AsynchronousReader::byte_source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="251" column="19" bodyfile="include/black-scholes-cpp/csv.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a729cf01cc703a42b6010dd5bec4a14f2" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread io::detail::AsynchronousReader::worker</definition>
+        <argsstring></argsstring>
+        <name>worker</name>
+        <qualifiedname>io::detail::AsynchronousReader::worker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="253" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a63031e519f616e839031529872bfa164" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">bool</ref></type>
+        <definition>bool io::detail::AsynchronousReader::termination_requested</definition>
+        <argsstring></argsstring>
+        <name>termination_requested</name>
+        <qualifiedname>io::detail::AsynchronousReader::termination_requested</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="255" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a6cb2b4a80454dc3b459a378693423a78" prot="private" static="no" mutable="no">
+        <type>std::exception_ptr</type>
+        <definition>std::exception_ptr io::detail::AsynchronousReader::read_error</definition>
+        <argsstring></argsstring>
+        <name>read_error</name>
+        <qualifiedname>io::detail::AsynchronousReader::read_error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="256" column="22" bodyfile="include/black-scholes-cpp/csv.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a1b755d751a33453ddaff7974bed29434" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+        <definition>char* io::detail::AsynchronousReader::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>io::detail::AsynchronousReader::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="257" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a9bde5d9c5268af659cbb623bea6715fe" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::AsynchronousReader::desired_byte_count</definition>
+        <argsstring></argsstring>
+        <name>desired_byte_count</name>
+        <qualifiedname>io::detail::AsynchronousReader::desired_byte_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="258" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1ab7aa18093deb7ae67f1c0a699dd4ef93" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::AsynchronousReader::read_byte_count</definition>
+        <argsstring></argsstring>
+        <name>read_byte_count</name>
+        <qualifiedname>io::detail::AsynchronousReader::read_byte_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="259" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a4fdba0a72e02dd5168b540795acac35e" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex io::detail::AsynchronousReader::lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <qualifiedname>io::detail::AsynchronousReader::lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="261" column="14" bodyfile="include/black-scholes-cpp/csv.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1a1ad4bce56a87bb95bae7a21f927c8db0" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable io::detail::AsynchronousReader::read_finished_condition</definition>
+        <argsstring></argsstring>
+        <name>read_finished_condition</name>
+        <qualifiedname>io::detail::AsynchronousReader::read_finished_condition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="262" column="27" bodyfile="include/black-scholes-cpp/csv.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_asynchronous_reader_1aaa5c6c774868149377cde2f8857d223d" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable io::detail::AsynchronousReader::read_requested_condition</definition>
+        <argsstring></argsstring>
+        <name>read_requested_condition</name>
+        <qualifiedname>io::detail::AsynchronousReader::read_requested_condition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="263" column="27" bodyfile="include/black-scholes-cpp/csv.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1detail_1_1_asynchronous_reader_1a6ef8780dae9b0b24b78d64934bc7a652" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::AsynchronousReader::init</definition>
+        <argsstring>(std::unique_ptr&lt; ByteSourceBase &gt; arg_byte_source)</argsstring>
+        <name>init</name>
+        <qualifiedname>io::detail::AsynchronousReader::init</qualifiedname>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+          <declname>arg_byte_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="191" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="191" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_asynchronous_reader_1ab6b6f8483008208fc3f529f94c7125e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">bool</ref></type>
+        <definition>bool io::detail::AsynchronousReader::is_valid</definition>
+        <argsstring>() const</argsstring>
+        <name>is_valid</name>
+        <qualifiedname>io::detail::AsynchronousReader::is_valid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="219" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="219" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_asynchronous_reader_1a9818851dbb994042d0d84183220e71c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::AsynchronousReader::start_read</definition>
+        <argsstring>(char *arg_buffer, int arg_desired_byte_count)</argsstring>
+        <name>start_read</name>
+        <qualifiedname>io::detail::AsynchronousReader::start_read</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>arg_buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+          <declname>arg_desired_byte_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="221" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="221" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_asynchronous_reader_1a94520530423e9bfeb04c23ea4e3a8786" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::AsynchronousReader::finish_read</definition>
+        <argsstring>()</argsstring>
+        <name>finish_read</name>
+        <qualifiedname>io::detail::AsynchronousReader::finish_read</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="229" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="229" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_asynchronous_reader_1a284dd807219eb954c35de4379822c02b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::AsynchronousReader::~AsynchronousReader</definition>
+        <argsstring>()</argsstring>
+        <name>~AsynchronousReader</name>
+        <qualifiedname>io::detail::AsynchronousReader::~AsynchronousReader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="239" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="239" bodyend="248"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="189" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="189" bodyend="264"/>
+    <listofallmembers>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a1b755d751a33453ddaff7974bed29434" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>buffer</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a6fd9551f8df07ec6a9ce32f8f33b362d" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>byte_source</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a9bde5d9c5268af659cbb623bea6715fe" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>desired_byte_count</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a94520530423e9bfeb04c23ea4e3a8786" prot="public" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>finish_read</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a6ef8780dae9b0b24b78d64934bc7a652" prot="public" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>init</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1ab6b6f8483008208fc3f529f94c7125e2" prot="public" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>is_valid</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a4fdba0a72e02dd5168b540795acac35e" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>lock</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1ab7aa18093deb7ae67f1c0a699dd4ef93" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>read_byte_count</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a6cb2b4a80454dc3b459a378693423a78" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>read_error</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a1ad4bce56a87bb95bae7a21f927c8db0" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>read_finished_condition</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1aaa5c6c774868149377cde2f8857d223d" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>read_requested_condition</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a9818851dbb994042d0d84183220e71c6" prot="public" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>start_read</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a63031e519f616e839031529872bfa164" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>termination_requested</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a729cf01cc703a42b6010dd5bec4a14f2" prot="private" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>worker</name></member>
+      <member refid="classio_1_1detail_1_1_asynchronous_reader_1a284dd807219eb954c35de4379822c02b" prot="public" virt="non-virtual"><scope>io::detail::AsynchronousReader</scope><name>~AsynchronousReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1_byte_source_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>io::ByteSourceBase</compoundname>
+    <derivedcompoundref refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source" prot="public" virt="non-virtual">io::detail::NonOwningIStreamByteSource</derivedcompoundref>
+    <derivedcompoundref refid="classio_1_1detail_1_1_non_owning_string_byte_source" prot="public" virt="non-virtual">io::detail::NonOwningStringByteSource</derivedcompoundref>
+    <derivedcompoundref refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base" prot="public" virt="non-virtual">io::detail::OwningStdIOByteSourceBase</derivedcompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1_byte_source_base_1a9598bcc869b79e44da07f0e6fa478615" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int io::ByteSourceBase::read</definition>
+        <argsstring>(char *buffer, int size)=0</argsstring>
+        <name>read</name>
+        <qualifiedname>io::ByteSourceBase::read</qualifiedname>
+        <reimplementedby refid="classio_1_1detail_1_1_non_owning_string_byte_source_1aba194be7e3a141f40d683db483a620bb">read</reimplementedby>
+        <reimplementedby refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a9269e7bfd07ebf2fa3518912fe7bebd0">read</reimplementedby>
+        <reimplementedby refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1ac7b1968c8314896d7ec0ebb97fdda30d">read</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="130" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_byte_source_base_1ac3228fe608b3268e49c2243d668d6efd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual io::ByteSourceBase::~ByteSourceBase</definition>
+        <argsstring>()</argsstring>
+        <name>~ByteSourceBase</name>
+        <qualifiedname>io::ByteSourceBase::~ByteSourceBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="131" column="11" bodyfile="include/black-scholes-cpp/csv.h" bodystart="131" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="2">
+        <label>io::detail::NonOwningIStreamByteSource</label>
+        <link refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>io::detail::NonOwningStringByteSource</label>
+        <link refid="classio_1_1detail_1_1_non_owning_string_byte_source"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>io::detail::OwningStdIOByteSourceBase</label>
+        <link refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/black-scholes-cpp/csv.h" line="128" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="128" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classio_1_1_byte_source_base_1a9598bcc869b79e44da07f0e6fa478615" prot="public" virt="pure-virtual"><scope>io::ByteSourceBase</scope><name>read</name></member>
+      <member refid="classio_1_1_byte_source_base_1ac3228fe608b3268e49c2243d668d6efd" prot="public" virt="virtual"><scope>io::ByteSourceBase</scope><name>~ByteSourceBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

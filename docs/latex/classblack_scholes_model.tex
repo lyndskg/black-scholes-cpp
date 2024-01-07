@@ -1,0 +1,315 @@
+\doxysection{black\+Scholes\+Model Class Reference}
+\hypertarget{classblack_scholes_model}{}\label{classblack_scholes_model}\index{blackScholesModel@{blackScholesModel}}
+
+
+{\ttfamily \#include $<$black\+Scholes\+Model.\+h$>$}
+
+Inheritance diagram for black\+Scholes\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classblack_scholes_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \{ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2}{CALL}}
+, \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0}{PUT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classblack_scholes_model_a7ddde3a422329fb1b20097aa78a2a510}{black\+Scholes\+Model}} ()
+\item 
+\mbox{\hyperlink{classblack_scholes_model_a9c2c473eaa2587a35119a4a50cf1b864}{black\+Scholes\+Model}} (double underlying\+Price, double strike\+Price, double time\+To\+Expiration, double risk\+Free\+Rate, double volatility)
+\item 
+\mbox{\hyperlink{classblack_scholes_model_adfa7fcdd443de8093f24c58866ec6ac7}{black\+Scholes\+Model}} (double underlying\+Price, double strike\+Price, double risk\+Free\+Rate, double time\+To\+Expiration, double volatility, \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{option\+Type}})
+\item 
+double \mbox{\hyperlink{classblack_scholes_model_a9608f80ab67eb8bcd96a5f53276c1762}{calculate\+Option\+Price}} ()
+\item 
+double \mbox{\hyperlink{classblack_scholes_model_a892ddce4b71241e8f027173686f34461}{normal\+CDF}} (double d) const
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a0981dfe03d4c4b44e3c1c2c5ce725a99}{set\+Underlying\+Price}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a560fa41b7e2ada19e5291fd02b9caf3e}{set\+Strike\+Price}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a973a8d1b689ee0bf23771672bd9774ac}{set\+TTE}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_adf70d018da40647100dfaff53fc2bd71}{set\+RFR}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a206cb165b1004ac80295f68b8f6ceee4}{set\+Volatility}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_ac2c755b853cf654df449095d8a82e684}{set\+Option\+Type}} (const \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_af93fef5df405832b852d15b11dbf7b3b}{set\+D1}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a3f38248c5395e90a3cb3f3e142c48f5f}{set\+D2}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a0cc11862cf9fae0bcaba5efb0082663b}{setK}} (const double \&value) const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a985c48c0222f31022c1c1f54050b73d5}{get\+Underlying\+Price}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a26226bc311b5a1eab9afb89a2b86824d}{get\+Strike\+Price}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_acce910bfd40831f839ea4d56c0f206ea}{get\+TTE}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_aa3df25dd7f6455b06f73435a55cc238c}{get\+RFR}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_aced3096a6015e3eb86d089636eaed7a2}{get\+Volatility}} () const
+\item 
+\mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \mbox{\hyperlink{classblack_scholes_model_a3a0e83fe7e08584ccaeffcbdf8dd2ba1}{get\+Option\+Type}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_ab6b804f0bf84f2609df992a379ac5340}{get\+D1}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a4d513ab31082c7e62a35b45aba2e5d39}{get\+D2}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a3f1b0604aa2613c6551371f33c836eb4}{getK}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{black\+Scholes\+Model\+::\+Option\+Type}} \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{option\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classblack_scholes_model_ad12265fab63fd4a253d35cf7254ed385}{input\+Reader}}
+\item 
+class \mbox{\hyperlink{classblack_scholes_model_a349acbb553dc2325ffea941b6f5945c1}{option\+Greeks}}
+\item 
+class \mbox{\hyperlink{classblack_scholes_model_aa4510b288e2670fef8432a2800116b24}{option\+Greeks\+Model}}
+\item 
+class \mbox{\hyperlink{classblack_scholes_model_a39aadfab3c4288b4b13a1364d9006b5c}{heston\+Model}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{black_scholes_model_8h_source_l00022}{22}} of file \mbox{\hyperlink{black_scholes_model_8h_source}{black\+Scholes\+Model.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}\label{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2} 
+\index{blackScholesModel@{blackScholesModel}!OptionType@{OptionType}}
+\index{OptionType@{OptionType}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{OptionType}{OptionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{black\+Scholes\+Model\+::\+Option\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CALL@{CALL}!blackScholesModel@{blackScholesModel}}\index{blackScholesModel@{blackScholesModel}!CALL@{CALL}}}\Hypertarget{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2}\label{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2} 
+CALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PUT@{PUT}!blackScholesModel@{blackScholesModel}}\index{blackScholesModel@{blackScholesModel}!PUT@{PUT}}}\Hypertarget{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0}\label{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0} 
+PUT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{black_scholes_model_8h_source_l00077}{77}} of file \mbox{\hyperlink{black_scholes_model_8h_source}{black\+Scholes\+Model.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classblack_scholes_model_a7ddde3a422329fb1b20097aa78a2a510}\label{classblack_scholes_model_a7ddde3a422329fb1b20097aa78a2a510} 
+\index{blackScholesModel@{blackScholesModel}!blackScholesModel@{blackScholesModel}}
+\index{blackScholesModel@{blackScholesModel}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{blackScholesModel()}{blackScholesModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily black\+Scholes\+Model\+::black\+Scholes\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_a9c2c473eaa2587a35119a4a50cf1b864}\label{classblack_scholes_model_a9c2c473eaa2587a35119a4a50cf1b864} 
+\index{blackScholesModel@{blackScholesModel}!blackScholesModel@{blackScholesModel}}
+\index{blackScholesModel@{blackScholesModel}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{blackScholesModel()}{blackScholesModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily black\+Scholes\+Model\+::black\+Scholes\+Model (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Expiration,  }\item[{double}]{risk\+Free\+Rate,  }\item[{double}]{volatility }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_adfa7fcdd443de8093f24c58866ec6ac7}\label{classblack_scholes_model_adfa7fcdd443de8093f24c58866ec6ac7} 
+\index{blackScholesModel@{blackScholesModel}!blackScholesModel@{blackScholesModel}}
+\index{blackScholesModel@{blackScholesModel}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{blackScholesModel()}{blackScholesModel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily black\+Scholes\+Model\+::black\+Scholes\+Model (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{risk\+Free\+Rate,  }\item[{double}]{time\+To\+Expiration,  }\item[{double}]{volatility,  }\item[{\mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}}}]{option\+Type }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classblack_scholes_model_a9608f80ab67eb8bcd96a5f53276c1762}\label{classblack_scholes_model_a9608f80ab67eb8bcd96a5f53276c1762} 
+\index{blackScholesModel@{blackScholesModel}!calculateOptionPrice@{calculateOptionPrice}}
+\index{calculateOptionPrice@{calculateOptionPrice}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{calculateOptionPrice()}{calculateOptionPrice()}}
+{\footnotesize\ttfamily double black\+Scholes\+Model\+::calculate\+Option\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_ab6b804f0bf84f2609df992a379ac5340}\label{classblack_scholes_model_ab6b804f0bf84f2609df992a379ac5340} 
+\index{blackScholesModel@{blackScholesModel}!getD1@{getD1}}
+\index{getD1@{getD1}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getD1()}{getD1()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+D1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a4d513ab31082c7e62a35b45aba2e5d39}\label{classblack_scholes_model_a4d513ab31082c7e62a35b45aba2e5d39} 
+\index{blackScholesModel@{blackScholesModel}!getD2@{getD2}}
+\index{getD2@{getD2}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getD2()}{getD2()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+D2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a3f1b0604aa2613c6551371f33c836eb4}\label{classblack_scholes_model_a3f1b0604aa2613c6551371f33c836eb4} 
+\index{blackScholesModel@{blackScholesModel}!getK@{getK}}
+\index{getK@{getK}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getK()}{getK()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::getK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a3a0e83fe7e08584ccaeffcbdf8dd2ba1}\label{classblack_scholes_model_a3a0e83fe7e08584ccaeffcbdf8dd2ba1} 
+\index{blackScholesModel@{blackScholesModel}!getOptionType@{getOptionType}}
+\index{getOptionType@{getOptionType}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getOptionType()}{getOptionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} black\+Scholes\+Model\+::get\+Option\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_aa3df25dd7f6455b06f73435a55cc238c}\label{classblack_scholes_model_aa3df25dd7f6455b06f73435a55cc238c} 
+\index{blackScholesModel@{blackScholesModel}!getRFR@{getRFR}}
+\index{getRFR@{getRFR}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getRFR()}{getRFR()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+RFR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a26226bc311b5a1eab9afb89a2b86824d}\label{classblack_scholes_model_a26226bc311b5a1eab9afb89a2b86824d} 
+\index{blackScholesModel@{blackScholesModel}!getStrikePrice@{getStrikePrice}}
+\index{getStrikePrice@{getStrikePrice}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getStrikePrice()}{getStrikePrice()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+Strike\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_acce910bfd40831f839ea4d56c0f206ea}\label{classblack_scholes_model_acce910bfd40831f839ea4d56c0f206ea} 
+\index{blackScholesModel@{blackScholesModel}!getTTE@{getTTE}}
+\index{getTTE@{getTTE}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getTTE()}{getTTE()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+TTE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a985c48c0222f31022c1c1f54050b73d5}\label{classblack_scholes_model_a985c48c0222f31022c1c1f54050b73d5} 
+\index{blackScholesModel@{blackScholesModel}!getUnderlyingPrice@{getUnderlyingPrice}}
+\index{getUnderlyingPrice@{getUnderlyingPrice}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getUnderlyingPrice()}{getUnderlyingPrice()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+Underlying\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_aced3096a6015e3eb86d089636eaed7a2}\label{classblack_scholes_model_aced3096a6015e3eb86d089636eaed7a2} 
+\index{blackScholesModel@{blackScholesModel}!getVolatility@{getVolatility}}
+\index{getVolatility@{getVolatility}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{getVolatility()}{getVolatility()}}
+{\footnotesize\ttfamily const double \& black\+Scholes\+Model\+::get\+Volatility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a892ddce4b71241e8f027173686f34461}\label{classblack_scholes_model_a892ddce4b71241e8f027173686f34461} 
+\index{blackScholesModel@{blackScholesModel}!normalCDF@{normalCDF}}
+\index{normalCDF@{normalCDF}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{normalCDF()}{normalCDF()}}
+{\footnotesize\ttfamily double black\+Scholes\+Model\+::normal\+CDF (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_af93fef5df405832b852d15b11dbf7b3b}\label{classblack_scholes_model_af93fef5df405832b852d15b11dbf7b3b} 
+\index{blackScholesModel@{blackScholesModel}!setD1@{setD1}}
+\index{setD1@{setD1}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setD1()}{setD1()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+D1 (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a3f38248c5395e90a3cb3f3e142c48f5f}\label{classblack_scholes_model_a3f38248c5395e90a3cb3f3e142c48f5f} 
+\index{blackScholesModel@{blackScholesModel}!setD2@{setD2}}
+\index{setD2@{setD2}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setD2()}{setD2()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+D2 (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_a0cc11862cf9fae0bcaba5efb0082663b}\label{classblack_scholes_model_a0cc11862cf9fae0bcaba5efb0082663b} 
+\index{blackScholesModel@{blackScholesModel}!setK@{setK}}
+\index{setK@{setK}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setK()}{setK()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::setK (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classblack_scholes_model_ac2c755b853cf654df449095d8a82e684}\label{classblack_scholes_model_ac2c755b853cf654df449095d8a82e684} 
+\index{blackScholesModel@{blackScholesModel}!setOptionType@{setOptionType}}
+\index{setOptionType@{setOptionType}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setOptionType()}{setOptionType()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+Option\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \&}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_adf70d018da40647100dfaff53fc2bd71}\label{classblack_scholes_model_adf70d018da40647100dfaff53fc2bd71} 
+\index{blackScholesModel@{blackScholesModel}!setRFR@{setRFR}}
+\index{setRFR@{setRFR}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setRFR()}{setRFR()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+RFR (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_a560fa41b7e2ada19e5291fd02b9caf3e}\label{classblack_scholes_model_a560fa41b7e2ada19e5291fd02b9caf3e} 
+\index{blackScholesModel@{blackScholesModel}!setStrikePrice@{setStrikePrice}}
+\index{setStrikePrice@{setStrikePrice}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setStrikePrice()}{setStrikePrice()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+Strike\+Price (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_a973a8d1b689ee0bf23771672bd9774ac}\label{classblack_scholes_model_a973a8d1b689ee0bf23771672bd9774ac} 
+\index{blackScholesModel@{blackScholesModel}!setTTE@{setTTE}}
+\index{setTTE@{setTTE}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setTTE()}{setTTE()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+TTE (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_a0981dfe03d4c4b44e3c1c2c5ce725a99}\label{classblack_scholes_model_a0981dfe03d4c4b44e3c1c2c5ce725a99} 
+\index{blackScholesModel@{blackScholesModel}!setUnderlyingPrice@{setUnderlyingPrice}}
+\index{setUnderlyingPrice@{setUnderlyingPrice}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setUnderlyingPrice()}{setUnderlyingPrice()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+Underlying\+Price (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+\Hypertarget{classblack_scholes_model_a206cb165b1004ac80295f68b8f6ceee4}\label{classblack_scholes_model_a206cb165b1004ac80295f68b8f6ceee4} 
+\index{blackScholesModel@{blackScholesModel}!setVolatility@{setVolatility}}
+\index{setVolatility@{setVolatility}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{setVolatility()}{setVolatility()}}
+{\footnotesize\ttfamily void black\+Scholes\+Model\+::set\+Volatility (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classblack_scholes_model_a39aadfab3c4288b4b13a1364d9006b5c}\label{classblack_scholes_model_a39aadfab3c4288b4b13a1364d9006b5c} 
+\index{blackScholesModel@{blackScholesModel}!hestonModel@{hestonModel}}
+\index{hestonModel@{hestonModel}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{hestonModel}{hestonModel}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classheston_model}{heston\+Model}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{black_scholes_model_8h_source_l00086}{86}} of file \mbox{\hyperlink{black_scholes_model_8h_source}{black\+Scholes\+Model.\+h}}.
+
+\Hypertarget{classblack_scholes_model_ad12265fab63fd4a253d35cf7254ed385}\label{classblack_scholes_model_ad12265fab63fd4a253d35cf7254ed385} 
+\index{blackScholesModel@{blackScholesModel}!inputReader@{inputReader}}
+\index{inputReader@{inputReader}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{inputReader}{inputReader}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classinput_reader}{input\+Reader}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{black_scholes_model_8h_source_l00083}{83}} of file \mbox{\hyperlink{black_scholes_model_8h_source}{black\+Scholes\+Model.\+h}}.
+
+\Hypertarget{classblack_scholes_model_a349acbb553dc2325ffea941b6f5945c1}\label{classblack_scholes_model_a349acbb553dc2325ffea941b6f5945c1} 
+\index{blackScholesModel@{blackScholesModel}!optionGreeks@{optionGreeks}}
+\index{optionGreeks@{optionGreeks}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{optionGreeks}{optionGreeks}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classoption_greeks}{option\+Greeks}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{black_scholes_model_8h_source_l00084}{84}} of file \mbox{\hyperlink{black_scholes_model_8h_source}{black\+Scholes\+Model.\+h}}.
+
+\Hypertarget{classblack_scholes_model_aa4510b288e2670fef8432a2800116b24}\label{classblack_scholes_model_aa4510b288e2670fef8432a2800116b24} 
+\index{blackScholesModel@{blackScholesModel}!optionGreeksModel@{optionGreeksModel}}
+\index{optionGreeksModel@{optionGreeksModel}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{optionGreeksModel}{optionGreeksModel}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classoption_greeks_model}{option\+Greeks\+Model}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{black_scholes_model_8h_source_l00085}{85}} of file \mbox{\hyperlink{black_scholes_model_8h_source}{black\+Scholes\+Model.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}\label{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8} 
+\index{blackScholesModel@{blackScholesModel}!optionType@{optionType}}
+\index{optionType@{optionType}!blackScholesModel@{blackScholesModel}}
+\doxysubsubsection{\texorpdfstring{optionType}{optionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{black\+Scholes\+Model\+::\+Option\+Type}} black\+Scholes\+Model\+::option\+Type}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/black-\/scholes-\/cpp/\mbox{\hyperlink{black_scholes_model_8h}{black\+Scholes\+Model.\+h}}\end{DoxyCompactItemize}

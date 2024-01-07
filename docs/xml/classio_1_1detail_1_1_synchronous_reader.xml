@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1detail_1_1_synchronous_reader" kind="class" language="C++" prot="public">
+    <compoundname>io::detail::SynchronousReader</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1detail_1_1_synchronous_reader_1aa4ab4d5029b7d438051b4c800292059d" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;ByteSourceBase&gt; io::detail::SynchronousReader::byte_source</definition>
+        <argsstring></argsstring>
+        <name>byte_source</name>
+        <qualifiedname>io::detail::SynchronousReader::byte_source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="283" column="19" bodyfile="include/black-scholes-cpp/csv.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_synchronous_reader_1aa57e237e05bd90abdd9e896647da3fc7" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+        <definition>char* io::detail::SynchronousReader::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>io::detail::SynchronousReader::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="284" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_synchronous_reader_1ac85e7a1b24cd383fb9fbfafe648f9ad6" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::SynchronousReader::desired_byte_count</definition>
+        <argsstring></argsstring>
+        <name>desired_byte_count</name>
+        <qualifiedname>io::detail::SynchronousReader::desired_byte_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="285" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1detail_1_1_synchronous_reader_1ac4a6ee3128ca582e9e1d43e442d3efdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::SynchronousReader::init</definition>
+        <argsstring>(std::unique_ptr&lt; ByteSourceBase &gt; arg_byte_source)</argsstring>
+        <name>init</name>
+        <qualifiedname>io::detail::SynchronousReader::init</qualifiedname>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+          <declname>arg_byte_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="269" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="269" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_synchronous_reader_1a9d6b2c888cc7020df1bb81c8bb5c58bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">bool</ref></type>
+        <definition>bool io::detail::SynchronousReader::is_valid</definition>
+        <argsstring>() const</argsstring>
+        <name>is_valid</name>
+        <qualifiedname>io::detail::SynchronousReader::is_valid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="273" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="273" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_synchronous_reader_1a6cad1371b97e14f660914898b16433c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::SynchronousReader::start_read</definition>
+        <argsstring>(char *arg_buffer, int arg_desired_byte_count)</argsstring>
+        <name>start_read</name>
+        <qualifiedname>io::detail::SynchronousReader::start_read</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>arg_buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+          <declname>arg_desired_byte_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="275" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="275" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_synchronous_reader_1a519a0cb25c641d2e51b6542749c44606" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::SynchronousReader::finish_read</definition>
+        <argsstring>()</argsstring>
+        <name>finish_read</name>
+        <qualifiedname>io::detail::SynchronousReader::finish_read</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="280" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="280" bodyend="280"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="267" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="267" bodyend="286"/>
+    <listofallmembers>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1aa57e237e05bd90abdd9e896647da3fc7" prot="private" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>buffer</name></member>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1aa4ab4d5029b7d438051b4c800292059d" prot="private" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>byte_source</name></member>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1ac85e7a1b24cd383fb9fbfafe648f9ad6" prot="private" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>desired_byte_count</name></member>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1a519a0cb25c641d2e51b6542749c44606" prot="public" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>finish_read</name></member>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1ac4a6ee3128ca582e9e1d43e442d3efdf" prot="public" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>init</name></member>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1a9d6b2c888cc7020df1bb81c8bb5c58bc" prot="public" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>is_valid</name></member>
+      <member refid="classio_1_1detail_1_1_synchronous_reader_1a6cad1371b97e14f660914898b16433c4" prot="public" virt="non-virtual"><scope>io::detail::SynchronousReader</scope><name>start_read</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

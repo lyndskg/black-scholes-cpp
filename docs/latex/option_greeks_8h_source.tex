@@ -1,0 +1,167 @@
+\doxysection{option\+Greeks.\+h}
+\hypertarget{option_greeks_8h_source}{}\label{option_greeks_8h_source}\index{include/black-\/scholes-\/cpp/optionGreeks.h@{include/black-\/scholes-\/cpp/optionGreeks.h}}
+\mbox{\hyperlink{option_greeks_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00002}00002\ \textcolor{comment}{//\ \ optionGreeks.h}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00003}00003\ \textcolor{comment}{//\ \ black-\/scholes}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00005}00005\ \textcolor{comment}{//\ \ Created\ by\ lyndskg\ on\ 7/18/23.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ optionGreeks\_h}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ optionGreeks\_h}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{black_scholes_model_8h}{blackScholesModel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00015}00015\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}optionGreeks"{}\ Class\ Declarations}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00017}00017\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DERIVED\ CLASS\ */}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00020}\mbox{\hyperlink{classoption_greeks}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoption_greeks}{optionGreeks}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00021}00021\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00022}00022\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ CONSTRUCTORS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Default\ constructor.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00024}\mbox{\hyperlink{classoption_greeks_a099df0d1a755af6b783e813faa1d4669}{00024}}\ \ \ \ \ \mbox{\hyperlink{classoption_greeks_a099df0d1a755af6b783e813faa1d4669}{optionGreeks}}();}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00026}00026\ \ \ \ \ \textcolor{comment}{//\ Custom\ constructor.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00027}\mbox{\hyperlink{classoption_greeks_a0e06203cf5c3416ebe5b0f7e5fe17905}{00027}}\ \ \ \ \ \mbox{\hyperlink{classoption_greeks_a0e06203cf5c3416ebe5b0f7e5fe17905}{optionGreeks}}(\textcolor{keywordtype}{double}\ underlyingPrice,\ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ timeToExpiration,}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ riskFreeRate,\ \textcolor{keywordtype}{double}\ volatility);}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00030}00030\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ KEY\ MEMBER\ FUNCTIONS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Delta\ measures\ the\ change\ in\ option\ price\ for\ a\ unit\ change\ in}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ the\ underlying\ asset\ price.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00037}\mbox{\hyperlink{classoption_greeks_a9a7102911af5916db57df784545da393}{00037}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_a9a7102911af5916db57df784545da393}{calculateDelta}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Gamma\ measures\ the\ rate\ of\ change\ of\ Delta\ concerning\ changes\ in}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ the\ underlying\ asset\ price.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00045}\mbox{\hyperlink{classoption_greeks_a232b79ca5072796fb94ca83aacc9b883}{00045}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_a232b79ca5072796fb94ca83aacc9b883}{calculateGamma}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Theta\ measures\ the\ rate\ of\ time\ decay\ of\ an\ option's\ value.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00052}\mbox{\hyperlink{classoption_greeks_a00ecc475b70f9607d63d0c31aa3d008b}{00052}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_a00ecc475b70f9607d63d0c31aa3d008b}{calculateTheta}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Vega\ measures\ the\ sensitivity\ of\ an\ option's\ price\ to\ changes}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ in\ implied\ volatility.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00058}00058\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00060}\mbox{\hyperlink{classoption_greeks_acd6ac5b8d1d66afb1a36fff92c5ee156}{00060}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_acd6ac5b8d1d66afb1a36fff92c5ee156}{calculateVega}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ Rho\ measures\ the\ sensitivity\ of\ an\ option's\ price\ to\ changes\ in\ the}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ risk-\/free\ interest\ rate.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00068}\mbox{\hyperlink{classoption_greeks_ab55cabebc6d03fc502c396ac3a24d0f6}{00068}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_ab55cabebc6d03fc502c396ac3a24d0f6}{calculateRho}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Implement\ more\ member\ functions\ for\ calculating/accessing\ option\ Greeks}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00073}00073\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ SETTER\ METHODS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ Delta\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00079}\mbox{\hyperlink{classoption_greeks_a7f03ba47195890ef98e04b01bfa06d2f}{00079}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoption_greeks_a7f03ba47195890ef98e04b01bfa06d2f}{setDelta}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ Gamma\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00083}00083\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00086}\mbox{\hyperlink{classoption_greeks_a245aba032de1c0b26f27942af11a8361}{00086}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoption_greeks_a245aba032de1c0b26f27942af11a8361}{setGamma}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ Vega\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00093}\mbox{\hyperlink{classoption_greeks_ad0d1a9ae498484fa49efcf9c44e03329}{00093}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoption_greeks_ad0d1a9ae498484fa49efcf9c44e03329}{setVega}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ Theta\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00097}00097\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00099}00099\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00100}\mbox{\hyperlink{classoption_greeks_acb7e4d715ccda6941dd0e6e9bfdc7685}{00100}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoption_greeks_acb7e4d715ccda6941dd0e6e9bfdc7685}{setTheta}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ Rho\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00106}00106\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00107}\mbox{\hyperlink{classoption_greeks_a2656f445b590f87b03e1893e4a096273}{00107}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoption_greeks_a2656f445b590f87b03e1893e4a096273}{setRho}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00110}00110\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ GETTER\ METHODS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ Delta\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00116}\mbox{\hyperlink{classoption_greeks_ac422607011fe88042ecde13279b85f17}{00116}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classoption_greeks_ac422607011fe88042ecde13279b85f17}{getDelta}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ Gamma\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00120}00120\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00123}\mbox{\hyperlink{classoption_greeks_a8a63d8e2ce3696d0c7e042b213e8c153}{00123}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classoption_greeks_a8a63d8e2ce3696d0c7e042b213e8c153}{getGamma}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00126}00126\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ Vega\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00127}00127\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00128}00128\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00129}00129\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00130}\mbox{\hyperlink{classoption_greeks_a64a39847d651b634db41d81c9949d13a}{00130}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classoption_greeks_a64a39847d651b634db41d81c9949d13a}{getVega}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ Theta\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00134}00134\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00135}00135\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00137}\mbox{\hyperlink{classoption_greeks_a30274dff6d0fd8e43f9b41b764469dbf}{00137}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classoption_greeks_a30274dff6d0fd8e43f9b41b764469dbf}{getTheta}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00140}00140\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ Rho\ value\ of\ option\ Greeks.}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00141}00141\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00142}00142\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00143}00143\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00144}\mbox{\hyperlink{classoption_greeks_ab3a42f69714b36c2ba4eb1d307d8f8a7}{00144}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classoption_greeks_ab3a42f69714b36c2ba4eb1d307d8f8a7}{getRho}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00146}00146\ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00147}00147\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00148}00148\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}optionGreeks"{}\ Member\ Variables}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00149}00149\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00150}\mbox{\hyperlink{classoption_greeks_a7f8aebb87a939685023f6fe89d665209}{00150}}\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_a7f8aebb87a939685023f6fe89d665209}{delta\_}};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00151}\mbox{\hyperlink{classoption_greeks_afc6a85b6696a780e14b653cc97d17e31}{00151}}\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_afc6a85b6696a780e14b653cc97d17e31}{gamma\_}};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00152}\mbox{\hyperlink{classoption_greeks_acd496d311df1a8d10d0f942d67183ccf}{00152}}\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_acd496d311df1a8d10d0f942d67183ccf}{vega\_}};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00153}\mbox{\hyperlink{classoption_greeks_ad2c8b5eb62d84840b1738f8c6ebbb2cb}{00153}}\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_ad2c8b5eb62d84840b1738f8c6ebbb2cb}{theta\_}};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00154}\mbox{\hyperlink{classoption_greeks_a719169708cf71d4f98d2f59748e623fd}{00154}}\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classoption_greeks_a719169708cf71d4f98d2f59748e623fd}{rho\_}};}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00156}00156\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00157}00157\ \ \ \ \ \textcolor{comment}{//\ Private\ member\ variables\ and\ helper\ functions}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00159}00159\ \};\ \textcolor{comment}{//\ class\ optionGreeks}}
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{option_greeks_8h_source_l00161}00161\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ optionGreeks\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

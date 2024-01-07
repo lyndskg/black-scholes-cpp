@@ -1,0 +1,333 @@
+\doxysection{io\+::detail Namespace Reference}
+\hypertarget{namespaceio_1_1detail}{}\label{namespaceio_1_1detail}\index{io::detail@{io::detail}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classio_1_1detail_1_1_asynchronous_reader}{Asynchronous\+Reader}}
+\item 
+class \mbox{\hyperlink{classio_1_1detail_1_1_non_owning_i_stream_byte_source}{Non\+Owning\+IStream\+Byte\+Source}}
+\item 
+class \mbox{\hyperlink{classio_1_1detail_1_1_non_owning_string_byte_source}{Non\+Owning\+String\+Byte\+Source}}
+\item 
+class \mbox{\hyperlink{classio_1_1detail_1_1_owning_std_i_o_byte_source_base}{Owning\+Std\+IOByte\+Source\+Base}}
+\item 
+class \mbox{\hyperlink{classio_1_1detail_1_1_synchronous_reader}{Synchronous\+Reader}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class quote\+\_\+policy $>$ }\\void \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{chop\+\_\+next\+\_\+column}} (char \texorpdfstring{$\ast$}{*}\&line, char \texorpdfstring{$\ast$}{*}\&col\+\_\+begin, char \texorpdfstring{$\ast$}{*}\&col\+\_\+end)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{trim\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{quote\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_af7113f75d17577c3964d5d45fef65d43}{parse\+\_\+line}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{line}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{sorted\+\_\+col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} std\+::vector$<$ \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} $>$ \&col\+\_\+order)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} column\+\_\+count, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{trim\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{quote\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a29aee32eb931073ca832933c7ed7cf51}{parse\+\_\+header\+\_\+line}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{line}}, std\+::vector$<$ \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} $>$ \&col\+\_\+order, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} std\+::string \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col\+\_\+name}}, \mbox{\hyperlink{namespaceio_aa04154e5c37e292c5acc7533d28a9da7}{ignore\+\_\+column}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{ignore\+\_\+policy}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a2109437c5cfde706232ff352a06a8c9f}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a0a834d872803de946c45bb9993ff1cdb}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, std\+::string \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a4b18842fa823d4e5ff2856c106a935f8}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a51894246476f8614a57292c4ecd5ee70}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a7e3c24544bc8a152ad2fdcad068cc15d}{parse\+\_\+unsigned\+\_\+integer}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a989169352cd4a941d3a4b41d34a5b507}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a7c503975d9ebb907a137437620cd88e2}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{short}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_aff0db116bccbbb97c60e15c88cf08c82}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_af21cf2ebdccbd344c3fa97ff290d5ba3}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_adfb924cb03fa5c6bbf3885eaae6b4900}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_abfca68de6bc98a4b80ee15bf6872d9a1}{parse\+\_\+signed\+\_\+integer}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_ac3445c529796f7c8a21353123b032359}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a8dd4aa570ce585f60eba494b2ae46f8f}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{short}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a4cac9397d7e326ffef73945d8dfdb3f9}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_af4f571ee91d11a004c807122129b658f}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_adae9f76b938985b1a9a93456cb9181eb}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a4f2b98902e1a5278853786aa8582df93}{parse\+\_\+float}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_a60d2e8a932d377f25fb4ea80fa56199e}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{float}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_af795e6a74044788a6b4a3179a7839a9a}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{double}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_aa5ded2fa5b85ef50ef2c0c3334f8fe6e}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{double}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ }\\\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} \mbox{\hyperlink{namespaceio_1_1detail_ae54f2ce37fee9f7320e2167cc6157a98}{parse}} (\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{col}}, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{x}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}\label{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191} 
+\index{io::detail@{io::detail}!chop\_next\_column@{chop\_next\_column}}
+\index{chop\_next\_column@{chop\_next\_column}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{chop\_next\_column()}{chop\_next\_column()}}
+{\footnotesize\ttfamily template$<$class quote\+\_\+policy $>$ \\
+void io\+::detail\+::chop\+\_\+next\+\_\+column (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\&}]{line,  }\item[{char \texorpdfstring{$\ast$}{*}\&}]{col\+\_\+begin,  }\item[{char \texorpdfstring{$\ast$}{*}\&}]{col\+\_\+end }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00788}{788}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a2109437c5cfde706232ff352a06a8c9f}\label{namespaceio_1_1detail_a2109437c5cfde706232ff352a06a8c9f} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00872}{872}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a51894246476f8614a57292c4ecd5ee70}\label{namespaceio_1_1detail_a51894246476f8614a57292c4ecd5ee70} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00889}{889}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a4b18842fa823d4e5ff2856c106a935f8}\label{namespaceio_1_1detail_a4b18842fa823d4e5ff2856c106a935f8} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00885}{885}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_af795e6a74044788a6b4a3179a7839a9a}\label{namespaceio_1_1detail_af795e6a74044788a6b4a3179a7839a9a} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [4/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{double}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01029}{1029}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a60d2e8a932d377f25fb4ea80fa56199e}\label{namespaceio_1_1detail_a60d2e8a932d377f25fb4ea80fa56199e} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [5/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{float}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01026}{1026}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_aa5ded2fa5b85ef50ef2c0c3334f8fe6e}\label{namespaceio_1_1detail_aa5ded2fa5b85ef50ef2c0c3334f8fe6e} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [6/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{double}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01032}{1032}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_ac3445c529796f7c8a21353123b032359}\label{namespaceio_1_1detail_ac3445c529796f7c8a21353123b032359} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [7/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00948}{948}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a4cac9397d7e326ffef73945d8dfdb3f9}\label{namespaceio_1_1detail_a4cac9397d7e326ffef73945d8dfdb3f9} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [8/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00954}{954}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_af4f571ee91d11a004c807122129b658f}\label{namespaceio_1_1detail_af4f571ee91d11a004c807122129b658f} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [9/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00957}{957}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_adae9f76b938985b1a9a93456cb9181eb}\label{namespaceio_1_1detail_adae9f76b938985b1a9a93456cb9181eb} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [10/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00960}{960}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a8dd4aa570ce585f60eba494b2ae46f8f}\label{namespaceio_1_1detail_a8dd4aa570ce585f60eba494b2ae46f8f} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [11/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{signed}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{short}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00951}{951}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a0a834d872803de946c45bb9993ff1cdb}\label{namespaceio_1_1detail_a0a834d872803de946c45bb9993ff1cdb} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [12/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{std\+::string \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00881}{881}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_ae54f2ce37fee9f7320e2167cc6157a98}\label{namespaceio_1_1detail_ae54f2ce37fee9f7320e2167cc6157a98} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [13/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01036}{1036}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a989169352cd4a941d3a4b41d34a5b507}\label{namespaceio_1_1detail_a989169352cd4a941d3a4b41d34a5b507} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [14/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00908}{908}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_aff0db116bccbbb97c60e15c88cf08c82}\label{namespaceio_1_1detail_aff0db116bccbbb97c60e15c88cf08c82} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [15/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00914}{914}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_af21cf2ebdccbd344c3fa97ff290d5ba3}\label{namespaceio_1_1detail_af21cf2ebdccbd344c3fa97ff290d5ba3} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [16/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00917}{917}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_adfb924cb03fa5c6bbf3885eaae6b4900}\label{namespaceio_1_1detail_adfb924cb03fa5c6bbf3885eaae6b4900} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [17/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{long}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00920}{920}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a7c503975d9ebb907a137437620cd88e2}\label{namespaceio_1_1detail_a7c503975d9ebb907a137437620cd88e2} 
+\index{io::detail@{io::detail}!parse@{parse}}
+\index{parse@{parse}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}\hspace{0.1cm}{\footnotesize\ttfamily [18/18]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{short}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00911}{911}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a4f2b98902e1a5278853786aa8582df93}\label{namespaceio_1_1detail_a4f2b98902e1a5278853786aa8582df93} 
+\index{io::detail@{io::detail}!parse\_float@{parse\_float}}
+\index{parse\_float@{parse\_float}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_float()}{parse\_float()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse\+\_\+float (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00964}{964}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a29aee32eb931073ca832933c7ed7cf51}\label{namespaceio_1_1detail_a29aee32eb931073ca832933c7ed7cf51} 
+\index{io::detail@{io::detail}!parse\_header\_line@{parse\_header\_line}}
+\index{parse\_header\_line@{parse\_header\_line}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_header\_line()}{parse\_header\_line()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{unsigned}} column\+\_\+count, \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{trim\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{quote\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse\+\_\+header\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{line,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} $>$ \&}]{col\+\_\+order,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} std\+::string \texorpdfstring{$\ast$}{*}}]{col\+\_\+name,  }\item[{\mbox{\hyperlink{namespaceio_aa04154e5c37e292c5acc7533d28a9da7}{ignore\+\_\+column}}}]{ignore\+\_\+policy }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00825}{825}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_af7113f75d17577c3964d5d45fef65d43}\label{namespaceio_1_1detail_af7113f75d17577c3964d5d45fef65d43} 
+\index{io::detail@{io::detail}!parse\_line@{parse\_line}}
+\index{parse\_line@{parse\_line}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_line()}{parse\_line()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{trim\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{quote\+\_\+policy}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{line,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{sorted\+\_\+col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} std\+::vector$<$ \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{int}} $>$ \&}]{col\+\_\+order }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00805}{805}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_abfca68de6bc98a4b80ee15bf6872d9a1}\label{namespaceio_1_1detail_abfca68de6bc98a4b80ee15bf6872d9a1} 
+\index{io::detail@{io::detail}!parse\_signed\_integer@{parse\_signed\_integer}}
+\index{parse\_signed\_integer@{parse\_signed\_integer}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_signed\_integer()}{parse\_signed\_integer()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse\+\_\+signed\+\_\+integer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00925}{925}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{namespaceio_1_1detail_a7e3c24544bc8a152ad2fdcad068cc15d}\label{namespaceio_1_1detail_a7e3c24544bc8a152ad2fdcad068cc15d} 
+\index{io::detail@{io::detail}!parse\_unsigned\_integer@{parse\_unsigned\_integer}}
+\index{parse\_unsigned\_integer@{parse\_unsigned\_integer}!io::detail@{io::detail}}
+\doxysubsubsection{\texorpdfstring{parse\_unsigned\_integer()}{parse\_unsigned\_integer()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{overflow\+\_\+policy}} , \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{class}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} $>$ \\
+\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{void}} io\+::detail\+::parse\+\_\+unsigned\+\_\+integer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{const}} \mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{char}} \texorpdfstring{$\ast$}{*}}]{col,  }\item[{\mbox{\hyperlink{namespaceio_1_1detail_a5656f385aea8d6ee5814a2abc20f5191}{T}} \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00892}{892}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1no__quote__escape" kind="struct" language="C++" prot="public">
+    <compoundname>io::no_quote_escape</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <templateparamlist>
+      <param>
+        <type>char</type>
+        <declname>sep</declname>
+        <defname>sep</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1no__quote__escape_1a82426f9625e26d22e07e00a6be333156" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char * io::no_quote_escape&lt; sep &gt;::find_next_column_end</definition>
+        <argsstring>(const char *col_begin)</argsstring>
+        <name>find_next_column_end</name>
+        <qualifiedname>io::no_quote_escape::find_next_column_end</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>col_begin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="709" column="21" bodyfile="include/black-scholes-cpp/csv.h" bodystart="709" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1no__quote__escape_1af1c217f2c995d178a91c58235191b052" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void io::no_quote_escape&lt; sep &gt;::unescape</definition>
+        <argsstring>(char *&amp;, char *&amp;)</argsstring>
+        <name>unescape</name>
+        <qualifiedname>io::no_quote_escape::unescape</qualifiedname>
+        <param>
+          <type>char *&amp;</type>
+        </param>
+        <param>
+          <type>char *&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="715" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="715" bodyend="715"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="708" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="708" bodyend="716"/>
+    <listofallmembers>
+      <member refid="structio_1_1no__quote__escape_1a82426f9625e26d22e07e00a6be333156" prot="public" virt="non-virtual"><scope>io::no_quote_escape</scope><name>find_next_column_end</name></member>
+      <member refid="structio_1_1no__quote__escape_1af1c217f2c995d178a91c58235191b052" prot="public" virt="non-virtual"><scope>io::no_quote_escape</scope><name>unescape</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

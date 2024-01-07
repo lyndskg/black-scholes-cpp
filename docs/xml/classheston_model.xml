@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classheston_model" kind="class" language="C++" prot="public">
+    <compoundname>hestonModel</compoundname>
+    <basecompoundref refid="classoption_greeks_model" prot="public" virt="non-virtual">optionGreeksModel</basecompoundref>
+    <includes refid="heston_model_8h" local="no">hestonModel.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classheston_model_1af0b8f33f31770eb6ea74e0a07adefcb2" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double hestonModel::V0_</definition>
+        <argsstring></argsstring>
+        <name>V0_</name>
+        <qualifiedname>hestonModel::V0_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="123" column="20" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classheston_model_1a85647e1fa24a36079aaf86cebb35234d" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double hestonModel::kappa_</definition>
+        <argsstring></argsstring>
+        <name>kappa_</name>
+        <qualifiedname>hestonModel::kappa_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="124" column="20" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classheston_model_1a397cc6fd5a864493162f1557d17e0f69" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double hestonModel::theta_</definition>
+        <argsstring></argsstring>
+        <name>theta_</name>
+        <qualifiedname>hestonModel::theta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="125" column="20" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classheston_model_1a6a2a981a1f8d60ed76a832e03609b2d7" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double hestonModel::sigma_</definition>
+        <argsstring></argsstring>
+        <name>sigma_</name>
+        <qualifiedname>hestonModel::sigma_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="126" column="20" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classheston_model_1ad97b57ad2ea94c28bcf84215ebb65dde" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double hestonModel::rho_</definition>
+        <argsstring></argsstring>
+        <name>rho_</name>
+        <qualifiedname>hestonModel::rho_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="127" column="20" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classheston_model_1aea91b5d4552bd4a225c525bfb5d913d3" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int hestonModel::num_time_steps</definition>
+        <argsstring></argsstring>
+        <name>num_time_steps</name>
+        <qualifiedname>hestonModel::num_time_steps</qualifiedname>
+        <initializer>= 252</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="129" column="15" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classheston_model_1af576f47dec82f7194857eb9c6a6a9a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hestonModel::hestonModel</definition>
+        <argsstring>()</argsstring>
+        <name>hestonModel</name>
+        <qualifiedname>hestonModel::hestonModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a31db3ecf3a964f0c5e76ff67c07f9d94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hestonModel::hestonModel</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double riskFreeRate, double timeToExpiration, double volatility, double V0, double kappa, double theta, double sigma, double rho, OptionType optionType)</argsstring>
+        <name>hestonModel</name>
+        <qualifiedname>hestonModel::hestonModel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToExpiration</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>V0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kappa</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigma</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rho</declname>
+        </param>
+        <param>
+          <type><ref refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" kindref="member">OptionType</ref></type>
+          <declname>optionType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a1cf0105c384f0230a5be772448fdf172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double hestonModel::calculateOptionPrice</definition>
+        <argsstring>()</argsstring>
+        <name>calculateOptionPrice</name>
+        <qualifiedname>hestonModel::calculateOptionPrice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="39" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1aef167d9d379654a8beb14ec6d203ac6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double hestonModel::random_normal</definition>
+        <argsstring>()</argsstring>
+        <name>random_normal</name>
+        <qualifiedname>hestonModel::random_normal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="43" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a2e6d404ef03d52e122e352c34888c6b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hestonModel::setV0</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>setV0</name>
+        <qualifiedname>hestonModel::setV0</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a4848db442646d130eeae9ff724f12d56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hestonModel::setKappa</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>setKappa</name>
+        <qualifiedname>hestonModel::setKappa</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a059a9012dbfd78f8f5cf69f8f8671566" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hestonModel::setTheta</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>setTheta</name>
+        <qualifiedname>hestonModel::setTheta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a53771dbb5446a1a27d17f57d539f7028" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hestonModel::setSigma</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>setSigma</name>
+        <qualifiedname>hestonModel::setSigma</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="73" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a7233e135813c494198e82379faa83e78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hestonModel::setRho</definition>
+        <argsstring>(double value) const</argsstring>
+        <name>setRho</name>
+        <qualifiedname>hestonModel::setRho</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="80" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1a4aa2b67ec78abe52c97a3c5150b008c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; hestonModel::getV0</definition>
+        <argsstring>() const</argsstring>
+        <name>getV0</name>
+        <qualifiedname>hestonModel::getV0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="88" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1ada21e2a6dd28261f2e9cb17068c5113f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; hestonModel::getKappa</definition>
+        <argsstring>() const</argsstring>
+        <name>getKappa</name>
+        <qualifiedname>hestonModel::getKappa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="95" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1ae11bc5e5a97b552a252e12ed5c565cd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; hestonModel::getTheta</definition>
+        <argsstring>() const</argsstring>
+        <name>getTheta</name>
+        <qualifiedname>hestonModel::getTheta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="102" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1abb30b0203ab3b41fe7d955325b3f72de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; hestonModel::getSigma</definition>
+        <argsstring>() const</argsstring>
+        <name>getSigma</name>
+        <qualifiedname>hestonModel::getSigma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="109" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classheston_model_1ac8fb9ee4760d8b4af669c03d20b9874c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; hestonModel::getRho</definition>
+        <argsstring>() const</argsstring>
+        <name>getRho</name>
+        <qualifiedname>hestonModel::getRho</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/hestonModel.h" line="116" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>blackScholesModel</label>
+        <link refid="classblack_scholes_model"/>
+      </node>
+      <node id="1">
+        <label>hestonModel</label>
+        <link refid="classheston_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>optionGreeks</label>
+        <link refid="classoption_greeks"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optionGreeksModel</label>
+        <link refid="classoption_greeks_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>blackScholesModel</label>
+        <link refid="classblack_scholes_model"/>
+      </node>
+      <node id="1">
+        <label>hestonModel</label>
+        <link refid="classheston_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>optionGreeks</label>
+        <link refid="classoption_greeks"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optionGreeksModel</label>
+        <link refid="classoption_greeks_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/black-scholes-cpp/hestonModel.h" line="19" column="1" bodyfile="include/black-scholes-cpp/hestonModel.h" bodystart="19" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classblack_scholes_model_1a7ddde3a422329fb1b20097aa78a2a510" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a9c2c473eaa2587a35119a4a50cf1b864" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1adfa7fcdd443de8093f24c58866ec6ac7" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a7ddde3a422329fb1b20097aa78a2a510" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a9c2c473eaa2587a35119a4a50cf1b864" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1adfa7fcdd443de8093f24c58866ec6ac7" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>blackScholesModel</name></member>
+      <member refid="classoption_greeks_1a9a7102911af5916db57df784545da393" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateDelta</name></member>
+      <member refid="classoption_greeks_model_1ab33ffabdf93c54716688b2ddbc2415ea" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateDeltaAdjWithGamma</name></member>
+      <member refid="classoption_greeks_model_1a8c53e0d09764c4921d391488134b6d2d" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateDeltaAdjWithGammaVega</name></member>
+      <member refid="classoption_greeks_model_1ac3988d21f263032b0a0c54f215717154" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateDeltaAdjWithIV</name></member>
+      <member refid="classoption_greeks_model_1ad6690d219286874bc292da354147e2ed" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateDeltaAdjWithTheta</name></member>
+      <member refid="classoption_greeks_model_1a930c94822db8e4502eb86694ff194de9" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateDeltaAdjWithVega</name></member>
+      <member refid="classoption_greeks_1a232b79ca5072796fb94ca83aacc9b883" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateGamma</name></member>
+      <member refid="classheston_model_1a1cf0105c384f0230a5be772448fdf172" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateOptionPrice</name></member>
+      <member refid="classoption_greeks_model_1a429716980b5b30717b7f44edcd3424dc" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateOptionPriceWithGamma</name></member>
+      <member refid="classoption_greeks_model_1ad599275faf4d62f82820a785cd7881fc" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateOptionPriceWithGammaVega</name></member>
+      <member refid="classoption_greeks_model_1ad68f3aa2d7c34bd43899d5e0419dae2c" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateOptionPriceWithIV</name></member>
+      <member refid="classoption_greeks_model_1a858b560658318bc6d7a0c4f6bf4eaa96" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateOptionPriceWithTheta</name></member>
+      <member refid="classoption_greeks_model_1a8563003548284cd013199e0f516c5444" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateOptionPriceWithVega</name></member>
+      <member refid="classoption_greeks_1ab55cabebc6d03fc502c396ac3a24d0f6" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateRho</name></member>
+      <member refid="classoption_greeks_1a00ecc475b70f9607d63d0c31aa3d008b" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateTheta</name></member>
+      <member refid="classoption_greeks_1acd6ac5b8d1d66afb1a36fff92c5ee156" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>calculateVega</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>CALL</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>CALL</name></member>
+      <member refid="classoption_greeks_1a7f8aebb87a939685023f6fe89d665209" prot="protected" virt="non-virtual"><scope>hestonModel</scope><name>delta_</name></member>
+      <member refid="classoption_greeks_1afc6a85b6696a780e14b653cc97d17e31" prot="protected" virt="non-virtual"><scope>hestonModel</scope><name>gamma_</name></member>
+      <member refid="classblack_scholes_model_1ab6b804f0bf84f2609df992a379ac5340" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getD1</name></member>
+      <member refid="classblack_scholes_model_1ab6b804f0bf84f2609df992a379ac5340" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getD1</name></member>
+      <member refid="classblack_scholes_model_1a4d513ab31082c7e62a35b45aba2e5d39" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getD2</name></member>
+      <member refid="classblack_scholes_model_1a4d513ab31082c7e62a35b45aba2e5d39" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getD2</name></member>
+      <member refid="classoption_greeks_1ac422607011fe88042ecde13279b85f17" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getDelta</name></member>
+      <member refid="classoption_greeks_1a8a63d8e2ce3696d0c7e042b213e8c153" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getGamma</name></member>
+      <member refid="classoption_greeks_model_1aaf3ca7f9d4c59adc1c074770d83452cc" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getGammaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1a6ce982e4f090084db2a56951cbb971f5" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getGammaVegaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1ad9360d0d7def2e959d0b7edd5ebc40c0" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getIvAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a3f1b0604aa2613c6551371f33c836eb4" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getK</name></member>
+      <member refid="classblack_scholes_model_1a3f1b0604aa2613c6551371f33c836eb4" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getK</name></member>
+      <member refid="classheston_model_1ada21e2a6dd28261f2e9cb17068c5113f" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getKappa</name></member>
+      <member refid="classoption_greeks_model_1a5e6a0717efe6a831762ab8995341882e" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getOptionPriceGamma</name></member>
+      <member refid="classoption_greeks_model_1a7862c1a8cdbcc4c8b76ab2d93f61986e" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getOptionPriceGammaVega</name></member>
+      <member refid="classoption_greeks_model_1ae9c77b011c8451b5e5a73b5c8d1d79aa" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getOptionPriceIv</name></member>
+      <member refid="classoption_greeks_model_1a8ab736b5500e00089ec34a23b3f2f50a" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getOptionPriceTheta</name></member>
+      <member refid="classoption_greeks_model_1ad77076ff2c052e1c62a74e3fcb7b1ae3" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getOptionPriceVega</name></member>
+      <member refid="classblack_scholes_model_1a3a0e83fe7e08584ccaeffcbdf8dd2ba1" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getOptionType</name></member>
+      <member refid="classblack_scholes_model_1a3a0e83fe7e08584ccaeffcbdf8dd2ba1" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getOptionType</name></member>
+      <member refid="classblack_scholes_model_1aa3df25dd7f6455b06f73435a55cc238c" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getRFR</name></member>
+      <member refid="classblack_scholes_model_1aa3df25dd7f6455b06f73435a55cc238c" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getRFR</name></member>
+      <member refid="classheston_model_1ac8fb9ee4760d8b4af669c03d20b9874c" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getRho</name></member>
+      <member refid="classheston_model_1abb30b0203ab3b41fe7d955325b3f72de" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getSigma</name></member>
+      <member refid="classblack_scholes_model_1a26226bc311b5a1eab9afb89a2b86824d" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getStrikePrice</name></member>
+      <member refid="classblack_scholes_model_1a26226bc311b5a1eab9afb89a2b86824d" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getStrikePrice</name></member>
+      <member refid="classheston_model_1ae11bc5e5a97b552a252e12ed5c565cd2" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getTheta</name></member>
+      <member refid="classoption_greeks_model_1aa67ba36f4cad369444f448f83c8dab38" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getThetaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1acce910bfd40831f839ea4d56c0f206ea" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getTTE</name></member>
+      <member refid="classblack_scholes_model_1acce910bfd40831f839ea4d56c0f206ea" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getTTE</name></member>
+      <member refid="classblack_scholes_model_1a985c48c0222f31022c1c1f54050b73d5" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getUnderlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1a985c48c0222f31022c1c1f54050b73d5" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getUnderlyingPrice</name></member>
+      <member refid="classheston_model_1a4aa2b67ec78abe52c97a3c5150b008c0" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getV0</name></member>
+      <member refid="classoption_greeks_1a64a39847d651b634db41d81c9949d13a" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getVega</name></member>
+      <member refid="classoption_greeks_model_1aafabb075c40131c42d65b09d91df2a3e" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>getVegaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1aced3096a6015e3eb86d089636eaed7a2" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>getVolatility</name></member>
+      <member refid="classblack_scholes_model_1aced3096a6015e3eb86d089636eaed7a2" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>getVolatility</name></member>
+      <member refid="classheston_model_1af576f47dec82f7194857eb9c6a6a9a88" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>hestonModel</name></member>
+      <member refid="classheston_model_1a31db3ecf3a964f0c5e76ff67c07f9d94" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>hestonModel</name></member>
+      <member refid="classheston_model_1a85647e1fa24a36079aaf86cebb35234d" prot="private" virt="non-virtual"><scope>hestonModel</scope><name>kappa_</name></member>
+      <member refid="classblack_scholes_model_1a892ddce4b71241e8f027173686f34461" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>normalCDF</name></member>
+      <member refid="classblack_scholes_model_1a892ddce4b71241e8f027173686f34461" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>normalCDF</name></member>
+      <member refid="classheston_model_1aea91b5d4552bd4a225c525bfb5d913d3" prot="private" virt="non-virtual"><scope>hestonModel</scope><name>num_time_steps</name></member>
+      <member refid="classoption_greeks_1a099df0d1a755af6b783e813faa1d4669" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>optionGreeks</name></member>
+      <member refid="classoption_greeks_1a0e06203cf5c3416ebe5b0f7e5fe17905" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>optionGreeks</name></member>
+      <member refid="classoption_greeks_model_1aa8cacf7b1635fc583a39a678f4bcbfd1" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>optionGreeksModel</name></member>
+      <member refid="classoption_greeks_model_1ae92c594162f8d34fa42250e7978bbb85" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>optionGreeksModel</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>OptionType</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>OptionType</name></member>
+      <member refid="classblack_scholes_model_1a35c786cf7e5b253f7a07f770d8ca5af8" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>optionType</name></member>
+      <member refid="classblack_scholes_model_1a35c786cf7e5b253f7a07f770d8ca5af8" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>optionType</name></member>
+      <member refid="classoption_greeks_model_1ad0d428c926e88327515358d77869284f" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>performDeltaNeutralHedging</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>PUT</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>PUT</name></member>
+      <member refid="classheston_model_1aef167d9d379654a8beb14ec6d203ac6f" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>random_normal</name></member>
+      <member refid="classheston_model_1ad97b57ad2ea94c28bcf84215ebb65dde" prot="private" virt="non-virtual"><scope>hestonModel</scope><name>rho_</name></member>
+      <member refid="classblack_scholes_model_1af93fef5df405832b852d15b11dbf7b3b" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setD1</name></member>
+      <member refid="classblack_scholes_model_1af93fef5df405832b852d15b11dbf7b3b" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setD1</name></member>
+      <member refid="classblack_scholes_model_1a3f38248c5395e90a3cb3f3e142c48f5f" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setD2</name></member>
+      <member refid="classblack_scholes_model_1a3f38248c5395e90a3cb3f3e142c48f5f" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setD2</name></member>
+      <member refid="classoption_greeks_1a7f03ba47195890ef98e04b01bfa06d2f" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setDelta</name></member>
+      <member refid="classoption_greeks_1a245aba032de1c0b26f27942af11a8361" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setGamma</name></member>
+      <member refid="classoption_greeks_model_1a648b439339edd47cf3448e66333883c9" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setGammaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1ae67e875038ebe531f468f2bcb58b4619" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setGammaVegaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1aa7c10cffaf1482e8b049e37d54955f41" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setIvAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a0cc11862cf9fae0bcaba5efb0082663b" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setK</name></member>
+      <member refid="classblack_scholes_model_1a0cc11862cf9fae0bcaba5efb0082663b" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setK</name></member>
+      <member refid="classheston_model_1a4848db442646d130eeae9ff724f12d56" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setKappa</name></member>
+      <member refid="classoption_greeks_model_1a8446f117f76179a68e774c63444573dc" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setOptionPriceGamma</name></member>
+      <member refid="classoption_greeks_model_1a4d48dd2af612a761f09e0d32223cba11" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setOptionPriceGammaVega</name></member>
+      <member refid="classoption_greeks_model_1a7f5de563c3b32085d3033581bd173bf8" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setOptionPriceIv</name></member>
+      <member refid="classoption_greeks_model_1a29123f7238b600a9f1c97a9956eec007" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setOptionPriceTheta</name></member>
+      <member refid="classoption_greeks_model_1ade909398afa01bac5b52fa69f6aa3643" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setOptionPriceVega</name></member>
+      <member refid="classblack_scholes_model_1ac2c755b853cf654df449095d8a82e684" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setOptionType</name></member>
+      <member refid="classblack_scholes_model_1ac2c755b853cf654df449095d8a82e684" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setOptionType</name></member>
+      <member refid="classblack_scholes_model_1adf70d018da40647100dfaff53fc2bd71" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setRFR</name></member>
+      <member refid="classblack_scholes_model_1adf70d018da40647100dfaff53fc2bd71" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setRFR</name></member>
+      <member refid="classheston_model_1a7233e135813c494198e82379faa83e78" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setRho</name></member>
+      <member refid="classoption_greeks_1a2656f445b590f87b03e1893e4a096273" prot="public" virt="non-virtual" ambiguityscope="optionGreeksModel::"><scope>hestonModel</scope><name>setRho</name></member>
+      <member refid="classheston_model_1a53771dbb5446a1a27d17f57d539f7028" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setSigma</name></member>
+      <member refid="classblack_scholes_model_1a560fa41b7e2ada19e5291fd02b9caf3e" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setStrikePrice</name></member>
+      <member refid="classblack_scholes_model_1a560fa41b7e2ada19e5291fd02b9caf3e" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setStrikePrice</name></member>
+      <member refid="classheston_model_1a059a9012dbfd78f8f5cf69f8f8671566" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setTheta</name></member>
+      <member refid="classoption_greeks_1acb7e4d715ccda6941dd0e6e9bfdc7685" prot="public" virt="non-virtual" ambiguityscope="optionGreeksModel::"><scope>hestonModel</scope><name>setTheta</name></member>
+      <member refid="classoption_greeks_model_1a582022e53db1580e0d6bea8b7fa0ea38" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setThetaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a973a8d1b689ee0bf23771672bd9774ac" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setTTE</name></member>
+      <member refid="classblack_scholes_model_1a973a8d1b689ee0bf23771672bd9774ac" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setTTE</name></member>
+      <member refid="classblack_scholes_model_1a0981dfe03d4c4b44e3c1c2c5ce725a99" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setUnderlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1a0981dfe03d4c4b44e3c1c2c5ce725a99" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setUnderlyingPrice</name></member>
+      <member refid="classheston_model_1a2e6d404ef03d52e122e352c34888c6b8" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setV0</name></member>
+      <member refid="classoption_greeks_1ad0d1a9ae498484fa49efcf9c44e03329" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setVega</name></member>
+      <member refid="classoption_greeks_model_1a36b8128bb93c0ff23eb863fb6f107712" prot="public" virt="non-virtual"><scope>hestonModel</scope><name>setVegaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a206cb165b1004ac80295f68b8f6ceee4" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>hestonModel</scope><name>setVolatility</name></member>
+      <member refid="classblack_scholes_model_1a206cb165b1004ac80295f68b8f6ceee4" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>hestonModel</scope><name>setVolatility</name></member>
+      <member refid="classheston_model_1a6a2a981a1f8d60ed76a832e03609b2d7" prot="private" virt="non-virtual"><scope>hestonModel</scope><name>sigma_</name></member>
+      <member refid="classheston_model_1a397cc6fd5a864493162f1557d17e0f69" prot="private" virt="non-virtual"><scope>hestonModel</scope><name>theta_</name></member>
+      <member refid="classheston_model_1af0b8f33f31770eb6ea74e0a07adefcb2" prot="private" virt="non-virtual"><scope>hestonModel</scope><name>V0_</name></member>
+      <member refid="classoption_greeks_1acd496d311df1a8d10d0f942d67183ccf" prot="protected" virt="non-virtual"><scope>hestonModel</scope><name>vega_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1single__and__empty__line__comment" kind="struct" language="C++" prot="public">
+    <compoundname>io::single_and_empty_line_comment</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <templateparamlist>
+      <param>
+        <type>char...</type>
+        <declname>comment_start_char_list</declname>
+        <defname>comment_start_char_list</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1single__and__empty__line__comment_1a93a1556dfe4d7e6e3a674d576c4b30f4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool io::single_and_empty_line_comment&lt; comment_start_char_list &gt;::is_comment</definition>
+        <argsstring>(const char *line)</argsstring>
+        <name>is_comment</name>
+        <qualifiedname>io::single_and_empty_line_comment::is_comment</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="702" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="702" bodyend="705"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="701" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="701" bodyend="706"/>
+    <listofallmembers>
+      <member refid="structio_1_1single__and__empty__line__comment_1a93a1556dfe4d7e6e3a674d576c4b30f4" prot="public" virt="non-virtual"><scope>io::single_and_empty_line_comment</scope><name>is_comment</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

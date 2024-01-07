@@ -1,0 +1,264 @@
+\doxysection{black\+Scholes\+Model.\+h}
+\hypertarget{black_scholes_model_8h_source}{}\label{black_scholes_model_8h_source}\index{include/black-\/scholes-\/cpp/blackScholesModel.h@{include/black-\/scholes-\/cpp/blackScholesModel.h}}
+\mbox{\hyperlink{black_scholes_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00002}00002\ \textcolor{comment}{//\ \ blackScholesModel.h}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00003}00003\ \textcolor{comment}{//\ \ black-\/scholes}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00005}00005\ \textcolor{comment}{//\ \ Created\ by\ lyndskg\ on\ 7/12/23.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ blackScholesModel\_h}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ blackScholesModel\_h}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input_reader_8h}{inputReader.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00018}00018\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00019}00019\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}blackScholesModel"{}\ Class\ Declarations}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00020}00020\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00022}\mbox{\hyperlink{classblack_scholes_model}{00022}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00023}00023\ \textcolor{comment}{//\ \ //\ Accessible\ by\ derived/friend\ classes:}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00024}00024\ \textcolor{comment}{//\ \ protected:}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00025}00025\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00026}00026\ \textcolor{comment}{//\ \ \ \ enum\ OptionType\ \{}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00027}00027\ \textcolor{comment}{//\ \ \ \ \ \ \ \ CALL,}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00028}00028\ \textcolor{comment}{//\ \ \ \ \ \ \ \ PUT}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00029}00029\ \textcolor{comment}{//\ \ \ \ \}\ optionType;}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00030}00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00031}00031\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00032}00032\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}blackScholesModel"{}\ Member\ Variables}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00033}00033\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00034}00034\ \textcolor{comment}{//*-\/-\/Variables\ used\ directly\ as\ input\ values\ in\ the\ Black-\/Scholes\ formula.-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{double}\ underlyingPrice;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{double}\ strikePrice;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{double}\ timeToExpiration;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{double}\ riskFreeRate;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{double}\ volatility;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00040}00040\ \textcolor{comment}{//\ const\ string\&\ optionType;}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00043}00043\ \textcolor{comment}{//*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Intermediate\ variables\ in\ pricing\ functions.\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ d1\_;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ d2\_;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ d\_;}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00049}00049\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ K\_;\ \textcolor{comment}{//\ For\ normalCDF()\ calculations.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00052}00052\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ HELPER\ FUNCTIONS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ Calculates\ the\ intermediate\ variable\ 'd1'.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00058}00058\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateD1(\textcolor{keywordtype}{double}\ underlyingPrice,\ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ timeToExpiration,\ \textcolor{keywordtype}{double}\ riskFreeRate,\ \textcolor{keywordtype}{double}\ volatility)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Calculates\ the\ intermediate\ variable\ 'd2'.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateD2(\textcolor{keywordtype}{double}\ underlyingPrice,\ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ timeToExpiration,\ \textcolor{keywordtype}{double}\ riskFreeRate,\ \textcolor{keywordtype}{double}\ volatility)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ Calculates\ the\ intermediate\ variable\ 'K'.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateK(\textcolor{keywordtype}{double}\ d)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00076}00076\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00077}\mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{00077}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{OptionType}}\ \{}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00078}\mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2}{00078}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2}{CALL}},}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0}{PUT}}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00080}\mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{00080}}\ \ \ \ \ \}\ \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{optionType}};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ Friend\ class\ declaration.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00083}\mbox{\hyperlink{classblack_scholes_model_ad12265fab63fd4a253d35cf7254ed385}{00083}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinput_reader}{inputReader}};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00084}\mbox{\hyperlink{classblack_scholes_model_a349acbb553dc2325ffea941b6f5945c1}{00084}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoption_greeks}{optionGreeks}};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00085}\mbox{\hyperlink{classblack_scholes_model_aa4510b288e2670fef8432a2800116b24}{00085}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoption_greeks_model}{optionGreeksModel}};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00086}\mbox{\hyperlink{classblack_scholes_model_a39aadfab3c4288b4b13a1364d9006b5c}{00086}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classheston_model}{hestonModel}};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00088}00088\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ CONSTRUCTORS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00089}00089\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//\ Default\ constructor.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00091}\mbox{\hyperlink{classblack_scholes_model_a7ddde3a422329fb1b20097aa78a2a510}{00091}}\ \ \ \ \ \mbox{\hyperlink{classblack_scholes_model_a7ddde3a422329fb1b20097aa78a2a510}{blackScholesModel}}();}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00092}00092\ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00093}00093\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Custom\ constructor\ for\ optionGreeks\ derived\ class.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00095}\mbox{\hyperlink{classblack_scholes_model_a9c2c473eaa2587a35119a4a50cf1b864}{00095}}\ \ \ \ \ \mbox{\hyperlink{classblack_scholes_model_a9c2c473eaa2587a35119a4a50cf1b864}{blackScholesModel}}(\textcolor{keywordtype}{double}\ underlyingPrice,\ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ timeToExpiration,}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ riskFreeRate,\ \textcolor{keywordtype}{double}\ volatility);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00097}00097\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00098}00098\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00099}00099\ \ \ \ \ \textcolor{comment}{//\ Custom\ constructor\ for\ general\ usage.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00100}00100\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00101}00101\ \ \ \ \ \textcolor{comment}{//\ Initializes\ all\ member\ functions\ used\ in\ the\ pricing\ formula\ via\ getter\ methods.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00102}\mbox{\hyperlink{classblack_scholes_model_adfa7fcdd443de8093f24c58866ec6ac7}{00102}}\ \ \ \ \ \mbox{\hyperlink{classblack_scholes_model_adfa7fcdd443de8093f24c58866ec6ac7}{blackScholesModel}}(\textcolor{keywordtype}{double}\ underlyingPrice,\ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ riskFreeRate,}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ timeToExpiration,\ \textcolor{keywordtype}{double}\ volatility,\ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{OptionType}}\ \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{optionType}});}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00104}00104\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00105}00105\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00106}00106\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ KEY\ MEMBER\ FUNCTIONS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00107}00107\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00108}00108\ \ \ \ \ \textcolor{comment}{/*\ Defines\ the\ option\ pricing\ function\ and\ calculates\ the\ option\ price\ using\ the}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00109}00109\ \textcolor{comment}{\ \ \ \ \ \ \ Black-\/Scholes\ formula.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00110}00110\ \textcolor{comment}{\ \ \ \ \ \ \ The\ function\ takes\ in\ the\ underlying\ price,\ strike\ price,\ time\ to\ expiration,\ risk-\/free\ rate,}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00111}00111\ \textcolor{comment}{\ \ \ \ \ \ \ volatility,\ and\ option\ type\ as\ input\ parameters\ and\ returns\ the\ calculated\ option\ price.\ */}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00115}\mbox{\hyperlink{classblack_scholes_model_a9608f80ab67eb8bcd96a5f53276c1762}{00115}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classblack_scholes_model_a9608f80ab67eb8bcd96a5f53276c1762}{calculateOptionPrice}}();}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00116}00116\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00117}00117\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00118}00118\ \ \ \ \ \textcolor{comment}{/*\ Approximates\ the\ cumulative\ distribution\ function\ (CDF)\ of\ a\ normal\ distribution.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00119}00119\ \textcolor{comment}{\ \ \ \ \ \ \ The\ function\ calculates\ an\ approximation\ of\ the\ CDF\ of\ a\ standard\ normal\ distribution}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ \ \ given\ a\ double\ value\ 'd'\ as\ input.\ */}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00121}00121\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00123}00123\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00124}\mbox{\hyperlink{classblack_scholes_model_a892ddce4b71241e8f027173686f34461}{00124}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classblack_scholes_model_a892ddce4b71241e8f027173686f34461}{normalCDF}}(\textcolor{keywordtype}{double}\ d)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00127}00127\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ SETTER\ METHODS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00129}00129\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ underlying\ price\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00130}00130\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00131}00131\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00132}00132\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00133}\mbox{\hyperlink{classblack_scholes_model_a0981dfe03d4c4b44e3c1c2c5ce725a99}{00133}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_a0981dfe03d4c4b44e3c1c2c5ce725a99}{setUnderlyingPrice}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00134}00134\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00135}00135\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00136}00136\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ strike\ price\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00137}00137\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00138}00138\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00139}00139\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00140}\mbox{\hyperlink{classblack_scholes_model_a560fa41b7e2ada19e5291fd02b9caf3e}{00140}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_a560fa41b7e2ada19e5291fd02b9caf3e}{setStrikePrice}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00141}00141\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00142}00142\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00143}00143\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ time\ until\ expiration\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00144}00144\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00145}00145\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00146}00146\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00147}\mbox{\hyperlink{classblack_scholes_model_a973a8d1b689ee0bf23771672bd9774ac}{00147}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_a973a8d1b689ee0bf23771672bd9774ac}{setTTE}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00148}00148\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00149}00149\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00150}00150\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ risk-\/free\ rate\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00151}00151\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00152}00152\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00153}00153\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00154}\mbox{\hyperlink{classblack_scholes_model_adf70d018da40647100dfaff53fc2bd71}{00154}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_adf70d018da40647100dfaff53fc2bd71}{setRFR}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00155}00155\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00156}00156\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00157}00157\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ volatility\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00158}00158\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00159}00159\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00160}00160\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00161}\mbox{\hyperlink{classblack_scholes_model_a206cb165b1004ac80295f68b8f6ceee4}{00161}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_a206cb165b1004ac80295f68b8f6ceee4}{setVolatility}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00162}00162\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00163}00163\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00164}00164\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ the\ option\ type\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00165}00165\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00166}00166\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00167}00167\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00168}\mbox{\hyperlink{classblack_scholes_model_ac2c755b853cf654df449095d8a82e684}{00168}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_ac2c755b853cf654df449095d8a82e684}{setOptionType}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{OptionType}}\&\ value);}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00169}00169\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00170}00170\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00171}00171\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ intermediate\ variable\ 'd1'\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00172}00172\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00173}00173\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00174}00174\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00175}\mbox{\hyperlink{classblack_scholes_model_af93fef5df405832b852d15b11dbf7b3b}{00175}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_af93fef5df405832b852d15b11dbf7b3b}{setD1}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00176}00176\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00177}00177\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00178}00178\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ intermediate\ variable\ 'd2'\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00179}00179\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00180}00180\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00181}00181\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00182}\mbox{\hyperlink{classblack_scholes_model_a3f38248c5395e90a3cb3f3e142c48f5f}{00182}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_a3f38248c5395e90a3cb3f3e142c48f5f}{setD2}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00183}00183\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00184}00184\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00185}00185\ \ \ \ \ \textcolor{comment}{//\ Setter\ method\ for\ intermediate\ variable\ 'K'\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00186}00186\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00187}00187\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00188}00188\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00189}\mbox{\hyperlink{classblack_scholes_model_a0cc11862cf9fae0bcaba5efb0082663b}{00189}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblack_scholes_model_a0cc11862cf9fae0bcaba5efb0082663b}{setK}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ value)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00190}00190\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00191}00191\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00192}00192\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ GETTER\ METHODS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00194}00194\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ underlying\ price\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00195}00195\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00196}00196\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00197}00197\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00198}\mbox{\hyperlink{classblack_scholes_model_a985c48c0222f31022c1c1f54050b73d5}{00198}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_a985c48c0222f31022c1c1f54050b73d5}{getUnderlyingPrice}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00199}00199\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00200}00200\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00201}00201\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ strike\ price\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00202}00202\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00203}00203\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00204}00204\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00205}\mbox{\hyperlink{classblack_scholes_model_a26226bc311b5a1eab9afb89a2b86824d}{00205}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_a26226bc311b5a1eab9afb89a2b86824d}{getStrikePrice}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00206}00206\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00207}00207\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00208}00208\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ time\ until\ expiration\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00209}00209\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00210}00210\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00211}00211\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00212}\mbox{\hyperlink{classblack_scholes_model_acce910bfd40831f839ea4d56c0f206ea}{00212}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_acce910bfd40831f839ea4d56c0f206ea}{getTTE}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00213}00213\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00214}00214\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00215}00215\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ risk-\/free\ rate\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00216}00216\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00217}00217\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00218}00218\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00219}\mbox{\hyperlink{classblack_scholes_model_aa3df25dd7f6455b06f73435a55cc238c}{00219}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_aa3df25dd7f6455b06f73435a55cc238c}{getRFR}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00221}00221\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00222}00222\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ volatility\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00223}00223\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00224}00224\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00225}00225\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00226}\mbox{\hyperlink{classblack_scholes_model_aced3096a6015e3eb86d089636eaed7a2}{00226}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_aced3096a6015e3eb86d089636eaed7a2}{getVolatility}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00227}00227\ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00228}00228\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00229}00229\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ option\ type\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00230}00230\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00231}00231\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00232}00232\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00233}\mbox{\hyperlink{classblack_scholes_model_a3a0e83fe7e08584ccaeffcbdf8dd2ba1}{00233}}\ \ \ \ \ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{OptionType}}\ \mbox{\hyperlink{classblack_scholes_model_a3a0e83fe7e08584ccaeffcbdf8dd2ba1}{getOptionType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00234}00234\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00235}00235\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00236}00236\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ intermediate\ variable\ d1\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00237}00237\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00238}00238\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00239}00239\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00240}\mbox{\hyperlink{classblack_scholes_model_ab6b804f0bf84f2609df992a379ac5340}{00240}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_ab6b804f0bf84f2609df992a379ac5340}{getD1}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00241}00241\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00242}00242\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00243}00243\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ intermediate\ variable\ d2\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00244}00244\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00245}00245\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00246}00246\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00247}\mbox{\hyperlink{classblack_scholes_model_a4d513ab31082c7e62a35b45aba2e5d39}{00247}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_a4d513ab31082c7e62a35b45aba2e5d39}{getD2}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00248}00248\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00249}00249\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00250}00250\ \ \ \ \ \textcolor{comment}{//\ Getter\ method\ for\ the\ intermediate\ variable\ K\ of\ the\ Black-\/Scholes\ model.}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00251}00251\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00252}00252\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00253}00253\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00254}\mbox{\hyperlink{classblack_scholes_model_a3f1b0604aa2613c6551371f33c836eb4}{00254}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{classblack_scholes_model_a3f1b0604aa2613c6551371f33c836eb4}{getK}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00255}00255\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00256}00256\ \};\ \textcolor{comment}{//\ class\ blackScholesModel}}
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{black_scholes_model_8h_source_l00258}00258\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ blackScholesModel\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

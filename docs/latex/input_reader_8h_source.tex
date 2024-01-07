@@ -1,0 +1,101 @@
+\doxysection{input\+Reader.\+h}
+\hypertarget{input_reader_8h_source}{}\label{input_reader_8h_source}\index{include/black-\/scholes-\/cpp/inputReader.h@{include/black-\/scholes-\/cpp/inputReader.h}}
+\mbox{\hyperlink{input_reader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00002}00002\ \textcolor{comment}{//\ \ inputReader.h}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00003}00003\ \textcolor{comment}{//\ \ black-\/scholes}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00005}00005\ \textcolor{comment}{//\ \ Created\ by\ lyndskg\ on\ 7/18/23.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ inputReader\_h}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ inputReader\_h}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <curl/curl.h>}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csv_8h}{csv.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{black_scholes_model_8h}{blackScholesModel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00017}00017\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00019}00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}};\ \textcolor{comment}{//\ Forward\ declaration\ of\ blackScholesModel\ class}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00021}00021\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}inputReader"{}\ Class\ Declarations}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00023}00023\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00025}\mbox{\hyperlink{classinput_reader}{00025}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinput_reader}{inputReader}}\ \{}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00026}00026\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{double}\ underlyingPrice;}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00028}00028\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ HELPER\ FUNCTION\ VARIABLES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{string}\ input;}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ validInput;}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ i;\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00032}00032\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00033}00033\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00034}00034\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ CONSTRUCTORS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ Default\ constructor.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00037}\mbox{\hyperlink{classinput_reader_a7c08c020024d761cbd33faca52fef7eb}{00037}}\ \ \ \ \ \mbox{\hyperlink{classinput_reader_a7c08c020024d761cbd33faca52fef7eb}{inputReader}}();}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00040}00040\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ KEY\ MEMBER\ FUNCTIONS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00041}00041\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Reads\ input\ values\ from\ the\ user\ interactively.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)\ per\ input\ prompt}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ i.e.\ time\ complexity\ depends\ on\ the\ number\ of\ input\ prompts}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ and\ the\ time\ it\ takes\ for\ the\ user\ to\ provide\ valid\ input.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Use\ validateAndSetInputValues()?\ }}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00050}\mbox{\hyperlink{classinput_reader_af254599e961a8ae1331735a621feac4f}{00050}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classinput_reader_af254599e961a8ae1331735a621feac4f}{readInputFromUser}}(\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\&\ model);}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00052}00052\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Reads\ input\ parameters\ from\ a\ file\ (e.g.\ JSON\ or\ CSV).}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)\ per\ input\ read\ from\ the\ file}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00057}\mbox{\hyperlink{classinput_reader_a14c0a5756f45060f15028b9e256b41ea}{00057}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinput_reader_a14c0a5756f45060f15028b9e256b41ea}{readInputFromFile}}(\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\&\ model,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ filename);}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00060}00060\ \ \ \ \ \textcolor{comment}{/*\ Reads\ input\ values\ from\ a\ database.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ \ \ It\ connects\ to\ the\ database,\ retrieves\ the\ input\ data,\ validates\ the}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ retrieved\ values,\ and\ sets\ them\ in\ the\ blackScholesModel\ object.\ */}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)\ [per\ input\ retrieval\ from\ the\ database]}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ TODO:\ IMPLEMENT}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00068}\mbox{\hyperlink{classinput_reader_a290a42eeb5358f9b68f39d178b5948d0}{00068}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinput_reader_a290a42eeb5358f9b68f39d178b5948d0}{readInputFromDB}}(\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\&\ model);}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00069}00069\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00071}00071\ \ \ \ \ \textcolor{comment}{/*\ Reads\ input\ values\ from\ an\ API\ by\ making\ an\ HTTP\ request.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ It\ initializes\ libcurl,\ sets\ up\ the\ HTTP\ request\ w/\ the\ API\ endpoint\ URL,}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ and\ performs\ the\ request.\ The\ received\ response\ is\ stored\ in\ the\ 'response'\ string}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ \ and\ then\ parsed\ to\ extract\ the\ input\ values.\ Finally,\ the\ retrieved\ input\ values}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ \ \ are\ validated\ and\ set\ in\ the\ blackScholesModel\ object.\ */}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)\ [per\ input\ retrieval\ from\ the\ API]}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00079}00079\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ TODO:\ IMPLEMENT}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00081}\mbox{\hyperlink{classinput_reader_a5d2940b07624435be940383f14bd599b}{00081}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinput_reader_a5d2940b07624435be940383f14bd599b}{readInputFromAPI}}(\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\&\ model);}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00082}00082\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00083}00083\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ Validates\ and\ sets\ the\ input\ values\ for\ the\ blackScholesModel.}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00088}\mbox{\hyperlink{classinput_reader_a5c95dd0db596a5179ab0272001d02b01}{00088}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classinput_reader_a5c95dd0db596a5179ab0272001d02b01}{validateAndSetInputValues}}(\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}\&\ model,\ \textcolor{keywordtype}{double}\ underlyingPrice,}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ strikePrice,\ \textcolor{keywordtype}{double}\ timeToExpiration,\ \textcolor{keywordtype}{double}\ riskFreeRate,}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ volatility,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ optionType);}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00091}00091\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00092}00092\ \};\ \textcolor{comment}{//\ class\ InputReader}}
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{input_reader_8h_source_l00095}00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ inputReader\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

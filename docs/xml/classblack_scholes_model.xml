@@ -1,0 +1,823 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classblack_scholes_model" kind="class" language="C++" prot="public">
+    <compoundname>blackScholesModel</compoundname>
+    <derivedcompoundref refid="classoption_greeks" prot="public" virt="virtual">optionGreeks</derivedcompoundref>
+    <derivedcompoundref refid="classoption_greeks_model" prot="public" virt="virtual">optionGreeksModel</derivedcompoundref>
+    <includes refid="black_scholes_model_8h" local="no">blackScholesModel.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" prot="public" static="no" strong="no">
+        <type></type>
+        <name>OptionType</name>
+        <qualifiedname>blackScholesModel::OptionType</qualifiedname>
+        <enumvalue id="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2" prot="public">
+          <name>CALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0" prot="public">
+          <name>PUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="77" column="5" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classblack_scholes_model_1abdc8ad5c6cdc1e10eb4c6023a639c0a7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double blackScholesModel::underlyingPrice</definition>
+        <argsstring></argsstring>
+        <name>underlyingPrice</name>
+        <qualifiedname>blackScholesModel::underlyingPrice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="35" column="12" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1ab7918e84a947aff190a1194dee18d028" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double blackScholesModel::strikePrice</definition>
+        <argsstring></argsstring>
+        <name>strikePrice</name>
+        <qualifiedname>blackScholesModel::strikePrice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="36" column="12" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1aaa3700f238e4c9eff6971d20d302fd90" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double blackScholesModel::timeToExpiration</definition>
+        <argsstring></argsstring>
+        <name>timeToExpiration</name>
+        <qualifiedname>blackScholesModel::timeToExpiration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="37" column="12" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1a90cd1a1aea72b151a3b2a78bd4251f5f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double blackScholesModel::riskFreeRate</definition>
+        <argsstring></argsstring>
+        <name>riskFreeRate</name>
+        <qualifiedname>blackScholesModel::riskFreeRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="38" column="12" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1ab2d2c8f3de7c1c4e63d87ecbff2e34a1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double blackScholesModel::volatility</definition>
+        <argsstring></argsstring>
+        <name>volatility</name>
+        <qualifiedname>blackScholesModel::volatility</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="39" column="12" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1a027f4776dcd7c533b32f1d8aebe2870d" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double blackScholesModel::d1_</definition>
+        <argsstring></argsstring>
+        <name>d1_</name>
+        <qualifiedname>blackScholesModel::d1_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="44" column="20" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1ac5601033fc693a818e0ced0af65f5610" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double blackScholesModel::d2_</definition>
+        <argsstring></argsstring>
+        <name>d2_</name>
+        <qualifiedname>blackScholesModel::d2_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="45" column="20" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1a2bd6ad6d4280d6a2c34deb15c35f98c6" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double blackScholesModel::d_</definition>
+        <argsstring></argsstring>
+        <name>d_</name>
+        <qualifiedname>blackScholesModel::d_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="47" column="20" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classblack_scholes_model_1a8e1ed3e28edacd0582023f66edf034c6" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double blackScholesModel::K_</definition>
+        <argsstring></argsstring>
+        <name>K_</name>
+        <qualifiedname>blackScholesModel::K_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="49" column="20" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classblack_scholes_model_1a35c786cf7e5b253f7a07f770d8ca5af8" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" kindref="member">blackScholesModel::OptionType</ref></type>
+        <definition>enum blackScholesModel::OptionType blackScholesModel::optionType</definition>
+        <argsstring></argsstring>
+        <name>optionType</name>
+        <qualifiedname>blackScholesModel::optionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="80" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classblack_scholes_model_1ad12265fab63fd4a253d35cf7254ed385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class inputReader</definition>
+        <argsstring></argsstring>
+        <name>inputReader</name>
+        <qualifiedname>blackScholesModel::inputReader</qualifiedname>
+        <param>
+          <type><ref refid="classinput_reader" kindref="compound">inputReader</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="83" column="18" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classblack_scholes_model_1a349acbb553dc2325ffea941b6f5945c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class optionGreeks</definition>
+        <argsstring></argsstring>
+        <name>optionGreeks</name>
+        <qualifiedname>blackScholesModel::optionGreeks</qualifiedname>
+        <param>
+          <type><ref refid="classoption_greeks" kindref="compound">optionGreeks</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="84" column="18" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classblack_scholes_model_1aa4510b288e2670fef8432a2800116b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class optionGreeksModel</definition>
+        <argsstring></argsstring>
+        <name>optionGreeksModel</name>
+        <qualifiedname>blackScholesModel::optionGreeksModel</qualifiedname>
+        <param>
+          <type><ref refid="classoption_greeks_model" kindref="compound">optionGreeksModel</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="85" column="18" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classblack_scholes_model_1a39aadfab3c4288b4b13a1364d9006b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class hestonModel</definition>
+        <argsstring></argsstring>
+        <name>hestonModel</name>
+        <qualifiedname>blackScholesModel::hestonModel</qualifiedname>
+        <param>
+          <type><ref refid="classheston_model" kindref="compound">hestonModel</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="86" column="18" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classblack_scholes_model_1aea3ddb6bbc80acc42ca150845b87cc46" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double blackScholesModel::calculateD1</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const</argsstring>
+        <name>calculateD1</name>
+        <qualifiedname>blackScholesModel::calculateD1</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToExpiration</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="58" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a97e711ceae4828dbb4187381686448fb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double blackScholesModel::calculateD2</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const</argsstring>
+        <name>calculateD2</name>
+        <qualifiedname>blackScholesModel::calculateD2</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToExpiration</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="65" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1ad64fe17cce37b979c57dc6b991599aa5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double blackScholesModel::calculateK</definition>
+        <argsstring>(double d) const</argsstring>
+        <name>calculateK</name>
+        <qualifiedname>blackScholesModel::calculateK</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="72" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classblack_scholes_model_1a7ddde3a422329fb1b20097aa78a2a510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>blackScholesModel::blackScholesModel</definition>
+        <argsstring>()</argsstring>
+        <name>blackScholesModel</name>
+        <qualifiedname>blackScholesModel::blackScholesModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="91" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a9c2c473eaa2587a35119a4a50cf1b864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>blackScholesModel::blackScholesModel</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility)</argsstring>
+        <name>blackScholesModel</name>
+        <qualifiedname>blackScholesModel::blackScholesModel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToExpiration</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="95" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1adfa7fcdd443de8093f24c58866ec6ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>blackScholesModel::blackScholesModel</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double riskFreeRate, double timeToExpiration, double volatility, OptionType optionType)</argsstring>
+        <name>blackScholesModel</name>
+        <qualifiedname>blackScholesModel::blackScholesModel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToExpiration</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <param>
+          <type><ref refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" kindref="member">OptionType</ref></type>
+          <declname>optionType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="102" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a9608f80ab67eb8bcd96a5f53276c1762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double blackScholesModel::calculateOptionPrice</definition>
+        <argsstring>()</argsstring>
+        <name>calculateOptionPrice</name>
+        <qualifiedname>blackScholesModel::calculateOptionPrice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="115" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a892ddce4b71241e8f027173686f34461" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double blackScholesModel::normalCDF</definition>
+        <argsstring>(double d) const</argsstring>
+        <name>normalCDF</name>
+        <qualifiedname>blackScholesModel::normalCDF</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="124" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a0981dfe03d4c4b44e3c1c2c5ce725a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setUnderlyingPrice</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>setUnderlyingPrice</name>
+        <qualifiedname>blackScholesModel::setUnderlyingPrice</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="133" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a560fa41b7e2ada19e5291fd02b9caf3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setStrikePrice</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>setStrikePrice</name>
+        <qualifiedname>blackScholesModel::setStrikePrice</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="140" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a973a8d1b689ee0bf23771672bd9774ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setTTE</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>setTTE</name>
+        <qualifiedname>blackScholesModel::setTTE</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1adf70d018da40647100dfaff53fc2bd71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setRFR</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>setRFR</name>
+        <qualifiedname>blackScholesModel::setRFR</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="154" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a206cb165b1004ac80295f68b8f6ceee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setVolatility</definition>
+        <argsstring>(const double &amp;value)</argsstring>
+        <name>setVolatility</name>
+        <qualifiedname>blackScholesModel::setVolatility</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="161" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1ac2c755b853cf654df449095d8a82e684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setOptionType</definition>
+        <argsstring>(const OptionType &amp;value)</argsstring>
+        <name>setOptionType</name>
+        <qualifiedname>blackScholesModel::setOptionType</qualifiedname>
+        <param>
+          <type>const <ref refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" kindref="member">OptionType</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="168" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1af93fef5df405832b852d15b11dbf7b3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setD1</definition>
+        <argsstring>(const double &amp;value) const</argsstring>
+        <name>setD1</name>
+        <qualifiedname>blackScholesModel::setD1</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="175" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a3f38248c5395e90a3cb3f3e142c48f5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setD2</definition>
+        <argsstring>(const double &amp;value) const</argsstring>
+        <name>setD2</name>
+        <qualifiedname>blackScholesModel::setD2</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="182" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a0cc11862cf9fae0bcaba5efb0082663b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blackScholesModel::setK</definition>
+        <argsstring>(const double &amp;value) const</argsstring>
+        <name>setK</name>
+        <qualifiedname>blackScholesModel::setK</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="189" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a985c48c0222f31022c1c1f54050b73d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getUnderlyingPrice</definition>
+        <argsstring>() const</argsstring>
+        <name>getUnderlyingPrice</name>
+        <qualifiedname>blackScholesModel::getUnderlyingPrice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="198" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a26226bc311b5a1eab9afb89a2b86824d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getStrikePrice</definition>
+        <argsstring>() const</argsstring>
+        <name>getStrikePrice</name>
+        <qualifiedname>blackScholesModel::getStrikePrice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="205" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1acce910bfd40831f839ea4d56c0f206ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getTTE</definition>
+        <argsstring>() const</argsstring>
+        <name>getTTE</name>
+        <qualifiedname>blackScholesModel::getTTE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="212" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1aa3df25dd7f6455b06f73435a55cc238c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getRFR</definition>
+        <argsstring>() const</argsstring>
+        <name>getRFR</name>
+        <qualifiedname>blackScholesModel::getRFR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="219" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1aced3096a6015e3eb86d089636eaed7a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getVolatility</definition>
+        <argsstring>() const</argsstring>
+        <name>getVolatility</name>
+        <qualifiedname>blackScholesModel::getVolatility</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="226" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a3a0e83fe7e08584ccaeffcbdf8dd2ba1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" kindref="member">OptionType</ref></type>
+        <definition>OptionType blackScholesModel::getOptionType</definition>
+        <argsstring>() const</argsstring>
+        <name>getOptionType</name>
+        <qualifiedname>blackScholesModel::getOptionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="233" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1ab6b804f0bf84f2609df992a379ac5340" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getD1</definition>
+        <argsstring>() const</argsstring>
+        <name>getD1</name>
+        <qualifiedname>blackScholesModel::getD1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="240" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a4d513ab31082c7e62a35b45aba2e5d39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getD2</definition>
+        <argsstring>() const</argsstring>
+        <name>getD2</name>
+        <qualifiedname>blackScholesModel::getD2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="247" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classblack_scholes_model_1a3f1b0604aa2613c6551371f33c836eb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; blackScholesModel::getK</definition>
+        <argsstring>() const</argsstring>
+        <name>getK</name>
+        <qualifiedname>blackScholesModel::getK</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/blackScholesModel.h" line="254" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>blackScholesModel</label>
+        <link refid="classblack_scholes_model"/>
+      </node>
+      <node id="4">
+        <label>hestonModel</label>
+        <link refid="classheston_model"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optionGreeks</label>
+        <link refid="classoption_greeks"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>optionGreeksModel</label>
+        <link refid="classoption_greeks_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/black-scholes-cpp/blackScholesModel.h" line="22" column="1" bodyfile="include/black-scholes-cpp/blackScholesModel.h" bodystart="22" bodyend="256"/>
+    <listofallmembers>
+      <member refid="classblack_scholes_model_1a7ddde3a422329fb1b20097aa78a2a510" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a9c2c473eaa2587a35119a4a50cf1b864" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1adfa7fcdd443de8093f24c58866ec6ac7" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1aea3ddb6bbc80acc42ca150845b87cc46" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>calculateD1</name></member>
+      <member refid="classblack_scholes_model_1a97e711ceae4828dbb4187381686448fb" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>calculateD2</name></member>
+      <member refid="classblack_scholes_model_1ad64fe17cce37b979c57dc6b991599aa5" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>calculateK</name></member>
+      <member refid="classblack_scholes_model_1a9608f80ab67eb8bcd96a5f53276c1762" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>calculateOptionPrice</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>CALL</name></member>
+      <member refid="classblack_scholes_model_1a027f4776dcd7c533b32f1d8aebe2870d" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>d1_</name></member>
+      <member refid="classblack_scholes_model_1ac5601033fc693a818e0ced0af65f5610" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>d2_</name></member>
+      <member refid="classblack_scholes_model_1a2bd6ad6d4280d6a2c34deb15c35f98c6" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>d_</name></member>
+      <member refid="classblack_scholes_model_1ab6b804f0bf84f2609df992a379ac5340" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getD1</name></member>
+      <member refid="classblack_scholes_model_1a4d513ab31082c7e62a35b45aba2e5d39" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getD2</name></member>
+      <member refid="classblack_scholes_model_1a3f1b0604aa2613c6551371f33c836eb4" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getK</name></member>
+      <member refid="classblack_scholes_model_1a3a0e83fe7e08584ccaeffcbdf8dd2ba1" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getOptionType</name></member>
+      <member refid="classblack_scholes_model_1aa3df25dd7f6455b06f73435a55cc238c" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getRFR</name></member>
+      <member refid="classblack_scholes_model_1a26226bc311b5a1eab9afb89a2b86824d" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getStrikePrice</name></member>
+      <member refid="classblack_scholes_model_1acce910bfd40831f839ea4d56c0f206ea" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getTTE</name></member>
+      <member refid="classblack_scholes_model_1a985c48c0222f31022c1c1f54050b73d5" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getUnderlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1aced3096a6015e3eb86d089636eaed7a2" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>getVolatility</name></member>
+      <member refid="classblack_scholes_model_1a39aadfab3c4288b4b13a1364d9006b5c" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>hestonModel</name></member>
+      <member refid="classblack_scholes_model_1ad12265fab63fd4a253d35cf7254ed385" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>inputReader</name></member>
+      <member refid="classblack_scholes_model_1a8e1ed3e28edacd0582023f66edf034c6" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>K_</name></member>
+      <member refid="classblack_scholes_model_1a892ddce4b71241e8f027173686f34461" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>normalCDF</name></member>
+      <member refid="classblack_scholes_model_1a349acbb553dc2325ffea941b6f5945c1" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>optionGreeks</name></member>
+      <member refid="classblack_scholes_model_1aa4510b288e2670fef8432a2800116b24" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>optionGreeksModel</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>OptionType</name></member>
+      <member refid="classblack_scholes_model_1a35c786cf7e5b253f7a07f770d8ca5af8" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>optionType</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>PUT</name></member>
+      <member refid="classblack_scholes_model_1a90cd1a1aea72b151a3b2a78bd4251f5f" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>riskFreeRate</name></member>
+      <member refid="classblack_scholes_model_1af93fef5df405832b852d15b11dbf7b3b" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setD1</name></member>
+      <member refid="classblack_scholes_model_1a3f38248c5395e90a3cb3f3e142c48f5f" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setD2</name></member>
+      <member refid="classblack_scholes_model_1a0cc11862cf9fae0bcaba5efb0082663b" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setK</name></member>
+      <member refid="classblack_scholes_model_1ac2c755b853cf654df449095d8a82e684" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setOptionType</name></member>
+      <member refid="classblack_scholes_model_1adf70d018da40647100dfaff53fc2bd71" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setRFR</name></member>
+      <member refid="classblack_scholes_model_1a560fa41b7e2ada19e5291fd02b9caf3e" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setStrikePrice</name></member>
+      <member refid="classblack_scholes_model_1a973a8d1b689ee0bf23771672bd9774ac" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setTTE</name></member>
+      <member refid="classblack_scholes_model_1a0981dfe03d4c4b44e3c1c2c5ce725a99" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setUnderlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1a206cb165b1004ac80295f68b8f6ceee4" prot="public" virt="non-virtual"><scope>blackScholesModel</scope><name>setVolatility</name></member>
+      <member refid="classblack_scholes_model_1ab7918e84a947aff190a1194dee18d028" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>strikePrice</name></member>
+      <member refid="classblack_scholes_model_1aaa3700f238e4c9eff6971d20d302fd90" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>timeToExpiration</name></member>
+      <member refid="classblack_scholes_model_1abdc8ad5c6cdc1e10eb4c6023a639c0a7" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>underlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1ab2d2c8f3de7c1c4e63d87ecbff2e34a1" prot="private" virt="non-virtual"><scope>blackScholesModel</scope><name>volatility</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

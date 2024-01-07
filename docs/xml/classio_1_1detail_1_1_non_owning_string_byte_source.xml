@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1detail_1_1_non_owning_string_byte_source" kind="class" language="C++" prot="public">
+    <compoundname>io::detail::NonOwningStringByteSource</compoundname>
+    <basecompoundref refid="classio_1_1_byte_source_base" prot="public" virt="non-virtual">io::ByteSourceBase</basecompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1detail_1_1_non_owning_string_byte_source_1ad130b4796eb5758c3e512d585af51bef" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+        <definition>const char* io::detail::NonOwningStringByteSource::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <qualifiedname>io::detail::NonOwningStringByteSource::str</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="184" column="14" bodyfile="include/black-scholes-cpp/csv.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1detail_1_1_non_owning_string_byte_source_1aa2097ba0c3c49f0266ec1fbc8f322947" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref></type>
+        <definition>long long io::detail::NonOwningStringByteSource::remaining_byte_count</definition>
+        <argsstring></argsstring>
+        <name>remaining_byte_count</name>
+        <qualifiedname>io::detail::NonOwningStringByteSource::remaining_byte_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="185" column="13" bodyfile="include/black-scholes-cpp/csv.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1detail_1_1_non_owning_string_byte_source_1a8fd604017b38e20f90386b6e10bd95a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::NonOwningStringByteSource::NonOwningStringByteSource</definition>
+        <argsstring>(const char *str, long long size)</argsstring>
+        <name>NonOwningStringByteSource</name>
+        <qualifiedname>io::detail::NonOwningStringByteSource::NonOwningStringByteSource</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="168" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="168" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_non_owning_string_byte_source_1aba194be7e3a141f40d683db483a620bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::NonOwningStringByteSource::read</definition>
+        <argsstring>(char *buffer, int desired_byte_count)</argsstring>
+        <name>read</name>
+        <qualifiedname>io::detail::NonOwningStringByteSource::read</qualifiedname>
+        <reimplements refid="classio_1_1_byte_source_base_1a9598bcc869b79e44da07f0e6fa478615">read</reimplements>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+          <declname>desired_byte_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="171" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="171" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_non_owning_string_byte_source_1aa727fc8845a570b7a7a2367da3fe0adf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::NonOwningStringByteSource::~NonOwningStringByteSource</definition>
+        <argsstring>()</argsstring>
+        <name>~NonOwningStringByteSource</name>
+        <qualifiedname>io::detail::NonOwningStringByteSource::~NonOwningStringByteSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="181" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="1">
+        <label>io::detail::NonOwningStringByteSource</label>
+        <link refid="classio_1_1detail_1_1_non_owning_string_byte_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="1">
+        <label>io::detail::NonOwningStringByteSource</label>
+        <link refid="classio_1_1detail_1_1_non_owning_string_byte_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/black-scholes-cpp/csv.h" line="166" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="166" bodyend="186"/>
+    <listofallmembers>
+      <member refid="classio_1_1detail_1_1_non_owning_string_byte_source_1a8fd604017b38e20f90386b6e10bd95a3" prot="public" virt="non-virtual"><scope>io::detail::NonOwningStringByteSource</scope><name>NonOwningStringByteSource</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_string_byte_source_1aba194be7e3a141f40d683db483a620bb" prot="public" virt="virtual"><scope>io::detail::NonOwningStringByteSource</scope><name>read</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_string_byte_source_1aa2097ba0c3c49f0266ec1fbc8f322947" prot="private" virt="non-virtual"><scope>io::detail::NonOwningStringByteSource</scope><name>remaining_byte_count</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_string_byte_source_1ad130b4796eb5758c3e512d585af51bef" prot="private" virt="non-virtual"><scope>io::detail::NonOwningStringByteSource</scope><name>str</name></member>
+      <member refid="classio_1_1_byte_source_base_1ac3228fe608b3268e49c2243d668d6efd" prot="public" virt="virtual"><scope>io::detail::NonOwningStringByteSource</scope><name>~ByteSourceBase</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_string_byte_source_1aa727fc8845a570b7a7a2367da3fe0adf" prot="public" virt="non-virtual"><scope>io::detail::NonOwningStringByteSource</scope><name>~NonOwningStringByteSource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

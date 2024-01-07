@@ -1,0 +1,87 @@
+\doxysection{Program.\+h}
+\hypertarget{_program_8h_source}{}\label{_program_8h_source}\index{include/black-\/scholes-\/cpp/Program.h@{include/black-\/scholes-\/cpp/Program.h}}
+\mbox{\hyperlink{_program_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00002}00002\ \textcolor{comment}{//\ \ Program.h}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00003}00003\ \textcolor{comment}{//\ \ black-\/scholes}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00005}00005\ \textcolor{comment}{//\ \ Created\ by\ lyndskg\ on\ 7/18/23.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ Program\_h}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ Program\_h}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input_reader_8h}{inputReader.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{black_scholes_model_8h}{blackScholesModel.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00013}00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00015}00015\ \textcolor{comment}{//\ Declare\ the\ fast\_io\ lambda\ function}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00016}\mbox{\hyperlink{_program_8h_a964f63b782f90651b088a9c60e52a464}{00016}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_program_8h_a964f63b782f90651b088a9c60e52a464}{fast\_io\_initializer}}();}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00018}00018\ \textcolor{comment}{//\ Declare\ the\ fast\_io\ variable\ as\ a\ function\ pointer}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00019}00019\ \textcolor{keyword}{extern}\ void\ (*\mbox{\hyperlink{_program_8h_a8ffb829ab72a9f9ac216bfb959f1830d}{fast\_io}})();}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00021}00021\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00022}00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Program"{}\ Class\ Declarations}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00023}00023\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00025}\mbox{\hyperlink{class_program}{00025}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_program}{Program}}\ \{}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00026}00026\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00027}00027\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ MEMBER\ VARIABLES\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00028}\mbox{\hyperlink{class_program_ac41a49da8a99a642576bcb692e8e8e63}{00028}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_program_ac41a49da8a99a642576bcb692e8e8e63}{inputMode}};\ \textcolor{comment}{//\ Program\ mode\ (i.e.\ USER,\ FILE,\ DB,\ or\ API)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00029}\mbox{\hyperlink{class_program_adced491443a62aa3fd437bb06b7d5a03}{00029}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_program_adced491443a62aa3fd437bb06b7d5a03}{MAX\_BUFFER\_SIZE}}\ =\ 10000;}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00030}00030\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00031}00031\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ CONSTRUCTORS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Default\ constructor.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00033}\mbox{\hyperlink{class_program_aaefaa0df08f3484476fc4d61e97acbdc}{00033}}\ \ \ \ \ \mbox{\hyperlink{class_program_aaefaa0df08f3484476fc4d61e97acbdc}{Program}}();}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Implement\ any\ relevant\ custom\ constructors.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00037}00037\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00038}00038\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ KEY\ MEMBER\ FUNCTIONS\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00039}00039\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00040}00040\ \ \ \ \ \textcolor{comment}{/*\ Processes\ the\ command\ line\ arguments.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ \ \ Uses\ getopt\_long\ to\ parse\ the\ options\ and\ their\ arguments.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ \ \ Based\ on\ the\ specified\ mode,\ it\ calls\ the\ corresponding\ functions\ to\ read\ input\ values}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ \ \ from\ different\ sources\ (e.g.\ user\ input,\ a\ file,\ a\ database,\ or\ an\ API).\ */}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(n),\ where\ n\ =\ \#\ of\ command\ line\ options}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00049}\mbox{\hyperlink{class_program_adedd67b6dbeae5b7290e664a0244f4ab}{00049}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_program_adedd67b6dbeae5b7290e664a0244f4ab}{get\_options}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[]);}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00050}00050\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ Prints\ a\ helpful\ message\ about\ how\ to\ use\ the\ program\ for\ the\ user\ when\ requested.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00056}\mbox{\hyperlink{class_program_acea75d5a337ccd2ea84bb23642099a3e}{00056}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_program_acea75d5a337ccd2ea84bb23642099a3e}{printHelp}}(\textcolor{keywordtype}{char}*\ argv[]);}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00057}00057\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Launches\ the\ algorithm\ by\ reading\ input\ values\ based\ on\ the\ specified\ input\ mode.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00063}\mbox{\hyperlink{class_program_af5efef91e7012e976d5c1fcdcb93797a}{00063}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_program_af5efef91e7012e976d5c1fcdcb93797a}{launchAlgo}}(\mbox{\hyperlink{classblack_scholes_model}{blackScholesModel}}*\ model);}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00064}00064\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Reads\ and\ validates\ the\ input\ mode\ from\ the\ user.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ @Return:\ Returns\ the\ validated\ input\ mode\ as\ a\ string.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ Time\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ Space\ complexity:\ O(1)}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00072}\mbox{\hyperlink{class_program_a86fed278c6ed6d7390e0adb8e8d061a0}{00072}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_program_a86fed278c6ed6d7390e0adb8e8d061a0}{readInputMode}}();}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00075}00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Implement\ any/all\ private\ and/or\ protected\ member\ variables.}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00078}00078\ \};\ \textcolor{comment}{//\ class\ Program}}
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_program_8h_source_l00081}00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ Program\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

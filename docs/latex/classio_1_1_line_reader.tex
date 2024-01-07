@@ -1,0 +1,243 @@
+\doxysection{io\+::Line\+Reader Class Reference}
+\hypertarget{classio_1_1_line_reader}{}\label{classio_1_1_line_reader}\index{io::LineReader@{io::LineReader}}
+
+
+{\ttfamily \#include $<$csv.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_abd9f13fb1d3f5d36857dec0a1d1bde6c}{Line\+Reader}} ()=delete
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a84f2957de769bb701eaaddfd8bc004dd}{Line\+Reader}} (const \mbox{\hyperlink{classio_1_1_line_reader}{Line\+Reader}} \&)=delete
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader}{Line\+Reader}} \& \mbox{\hyperlink{classio_1_1_line_reader_a284f7970473d13bc32a0c618b313043e}{operator=}} (const \mbox{\hyperlink{classio_1_1_line_reader}{Line\+Reader}} \&)=delete
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a81a75d3f53725d35822f490007520e29}{Line\+Reader}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_ab0eb26f44fa6b18f9c39dfb2561ac882}{Line\+Reader}} (const std\+::string \&file\+\_\+name)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a2d30e0770f33beeb2b45643dfd629c3a}{Line\+Reader}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classio_1_1_byte_source_base}{Byte\+Source\+Base}} $>$ byte\+\_\+source)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a786bde1b46d6ae5ade1492e9015e42b0}{Line\+Reader}} (const std\+::string \&file\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classio_1_1_byte_source_base}{Byte\+Source\+Base}} $>$ byte\+\_\+source)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_ad5a65d6f23474884061a77ea858c042b}{Line\+Reader}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name, const char \texorpdfstring{$\ast$}{*}data\+\_\+begin, const char \texorpdfstring{$\ast$}{*}data\+\_\+end)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a0a52d864b46442a253443cac1367366e}{Line\+Reader}} (const std\+::string \&file\+\_\+name, const char \texorpdfstring{$\ast$}{*}data\+\_\+begin, const char \texorpdfstring{$\ast$}{*}data\+\_\+end)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_ad2a8943ba0848ae5052e2f5ad30c010e}{Line\+Reader}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name, FILE \texorpdfstring{$\ast$}{*}file)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a93fa2e3ae98b0e7a7391714d6395c552}{Line\+Reader}} (const std\+::string \&file\+\_\+name, FILE \texorpdfstring{$\ast$}{*}file)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a301c08eb9ca5d3fdccf4e9a8e5ac82f8}{Line\+Reader}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name, std\+::istream \&in)
+\item 
+\mbox{\hyperlink{classio_1_1_line_reader_a3eacf4d1539a24122c6897fce4e72f06}{Line\+Reader}} (const std\+::string \&file\+\_\+name, std\+::istream \&in)
+\item 
+void \mbox{\hyperlink{classio_1_1_line_reader_a1a0763d491dec16cebc33134e965dfee}{set\+\_\+file\+\_\+name}} (const std\+::string \&file\+\_\+name)
+\item 
+void \mbox{\hyperlink{classio_1_1_line_reader_a81c56ac68497da5ec874333ce063fd83}{set\+\_\+file\+\_\+name}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classio_1_1_line_reader_a9279e6a30a85061167ecd50e20c5a10e}{get\+\_\+truncated\+\_\+file\+\_\+name}} () const
+\item 
+void \mbox{\hyperlink{classio_1_1_line_reader_a581b55d4ced6adb964de50fa8ac6eb08}{set\+\_\+file\+\_\+line}} (unsigned file\+\_\+line)
+\item 
+unsigned \mbox{\hyperlink{classio_1_1_line_reader_a3f3459e22ed8e459238c290050b6722e}{get\+\_\+file\+\_\+line}} () const
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classio_1_1_line_reader_a09a64339a84ceeb09f9a1249beacca15}{next\+\_\+line}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00289}{289}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classio_1_1_line_reader_abd9f13fb1d3f5d36857dec0a1d1bde6c}\label{classio_1_1_line_reader_abd9f13fb1d3f5d36857dec0a1d1bde6c} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classio_1_1_line_reader_a84f2957de769bb701eaaddfd8bc004dd}\label{classio_1_1_line_reader_a84f2957de769bb701eaaddfd8bc004dd} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classio_1_1_line_reader}{Line\+Reader}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classio_1_1_line_reader_a81a75d3f53725d35822f490007520e29}\label{classio_1_1_line_reader_a81a75d3f53725d35822f490007520e29} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00344}{344}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_ab0eb26f44fa6b18f9c39dfb2561ac882}\label{classio_1_1_line_reader_ab0eb26f44fa6b18f9c39dfb2561ac882} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00349}{349}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a2d30e0770f33beeb2b45643dfd629c3a}\label{classio_1_1_line_reader_a2d30e0770f33beeb2b45643dfd629c3a} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classio_1_1_byte_source_base}{Byte\+Source\+Base}} $>$}]{byte\+\_\+source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00354}{354}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a786bde1b46d6ae5ade1492e9015e42b0}\label{classio_1_1_line_reader_a786bde1b46d6ae5ade1492e9015e42b0} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classio_1_1_byte_source_base}{Byte\+Source\+Base}} $>$}]{byte\+\_\+source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00360}{360}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_ad5a65d6f23474884061a77ea858c042b}\label{classio_1_1_line_reader_ad5a65d6f23474884061a77ea858c042b} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data\+\_\+begin,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00366}{366}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a0a52d864b46442a253443cac1367366e}\label{classio_1_1_line_reader_a0a52d864b46442a253443cac1367366e} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data\+\_\+begin,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{data\+\_\+end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00373}{373}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_ad2a8943ba0848ae5052e2f5ad30c010e}\label{classio_1_1_line_reader_ad2a8943ba0848ae5052e2f5ad30c010e} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00380}{380}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a93fa2e3ae98b0e7a7391714d6395c552}\label{classio_1_1_line_reader_a93fa2e3ae98b0e7a7391714d6395c552} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00386}{386}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a301c08eb9ca5d3fdccf4e9a8e5ac82f8}\label{classio_1_1_line_reader_a301c08eb9ca5d3fdccf4e9a8e5ac82f8} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00392}{392}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a3eacf4d1539a24122c6897fce4e72f06}\label{classio_1_1_line_reader_a3eacf4d1539a24122c6897fce4e72f06} 
+\index{io::LineReader@{io::LineReader}!LineReader@{LineReader}}
+\index{LineReader@{LineReader}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{LineReader()}{LineReader()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily io\+::\+Line\+Reader\+::\+Line\+Reader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00398}{398}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classio_1_1_line_reader_a3f3459e22ed8e459238c290050b6722e}\label{classio_1_1_line_reader_a3f3459e22ed8e459238c290050b6722e} 
+\index{io::LineReader@{io::LineReader}!get\_file\_line@{get\_file\_line}}
+\index{get\_file\_line@{get\_file\_line}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{get\_file\_line()}{get\_file\_line()}}
+{\footnotesize\ttfamily unsigned io\+::\+Line\+Reader\+::get\+\_\+file\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00421}{421}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a9279e6a30a85061167ecd50e20c5a10e}\label{classio_1_1_line_reader_a9279e6a30a85061167ecd50e20c5a10e} 
+\index{io::LineReader@{io::LineReader}!get\_truncated\_file\_name@{get\_truncated\_file\_name}}
+\index{get\_truncated\_file\_name@{get\_truncated\_file\_name}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{get\_truncated\_file\_name()}{get\_truncated\_file\_name()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} io\+::\+Line\+Reader\+::get\+\_\+truncated\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00417}{417}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a09a64339a84ceeb09f9a1249beacca15}\label{classio_1_1_line_reader_a09a64339a84ceeb09f9a1249beacca15} 
+\index{io::LineReader@{io::LineReader}!next\_line@{next\_line}}
+\index{next\_line@{next\_line}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{next\_line()}{next\_line()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} io\+::\+Line\+Reader\+::next\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00423}{423}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a284f7970473d13bc32a0c618b313043e}\label{classio_1_1_line_reader_a284f7970473d13bc32a0c618b313043e} 
+\index{io::LineReader@{io::LineReader}!operator=@{operator=}}
+\index{operator=@{operator=}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classio_1_1_line_reader}{Line\+Reader}} \& io\+::\+Line\+Reader\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classio_1_1_line_reader}{Line\+Reader}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classio_1_1_line_reader_a581b55d4ced6adb964de50fa8ac6eb08}\label{classio_1_1_line_reader_a581b55d4ced6adb964de50fa8ac6eb08} 
+\index{io::LineReader@{io::LineReader}!set\_file\_line@{set\_file\_line}}
+\index{set\_file\_line@{set\_file\_line}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{set\_file\_line()}{set\_file\_line()}}
+{\footnotesize\ttfamily void io\+::\+Line\+Reader\+::set\+\_\+file\+\_\+line (\begin{DoxyParamCaption}\item[{unsigned}]{file\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00419}{419}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a81c56ac68497da5ec874333ce063fd83}\label{classio_1_1_line_reader_a81c56ac68497da5ec874333ce063fd83} 
+\index{io::LineReader@{io::LineReader}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void io\+::\+Line\+Reader\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00408}{408}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_line_reader_a1a0763d491dec16cebc33134e965dfee}\label{classio_1_1_line_reader_a1a0763d491dec16cebc33134e965dfee} 
+\index{io::LineReader@{io::LineReader}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!io::LineReader@{io::LineReader}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void io\+::\+Line\+Reader\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l00404}{404}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/black-\/scholes-\/cpp/\mbox{\hyperlink{csv_8h}{csv.\+h}}\end{DoxyCompactItemize}

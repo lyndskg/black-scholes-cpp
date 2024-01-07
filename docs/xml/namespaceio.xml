@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespaceio" kind="namespace" language="C++">
+    <compoundname>io</compoundname>
+    <innerclass refid="classio_1_1_byte_source_base" prot="public">io::ByteSourceBase</innerclass>
+    <innerclass refid="classio_1_1_c_s_v_reader" prot="public">io::CSVReader</innerclass>
+    <innerclass refid="structio_1_1double__quote__escape" prot="public">io::double_quote_escape</innerclass>
+    <innerclass refid="structio_1_1empty__line__comment" prot="public">io::empty_line_comment</innerclass>
+    <innerclass refid="structio_1_1ignore__overflow" prot="public">io::ignore_overflow</innerclass>
+    <innerclass refid="classio_1_1_line_reader" prot="public">io::LineReader</innerclass>
+    <innerclass refid="structio_1_1no__comment" prot="public">io::no_comment</innerclass>
+    <innerclass refid="structio_1_1no__quote__escape" prot="public">io::no_quote_escape</innerclass>
+    <innerclass refid="structio_1_1set__to__max__on__overflow" prot="public">io::set_to_max_on_overflow</innerclass>
+    <innerclass refid="structio_1_1single__and__empty__line__comment" prot="public">io::single_and_empty_line_comment</innerclass>
+    <innerclass refid="structio_1_1single__line__comment" prot="public">io::single_line_comment</innerclass>
+    <innerclass refid="structio_1_1throw__on__overflow" prot="public">io::throw_on_overflow</innerclass>
+    <innerclass refid="structio_1_1trim__chars" prot="public">io::trim_chars</innerclass>
+    <innernamespace refid="namespaceio_1_1detail">io::detail</innernamespace>
+    <innernamespace refid="namespaceio_1_1error">io::error</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceio_1aa04154e5c37e292c5acc7533d28a9da7" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>using io::ignore_column =  unsigned int</definition>
+        <argsstring></argsstring>
+        <name>ignore_column</name>
+        <qualifiedname>io::ignore_column</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="639" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="639" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceio_1a5ce8c4a05cf8b606e01ee4d510003a48" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespaceio_1aa04154e5c37e292c5acc7533d28a9da7" kindref="member">ignore_column</ref></type>
+        <definition>const ignore_column io::ignore_no_column</definition>
+        <argsstring></argsstring>
+        <name>ignore_no_column</name>
+        <qualifiedname>io::ignore_no_column</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="640" column="28" bodyfile="include/black-scholes-cpp/csv.h" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceio_1ab7880af847e3a9363f5b8e7426d91d92" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespaceio_1aa04154e5c37e292c5acc7533d28a9da7" kindref="member">ignore_column</ref></type>
+        <definition>const ignore_column io::ignore_extra_column</definition>
+        <argsstring></argsstring>
+        <name>ignore_extra_column</name>
+        <qualifiedname>io::ignore_extra_column</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="641" column="28" bodyfile="include/black-scholes-cpp/csv.h" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceio_1ad4dfab332554569a996f68d8e9920a81" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespaceio_1aa04154e5c37e292c5acc7533d28a9da7" kindref="member">ignore_column</ref></type>
+        <definition>const ignore_column io::ignore_missing_column</definition>
+        <argsstring></argsstring>
+        <name>ignore_missing_column</name>
+        <qualifiedname>io::ignore_missing_column</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="642" column="28" bodyfile="include/black-scholes-cpp/csv.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="53" column="1"/>
+  </compounddef>
+</doxygen>

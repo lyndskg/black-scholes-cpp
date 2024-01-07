@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1error_1_1with__errno" kind="struct" language="C++" prot="public">
+    <compoundname>io::error::with_errno</compoundname>
+    <derivedcompoundref refid="structio_1_1error_1_1can__not__open__file" prot="public" virt="non-virtual">io::error::can_not_open_file</derivedcompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structio_1_1error_1_1with__errno_1a99dcacba02cb53351fe64d7e064406be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int io::error::with_errno::errno_value</definition>
+        <argsstring></argsstring>
+        <name>errno_value</name>
+        <qualifiedname>io::error::with_errno::errno_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="103" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structio_1_1error_1_1with__errno_1a32a76a42097cfdfb2793511082eb0f93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::error::with_errno::with_errno</definition>
+        <argsstring>()</argsstring>
+        <name>with_errno</name>
+        <qualifiedname>io::error::with_errno::with_errno</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="99" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1error_1_1with__errno_1a572cfa4b4a96792cd1d17dc9ad2eb5a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::error::with_errno::set_errno</definition>
+        <argsstring>(int errno_value)</argsstring>
+        <name>set_errno</name>
+        <qualifiedname>io::error::with_errno::set_errno</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>errno_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="101" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::error::can_not_open_file</label>
+        <link refid="structio_1_1error_1_1can__not__open__file"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>io::error::with_errno</label>
+        <link refid="structio_1_1error_1_1with__errno"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/black-scholes-cpp/csv.h" line="98" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="98" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structio_1_1error_1_1with__errno_1a99dcacba02cb53351fe64d7e064406be" prot="public" virt="non-virtual"><scope>io::error::with_errno</scope><name>errno_value</name></member>
+      <member refid="structio_1_1error_1_1with__errno_1a572cfa4b4a96792cd1d17dc9ad2eb5a9" prot="public" virt="non-virtual"><scope>io::error::with_errno</scope><name>set_errno</name></member>
+      <member refid="structio_1_1error_1_1with__errno_1a32a76a42097cfdfb2793511082eb0f93" prot="public" virt="non-virtual"><scope>io::error::with_errno</scope><name>with_errno</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

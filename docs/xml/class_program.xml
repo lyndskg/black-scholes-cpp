@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_program" kind="class" language="C++" prot="public">
+    <compoundname>Program</compoundname>
+    <includes refid="_program_8h" local="no">Program.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_program_1ac41a49da8a99a642576bcb692e8e8e63" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Program::inputMode</definition>
+        <argsstring></argsstring>
+        <name>inputMode</name>
+        <qualifiedname>Program::inputMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="28" column="12" bodyfile="include/black-scholes-cpp/Program.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_program_1adced491443a62aa3fd437bb06b7d5a03" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Program::MAX_BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MAX_BUFFER_SIZE</name>
+        <qualifiedname>Program::MAX_BUFFER_SIZE</qualifiedname>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="29" column="26" bodyfile="include/black-scholes-cpp/Program.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_program_1aaefaa0df08f3484476fc4d61e97acbdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Program::Program</definition>
+        <argsstring>()</argsstring>
+        <name>Program</name>
+        <qualifiedname>Program::Program</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1adedd67b6dbeae5b7290e664a0244f4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Program::get_options</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>get_options</name>
+        <qualifiedname>Program::get_options</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="49" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1acea75d5a337ccd2ea84bb23642099a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Program::printHelp</definition>
+        <argsstring>(char *argv[])</argsstring>
+        <name>printHelp</name>
+        <qualifiedname>Program::printHelp</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1af5efef91e7012e976d5c1fcdcb93797a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Program::launchAlgo</definition>
+        <argsstring>(blackScholesModel *model)</argsstring>
+        <name>launchAlgo</name>
+        <qualifiedname>Program::launchAlgo</qualifiedname>
+        <param>
+          <type><ref refid="classblack_scholes_model" kindref="compound">blackScholesModel</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_program_1a86fed278c6ed6d7390e0adb8e8d061a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Program::readInputMode</definition>
+        <argsstring>()</argsstring>
+        <name>readInputMode</name>
+        <qualifiedname>Program::readInputMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="72" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/Program.h" line="25" column="1" bodyfile="include/black-scholes-cpp/Program.h" bodystart="25" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_program_1adedd67b6dbeae5b7290e664a0244f4ab" prot="public" virt="non-virtual"><scope>Program</scope><name>get_options</name></member>
+      <member refid="class_program_1ac41a49da8a99a642576bcb692e8e8e63" prot="public" virt="non-virtual"><scope>Program</scope><name>inputMode</name></member>
+      <member refid="class_program_1af5efef91e7012e976d5c1fcdcb93797a" prot="public" virt="non-virtual"><scope>Program</scope><name>launchAlgo</name></member>
+      <member refid="class_program_1adced491443a62aa3fd437bb06b7d5a03" prot="public" virt="non-virtual"><scope>Program</scope><name>MAX_BUFFER_SIZE</name></member>
+      <member refid="class_program_1acea75d5a337ccd2ea84bb23642099a3e" prot="public" virt="non-virtual"><scope>Program</scope><name>printHelp</name></member>
+      <member refid="class_program_1aaefaa0df08f3484476fc4d61e97acbdc" prot="public" virt="non-virtual"><scope>Program</scope><name>Program</name></member>
+      <member refid="class_program_1a86fed278c6ed6d7390e0adb8e8d061a0" prot="public" virt="non-virtual"><scope>Program</scope><name>readInputMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

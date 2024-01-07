@@ -1,0 +1,940 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classoption_greeks_model" kind="class" language="C++" prot="public">
+    <compoundname>optionGreeksModel</compoundname>
+    <basecompoundref refid="classoption_greeks" prot="public" virt="non-virtual">optionGreeks</basecompoundref>
+    <basecompoundref refid="classblack_scholes_model" prot="public" virt="virtual">blackScholesModel</basecompoundref>
+    <derivedcompoundref refid="classheston_model" prot="public" virt="non-virtual">hestonModel</derivedcompoundref>
+    <includes refid="option_greeks_model_8h" local="no">optionGreeksModel.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classoption_greeks_model_1a4adfcc3f5dd0eaf668d2ed54b65d51f1" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::ivAdjustedDelta_</definition>
+        <argsstring></argsstring>
+        <name>ivAdjustedDelta_</name>
+        <qualifiedname>optionGreeksModel::ivAdjustedDelta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="279" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1a77287aa888c29c3ce850fa7008b399b9" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::gammaAdjustedDelta_</definition>
+        <argsstring></argsstring>
+        <name>gammaAdjustedDelta_</name>
+        <qualifiedname>optionGreeksModel::gammaAdjustedDelta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="280" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1a8073610082c2532c92b901e2b3fbee45" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::vegaAdjustedDelta_</definition>
+        <argsstring></argsstring>
+        <name>vegaAdjustedDelta_</name>
+        <qualifiedname>optionGreeksModel::vegaAdjustedDelta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="281" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1aeca3fe6fe981a4eb8a874f3c77d0a8be" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::thetaAdjustedDelta_</definition>
+        <argsstring></argsstring>
+        <name>thetaAdjustedDelta_</name>
+        <qualifiedname>optionGreeksModel::thetaAdjustedDelta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="282" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1ad2fea77cce8aa47a918097d57ec886b7" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::gammaVegaAdjustedDelta_</definition>
+        <argsstring></argsstring>
+        <name>gammaVegaAdjustedDelta_</name>
+        <qualifiedname>optionGreeksModel::gammaVegaAdjustedDelta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="283" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1a81c68ce6f50abc3215852d14698bda90" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::optionPriceIv_</definition>
+        <argsstring></argsstring>
+        <name>optionPriceIv_</name>
+        <qualifiedname>optionGreeksModel::optionPriceIv_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="285" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1ac58b8e540f863dd5e80f34c0a790900d" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::optionPriceGamma_</definition>
+        <argsstring></argsstring>
+        <name>optionPriceGamma_</name>
+        <qualifiedname>optionGreeksModel::optionPriceGamma_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="286" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1a35707c3b6536caa2fe61f8ff38bd87d2" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::optionPriceVega_</definition>
+        <argsstring></argsstring>
+        <name>optionPriceVega_</name>
+        <qualifiedname>optionGreeksModel::optionPriceVega_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="287" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1a8bf6fc344444d2b809bb477509e217d8" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::optionPriceTheta_</definition>
+        <argsstring></argsstring>
+        <name>optionPriceTheta_</name>
+        <qualifiedname>optionGreeksModel::optionPriceTheta_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="288" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classoption_greeks_model_1a5f81336fe160a3a28d0340202761d7bf" prot="private" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double optionGreeksModel::optionPriceGammaVega_</definition>
+        <argsstring></argsstring>
+        <name>optionPriceGammaVega_</name>
+        <qualifiedname>optionGreeksModel::optionPriceGammaVega_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="289" column="20" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classoption_greeks_model_1aa8cacf7b1635fc583a39a678f4bcbfd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>optionGreeksModel::optionGreeksModel</definition>
+        <argsstring>()</argsstring>
+        <name>optionGreeksModel</name>
+        <qualifiedname>optionGreeksModel::optionGreeksModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ae92c594162f8d34fa42250e7978bbb85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>optionGreeksModel::optionGreeksModel</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double riskFreeRate, double timeToExpiration, double volatility)</argsstring>
+        <name>optionGreeksModel</name>
+        <qualifiedname>optionGreeksModel::optionGreeksModel</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToExpiration</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ad0d428c926e88327515358d77869284f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::performDeltaNeutralHedging</definition>
+        <argsstring>(double hedgeRatio)</argsstring>
+        <name>performDeltaNeutralHedging</name>
+        <qualifiedname>optionGreeksModel::performDeltaNeutralHedging</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>hedgeRatio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ad68f3aa2d7c34bd43899d5e0419dae2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateOptionPriceWithIV</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToMaturity, double riskFreeRate, double impliedVolatility) const</argsstring>
+        <name>calculateOptionPriceWithIV</name>
+        <qualifiedname>optionGreeksModel::calculateOptionPriceWithIV</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToMaturity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>impliedVolatility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="48" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a429716980b5b30717b7f44edcd3424dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateOptionPriceWithGamma</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToMaturity, double riskFreeRate) const</argsstring>
+        <name>calculateOptionPriceWithGamma</name>
+        <qualifiedname>optionGreeksModel::calculateOptionPriceWithGamma</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToMaturity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="58" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a8563003548284cd013199e0f516c5444" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateOptionPriceWithVega</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToMaturity, double riskFreeRate) const</argsstring>
+        <name>calculateOptionPriceWithVega</name>
+        <qualifiedname>optionGreeksModel::calculateOptionPriceWithVega</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToMaturity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="67" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a858b560658318bc6d7a0c4f6bf4eaa96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateOptionPriceWithTheta</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToMaturity, double riskFreeRate) const</argsstring>
+        <name>calculateOptionPriceWithTheta</name>
+        <qualifiedname>optionGreeksModel::calculateOptionPriceWithTheta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToMaturity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="76" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ad599275faf4d62f82820a785cd7881fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateOptionPriceWithGammaVega</definition>
+        <argsstring>(double underlyingPrice, double strikePrice, double timeToMaturity, double riskFreeRate) const</argsstring>
+        <name>calculateOptionPriceWithGammaVega</name>
+        <qualifiedname>optionGreeksModel::calculateOptionPriceWithGammaVega</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>underlyingPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>strikePrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>timeToMaturity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>riskFreeRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="84" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ac3988d21f263032b0a0c54f215717154" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateDeltaAdjWithIV</definition>
+        <argsstring>(double impliedVolatility) const</argsstring>
+        <name>calculateDeltaAdjWithIV</name>
+        <qualifiedname>optionGreeksModel::calculateDeltaAdjWithIV</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>impliedVolatility</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="96" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ab33ffabdf93c54716688b2ddbc2415ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateDeltaAdjWithGamma</definition>
+        <argsstring>() const</argsstring>
+        <name>calculateDeltaAdjWithGamma</name>
+        <qualifiedname>optionGreeksModel::calculateDeltaAdjWithGamma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="103" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a930c94822db8e4502eb86694ff194de9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateDeltaAdjWithVega</definition>
+        <argsstring>() const</argsstring>
+        <name>calculateDeltaAdjWithVega</name>
+        <qualifiedname>optionGreeksModel::calculateDeltaAdjWithVega</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="109" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ad6690d219286874bc292da354147e2ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateDeltaAdjWithTheta</definition>
+        <argsstring>() const</argsstring>
+        <name>calculateDeltaAdjWithTheta</name>
+        <qualifiedname>optionGreeksModel::calculateDeltaAdjWithTheta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="116" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a8c53e0d09764c4921d391488134b6d2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double optionGreeksModel::calculateDeltaAdjWithGammaVega</definition>
+        <argsstring>() const</argsstring>
+        <name>calculateDeltaAdjWithGammaVega</name>
+        <qualifiedname>optionGreeksModel::calculateDeltaAdjWithGammaVega</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="124" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a7f5de563c3b32085d3033581bd173bf8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setOptionPriceIv</definition>
+        <argsstring>(double optionPriceIv) const</argsstring>
+        <name>setOptionPriceIv</name>
+        <qualifiedname>optionGreeksModel::setOptionPriceIv</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>optionPriceIv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="133" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a8446f117f76179a68e774c63444573dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setOptionPriceGamma</definition>
+        <argsstring>(double optionPriceGamma) const</argsstring>
+        <name>setOptionPriceGamma</name>
+        <qualifiedname>optionGreeksModel::setOptionPriceGamma</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>optionPriceGamma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="139" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ade909398afa01bac5b52fa69f6aa3643" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setOptionPriceVega</definition>
+        <argsstring>(double optionPriceVega) const</argsstring>
+        <name>setOptionPriceVega</name>
+        <qualifiedname>optionGreeksModel::setOptionPriceVega</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>optionPriceVega</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="146" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a29123f7238b600a9f1c97a9956eec007" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setOptionPriceTheta</definition>
+        <argsstring>(double optionPriceTheta) const</argsstring>
+        <name>setOptionPriceTheta</name>
+        <qualifiedname>optionGreeksModel::setOptionPriceTheta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>optionPriceTheta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="153" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a582022e53db1580e0d6bea8b7fa0ea38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setThetaAdjustedDelta</definition>
+        <argsstring>(double thetaAdjustedDelta) const</argsstring>
+        <name>setThetaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::setThetaAdjustedDelta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>thetaAdjustedDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="160" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a4d48dd2af612a761f09e0d32223cba11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setOptionPriceGammaVega</definition>
+        <argsstring>(double optionPriceGammaVega) const</argsstring>
+        <name>setOptionPriceGammaVega</name>
+        <qualifiedname>optionGreeksModel::setOptionPriceGammaVega</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>optionPriceGammaVega</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="167" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1aa7c10cffaf1482e8b049e37d54955f41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setIvAdjustedDelta</definition>
+        <argsstring>(double ivAdjustedDelta) const</argsstring>
+        <name>setIvAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::setIvAdjustedDelta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>ivAdjustedDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="174" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a648b439339edd47cf3448e66333883c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setGammaAdjustedDelta</definition>
+        <argsstring>(double gammaAdjustedDelta) const</argsstring>
+        <name>setGammaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::setGammaAdjustedDelta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>gammaAdjustedDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="181" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a36b8128bb93c0ff23eb863fb6f107712" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setVegaAdjustedDelta</definition>
+        <argsstring>(double vegaAdjustedDelta) const</argsstring>
+        <name>setVegaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::setVegaAdjustedDelta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>vegaAdjustedDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="188" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ae67e875038ebe531f468f2bcb58b4619" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void optionGreeksModel::setGammaVegaAdjustedDelta</definition>
+        <argsstring>(double gammaVegaAdjustedDelta) const</argsstring>
+        <name>setGammaVegaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::setGammaVegaAdjustedDelta</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>gammaVegaAdjustedDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="195" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ae9c77b011c8451b5e5a73b5c8d1d79aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getOptionPriceIv</definition>
+        <argsstring>() const</argsstring>
+        <name>getOptionPriceIv</name>
+        <qualifiedname>optionGreeksModel::getOptionPriceIv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="205" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a5e6a0717efe6a831762ab8995341882e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getOptionPriceGamma</definition>
+        <argsstring>() const</argsstring>
+        <name>getOptionPriceGamma</name>
+        <qualifiedname>optionGreeksModel::getOptionPriceGamma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="211" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ad77076ff2c052e1c62a74e3fcb7b1ae3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getOptionPriceVega</definition>
+        <argsstring>() const</argsstring>
+        <name>getOptionPriceVega</name>
+        <qualifiedname>optionGreeksModel::getOptionPriceVega</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="218" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a8ab736b5500e00089ec34a23b3f2f50a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getOptionPriceTheta</definition>
+        <argsstring>() const</argsstring>
+        <name>getOptionPriceTheta</name>
+        <qualifiedname>optionGreeksModel::getOptionPriceTheta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="225" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a7862c1a8cdbcc4c8b76ab2d93f61986e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getOptionPriceGammaVega</definition>
+        <argsstring>() const</argsstring>
+        <name>getOptionPriceGammaVega</name>
+        <qualifiedname>optionGreeksModel::getOptionPriceGammaVega</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="232" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1ad9360d0d7def2e959d0b7edd5ebc40c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getIvAdjustedDelta</definition>
+        <argsstring>() const</argsstring>
+        <name>getIvAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::getIvAdjustedDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="239" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1aaf3ca7f9d4c59adc1c074770d83452cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getGammaAdjustedDelta</definition>
+        <argsstring>() const</argsstring>
+        <name>getGammaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::getGammaAdjustedDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="246" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1aafabb075c40131c42d65b09d91df2a3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getVegaAdjustedDelta</definition>
+        <argsstring>() const</argsstring>
+        <name>getVegaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::getVegaAdjustedDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="253" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1aa67ba36f4cad369444f448f83c8dab38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getThetaAdjustedDelta</definition>
+        <argsstring>() const</argsstring>
+        <name>getThetaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::getThetaAdjustedDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="260" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classoption_greeks_model_1a6ce982e4f090084db2a56951cbb971f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const double &amp;</type>
+        <definition>const double &amp; optionGreeksModel::getGammaVegaAdjustedDelta</definition>
+        <argsstring>() const</argsstring>
+        <name>getGammaVegaAdjustedDelta</name>
+        <qualifiedname>optionGreeksModel::getGammaVegaAdjustedDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/optionGreeksModel.h" line="268" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>blackScholesModel</label>
+        <link refid="classblack_scholes_model"/>
+      </node>
+      <node id="4">
+        <label>hestonModel</label>
+        <link refid="classheston_model"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>optionGreeks</label>
+        <link refid="classoption_greeks"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>optionGreeksModel</label>
+        <link refid="classoption_greeks_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>blackScholesModel</label>
+        <link refid="classblack_scholes_model"/>
+      </node>
+      <node id="2">
+        <label>optionGreeks</label>
+        <link refid="classoption_greeks"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>optionGreeksModel</label>
+        <link refid="classoption_greeks_model"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/black-scholes-cpp/optionGreeksModel.h" line="18" column="1" bodyfile="include/black-scholes-cpp/optionGreeksModel.h" bodystart="18" bodyend="292"/>
+    <listofallmembers>
+      <member refid="classblack_scholes_model_1a7ddde3a422329fb1b20097aa78a2a510" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a9c2c473eaa2587a35119a4a50cf1b864" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1adfa7fcdd443de8093f24c58866ec6ac7" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a7ddde3a422329fb1b20097aa78a2a510" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1a9c2c473eaa2587a35119a4a50cf1b864" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>blackScholesModel</name></member>
+      <member refid="classblack_scholes_model_1adfa7fcdd443de8093f24c58866ec6ac7" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>blackScholesModel</name></member>
+      <member refid="classoption_greeks_1a9a7102911af5916db57df784545da393" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateDelta</name></member>
+      <member refid="classoption_greeks_model_1ab33ffabdf93c54716688b2ddbc2415ea" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateDeltaAdjWithGamma</name></member>
+      <member refid="classoption_greeks_model_1a8c53e0d09764c4921d391488134b6d2d" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateDeltaAdjWithGammaVega</name></member>
+      <member refid="classoption_greeks_model_1ac3988d21f263032b0a0c54f215717154" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateDeltaAdjWithIV</name></member>
+      <member refid="classoption_greeks_model_1ad6690d219286874bc292da354147e2ed" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateDeltaAdjWithTheta</name></member>
+      <member refid="classoption_greeks_model_1a930c94822db8e4502eb86694ff194de9" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateDeltaAdjWithVega</name></member>
+      <member refid="classoption_greeks_1a232b79ca5072796fb94ca83aacc9b883" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateGamma</name></member>
+      <member refid="classblack_scholes_model_1a9608f80ab67eb8bcd96a5f53276c1762" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>calculateOptionPrice</name></member>
+      <member refid="classblack_scholes_model_1a9608f80ab67eb8bcd96a5f53276c1762" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>calculateOptionPrice</name></member>
+      <member refid="classoption_greeks_model_1a429716980b5b30717b7f44edcd3424dc" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateOptionPriceWithGamma</name></member>
+      <member refid="classoption_greeks_model_1ad599275faf4d62f82820a785cd7881fc" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateOptionPriceWithGammaVega</name></member>
+      <member refid="classoption_greeks_model_1ad68f3aa2d7c34bd43899d5e0419dae2c" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateOptionPriceWithIV</name></member>
+      <member refid="classoption_greeks_model_1a858b560658318bc6d7a0c4f6bf4eaa96" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateOptionPriceWithTheta</name></member>
+      <member refid="classoption_greeks_model_1a8563003548284cd013199e0f516c5444" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateOptionPriceWithVega</name></member>
+      <member refid="classoption_greeks_1ab55cabebc6d03fc502c396ac3a24d0f6" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateRho</name></member>
+      <member refid="classoption_greeks_1a00ecc475b70f9607d63d0c31aa3d008b" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateTheta</name></member>
+      <member refid="classoption_greeks_1acd6ac5b8d1d66afb1a36fff92c5ee156" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>calculateVega</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>CALL</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>CALL</name></member>
+      <member refid="classoption_greeks_1a7f8aebb87a939685023f6fe89d665209" prot="protected" virt="non-virtual"><scope>optionGreeksModel</scope><name>delta_</name></member>
+      <member refid="classoption_greeks_1afc6a85b6696a780e14b653cc97d17e31" prot="protected" virt="non-virtual"><scope>optionGreeksModel</scope><name>gamma_</name></member>
+      <member refid="classoption_greeks_model_1a77287aa888c29c3ce850fa7008b399b9" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>gammaAdjustedDelta_</name></member>
+      <member refid="classoption_greeks_model_1ad2fea77cce8aa47a918097d57ec886b7" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>gammaVegaAdjustedDelta_</name></member>
+      <member refid="classblack_scholes_model_1ab6b804f0bf84f2609df992a379ac5340" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getD1</name></member>
+      <member refid="classblack_scholes_model_1ab6b804f0bf84f2609df992a379ac5340" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getD1</name></member>
+      <member refid="classblack_scholes_model_1a4d513ab31082c7e62a35b45aba2e5d39" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getD2</name></member>
+      <member refid="classblack_scholes_model_1a4d513ab31082c7e62a35b45aba2e5d39" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getD2</name></member>
+      <member refid="classoption_greeks_1ac422607011fe88042ecde13279b85f17" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getDelta</name></member>
+      <member refid="classoption_greeks_1a8a63d8e2ce3696d0c7e042b213e8c153" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getGamma</name></member>
+      <member refid="classoption_greeks_model_1aaf3ca7f9d4c59adc1c074770d83452cc" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getGammaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1a6ce982e4f090084db2a56951cbb971f5" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getGammaVegaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1ad9360d0d7def2e959d0b7edd5ebc40c0" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getIvAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a3f1b0604aa2613c6551371f33c836eb4" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getK</name></member>
+      <member refid="classblack_scholes_model_1a3f1b0604aa2613c6551371f33c836eb4" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getK</name></member>
+      <member refid="classoption_greeks_model_1a5e6a0717efe6a831762ab8995341882e" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getOptionPriceGamma</name></member>
+      <member refid="classoption_greeks_model_1a7862c1a8cdbcc4c8b76ab2d93f61986e" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getOptionPriceGammaVega</name></member>
+      <member refid="classoption_greeks_model_1ae9c77b011c8451b5e5a73b5c8d1d79aa" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getOptionPriceIv</name></member>
+      <member refid="classoption_greeks_model_1a8ab736b5500e00089ec34a23b3f2f50a" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getOptionPriceTheta</name></member>
+      <member refid="classoption_greeks_model_1ad77076ff2c052e1c62a74e3fcb7b1ae3" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getOptionPriceVega</name></member>
+      <member refid="classblack_scholes_model_1a3a0e83fe7e08584ccaeffcbdf8dd2ba1" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getOptionType</name></member>
+      <member refid="classblack_scholes_model_1a3a0e83fe7e08584ccaeffcbdf8dd2ba1" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getOptionType</name></member>
+      <member refid="classblack_scholes_model_1aa3df25dd7f6455b06f73435a55cc238c" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getRFR</name></member>
+      <member refid="classblack_scholes_model_1aa3df25dd7f6455b06f73435a55cc238c" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getRFR</name></member>
+      <member refid="classoption_greeks_1ab3a42f69714b36c2ba4eb1d307d8f8a7" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getRho</name></member>
+      <member refid="classblack_scholes_model_1a26226bc311b5a1eab9afb89a2b86824d" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getStrikePrice</name></member>
+      <member refid="classblack_scholes_model_1a26226bc311b5a1eab9afb89a2b86824d" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getStrikePrice</name></member>
+      <member refid="classoption_greeks_1a30274dff6d0fd8e43f9b41b764469dbf" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getTheta</name></member>
+      <member refid="classoption_greeks_model_1aa67ba36f4cad369444f448f83c8dab38" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getThetaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1acce910bfd40831f839ea4d56c0f206ea" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getTTE</name></member>
+      <member refid="classblack_scholes_model_1acce910bfd40831f839ea4d56c0f206ea" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getTTE</name></member>
+      <member refid="classblack_scholes_model_1a985c48c0222f31022c1c1f54050b73d5" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getUnderlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1a985c48c0222f31022c1c1f54050b73d5" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getUnderlyingPrice</name></member>
+      <member refid="classoption_greeks_1a64a39847d651b634db41d81c9949d13a" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getVega</name></member>
+      <member refid="classoption_greeks_model_1aafabb075c40131c42d65b09d91df2a3e" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>getVegaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1aced3096a6015e3eb86d089636eaed7a2" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>getVolatility</name></member>
+      <member refid="classblack_scholes_model_1aced3096a6015e3eb86d089636eaed7a2" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>getVolatility</name></member>
+      <member refid="classoption_greeks_model_1a4adfcc3f5dd0eaf668d2ed54b65d51f1" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>ivAdjustedDelta_</name></member>
+      <member refid="classblack_scholes_model_1a892ddce4b71241e8f027173686f34461" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>normalCDF</name></member>
+      <member refid="classblack_scholes_model_1a892ddce4b71241e8f027173686f34461" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>normalCDF</name></member>
+      <member refid="classoption_greeks_1a099df0d1a755af6b783e813faa1d4669" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionGreeks</name></member>
+      <member refid="classoption_greeks_1a0e06203cf5c3416ebe5b0f7e5fe17905" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionGreeks</name></member>
+      <member refid="classoption_greeks_model_1aa8cacf7b1635fc583a39a678f4bcbfd1" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionGreeksModel</name></member>
+      <member refid="classoption_greeks_model_1ae92c594162f8d34fa42250e7978bbb85" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionGreeksModel</name></member>
+      <member refid="classoption_greeks_model_1ac58b8e540f863dd5e80f34c0a790900d" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionPriceGamma_</name></member>
+      <member refid="classoption_greeks_model_1a5f81336fe160a3a28d0340202761d7bf" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionPriceGammaVega_</name></member>
+      <member refid="classoption_greeks_model_1a81c68ce6f50abc3215852d14698bda90" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionPriceIv_</name></member>
+      <member refid="classoption_greeks_model_1a8bf6fc344444d2b809bb477509e217d8" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionPriceTheta_</name></member>
+      <member refid="classoption_greeks_model_1a35707c3b6536caa2fe61f8ff38bd87d2" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>optionPriceVega_</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>OptionType</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>OptionType</name></member>
+      <member refid="classblack_scholes_model_1a35c786cf7e5b253f7a07f770d8ca5af8" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>optionType</name></member>
+      <member refid="classblack_scholes_model_1a35c786cf7e5b253f7a07f770d8ca5af8" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>optionType</name></member>
+      <member refid="classoption_greeks_model_1ad0d428c926e88327515358d77869284f" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>performDeltaNeutralHedging</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>PUT</name></member>
+      <member refid="classblack_scholes_model_1a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>PUT</name></member>
+      <member refid="classoption_greeks_1a719169708cf71d4f98d2f59748e623fd" prot="protected" virt="non-virtual"><scope>optionGreeksModel</scope><name>rho_</name></member>
+      <member refid="classblack_scholes_model_1af93fef5df405832b852d15b11dbf7b3b" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setD1</name></member>
+      <member refid="classblack_scholes_model_1af93fef5df405832b852d15b11dbf7b3b" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setD1</name></member>
+      <member refid="classblack_scholes_model_1a3f38248c5395e90a3cb3f3e142c48f5f" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setD2</name></member>
+      <member refid="classblack_scholes_model_1a3f38248c5395e90a3cb3f3e142c48f5f" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setD2</name></member>
+      <member refid="classoption_greeks_1a7f03ba47195890ef98e04b01bfa06d2f" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setDelta</name></member>
+      <member refid="classoption_greeks_1a245aba032de1c0b26f27942af11a8361" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setGamma</name></member>
+      <member refid="classoption_greeks_model_1a648b439339edd47cf3448e66333883c9" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setGammaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1ae67e875038ebe531f468f2bcb58b4619" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setGammaVegaAdjustedDelta</name></member>
+      <member refid="classoption_greeks_model_1aa7c10cffaf1482e8b049e37d54955f41" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setIvAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a0cc11862cf9fae0bcaba5efb0082663b" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setK</name></member>
+      <member refid="classblack_scholes_model_1a0cc11862cf9fae0bcaba5efb0082663b" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setK</name></member>
+      <member refid="classoption_greeks_model_1a8446f117f76179a68e774c63444573dc" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setOptionPriceGamma</name></member>
+      <member refid="classoption_greeks_model_1a4d48dd2af612a761f09e0d32223cba11" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setOptionPriceGammaVega</name></member>
+      <member refid="classoption_greeks_model_1a7f5de563c3b32085d3033581bd173bf8" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setOptionPriceIv</name></member>
+      <member refid="classoption_greeks_model_1a29123f7238b600a9f1c97a9956eec007" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setOptionPriceTheta</name></member>
+      <member refid="classoption_greeks_model_1ade909398afa01bac5b52fa69f6aa3643" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setOptionPriceVega</name></member>
+      <member refid="classblack_scholes_model_1ac2c755b853cf654df449095d8a82e684" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setOptionType</name></member>
+      <member refid="classblack_scholes_model_1ac2c755b853cf654df449095d8a82e684" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setOptionType</name></member>
+      <member refid="classblack_scholes_model_1adf70d018da40647100dfaff53fc2bd71" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setRFR</name></member>
+      <member refid="classblack_scholes_model_1adf70d018da40647100dfaff53fc2bd71" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setRFR</name></member>
+      <member refid="classoption_greeks_1a2656f445b590f87b03e1893e4a096273" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setRho</name></member>
+      <member refid="classblack_scholes_model_1a560fa41b7e2ada19e5291fd02b9caf3e" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setStrikePrice</name></member>
+      <member refid="classblack_scholes_model_1a560fa41b7e2ada19e5291fd02b9caf3e" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setStrikePrice</name></member>
+      <member refid="classoption_greeks_1acb7e4d715ccda6941dd0e6e9bfdc7685" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setTheta</name></member>
+      <member refid="classoption_greeks_model_1a582022e53db1580e0d6bea8b7fa0ea38" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setThetaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a973a8d1b689ee0bf23771672bd9774ac" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setTTE</name></member>
+      <member refid="classblack_scholes_model_1a973a8d1b689ee0bf23771672bd9774ac" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setTTE</name></member>
+      <member refid="classblack_scholes_model_1a0981dfe03d4c4b44e3c1c2c5ce725a99" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setUnderlyingPrice</name></member>
+      <member refid="classblack_scholes_model_1a0981dfe03d4c4b44e3c1c2c5ce725a99" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setUnderlyingPrice</name></member>
+      <member refid="classoption_greeks_1ad0d1a9ae498484fa49efcf9c44e03329" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setVega</name></member>
+      <member refid="classoption_greeks_model_1a36b8128bb93c0ff23eb863fb6f107712" prot="public" virt="non-virtual"><scope>optionGreeksModel</scope><name>setVegaAdjustedDelta</name></member>
+      <member refid="classblack_scholes_model_1a206cb165b1004ac80295f68b8f6ceee4" prot="public" virt="non-virtual" ambiguityscope="optionGreeks::"><scope>optionGreeksModel</scope><name>setVolatility</name></member>
+      <member refid="classblack_scholes_model_1a206cb165b1004ac80295f68b8f6ceee4" prot="public" virt="non-virtual" ambiguityscope="blackScholesModel::"><scope>optionGreeksModel</scope><name>setVolatility</name></member>
+      <member refid="classoption_greeks_1ad2c8b5eb62d84840b1738f8c6ebbb2cb" prot="protected" virt="non-virtual"><scope>optionGreeksModel</scope><name>theta_</name></member>
+      <member refid="classoption_greeks_model_1aeca3fe6fe981a4eb8a874f3c77d0a8be" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>thetaAdjustedDelta_</name></member>
+      <member refid="classoption_greeks_1acd496d311df1a8d10d0f942d67183ccf" prot="protected" virt="non-virtual"><scope>optionGreeksModel</scope><name>vega_</name></member>
+      <member refid="classoption_greeks_model_1a8073610082c2532c92b901e2b3fbee45" prot="private" virt="non-virtual"><scope>optionGreeksModel</scope><name>vegaAdjustedDelta_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

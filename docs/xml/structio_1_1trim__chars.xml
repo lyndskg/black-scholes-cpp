@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1trim__chars" kind="struct" language="C++" prot="public">
+    <compoundname>io::trim_chars</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <templateparamlist>
+      <param>
+        <type>char...</type>
+        <declname>trim_char_list</declname>
+        <defname>trim_char_list</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="structio_1_1trim__chars_1a8868df0aa3887f5968cab2fac9c746fb" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool io::trim_chars&lt; trim_char_list &gt;::is_trim_char</definition>
+        <argsstring>(char)</argsstring>
+        <name>is_trim_char</name>
+        <qualifiedname>io::trim_chars::is_trim_char</qualifiedname>
+        <param>
+          <type>char</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="646" column="25" bodyfile="include/black-scholes-cpp/csv.h" bodystart="646" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1trim__chars_1aa473a1ab6c28b03265bcb727006c6201" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>OtherTrimChars</declname>
+            <defname>OtherTrimChars</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>static constexpr bool io::trim_chars&lt; trim_char_list &gt;::is_trim_char</definition>
+        <argsstring>(char c, char trim_char, OtherTrimChars... other_trim_chars)</argsstring>
+        <name>is_trim_char</name>
+        <qualifiedname>io::trim_chars::is_trim_char</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>trim_char</declname>
+        </param>
+        <param>
+          <type>OtherTrimChars...</type>
+          <declname>other_trim_chars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="649" column="25" bodyfile="include/black-scholes-cpp/csv.h" bodystart="649" bodyend="652"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1trim__chars_1a4cffc5e839ab4024ca8c8330e26e338c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void io::trim_chars&lt; trim_char_list &gt;::trim</definition>
+        <argsstring>(char *&amp;str_begin, char *&amp;str_end)</argsstring>
+        <name>trim</name>
+        <qualifiedname>io::trim_chars::trim</qualifiedname>
+        <param>
+          <type>char *&amp;</type>
+          <declname>str_begin</declname>
+        </param>
+        <param>
+          <type>char *&amp;</type>
+          <declname>str_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="655" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="655" bodyend="662"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="644" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="644" bodyend="663"/>
+    <listofallmembers>
+      <member refid="structio_1_1trim__chars_1a8868df0aa3887f5968cab2fac9c746fb" prot="private" virt="non-virtual"><scope>io::trim_chars</scope><name>is_trim_char</name></member>
+      <member refid="structio_1_1trim__chars_1aa473a1ab6c28b03265bcb727006c6201" prot="private" virt="non-virtual"><scope>io::trim_chars</scope><name>is_trim_char</name></member>
+      <member refid="structio_1_1trim__chars_1a4cffc5e839ab4024ca8c8330e26e338c" prot="public" virt="non-virtual"><scope>io::trim_chars</scope><name>trim</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

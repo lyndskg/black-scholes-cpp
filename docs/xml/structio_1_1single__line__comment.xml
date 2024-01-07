@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1single__line__comment" kind="struct" language="C++" prot="public">
+    <compoundname>io::single_line_comment</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <templateparamlist>
+      <param>
+        <type>char...</type>
+        <declname>comment_start_char_list</declname>
+        <defname>comment_start_char_list</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="structio_1_1single__line__comment_1a961a1b5c85dd2ec717ff483cb2206ade" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr bool</type>
+        <definition>static constexpr bool io::single_line_comment&lt; comment_start_char_list &gt;::is_comment_start_char</definition>
+        <argsstring>(char)</argsstring>
+        <name>is_comment_start_char</name>
+        <qualifiedname>io::single_line_comment::is_comment_start_char</qualifiedname>
+        <param>
+          <type>char</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="671" column="25" bodyfile="include/black-scholes-cpp/csv.h" bodystart="671" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1single__line__comment_1af2fe2ec267516a2789350b661f34756b" prot="private" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>OtherCommentStartChars</declname>
+            <defname>OtherCommentStartChars</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>static constexpr bool io::single_line_comment&lt; comment_start_char_list &gt;::is_comment_start_char</definition>
+        <argsstring>(char c, char comment_start_char, OtherCommentStartChars... other_comment_start_chars)</argsstring>
+        <name>is_comment_start_char</name>
+        <qualifiedname>io::single_line_comment::is_comment_start_char</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>comment_start_char</declname>
+        </param>
+        <param>
+          <type>OtherCommentStartChars...</type>
+          <declname>other_comment_start_chars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="675" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="675" bodyend="679"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1single__line__comment_1ac4b029bb0efd251505f8e610cc308a92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool io::single_line_comment&lt; comment_start_char_list &gt;::is_comment</definition>
+        <argsstring>(const char *line)</argsstring>
+        <name>is_comment</name>
+        <qualifiedname>io::single_line_comment::is_comment</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="682" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="682" bodyend="684"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="669" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="669" bodyend="685"/>
+    <listofallmembers>
+      <member refid="structio_1_1single__line__comment_1ac4b029bb0efd251505f8e610cc308a92" prot="public" virt="non-virtual"><scope>io::single_line_comment</scope><name>is_comment</name></member>
+      <member refid="structio_1_1single__line__comment_1a961a1b5c85dd2ec717ff483cb2206ade" prot="private" virt="non-virtual"><scope>io::single_line_comment</scope><name>is_comment_start_char</name></member>
+      <member refid="structio_1_1single__line__comment_1af2fe2ec267516a2789350b661f34756b" prot="private" virt="non-virtual"><scope>io::single_line_comment</scope><name>is_comment_start_char</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

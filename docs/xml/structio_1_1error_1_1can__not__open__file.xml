@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1error_1_1can__not__open__file" kind="struct" language="C++" prot="public">
+    <compoundname>io::error::can_not_open_file</compoundname>
+    <basecompoundref refid="structio_1_1error_1_1base" prot="public" virt="non-virtual">io::error::base</basecompoundref>
+    <basecompoundref refid="structio_1_1error_1_1with__file__name" prot="public" virt="non-virtual">io::error::with_file_name</basecompoundref>
+    <basecompoundref refid="structio_1_1error_1_1with__errno" prot="public" virt="non-virtual">io::error::with_errno</basecompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structio_1_1error_1_1can__not__open__file_1a60abbeaffed9d0a354cfff5bccfab1d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void io::error::can_not_open_file::format_error_message</definition>
+        <argsstring>() const override</argsstring>
+        <name>format_error_message</name>
+        <qualifiedname>io::error::can_not_open_file::format_error_message</qualifiedname>
+        <reimplements refid="structio_1_1error_1_1base_1a7d9ff6a31b716a24f056cf8a3e15191d">format_error_message</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="107" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="107" bodyend="115"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::error::base</label>
+        <link refid="structio_1_1error_1_1base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>io::error::can_not_open_file</label>
+        <link refid="structio_1_1error_1_1can__not__open__file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>io::error::with_errno</label>
+        <link refid="structio_1_1error_1_1with__errno"/>
+      </node>
+      <node id="4">
+        <label>io::error::with_file_name</label>
+        <link refid="structio_1_1error_1_1with__file__name"/>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>io::error::base</label>
+        <link refid="structio_1_1error_1_1base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>io::error::can_not_open_file</label>
+        <link refid="structio_1_1error_1_1can__not__open__file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>io::error::with_errno</label>
+        <link refid="structio_1_1error_1_1with__errno"/>
+      </node>
+      <node id="4">
+        <label>io::error::with_file_name</label>
+        <link refid="structio_1_1error_1_1with__file__name"/>
+      </node>
+      <node id="3">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="include/black-scholes-cpp/csv.h" line="106" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="106" bodyend="116"/>
+    <listofallmembers>
+      <member refid="structio_1_1error_1_1with__errno_1a99dcacba02cb53351fe64d7e064406be" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>errno_value</name></member>
+      <member refid="structio_1_1error_1_1base_1a3ca424e883ceb4405edf12b8bf974610" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>error_message_buffer</name></member>
+      <member refid="structio_1_1error_1_1with__file__name_1ac957d5590a8b95517b74eb5bf373a424" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>file_name</name></member>
+      <member refid="structio_1_1error_1_1can__not__open__file_1a60abbeaffed9d0a354cfff5bccfab1d6" prot="public" virt="virtual"><scope>io::error::can_not_open_file</scope><name>format_error_message</name></member>
+      <member refid="structio_1_1error_1_1with__errno_1a572cfa4b4a96792cd1d17dc9ad2eb5a9" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>set_errno</name></member>
+      <member refid="structio_1_1error_1_1with__file__name_1ae765de62778c989d4658b4efe2995390" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>set_file_name</name></member>
+      <member refid="structio_1_1error_1_1base_1a676fc3d9348e1130f1d343ce4b9187c1" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>what</name></member>
+      <member refid="structio_1_1error_1_1with__errno_1a32a76a42097cfdfb2793511082eb0f93" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>with_errno</name></member>
+      <member refid="structio_1_1error_1_1with__file__name_1aeb0eced36b022e8a00b19727d833067f" prot="public" virt="non-virtual"><scope>io::error::can_not_open_file</scope><name>with_file_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

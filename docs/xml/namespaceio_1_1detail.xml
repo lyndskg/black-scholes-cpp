@@ -1,0 +1,702 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespaceio_1_1detail" kind="namespace" language="C++">
+    <compoundname>io::detail</compoundname>
+    <innerclass refid="classio_1_1detail_1_1_asynchronous_reader" prot="public">io::detail::AsynchronousReader</innerclass>
+    <innerclass refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source" prot="public">io::detail::NonOwningIStreamByteSource</innerclass>
+    <innerclass refid="classio_1_1detail_1_1_non_owning_string_byte_source" prot="public">io::detail::NonOwningStringByteSource</innerclass>
+    <innerclass refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base" prot="public">io::detail::OwningStdIOByteSourceBase</innerclass>
+    <innerclass refid="classio_1_1detail_1_1_synchronous_reader" prot="public">io::detail::SynchronousReader</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class quote_policy</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void io::detail::chop_next_column</definition>
+        <argsstring>(char *&amp;line, char *&amp;col_begin, char *&amp;col_end)</argsstring>
+        <name>chop_next_column</name>
+        <qualifiedname>io::detail::chop_next_column</qualifiedname>
+        <param>
+          <type>char *&amp;</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>char *&amp;</type>
+          <declname>col_begin</declname>
+        </param>
+        <param>
+          <type>char *&amp;</type>
+          <declname>col_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="788" column="6" bodyfile="include/black-scholes-cpp/csv.h" bodystart="788" bodyend="802"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1af7113f75d17577c3964d5d45fef65d43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class trim_policy</type>
+          </param>
+          <param>
+            <type>class quote_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse_line</definition>
+        <argsstring>(char *line, char **sorted_col, const std::vector&lt; int &gt; &amp;col_order)</argsstring>
+        <name>parse_line</name>
+        <qualifiedname>io::detail::parse_line</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> **</type>
+          <declname>sorted_col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> std::vector&lt; <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref> &gt; &amp;</type>
+          <declname>col_order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="805" column="6" bodyfile="include/black-scholes-cpp/csv.h" bodystart="805" bodyend="822"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a29aee32eb931073ca832933c7ed7cf51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>unsigned</type>
+            <declname>column_count</declname>
+            <defname>column_count</defname>
+          </param>
+          <param>
+            <type>class trim_policy</type>
+          </param>
+          <param>
+            <type>class quote_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse_header_line</definition>
+        <argsstring>(char *line, std::vector&lt; int &gt; &amp;col_order, const std::string *col_name, ignore_column ignore_policy)</argsstring>
+        <name>parse_header_line</name>
+        <qualifiedname>io::detail::parse_header_line</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref> &gt; &amp;</type>
+          <declname>col_order</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> std::string *</type>
+          <declname>col_name</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1aa04154e5c37e292c5acc7533d28a9da7" kindref="member">ignore_column</ref></type>
+          <declname>ignore_policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="825" column="6" bodyfile="include/black-scholes-cpp/csv.h" bodystart="825" bodyend="870"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a2109437c5cfde706232ff352a06a8c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, char &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="872" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="872" bodyend="879"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a0a834d872803de946c45bb9993ff1cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, std::string &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="881" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="881" bodyend="883"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a4b18842fa823d4e5ff2856c106a935f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, const char *&amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *&amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="885" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="885" bodyend="887"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a51894246476f8614a57292c4ecd5ee70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, char *&amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *&amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="889" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="889" bodyend="889"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a7e3c24544bc8a152ad2fdcad068cc15d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse_unsigned_integer</definition>
+        <argsstring>(const char *col, T &amp;x)</argsstring>
+        <name>parse_unsigned_integer</name>
+        <qualifiedname>io::detail::parse_unsigned_integer</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">T</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="892" column="6" bodyfile="include/black-scholes-cpp/csv.h" bodystart="892" bodyend="906"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a989169352cd4a941d3a4b41d34a5b507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, unsigned char &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">unsigned</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="908" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="908" bodyend="910"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a7c503975d9ebb907a137437620cd88e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, unsigned short &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">unsigned</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">short</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="911" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="911" bodyend="913"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1aff0db116bccbbb97c60e15c88cf08c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, unsigned int &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">unsigned</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="914" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="914" bodyend="916"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1af21cf2ebdccbd344c3fa97ff290d5ba3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, unsigned long &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">unsigned</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="917" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="917" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1adfb924cb03fa5c6bbf3885eaae6b4900" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, unsigned long long &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">unsigned</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="920" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="920" bodyend="922"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1abfca68de6bc98a4b80ee15bf6872d9a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse_signed_integer</definition>
+        <argsstring>(const char *col, T &amp;x)</argsstring>
+        <name>parse_signed_integer</name>
+        <qualifiedname>io::detail::parse_signed_integer</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">T</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="925" column="6" bodyfile="include/black-scholes-cpp/csv.h" bodystart="925" bodyend="946"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1ac3445c529796f7c8a21353123b032359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, signed char &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">signed</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="948" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="948" bodyend="950"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a8dd4aa570ce585f60eba494b2ae46f8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, signed short &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">signed</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">short</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="951" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="951" bodyend="953"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a4cac9397d7e326ffef73945d8dfdb3f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, signed int &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">signed</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="954" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="954" bodyend="956"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1af4f571ee91d11a004c807122129b658f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, signed long &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">signed</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="957" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="957" bodyend="959"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1adae9f76b938985b1a9a93456cb9181eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, signed long long &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">signed</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="960" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="960" bodyend="962"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a4f2b98902e1a5278853786aa8582df93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse_float</definition>
+        <argsstring>(const char *col, T &amp;x)</argsstring>
+        <name>parse_float</name>
+        <qualifiedname>io::detail::parse_float</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">const</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">T</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="964" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="964" bodyend="1024"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1a60d2e8a932d377f25fb4ea80fa56199e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, float &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">float</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1026" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1026" bodyend="1028"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1af795e6a74044788a6b4a3179a7839a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, double &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">double</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1029" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1029" bodyend="1031"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1aa5ded2fa5b85ef50ef2c0c3334f8fe6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, long double &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">long</ref> <ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">double</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1032" column="18" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1032" bodyend="1034"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceio_1_1detail_1ae54f2ce37fee9f7320e2167cc6157a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class overflow_policy</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">void</ref></type>
+        <definition>void io::detail::parse</definition>
+        <argsstring>(char *col, T &amp;x)</argsstring>
+        <name>parse</name>
+        <qualifiedname>io::detail::parse</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">T</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="1036" column="20" bodyfile="include/black-scholes-cpp/csv.h" bodystart="1036" bodyend="1046"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="134" column="1"/>
+  </compounddef>
+</doxygen>

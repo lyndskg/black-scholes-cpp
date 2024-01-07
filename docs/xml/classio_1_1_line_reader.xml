@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1_line_reader" kind="class" language="C++" prot="public">
+    <compoundname>io::LineReader</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classio_1_1_line_reader_1a04db9ad3b956347b48136dbe5751469d" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int io::LineReader::block_len</definition>
+        <argsstring></argsstring>
+        <name>block_len</name>
+        <qualifiedname>io::LineReader::block_len</qualifiedname>
+        <initializer>= 1 &lt;&lt; 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="291" column="20" bodyfile="include/black-scholes-cpp/csv.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1_line_reader_1afd45c8f7175a4094a469f5764816d181" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; char[]&gt;</type>
+        <definition>std::unique_ptr&lt;char[]&gt; io::LineReader::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>io::LineReader::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="292" column="19" bodyfile="include/black-scholes-cpp/csv.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_line_reader_1abfd04ef491b6515a26b1b17aab9430b0" prot="private" static="no" mutable="no">
+        <type><ref refid="classio_1_1detail_1_1_asynchronous_reader" kindref="compound">detail::AsynchronousReader</ref></type>
+        <definition>detail::AsynchronousReader io::LineReader::reader</definition>
+        <argsstring></argsstring>
+        <name>reader</name>
+        <qualifiedname>io::LineReader::reader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="297" column="30" bodyfile="include/black-scholes-cpp/csv.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_line_reader_1a20676a014d14bfa566591d8cfeed0f29" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int io::LineReader::data_begin</definition>
+        <argsstring></argsstring>
+        <name>data_begin</name>
+        <qualifiedname>io::LineReader::data_begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="299" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_line_reader_1a16829b470aa908981d4799401d42a85b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int io::LineReader::data_end</definition>
+        <argsstring></argsstring>
+        <name>data_end</name>
+        <qualifiedname>io::LineReader::data_end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="300" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_line_reader_1a8b853ac45c1eae0afc36d49630e949d8" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char io::LineReader::file_name[error::max_file_name_length+1]</definition>
+        <argsstring>[error::max_file_name_length+1]</argsstring>
+        <name>file_name</name>
+        <qualifiedname>io::LineReader::file_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="302" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classio_1_1_line_reader_1a5c29ad60208bca6475af54e54eff80b7" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned io::LineReader::file_line</definition>
+        <argsstring></argsstring>
+        <name>file_line</name>
+        <qualifiedname>io::LineReader::file_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="303" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classio_1_1_line_reader_1acd0a5fb5711043ede987e31057f80795" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+        <definition>static std::unique_ptr&lt; ByteSourceBase &gt; io::LineReader::open_file</definition>
+        <argsstring>(const char *file_name)</argsstring>
+        <name>open_file</name>
+        <qualifiedname>io::LineReader::open_file</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="305" column="26" bodyfile="include/black-scholes-cpp/csv.h" bodystart="305" bodyend="319"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classio_1_1_line_reader_1a5cf3f944fd3454c33adcf46f6952dd7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::LineReader::init</definition>
+        <argsstring>(std::unique_ptr&lt; ByteSourceBase &gt; byte_source)</argsstring>
+        <name>init</name>
+        <qualifiedname>io::LineReader::init</qualifiedname>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+          <declname>byte_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="321" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="321" bodyend="337"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1_line_reader_1abd9f13fb1d3f5d36857dec0a1d1bde6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>()=delete</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="340" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a84f2957de769bb701eaaddfd8bc004dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const LineReader &amp;)=delete</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const <ref refid="classio_1_1_line_reader" kindref="compound">LineReader</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="341" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a284f7970473d13bc32a0c618b313043e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classio_1_1_line_reader" kindref="compound">LineReader</ref> &amp;</type>
+        <definition>LineReader &amp; io::LineReader::operator=</definition>
+        <argsstring>(const LineReader &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>io::LineReader::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classio_1_1_line_reader" kindref="compound">LineReader</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="342" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a81a75d3f53725d35822f490007520e29" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const char *file_name)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="344" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="344" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1ab0eb26f44fa6b18f9c39dfb2561ac882" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="349" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="349" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a2d30e0770f33beeb2b45643dfd629c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const char *file_name, std::unique_ptr&lt; ByteSourceBase &gt; byte_source)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+          <declname>byte_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="354" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="354" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a786bde1b46d6ae5ade1492e9015e42b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const std::string &amp;file_name, std::unique_ptr&lt; ByteSourceBase &gt; byte_source)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classio_1_1_byte_source_base" kindref="compound">ByteSourceBase</ref> &gt;</type>
+          <declname>byte_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="360" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="360" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1ad5a65d6f23474884061a77ea858c042b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const char *file_name, const char *data_begin, const char *data_end)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data_begin</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="366" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="366" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a0a52d864b46442a253443cac1367366e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const std::string &amp;file_name, const char *data_begin, const char *data_end)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data_begin</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="373" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="373" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1ad2a8943ba0848ae5052e2f5ad30c010e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const char *file_name, FILE *file)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="380" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="380" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a93fa2e3ae98b0e7a7391714d6395c552" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const std::string &amp;file_name, FILE *file)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="386" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="386" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a301c08eb9ca5d3fdccf4e9a8e5ac82f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const char *file_name, std::istream &amp;in)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="392" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="392" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a3eacf4d1539a24122c6897fce4e72f06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::LineReader::LineReader</definition>
+        <argsstring>(const std::string &amp;file_name, std::istream &amp;in)</argsstring>
+        <name>LineReader</name>
+        <qualifiedname>io::LineReader::LineReader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="398" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="398" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a1a0763d491dec16cebc33134e965dfee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::LineReader::set_file_name</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>set_file_name</name>
+        <qualifiedname>io::LineReader::set_file_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="404" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="404" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a81c56ac68497da5ec874333ce063fd83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::LineReader::set_file_name</definition>
+        <argsstring>(const char *file_name)</argsstring>
+        <name>set_file_name</name>
+        <qualifiedname>io::LineReader::set_file_name</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="408" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="408" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a9279e6a30a85061167ecd50e20c5a10e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * io::LineReader::get_truncated_file_name</definition>
+        <argsstring>() const</argsstring>
+        <name>get_truncated_file_name</name>
+        <qualifiedname>io::LineReader::get_truncated_file_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="417" column="14" bodyfile="include/black-scholes-cpp/csv.h" bodystart="417" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a581b55d4ced6adb964de50fa8ac6eb08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::LineReader::set_file_line</definition>
+        <argsstring>(unsigned file_line)</argsstring>
+        <name>set_file_line</name>
+        <qualifiedname>io::LineReader::set_file_line</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>file_line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="419" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="419" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a3f3459e22ed8e459238c290050b6722e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned io::LineReader::get_file_line</definition>
+        <argsstring>() const</argsstring>
+        <name>get_file_line</name>
+        <qualifiedname>io::LineReader::get_file_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="421" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="421" bodyend="421"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1_line_reader_1a09a64339a84ceeb09f9a1249beacca15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * io::LineReader::next_line</definition>
+        <argsstring>()</argsstring>
+        <name>next_line</name>
+        <qualifiedname>io::LineReader::next_line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="423" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="423" bodyend="472"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="289" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="289" bodyend="473"/>
+    <listofallmembers>
+      <member refid="classio_1_1_line_reader_1a04db9ad3b956347b48136dbe5751469d" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>block_len</name></member>
+      <member refid="classio_1_1_line_reader_1afd45c8f7175a4094a469f5764816d181" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>buffer</name></member>
+      <member refid="classio_1_1_line_reader_1a20676a014d14bfa566591d8cfeed0f29" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>data_begin</name></member>
+      <member refid="classio_1_1_line_reader_1a16829b470aa908981d4799401d42a85b" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>data_end</name></member>
+      <member refid="classio_1_1_line_reader_1a5c29ad60208bca6475af54e54eff80b7" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>file_line</name></member>
+      <member refid="classio_1_1_line_reader_1a8b853ac45c1eae0afc36d49630e949d8" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>file_name</name></member>
+      <member refid="classio_1_1_line_reader_1a3f3459e22ed8e459238c290050b6722e" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>get_file_line</name></member>
+      <member refid="classio_1_1_line_reader_1a9279e6a30a85061167ecd50e20c5a10e" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>get_truncated_file_name</name></member>
+      <member refid="classio_1_1_line_reader_1a5cf3f944fd3454c33adcf46f6952dd7e" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>init</name></member>
+      <member refid="classio_1_1_line_reader_1abd9f13fb1d3f5d36857dec0a1d1bde6c" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a84f2957de769bb701eaaddfd8bc004dd" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a81a75d3f53725d35822f490007520e29" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1ab0eb26f44fa6b18f9c39dfb2561ac882" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a2d30e0770f33beeb2b45643dfd629c3a" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a786bde1b46d6ae5ade1492e9015e42b0" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1ad5a65d6f23474884061a77ea858c042b" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a0a52d864b46442a253443cac1367366e" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1ad2a8943ba0848ae5052e2f5ad30c010e" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a93fa2e3ae98b0e7a7391714d6395c552" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a301c08eb9ca5d3fdccf4e9a8e5ac82f8" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a3eacf4d1539a24122c6897fce4e72f06" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>LineReader</name></member>
+      <member refid="classio_1_1_line_reader_1a09a64339a84ceeb09f9a1249beacca15" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>next_line</name></member>
+      <member refid="classio_1_1_line_reader_1acd0a5fb5711043ede987e31057f80795" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>open_file</name></member>
+      <member refid="classio_1_1_line_reader_1a284f7970473d13bc32a0c618b313043e" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>operator=</name></member>
+      <member refid="classio_1_1_line_reader_1abfd04ef491b6515a26b1b17aab9430b0" prot="private" virt="non-virtual"><scope>io::LineReader</scope><name>reader</name></member>
+      <member refid="classio_1_1_line_reader_1a581b55d4ced6adb964de50fa8ac6eb08" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>set_file_line</name></member>
+      <member refid="classio_1_1_line_reader_1a1a0763d491dec16cebc33134e965dfee" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>set_file_name</name></member>
+      <member refid="classio_1_1_line_reader_1a81c56ac68497da5ec874333ce063fd83" prot="public" virt="non-virtual"><scope>io::LineReader</scope><name>set_file_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

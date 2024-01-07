@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1no__comment" kind="struct" language="C++" prot="public">
+    <compoundname>io::no_comment</compoundname>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structio_1_1no__comment_1a52b252547482e28edd076ee2224bc8d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool io::no_comment::is_comment</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>is_comment</name>
+        <qualifiedname>io::no_comment::is_comment</qualifiedname>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="666" column="15" bodyfile="include/black-scholes-cpp/csv.h" bodystart="666" bodyend="666"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/black-scholes-cpp/csv.h" line="665" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="665" bodyend="667"/>
+    <listofallmembers>
+      <member refid="structio_1_1no__comment_1a52b252547482e28edd076ee2224bc8d8" prot="public" virt="non-virtual"><scope>io::no_comment</scope><name>is_comment</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

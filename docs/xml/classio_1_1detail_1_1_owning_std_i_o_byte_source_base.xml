@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1detail_1_1_owning_std_i_o_byte_source_base" kind="class" language="C++" prot="public">
+    <compoundname>io::detail::OwningStdIOByteSourceBase</compoundname>
+    <basecompoundref refid="classio_1_1_byte_source_base" prot="public" virt="non-virtual">io::ByteSourceBase</basecompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a00f62c8522d0fe9edadf3d094e94ae26" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">FILE</ref> *</type>
+        <definition>FILE* io::detail::OwningStdIOByteSourceBase::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <qualifiedname>io::detail::OwningStdIOByteSourceBase::file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="148" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a259f77d1a3c57720b54b88d9f8a3c018" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::OwningStdIOByteSourceBase::OwningStdIOByteSourceBase</definition>
+        <argsstring>(FILE *file)</argsstring>
+        <name>OwningStdIOByteSourceBase</name>
+        <qualifiedname>io::detail::OwningStdIOByteSourceBase::OwningStdIOByteSourceBase</qualifiedname>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">FILE</ref> *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="138" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a9269e7bfd07ebf2fa3518912fe7bebd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::OwningStdIOByteSourceBase::read</definition>
+        <argsstring>(char *buffer, int size)</argsstring>
+        <name>read</name>
+        <qualifiedname>io::detail::OwningStdIOByteSourceBase::read</qualifiedname>
+        <reimplements refid="classio_1_1_byte_source_base_1a9598bcc869b79e44da07f0e6fa478615">read</reimplements>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="143" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1accecf70a8e958d44b0adf4211a775452" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::OwningStdIOByteSourceBase::~OwningStdIOByteSourceBase</definition>
+        <argsstring>()</argsstring>
+        <name>~OwningStdIOByteSourceBase</name>
+        <qualifiedname>io::detail::OwningStdIOByteSourceBase::~OwningStdIOByteSourceBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="145" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="1">
+        <label>io::detail::OwningStdIOByteSourceBase</label>
+        <link refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="1">
+        <label>io::detail::OwningStdIOByteSourceBase</label>
+        <link refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/black-scholes-cpp/csv.h" line="136" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="136" bodyend="149"/>
+    <listofallmembers>
+      <member refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a00f62c8522d0fe9edadf3d094e94ae26" prot="private" virt="non-virtual"><scope>io::detail::OwningStdIOByteSourceBase</scope><name>file</name></member>
+      <member refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a259f77d1a3c57720b54b88d9f8a3c018" prot="public" virt="non-virtual"><scope>io::detail::OwningStdIOByteSourceBase</scope><name>OwningStdIOByteSourceBase</name></member>
+      <member refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1a9269e7bfd07ebf2fa3518912fe7bebd0" prot="public" virt="virtual"><scope>io::detail::OwningStdIOByteSourceBase</scope><name>read</name></member>
+      <member refid="classio_1_1_byte_source_base_1ac3228fe608b3268e49c2243d668d6efd" prot="public" virt="virtual"><scope>io::detail::OwningStdIOByteSourceBase</scope><name>~ByteSourceBase</name></member>
+      <member refid="classio_1_1detail_1_1_owning_std_i_o_byte_source_base_1accecf70a8e958d44b0adf4211a775452" prot="public" virt="non-virtual"><scope>io::detail::OwningStdIOByteSourceBase</scope><name>~OwningStdIOByteSourceBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

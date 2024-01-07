@@ -1,0 +1,203 @@
+\doxysection{io\+::CSVReader\texorpdfstring{$<$}{<} column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classio_1_1_c_s_v_reader}{}\label{classio_1_1_c_s_v_reader}\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+
+
+{\ttfamily \#include $<$csv.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classio_1_1_c_s_v_reader_abb95a0607cd9a32231daf62f8fc841ab}{CSVReader}} ()=delete
+\item 
+\mbox{\hyperlink{classio_1_1_c_s_v_reader_a0507ac5abe201969a15df76795e13c28}{CSVReader}} (const \mbox{\hyperlink{classio_1_1_c_s_v_reader}{CSVReader}} \&)=delete
+\item 
+\mbox{\hyperlink{classio_1_1_c_s_v_reader}{CSVReader}} \& \mbox{\hyperlink{classio_1_1_c_s_v_reader_a251282b8a9cdf6a2f8e4be8215ca1d27}{operator=}} (const \mbox{\hyperlink{classio_1_1_c_s_v_reader}{CSVReader}} \&)
+\item 
+{\footnotesize template$<$class... Args$>$ }\\\mbox{\hyperlink{classio_1_1_c_s_v_reader_adc9a15ffb046bfa61407d5b12ed0204c}{CSVReader}} (Args \&\&... args)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classio_1_1_c_s_v_reader_a6be5e639c82112332fe527525ff4319a}{next\+\_\+line}} ()
+\item 
+{\footnotesize template$<$class... Col\+Names$>$ }\\void \mbox{\hyperlink{classio_1_1_c_s_v_reader_ac5ece4c73a35ce331cdd27e98587beda}{read\+\_\+header}} (\mbox{\hyperlink{namespaceio_aa04154e5c37e292c5acc7533d28a9da7}{ignore\+\_\+column}} ignore\+\_\+policy, Col\+Names... cols)
+\item 
+{\footnotesize template$<$class... Col\+Names$>$ }\\void \mbox{\hyperlink{classio_1_1_c_s_v_reader_a78f8b6d773e1e07c5c1c078b75ba4eae}{set\+\_\+header}} (Col\+Names... cols)
+\item 
+bool \mbox{\hyperlink{classio_1_1_c_s_v_reader_aaba91fff6faea12e451943e8d32a5a17}{has\+\_\+column}} (const std\+::string \&name) const
+\item 
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader_a4096c1e43a4fba2b4f5ae21d047b5fbc}{set\+\_\+file\+\_\+name}} (const std\+::string \&file\+\_\+name)
+\item 
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader_a5f1dc083a8fa8661f5ecdcf6aebc7b24}{set\+\_\+file\+\_\+name}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classio_1_1_c_s_v_reader_a40f4b2d96c12a1f3985a9cfb1c5a5eaa}{get\+\_\+truncated\+\_\+file\+\_\+name}} () const
+\item 
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader_a1303bd6a2eb0d3d7c743212e52839ac4}{set\+\_\+file\+\_\+line}} (unsigned file\+\_\+line)
+\item 
+unsigned \mbox{\hyperlink{classio_1_1_c_s_v_reader_a065f805596018d1568b81152e6a22e0c}{get\+\_\+file\+\_\+line}} () const
+\item 
+{\footnotesize template$<$class... Col\+Type$>$ }\\bool \mbox{\hyperlink{classio_1_1_c_s_v_reader_a5ca6e99a0c31b29b8d0fd14c9ec70ea3}{read\+\_\+row}} (Col\+Type \&... cols)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$unsigned column\+\_\+count, class trim\+\_\+policy = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy = no\+\_\+comment$>$\newline
+class io\+::\+CSVReader$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$}
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01054}{1054}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classio_1_1_c_s_v_reader_abb95a0607cd9a32231daf62f8fc841ab}\label{classio_1_1_c_s_v_reader_abb95a0607cd9a32231daf62f8fc841ab} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!CSVReader@{CSVReader}}
+\index{CSVReader@{CSVReader}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{CSVReader()}{CSVReader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+\mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::\+CSVReader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classio_1_1_c_s_v_reader_a0507ac5abe201969a15df76795e13c28}\label{classio_1_1_c_s_v_reader_a0507ac5abe201969a15df76795e13c28} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!CSVReader@{CSVReader}}
+\index{CSVReader@{CSVReader}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{CSVReader()}{CSVReader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+\mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::\+CSVReader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classio_1_1_c_s_v_reader}{CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classio_1_1_c_s_v_reader_adc9a15ffb046bfa61407d5b12ed0204c}\label{classio_1_1_c_s_v_reader_adc9a15ffb046bfa61407d5b12ed0204c} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!CSVReader@{CSVReader}}
+\index{CSVReader@{CSVReader}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{CSVReader()}{CSVReader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+template$<$class... Args$>$ \\
+\mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::\+CSVReader (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01077}{1077}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classio_1_1_c_s_v_reader_a065f805596018d1568b81152e6a22e0c}\label{classio_1_1_c_s_v_reader_a065f805596018d1568b81152e6a22e0c} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!get\_file\_line@{get\_file\_line}}
+\index{get\_file\_line@{get\_file\_line}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{get\_file\_line()}{get\_file\_line()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+unsigned \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::get\+\_\+file\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01144}{1144}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a40f4b2d96c12a1f3985a9cfb1c5a5eaa}\label{classio_1_1_c_s_v_reader_a40f4b2d96c12a1f3985a9cfb1c5a5eaa} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!get\_truncated\_file\_name@{get\_truncated\_file\_name}}
+\index{get\_truncated\_file\_name@{get\_truncated\_file\_name}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{get\_truncated\_file\_name()}{get\_truncated\_file\_name()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::get\+\_\+truncated\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01138}{1138}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_aaba91fff6faea12e451943e8d32a5a17}\label{classio_1_1_c_s_v_reader_aaba91fff6faea12e451943e8d32a5a17} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!has\_column@{has\_column}}
+\index{has\_column@{has\_column}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{has\_column()}{has\_column()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+bool \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::has\+\_\+column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01124}{1124}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a6be5e639c82112332fe527525ff4319a}\label{classio_1_1_c_s_v_reader_a6be5e639c82112332fe527525ff4319a} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!next\_line@{next\_line}}
+\index{next\_line@{next\_line}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{next\_line()}{next\_line()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::next\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01086}{1086}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a251282b8a9cdf6a2f8e4be8215ca1d27}\label{classio_1_1_c_s_v_reader_a251282b8a9cdf6a2f8e4be8215ca1d27} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+\mbox{\hyperlink{classio_1_1_c_s_v_reader}{CSVReader}} \& \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classio_1_1_c_s_v_reader}{CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classio_1_1_c_s_v_reader_ac5ece4c73a35ce331cdd27e98587beda}\label{classio_1_1_c_s_v_reader_ac5ece4c73a35ce331cdd27e98587beda} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!read\_header@{read\_header}}
+\index{read\_header@{read\_header}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{read\_header()}{read\_header()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+template$<$class... Col\+Names$>$ \\
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::read\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceio_aa04154e5c37e292c5acc7533d28a9da7}{ignore\+\_\+column}}}]{ignore\+\_\+policy,  }\item[{Col\+Names...}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01089}{1089}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a5ca6e99a0c31b29b8d0fd14c9ec70ea3}\label{classio_1_1_c_s_v_reader_a5ca6e99a0c31b29b8d0fd14c9ec70ea3} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!read\_row@{read\_row}}
+\index{read\_row@{read\_row}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{read\_row()}{read\_row()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+template$<$class... Col\+Type$>$ \\
+bool \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::read\+\_\+row (\begin{DoxyParamCaption}\item[{Col\+Type \&...}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01168}{1168}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a1303bd6a2eb0d3d7c743212e52839ac4}\label{classio_1_1_c_s_v_reader_a1303bd6a2eb0d3d7c743212e52839ac4} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!set\_file\_line@{set\_file\_line}}
+\index{set\_file\_line@{set\_file\_line}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{set\_file\_line()}{set\_file\_line()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::set\+\_\+file\+\_\+line (\begin{DoxyParamCaption}\item[{unsigned}]{file\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01142}{1142}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a5f1dc083a8fa8661f5ecdcf6aebc7b24}\label{classio_1_1_c_s_v_reader_a5f1dc083a8fa8661f5ecdcf6aebc7b24} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01136}{1136}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a4096c1e43a4fba2b4f5ae21d047b5fbc}\label{classio_1_1_c_s_v_reader_a4096c1e43a4fba2b4f5ae21d047b5fbc} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01132}{1132}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+\Hypertarget{classio_1_1_c_s_v_reader_a78f8b6d773e1e07c5c1c078b75ba4eae}\label{classio_1_1_c_s_v_reader_a78f8b6d773e1e07c5c1c078b75ba4eae} 
+\index{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}!set\_header@{set\_header}}
+\index{set\_header@{set\_header}!io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$@{io::CSVReader$<$ column\_count, trim\_policy, quote\_policy, overflow\_policy, comment\_policy $>$}}
+\doxysubsubsection{\texorpdfstring{set\_header()}{set\_header()}}
+{\footnotesize\ttfamily template$<$unsigned column\+\_\+count, class trim\+\_\+policy  = trim\+\_\+chars$<$\textquotesingle{} \textquotesingle{}, \textquotesingle{}\textbackslash{}t\textquotesingle{}$>$, class quote\+\_\+policy  = no\+\_\+quote\+\_\+escape$<$\textquotesingle{},\textquotesingle{}$>$, class overflow\+\_\+policy  = throw\+\_\+on\+\_\+overflow, class comment\+\_\+policy  = no\+\_\+comment$>$ \\
+template$<$class... Col\+Names$>$ \\
+void \mbox{\hyperlink{classio_1_1_c_s_v_reader}{io\+::\+CSVReader}}$<$ column\+\_\+count, trim\+\_\+policy, quote\+\_\+policy, overflow\+\_\+policy, comment\+\_\+policy $>$\+::set\+\_\+header (\begin{DoxyParamCaption}\item[{Col\+Names...}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{csv_8h_source_l01112}{1112}} of file \mbox{\hyperlink{csv_8h_source}{csv.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/black-\/scholes-\/cpp/\mbox{\hyperlink{csv_8h}{csv.\+h}}\end{DoxyCompactItemize}

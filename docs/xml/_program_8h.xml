@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_program_8h" kind="file" language="C++">
+    <compoundname>Program.h</compoundname>
+    <includes refid="input_reader_8h" local="yes">inputReader.h</includes>
+    <includes refid="black_scholes_model_8h" local="yes">blackScholesModel.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>include/black-scholes-cpp/Program.h</label>
+        <link refid="_program_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>blackScholesModel.h</label>
+        <link refid="black_scholes_model_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>csv.h</label>
+        <link refid="csv_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inputReader.h</label>
+        <link refid="input_reader_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cassert</label>
+      </node>
+      <node id="16">
+        <label>cerrno</label>
+      </node>
+      <node id="12">
+        <label>condition_variable</label>
+      </node>
+      <node id="7">
+        <label>cstdio</label>
+      </node>
+      <node id="8">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>curl/curl.h</label>
+      </node>
+      <node id="9">
+        <label>exception</label>
+      </node>
+      <node id="17">
+        <label>istream</label>
+      </node>
+      <node id="18">
+        <label>limits</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="13">
+        <label>mutex</label>
+      </node>
+      <node id="21">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>thread</label>
+      </node>
+      <node id="10">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_program" prot="public">Program</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_program_8h_1a8ffb829ab72a9f9ac216bfb959f1830d" prot="public" static="no" extern="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* fast_io) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>fast_io</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="19" column="8" declfile="include/black-scholes-cpp/Program.h" declline="19" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_program_8h_1a964f63b782f90651b088a9c60e52a464" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fast_io_initializer</definition>
+        <argsstring>()</argsstring>
+        <name>fast_io_initializer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/Program.h" line="16" column="13" declfile="include/black-scholes-cpp/Program.h" declline="16" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Program.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>black-scholes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>lyndskg<sp/>on<sp/>7/18/23.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Program_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Program_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input_reader_8h" kindref="compound">inputReader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="black_scholes_model_8h" kindref="compound">blackScholesModel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Declare<sp/>the<sp/>fast_io<sp/>lambda<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_program_8h_1a964f63b782f90651b088a9c60e52a464" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_program_8h_1a964f63b782f90651b088a9c60e52a464" kindref="member">fast_io_initializer</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Declare<sp/>the<sp/>fast_io<sp/>variable<sp/>as<sp/>a<sp/>function<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="_program_8h_1a8ffb829ab72a9f9ac216bfb959f1830d" kindref="member">fast_io</ref>)();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Program&quot;<sp/>Class<sp/>Declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_program" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_program" kindref="compound">Program</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------<sp/>MEMBER<sp/>VARIABLES<sp/><sp/>------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_program_1ac41a49da8a99a642576bcb692e8e8e63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_program_1ac41a49da8a99a642576bcb692e8e8e63" kindref="member">inputMode</ref>;<sp/></highlight><highlight class="comment">//<sp/>Program<sp/>mode<sp/>(i.e.<sp/>USER,<sp/>FILE,<sp/>DB,<sp/>or<sp/>API)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_program_1adced491443a62aa3fd437bb06b7d5a03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_program_1adced491443a62aa3fd437bb06b7d5a03" kindref="member">MAX_BUFFER_SIZE</ref><sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*------------------------------<sp/><sp/>CONSTRUCTORS<sp/><sp/>------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>constructor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_program_1aaefaa0df08f3484476fc4d61e97acbdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_program_1aaefaa0df08f3484476fc4d61e97acbdc" kindref="member">Program</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Implement<sp/>any<sp/>relevant<sp/>custom<sp/>constructors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------<sp/>KEY<sp/>MEMBER<sp/>FUNCTIONS<sp/><sp/>---------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Processes<sp/>the<sp/>command<sp/>line<sp/>arguments.</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Uses<sp/>getopt_long<sp/>to<sp/>parse<sp/>the<sp/>options<sp/>and<sp/>their<sp/>arguments.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Based<sp/>on<sp/>the<sp/>specified<sp/>mode,<sp/>it<sp/>calls<sp/>the<sp/>corresponding<sp/>functions<sp/>to<sp/>read<sp/>input<sp/>values</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>from<sp/>different<sp/>sources<sp/>(e.g.<sp/>user<sp/>input,<sp/>a<sp/>file,<sp/>a<sp/>database,<sp/>or<sp/>an<sp/>API).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>complexity:<sp/>O(n),<sp/>where<sp/>n<sp/>=<sp/>#<sp/>of<sp/>command<sp/>line<sp/>options</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Space<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_program_1adedd67b6dbeae5b7290e664a0244f4ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_program_1adedd67b6dbeae5b7290e664a0244f4ab" kindref="member">get_options</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prints<sp/>a<sp/>helpful<sp/>message<sp/>about<sp/>how<sp/>to<sp/>use<sp/>the<sp/>program<sp/>for<sp/>the<sp/>user<sp/>when<sp/>requested.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Space<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_program_1acea75d5a337ccd2ea84bb23642099a3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_program_1acea75d5a337ccd2ea84bb23642099a3e" kindref="member">printHelp</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[]);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Launches<sp/>the<sp/>algorithm<sp/>by<sp/>reading<sp/>input<sp/>values<sp/>based<sp/>on<sp/>the<sp/>specified<sp/>input<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Space<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_program_1af5efef91e7012e976d5c1fcdcb93797a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_program_1af5efef91e7012e976d5c1fcdcb93797a" kindref="member">launchAlgo</ref>(<ref refid="classblack_scholes_model" kindref="compound">blackScholesModel</ref>*<sp/>model);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reads<sp/>and<sp/>validates<sp/>the<sp/>input<sp/>mode<sp/>from<sp/>the<sp/>user.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@Return:<sp/>Returns<sp/>the<sp/>validated<sp/>input<sp/>mode<sp/>as<sp/>a<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Time<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Space<sp/>complexity:<sp/>O(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_program_1a86fed278c6ed6d7390e0adb8e8d061a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_program_1a86fed278c6ed6d7390e0adb8e8d061a0" kindref="member">readInputMode</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Implement<sp/>any/all<sp/>private<sp/>and/or<sp/>protected<sp/>member<sp/>variables.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>Program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>Program_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/black-scholes-cpp/Program.h"/>
+  </compounddef>
+</doxygen>

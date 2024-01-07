@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structio_1_1error_1_1with__column__content" kind="struct" language="C++" prot="public">
+    <compoundname>io::error::with_column_content</compoundname>
+    <derivedcompoundref refid="structio_1_1error_1_1integer__must__be__positive" prot="public" virt="non-virtual">io::error::integer_must_be_positive</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1integer__overflow" prot="public" virt="non-virtual">io::error::integer_overflow</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1integer__underflow" prot="public" virt="non-virtual">io::error::integer_underflow</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1invalid__single__character" prot="public" virt="non-virtual">io::error::invalid_single_character</derivedcompoundref>
+    <derivedcompoundref refid="structio_1_1error_1_1no__digit" prot="public" virt="non-virtual">io::error::no_digit</derivedcompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structio_1_1error_1_1with__column__content_1a8587779769fbfb40155abb362137a523" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char io::error::with_column_content::column_content[max_column_content_length+1]</definition>
+        <argsstring>[max_column_content_length+1]</argsstring>
+        <name>column_content</name>
+        <qualifiedname>io::error::with_column_content::column_content</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="515" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structio_1_1error_1_1with__column__content_1aca754ef952be5ff4fcfe51ccb57ab66d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::error::with_column_content::with_column_content</definition>
+        <argsstring>()</argsstring>
+        <name>with_column_content</name>
+        <qualifiedname>io::error::with_column_content::with_column_content</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="501" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="501" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="structio_1_1error_1_1with__column__content_1ae7375310dc02425cb3cc4115b3ac8d6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void io::error::with_column_content::set_column_content</definition>
+        <argsstring>(const char *column_content)</argsstring>
+        <name>set_column_content</name>
+        <qualifiedname>io::error::with_column_content::set_column_content</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>column_content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="505" column="8" bodyfile="include/black-scholes-cpp/csv.h" bodystart="505" bodyend="513"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::error::integer_must_be_positive</label>
+        <link refid="structio_1_1error_1_1integer__must__be__positive"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>io::error::integer_overflow</label>
+        <link refid="structio_1_1error_1_1integer__overflow"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>io::error::integer_underflow</label>
+        <link refid="structio_1_1error_1_1integer__underflow"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>io::error::invalid_single_character</label>
+        <link refid="structio_1_1error_1_1invalid__single__character"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io::error::no_digit</label>
+        <link refid="structio_1_1error_1_1no__digit"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>io::error::with_column_content</label>
+        <link refid="structio_1_1error_1_1with__column__content"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/black-scholes-cpp/csv.h" line="500" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="500" bodyend="516"/>
+    <listofallmembers>
+      <member refid="structio_1_1error_1_1with__column__content_1a8587779769fbfb40155abb362137a523" prot="public" virt="non-virtual"><scope>io::error::with_column_content</scope><name>column_content</name></member>
+      <member refid="structio_1_1error_1_1with__column__content_1ae7375310dc02425cb3cc4115b3ac8d6a" prot="public" virt="non-virtual"><scope>io::error::with_column_content</scope><name>set_column_content</name></member>
+      <member refid="structio_1_1error_1_1with__column__content_1aca754ef952be5ff4fcfe51ccb57ab66d" prot="public" virt="non-virtual"><scope>io::error::with_column_content</scope><name>with_column_content</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

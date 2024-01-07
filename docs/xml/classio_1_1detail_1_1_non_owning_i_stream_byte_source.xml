@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classio_1_1detail_1_1_non_owning_i_stream_byte_source" kind="class" language="C++" prot="public">
+    <compoundname>io::detail::NonOwningIStreamByteSource</compoundname>
+    <basecompoundref refid="classio_1_1_byte_source_base" prot="public" virt="non-virtual">io::ByteSourceBase</basecompoundref>
+    <includes refid="csv_8h" local="no">csv.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1a42ec07be9409b77a17bdf08cfa73739d" prot="private" static="no" mutable="no">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; io::detail::NonOwningIStreamByteSource::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <qualifiedname>io::detail::NonOwningIStreamByteSource::in</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="163" column="16" bodyfile="include/black-scholes-cpp/csv.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1aacb55ba2f52ba1c30810697d6aa92169" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::NonOwningIStreamByteSource::NonOwningIStreamByteSource</definition>
+        <argsstring>(std::istream &amp;in)</argsstring>
+        <name>NonOwningIStreamByteSource</name>
+        <qualifiedname>io::detail::NonOwningIStreamByteSource::NonOwningIStreamByteSource</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="153" column="12" bodyfile="include/black-scholes-cpp/csv.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1ac7b1968c8314896d7ec0ebb97fdda30d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+        <definition>int io::detail::NonOwningIStreamByteSource::read</definition>
+        <argsstring>(char *buffer, int size)</argsstring>
+        <name>read</name>
+        <qualifiedname>io::detail::NonOwningIStreamByteSource::read</qualifiedname>
+        <reimplements refid="classio_1_1_byte_source_base_1a9598bcc869b79e44da07f0e6fa478615">read</reimplements>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">char</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceio_1_1detail_1a5656f385aea8d6ee5814a2abc20f5191" kindref="member">int</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="155" column="7" bodyfile="include/black-scholes-cpp/csv.h" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1a74a5a592a35640f3b2c5694ca509bec7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>io::detail::NonOwningIStreamByteSource::~NonOwningIStreamByteSource</definition>
+        <argsstring>()</argsstring>
+        <name>~NonOwningIStreamByteSource</name>
+        <qualifiedname>io::detail::NonOwningIStreamByteSource::~NonOwningIStreamByteSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/black-scholes-cpp/csv.h" line="160" column="3" bodyfile="include/black-scholes-cpp/csv.h" bodystart="160" bodyend="160"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="1">
+        <label>io::detail::NonOwningIStreamByteSource</label>
+        <link refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>io::ByteSourceBase</label>
+        <link refid="classio_1_1_byte_source_base"/>
+      </node>
+      <node id="1">
+        <label>io::detail::NonOwningIStreamByteSource</label>
+        <link refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/black-scholes-cpp/csv.h" line="151" column="1" bodyfile="include/black-scholes-cpp/csv.h" bodystart="151" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1a42ec07be9409b77a17bdf08cfa73739d" prot="private" virt="non-virtual"><scope>io::detail::NonOwningIStreamByteSource</scope><name>in</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1aacb55ba2f52ba1c30810697d6aa92169" prot="public" virt="non-virtual"><scope>io::detail::NonOwningIStreamByteSource</scope><name>NonOwningIStreamByteSource</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1ac7b1968c8314896d7ec0ebb97fdda30d" prot="public" virt="virtual"><scope>io::detail::NonOwningIStreamByteSource</scope><name>read</name></member>
+      <member refid="classio_1_1_byte_source_base_1ac3228fe608b3268e49c2243d668d6efd" prot="public" virt="virtual"><scope>io::detail::NonOwningIStreamByteSource</scope><name>~ByteSourceBase</name></member>
+      <member refid="classio_1_1detail_1_1_non_owning_i_stream_byte_source_1a74a5a592a35640f3b2c5694ca509bec7" prot="public" virt="non-virtual"><scope>io::detail::NonOwningIStreamByteSource</scope><name>~NonOwningIStreamByteSource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

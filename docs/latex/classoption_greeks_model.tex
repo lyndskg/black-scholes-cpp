@@ -1,0 +1,409 @@
+\doxysection{option\+Greeks\+Model Class Reference}
+\hypertarget{classoption_greeks_model}{}\label{classoption_greeks_model}\index{optionGreeksModel@{optionGreeksModel}}
+
+
+{\ttfamily \#include $<$option\+Greeks\+Model.\+h$>$}
+
+Inheritance diagram for option\+Greeks\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classoption_greeks_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoption_greeks_model_aa8cacf7b1635fc583a39a678f4bcbfd1}{option\+Greeks\+Model}} ()
+\item 
+\mbox{\hyperlink{classoption_greeks_model_ae92c594162f8d34fa42250e7978bbb85}{option\+Greeks\+Model}} (double underlying\+Price, double strike\+Price, double risk\+Free\+Rate, double time\+To\+Expiration, double volatility)
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_ad0d428c926e88327515358d77869284f}{perform\+Delta\+Neutral\+Hedging}} (double hedge\+Ratio)
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_ad68f3aa2d7c34bd43899d5e0419dae2c}{calculate\+Option\+Price\+With\+IV}} (double underlying\+Price, double strike\+Price, double time\+To\+Maturity, double risk\+Free\+Rate, double implied\+Volatility) const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_a429716980b5b30717b7f44edcd3424dc}{calculate\+Option\+Price\+With\+Gamma}} (double underlying\+Price, double strike\+Price, double time\+To\+Maturity, double risk\+Free\+Rate) const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_a8563003548284cd013199e0f516c5444}{calculate\+Option\+Price\+With\+Vega}} (double underlying\+Price, double strike\+Price, double time\+To\+Maturity, double risk\+Free\+Rate) const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_a858b560658318bc6d7a0c4f6bf4eaa96}{calculate\+Option\+Price\+With\+Theta}} (double underlying\+Price, double strike\+Price, double time\+To\+Maturity, double risk\+Free\+Rate) const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_ad599275faf4d62f82820a785cd7881fc}{calculate\+Option\+Price\+With\+Gamma\+Vega}} (double underlying\+Price, double strike\+Price, double time\+To\+Maturity, double risk\+Free\+Rate) const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_ac3988d21f263032b0a0c54f215717154}{calculate\+Delta\+Adj\+With\+IV}} (double implied\+Volatility) const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_ab33ffabdf93c54716688b2ddbc2415ea}{calculate\+Delta\+Adj\+With\+Gamma}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_a930c94822db8e4502eb86694ff194de9}{calculate\+Delta\+Adj\+With\+Vega}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_ad6690d219286874bc292da354147e2ed}{calculate\+Delta\+Adj\+With\+Theta}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_model_a8c53e0d09764c4921d391488134b6d2d}{calculate\+Delta\+Adj\+With\+Gamma\+Vega}} () const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a7f5de563c3b32085d3033581bd173bf8}{set\+Option\+Price\+Iv}} (double option\+Price\+Iv) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a8446f117f76179a68e774c63444573dc}{set\+Option\+Price\+Gamma}} (double option\+Price\+Gamma) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_ade909398afa01bac5b52fa69f6aa3643}{set\+Option\+Price\+Vega}} (double option\+Price\+Vega) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a29123f7238b600a9f1c97a9956eec007}{set\+Option\+Price\+Theta}} (double option\+Price\+Theta) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a582022e53db1580e0d6bea8b7fa0ea38}{set\+Theta\+Adjusted\+Delta}} (double theta\+Adjusted\+Delta) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a4d48dd2af612a761f09e0d32223cba11}{set\+Option\+Price\+Gamma\+Vega}} (double option\+Price\+Gamma\+Vega) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_aa7c10cffaf1482e8b049e37d54955f41}{set\+Iv\+Adjusted\+Delta}} (double iv\+Adjusted\+Delta) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a648b439339edd47cf3448e66333883c9}{set\+Gamma\+Adjusted\+Delta}} (double gamma\+Adjusted\+Delta) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_a36b8128bb93c0ff23eb863fb6f107712}{set\+Vega\+Adjusted\+Delta}} (double vega\+Adjusted\+Delta) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_model_ae67e875038ebe531f468f2bcb58b4619}{set\+Gamma\+Vega\+Adjusted\+Delta}} (double gamma\+Vega\+Adjusted\+Delta) const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_ae9c77b011c8451b5e5a73b5c8d1d79aa}{get\+Option\+Price\+Iv}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_a5e6a0717efe6a831762ab8995341882e}{get\+Option\+Price\+Gamma}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_ad77076ff2c052e1c62a74e3fcb7b1ae3}{get\+Option\+Price\+Vega}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_a8ab736b5500e00089ec34a23b3f2f50a}{get\+Option\+Price\+Theta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_a7862c1a8cdbcc4c8b76ab2d93f61986e}{get\+Option\+Price\+Gamma\+Vega}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_ad9360d0d7def2e959d0b7edd5ebc40c0}{get\+Iv\+Adjusted\+Delta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_aaf3ca7f9d4c59adc1c074770d83452cc}{get\+Gamma\+Adjusted\+Delta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_aafabb075c40131c42d65b09d91df2a3e}{get\+Vega\+Adjusted\+Delta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_aa67ba36f4cad369444f448f83c8dab38}{get\+Theta\+Adjusted\+Delta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_model_a6ce982e4f090084db2a56951cbb971f5}{get\+Gamma\+Vega\+Adjusted\+Delta}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classoption_greeks}{option\+Greeks}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoption_greeks_a099df0d1a755af6b783e813faa1d4669}{option\+Greeks}} ()
+\item 
+\mbox{\hyperlink{classoption_greeks_a0e06203cf5c3416ebe5b0f7e5fe17905}{option\+Greeks}} (double underlying\+Price, double strike\+Price, double time\+To\+Expiration, double risk\+Free\+Rate, double volatility)
+\item 
+double \mbox{\hyperlink{classoption_greeks_a9a7102911af5916db57df784545da393}{calculate\+Delta}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_a232b79ca5072796fb94ca83aacc9b883}{calculate\+Gamma}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_a00ecc475b70f9607d63d0c31aa3d008b}{calculate\+Theta}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_acd6ac5b8d1d66afb1a36fff92c5ee156}{calculate\+Vega}} () const
+\item 
+double \mbox{\hyperlink{classoption_greeks_ab55cabebc6d03fc502c396ac3a24d0f6}{calculate\+Rho}} () const
+\item 
+void \mbox{\hyperlink{classoption_greeks_a7f03ba47195890ef98e04b01bfa06d2f}{set\+Delta}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_a245aba032de1c0b26f27942af11a8361}{set\+Gamma}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_ad0d1a9ae498484fa49efcf9c44e03329}{set\+Vega}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_acb7e4d715ccda6941dd0e6e9bfdc7685}{set\+Theta}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classoption_greeks_a2656f445b590f87b03e1893e4a096273}{set\+Rho}} (const double \&value) const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_ac422607011fe88042ecde13279b85f17}{get\+Delta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_a8a63d8e2ce3696d0c7e042b213e8c153}{get\+Gamma}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_a64a39847d651b634db41d81c9949d13a}{get\+Vega}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_a30274dff6d0fd8e43f9b41b764469dbf}{get\+Theta}} () const
+\item 
+const double \& \mbox{\hyperlink{classoption_greeks_ab3a42f69714b36c2ba4eb1d307d8f8a7}{get\+Rho}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classblack_scholes_model_a7ddde3a422329fb1b20097aa78a2a510}{black\+Scholes\+Model}} ()
+\item 
+\mbox{\hyperlink{classblack_scholes_model_a9c2c473eaa2587a35119a4a50cf1b864}{black\+Scholes\+Model}} (double underlying\+Price, double strike\+Price, double time\+To\+Expiration, double risk\+Free\+Rate, double volatility)
+\item 
+\mbox{\hyperlink{classblack_scholes_model_adfa7fcdd443de8093f24c58866ec6ac7}{black\+Scholes\+Model}} (double underlying\+Price, double strike\+Price, double risk\+Free\+Rate, double time\+To\+Expiration, double volatility, \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{option\+Type}})
+\item 
+double \mbox{\hyperlink{classblack_scholes_model_a9608f80ab67eb8bcd96a5f53276c1762}{calculate\+Option\+Price}} ()
+\item 
+double \mbox{\hyperlink{classblack_scholes_model_a892ddce4b71241e8f027173686f34461}{normal\+CDF}} (double d) const
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a0981dfe03d4c4b44e3c1c2c5ce725a99}{set\+Underlying\+Price}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a560fa41b7e2ada19e5291fd02b9caf3e}{set\+Strike\+Price}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a973a8d1b689ee0bf23771672bd9774ac}{set\+TTE}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_adf70d018da40647100dfaff53fc2bd71}{set\+RFR}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a206cb165b1004ac80295f68b8f6ceee4}{set\+Volatility}} (const double \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_ac2c755b853cf654df449095d8a82e684}{set\+Option\+Type}} (const \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \&value)
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_af93fef5df405832b852d15b11dbf7b3b}{set\+D1}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a3f38248c5395e90a3cb3f3e142c48f5f}{set\+D2}} (const double \&value) const
+\item 
+void \mbox{\hyperlink{classblack_scholes_model_a0cc11862cf9fae0bcaba5efb0082663b}{setK}} (const double \&value) const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a985c48c0222f31022c1c1f54050b73d5}{get\+Underlying\+Price}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a26226bc311b5a1eab9afb89a2b86824d}{get\+Strike\+Price}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_acce910bfd40831f839ea4d56c0f206ea}{get\+TTE}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_aa3df25dd7f6455b06f73435a55cc238c}{get\+RFR}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_aced3096a6015e3eb86d089636eaed7a2}{get\+Volatility}} () const
+\item 
+\mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \mbox{\hyperlink{classblack_scholes_model_a3a0e83fe7e08584ccaeffcbdf8dd2ba1}{get\+Option\+Type}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_ab6b804f0bf84f2609df992a379ac5340}{get\+D1}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a4d513ab31082c7e62a35b45aba2e5d39}{get\+D2}} () const
+\item 
+const double \& \mbox{\hyperlink{classblack_scholes_model_a3f1b0604aa2613c6551371f33c836eb4}{getK}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{Option\+Type}} \{ \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2a8c7dcca81f7571f4532c6514fc905eb2}{CALL}}
+, \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2af1c731c160635a62301f976a10dae8e0}{PUT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classblack_scholes_model}{black\+Scholes\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classblack_scholes_model_a26f3559e7d53eb191eb1ee5d186342e2}{black\+Scholes\+Model\+::\+Option\+Type}} \mbox{\hyperlink{classblack_scholes_model_a35c786cf7e5b253f7a07f770d8ca5af8}{option\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classoption_greeks}{option\+Greeks}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classoption_greeks_a7f8aebb87a939685023f6fe89d665209}{delta\+\_\+}}
+\item 
+double \mbox{\hyperlink{classoption_greeks_afc6a85b6696a780e14b653cc97d17e31}{gamma\+\_\+}}
+\item 
+double \mbox{\hyperlink{classoption_greeks_acd496d311df1a8d10d0f942d67183ccf}{vega\+\_\+}}
+\item 
+double \mbox{\hyperlink{classoption_greeks_ad2c8b5eb62d84840b1738f8c6ebbb2cb}{theta\+\_\+}}
+\item 
+double \mbox{\hyperlink{classoption_greeks_a719169708cf71d4f98d2f59748e623fd}{rho\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{option_greeks_model_8h_source_l00018}{18}} of file \mbox{\hyperlink{option_greeks_model_8h_source}{option\+Greeks\+Model.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classoption_greeks_model_aa8cacf7b1635fc583a39a678f4bcbfd1}\label{classoption_greeks_model_aa8cacf7b1635fc583a39a678f4bcbfd1} 
+\index{optionGreeksModel@{optionGreeksModel}!optionGreeksModel@{optionGreeksModel}}
+\index{optionGreeksModel@{optionGreeksModel}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{optionGreeksModel()}{optionGreeksModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily option\+Greeks\+Model\+::option\+Greeks\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classoption_greeks_model_ae92c594162f8d34fa42250e7978bbb85}\label{classoption_greeks_model_ae92c594162f8d34fa42250e7978bbb85} 
+\index{optionGreeksModel@{optionGreeksModel}!optionGreeksModel@{optionGreeksModel}}
+\index{optionGreeksModel@{optionGreeksModel}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{optionGreeksModel()}{optionGreeksModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily option\+Greeks\+Model\+::option\+Greeks\+Model (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{risk\+Free\+Rate,  }\item[{double}]{time\+To\+Expiration,  }\item[{double}]{volatility }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classoption_greeks_model_ab33ffabdf93c54716688b2ddbc2415ea}\label{classoption_greeks_model_ab33ffabdf93c54716688b2ddbc2415ea} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateDeltaAdjWithGamma@{calculateDeltaAdjWithGamma}}
+\index{calculateDeltaAdjWithGamma@{calculateDeltaAdjWithGamma}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateDeltaAdjWithGamma()}{calculateDeltaAdjWithGamma()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Delta\+Adj\+With\+Gamma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a8c53e0d09764c4921d391488134b6d2d}\label{classoption_greeks_model_a8c53e0d09764c4921d391488134b6d2d} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateDeltaAdjWithGammaVega@{calculateDeltaAdjWithGammaVega}}
+\index{calculateDeltaAdjWithGammaVega@{calculateDeltaAdjWithGammaVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateDeltaAdjWithGammaVega()}{calculateDeltaAdjWithGammaVega()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Delta\+Adj\+With\+Gamma\+Vega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ac3988d21f263032b0a0c54f215717154}\label{classoption_greeks_model_ac3988d21f263032b0a0c54f215717154} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateDeltaAdjWithIV@{calculateDeltaAdjWithIV}}
+\index{calculateDeltaAdjWithIV@{calculateDeltaAdjWithIV}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateDeltaAdjWithIV()}{calculateDeltaAdjWithIV()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Delta\+Adj\+With\+IV (\begin{DoxyParamCaption}\item[{double}]{implied\+Volatility }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ad6690d219286874bc292da354147e2ed}\label{classoption_greeks_model_ad6690d219286874bc292da354147e2ed} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateDeltaAdjWithTheta@{calculateDeltaAdjWithTheta}}
+\index{calculateDeltaAdjWithTheta@{calculateDeltaAdjWithTheta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateDeltaAdjWithTheta()}{calculateDeltaAdjWithTheta()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Delta\+Adj\+With\+Theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a930c94822db8e4502eb86694ff194de9}\label{classoption_greeks_model_a930c94822db8e4502eb86694ff194de9} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateDeltaAdjWithVega@{calculateDeltaAdjWithVega}}
+\index{calculateDeltaAdjWithVega@{calculateDeltaAdjWithVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateDeltaAdjWithVega()}{calculateDeltaAdjWithVega()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Delta\+Adj\+With\+Vega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a429716980b5b30717b7f44edcd3424dc}\label{classoption_greeks_model_a429716980b5b30717b7f44edcd3424dc} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateOptionPriceWithGamma@{calculateOptionPriceWithGamma}}
+\index{calculateOptionPriceWithGamma@{calculateOptionPriceWithGamma}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateOptionPriceWithGamma()}{calculateOptionPriceWithGamma()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Option\+Price\+With\+Gamma (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Maturity,  }\item[{double}]{risk\+Free\+Rate }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ad599275faf4d62f82820a785cd7881fc}\label{classoption_greeks_model_ad599275faf4d62f82820a785cd7881fc} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateOptionPriceWithGammaVega@{calculateOptionPriceWithGammaVega}}
+\index{calculateOptionPriceWithGammaVega@{calculateOptionPriceWithGammaVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateOptionPriceWithGammaVega()}{calculateOptionPriceWithGammaVega()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Option\+Price\+With\+Gamma\+Vega (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Maturity,  }\item[{double}]{risk\+Free\+Rate }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ad68f3aa2d7c34bd43899d5e0419dae2c}\label{classoption_greeks_model_ad68f3aa2d7c34bd43899d5e0419dae2c} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateOptionPriceWithIV@{calculateOptionPriceWithIV}}
+\index{calculateOptionPriceWithIV@{calculateOptionPriceWithIV}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateOptionPriceWithIV()}{calculateOptionPriceWithIV()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Option\+Price\+With\+IV (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Maturity,  }\item[{double}]{risk\+Free\+Rate,  }\item[{double}]{implied\+Volatility }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a858b560658318bc6d7a0c4f6bf4eaa96}\label{classoption_greeks_model_a858b560658318bc6d7a0c4f6bf4eaa96} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateOptionPriceWithTheta@{calculateOptionPriceWithTheta}}
+\index{calculateOptionPriceWithTheta@{calculateOptionPriceWithTheta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateOptionPriceWithTheta()}{calculateOptionPriceWithTheta()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Option\+Price\+With\+Theta (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Maturity,  }\item[{double}]{risk\+Free\+Rate }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a8563003548284cd013199e0f516c5444}\label{classoption_greeks_model_a8563003548284cd013199e0f516c5444} 
+\index{optionGreeksModel@{optionGreeksModel}!calculateOptionPriceWithVega@{calculateOptionPriceWithVega}}
+\index{calculateOptionPriceWithVega@{calculateOptionPriceWithVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{calculateOptionPriceWithVega()}{calculateOptionPriceWithVega()}}
+{\footnotesize\ttfamily double option\+Greeks\+Model\+::calculate\+Option\+Price\+With\+Vega (\begin{DoxyParamCaption}\item[{double}]{underlying\+Price,  }\item[{double}]{strike\+Price,  }\item[{double}]{time\+To\+Maturity,  }\item[{double}]{risk\+Free\+Rate }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_aaf3ca7f9d4c59adc1c074770d83452cc}\label{classoption_greeks_model_aaf3ca7f9d4c59adc1c074770d83452cc} 
+\index{optionGreeksModel@{optionGreeksModel}!getGammaAdjustedDelta@{getGammaAdjustedDelta}}
+\index{getGammaAdjustedDelta@{getGammaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getGammaAdjustedDelta()}{getGammaAdjustedDelta()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Gamma\+Adjusted\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a6ce982e4f090084db2a56951cbb971f5}\label{classoption_greeks_model_a6ce982e4f090084db2a56951cbb971f5} 
+\index{optionGreeksModel@{optionGreeksModel}!getGammaVegaAdjustedDelta@{getGammaVegaAdjustedDelta}}
+\index{getGammaVegaAdjustedDelta@{getGammaVegaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getGammaVegaAdjustedDelta()}{getGammaVegaAdjustedDelta()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Gamma\+Vega\+Adjusted\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ad9360d0d7def2e959d0b7edd5ebc40c0}\label{classoption_greeks_model_ad9360d0d7def2e959d0b7edd5ebc40c0} 
+\index{optionGreeksModel@{optionGreeksModel}!getIvAdjustedDelta@{getIvAdjustedDelta}}
+\index{getIvAdjustedDelta@{getIvAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getIvAdjustedDelta()}{getIvAdjustedDelta()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Iv\+Adjusted\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a5e6a0717efe6a831762ab8995341882e}\label{classoption_greeks_model_a5e6a0717efe6a831762ab8995341882e} 
+\index{optionGreeksModel@{optionGreeksModel}!getOptionPriceGamma@{getOptionPriceGamma}}
+\index{getOptionPriceGamma@{getOptionPriceGamma}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getOptionPriceGamma()}{getOptionPriceGamma()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Option\+Price\+Gamma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a7862c1a8cdbcc4c8b76ab2d93f61986e}\label{classoption_greeks_model_a7862c1a8cdbcc4c8b76ab2d93f61986e} 
+\index{optionGreeksModel@{optionGreeksModel}!getOptionPriceGammaVega@{getOptionPriceGammaVega}}
+\index{getOptionPriceGammaVega@{getOptionPriceGammaVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getOptionPriceGammaVega()}{getOptionPriceGammaVega()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Option\+Price\+Gamma\+Vega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ae9c77b011c8451b5e5a73b5c8d1d79aa}\label{classoption_greeks_model_ae9c77b011c8451b5e5a73b5c8d1d79aa} 
+\index{optionGreeksModel@{optionGreeksModel}!getOptionPriceIv@{getOptionPriceIv}}
+\index{getOptionPriceIv@{getOptionPriceIv}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getOptionPriceIv()}{getOptionPriceIv()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Option\+Price\+Iv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a8ab736b5500e00089ec34a23b3f2f50a}\label{classoption_greeks_model_a8ab736b5500e00089ec34a23b3f2f50a} 
+\index{optionGreeksModel@{optionGreeksModel}!getOptionPriceTheta@{getOptionPriceTheta}}
+\index{getOptionPriceTheta@{getOptionPriceTheta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getOptionPriceTheta()}{getOptionPriceTheta()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Option\+Price\+Theta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ad77076ff2c052e1c62a74e3fcb7b1ae3}\label{classoption_greeks_model_ad77076ff2c052e1c62a74e3fcb7b1ae3} 
+\index{optionGreeksModel@{optionGreeksModel}!getOptionPriceVega@{getOptionPriceVega}}
+\index{getOptionPriceVega@{getOptionPriceVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getOptionPriceVega()}{getOptionPriceVega()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Option\+Price\+Vega (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_aa67ba36f4cad369444f448f83c8dab38}\label{classoption_greeks_model_aa67ba36f4cad369444f448f83c8dab38} 
+\index{optionGreeksModel@{optionGreeksModel}!getThetaAdjustedDelta@{getThetaAdjustedDelta}}
+\index{getThetaAdjustedDelta@{getThetaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getThetaAdjustedDelta()}{getThetaAdjustedDelta()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Theta\+Adjusted\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_aafabb075c40131c42d65b09d91df2a3e}\label{classoption_greeks_model_aafabb075c40131c42d65b09d91df2a3e} 
+\index{optionGreeksModel@{optionGreeksModel}!getVegaAdjustedDelta@{getVegaAdjustedDelta}}
+\index{getVegaAdjustedDelta@{getVegaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{getVegaAdjustedDelta()}{getVegaAdjustedDelta()}}
+{\footnotesize\ttfamily const double \& option\+Greeks\+Model\+::get\+Vega\+Adjusted\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ad0d428c926e88327515358d77869284f}\label{classoption_greeks_model_ad0d428c926e88327515358d77869284f} 
+\index{optionGreeksModel@{optionGreeksModel}!performDeltaNeutralHedging@{performDeltaNeutralHedging}}
+\index{performDeltaNeutralHedging@{performDeltaNeutralHedging}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{performDeltaNeutralHedging()}{performDeltaNeutralHedging()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::perform\+Delta\+Neutral\+Hedging (\begin{DoxyParamCaption}\item[{double}]{hedge\+Ratio }\end{DoxyParamCaption})}
+
+\Hypertarget{classoption_greeks_model_a648b439339edd47cf3448e66333883c9}\label{classoption_greeks_model_a648b439339edd47cf3448e66333883c9} 
+\index{optionGreeksModel@{optionGreeksModel}!setGammaAdjustedDelta@{setGammaAdjustedDelta}}
+\index{setGammaAdjustedDelta@{setGammaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setGammaAdjustedDelta()}{setGammaAdjustedDelta()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Gamma\+Adjusted\+Delta (\begin{DoxyParamCaption}\item[{double}]{gamma\+Adjusted\+Delta }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ae67e875038ebe531f468f2bcb58b4619}\label{classoption_greeks_model_ae67e875038ebe531f468f2bcb58b4619} 
+\index{optionGreeksModel@{optionGreeksModel}!setGammaVegaAdjustedDelta@{setGammaVegaAdjustedDelta}}
+\index{setGammaVegaAdjustedDelta@{setGammaVegaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setGammaVegaAdjustedDelta()}{setGammaVegaAdjustedDelta()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Gamma\+Vega\+Adjusted\+Delta (\begin{DoxyParamCaption}\item[{double}]{gamma\+Vega\+Adjusted\+Delta }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_aa7c10cffaf1482e8b049e37d54955f41}\label{classoption_greeks_model_aa7c10cffaf1482e8b049e37d54955f41} 
+\index{optionGreeksModel@{optionGreeksModel}!setIvAdjustedDelta@{setIvAdjustedDelta}}
+\index{setIvAdjustedDelta@{setIvAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setIvAdjustedDelta()}{setIvAdjustedDelta()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Iv\+Adjusted\+Delta (\begin{DoxyParamCaption}\item[{double}]{iv\+Adjusted\+Delta }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a8446f117f76179a68e774c63444573dc}\label{classoption_greeks_model_a8446f117f76179a68e774c63444573dc} 
+\index{optionGreeksModel@{optionGreeksModel}!setOptionPriceGamma@{setOptionPriceGamma}}
+\index{setOptionPriceGamma@{setOptionPriceGamma}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setOptionPriceGamma()}{setOptionPriceGamma()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Option\+Price\+Gamma (\begin{DoxyParamCaption}\item[{double}]{option\+Price\+Gamma }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a4d48dd2af612a761f09e0d32223cba11}\label{classoption_greeks_model_a4d48dd2af612a761f09e0d32223cba11} 
+\index{optionGreeksModel@{optionGreeksModel}!setOptionPriceGammaVega@{setOptionPriceGammaVega}}
+\index{setOptionPriceGammaVega@{setOptionPriceGammaVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setOptionPriceGammaVega()}{setOptionPriceGammaVega()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Option\+Price\+Gamma\+Vega (\begin{DoxyParamCaption}\item[{double}]{option\+Price\+Gamma\+Vega }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a7f5de563c3b32085d3033581bd173bf8}\label{classoption_greeks_model_a7f5de563c3b32085d3033581bd173bf8} 
+\index{optionGreeksModel@{optionGreeksModel}!setOptionPriceIv@{setOptionPriceIv}}
+\index{setOptionPriceIv@{setOptionPriceIv}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setOptionPriceIv()}{setOptionPriceIv()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Option\+Price\+Iv (\begin{DoxyParamCaption}\item[{double}]{option\+Price\+Iv }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a29123f7238b600a9f1c97a9956eec007}\label{classoption_greeks_model_a29123f7238b600a9f1c97a9956eec007} 
+\index{optionGreeksModel@{optionGreeksModel}!setOptionPriceTheta@{setOptionPriceTheta}}
+\index{setOptionPriceTheta@{setOptionPriceTheta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setOptionPriceTheta()}{setOptionPriceTheta()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Option\+Price\+Theta (\begin{DoxyParamCaption}\item[{double}]{option\+Price\+Theta }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_ade909398afa01bac5b52fa69f6aa3643}\label{classoption_greeks_model_ade909398afa01bac5b52fa69f6aa3643} 
+\index{optionGreeksModel@{optionGreeksModel}!setOptionPriceVega@{setOptionPriceVega}}
+\index{setOptionPriceVega@{setOptionPriceVega}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setOptionPriceVega()}{setOptionPriceVega()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Option\+Price\+Vega (\begin{DoxyParamCaption}\item[{double}]{option\+Price\+Vega }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a582022e53db1580e0d6bea8b7fa0ea38}\label{classoption_greeks_model_a582022e53db1580e0d6bea8b7fa0ea38} 
+\index{optionGreeksModel@{optionGreeksModel}!setThetaAdjustedDelta@{setThetaAdjustedDelta}}
+\index{setThetaAdjustedDelta@{setThetaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setThetaAdjustedDelta()}{setThetaAdjustedDelta()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Theta\+Adjusted\+Delta (\begin{DoxyParamCaption}\item[{double}]{theta\+Adjusted\+Delta }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classoption_greeks_model_a36b8128bb93c0ff23eb863fb6f107712}\label{classoption_greeks_model_a36b8128bb93c0ff23eb863fb6f107712} 
+\index{optionGreeksModel@{optionGreeksModel}!setVegaAdjustedDelta@{setVegaAdjustedDelta}}
+\index{setVegaAdjustedDelta@{setVegaAdjustedDelta}!optionGreeksModel@{optionGreeksModel}}
+\doxysubsubsection{\texorpdfstring{setVegaAdjustedDelta()}{setVegaAdjustedDelta()}}
+{\footnotesize\ttfamily void option\+Greeks\+Model\+::set\+Vega\+Adjusted\+Delta (\begin{DoxyParamCaption}\item[{double}]{vega\+Adjusted\+Delta }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/black-\/scholes-\/cpp/\mbox{\hyperlink{option_greeks_model_8h}{option\+Greeks\+Model.\+h}}\end{DoxyCompactItemize}
