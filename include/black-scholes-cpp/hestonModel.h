@@ -1,6 +1,5 @@
-//
 //  hestonModel.h
-//  black-scholes
+//  black-scholes-cpp
 //
 //  Created by lyndskg on 7/18/23.
 
@@ -17,23 +16,25 @@
 using namespace std;
 
 class hestonModel : public optionGreeksModel {
-public:
-// ----------------------------------------------------------------------------
-//                       "hestonModel" Class Declarations
-// ----------------------------------------------------------------------------
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+  public:
+
+// ---------------------------------------------------------------------------------------
+//                         "hestonModel" Class Declarations
+// ---------------------------------------------------------------------------------------
+/*------------------------------------  CONSTRUCTORS  -----------------------------------*/
     hestonModel();
     
     hestonModel(double underlyingPrice, double strikePrice, double riskFreeRate,
                     double timeToExpiration, double volatility, double V0, double kappa,
                     double theta, double sigma, double rho, OptionType optionType);
-   
-/*--------------------------- KEY MEMBER FUNCTIONS  ---------------------------*/
+
+
+/*-------------------------------- KEY MEMBER FUNCTIONS  --------------------------------*/
     /* Calculates the option price using the Heston model with stochastic volatility.
        It uses Euler discretization to approximate the variance process over time,
        and then calculates the option price based on the type of option (call or put)
        using the Black-Scholes formula with Heston volatility.*/
-    //
+    
     // Time complexity: O(num_time_steps)
     // Space complexity: O(1)
     double calculateOptionPrice();
@@ -43,82 +44,83 @@ public:
     double random_normal();
 
     
-/*----------------------------  SETTER METHODS  ----------------------------*/
+/*-----------------------------------  SETTER METHODS  -----------------------------------*/
     
     // Setter method for V0.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setV0(double value) const;
     
     
     // Setter method for Kappa.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setKappa(double value) const;
     
     
     // Setter method for Theta.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setTheta(double value) const;
     
     
     // Setter method for Sigma.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setSigma(double value) const;
     
     
     // Setter method for Rho.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setRho(double value) const;
 
     
-/*----------------------------  GETTER METHODS  ----------------------------*/
+/*-----------------------------------  GETTER METHODS  -----------------------------------*/
     // Getter method for V0.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getV0() const;
     
     
     // Getter method for Kappa.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getKappa() const;
     
     
     // Getter method for Theta.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getTheta() const;
     
     
     // Getter method for Sigma.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getSigma() const;
     
     
     // Getter method for Rho.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getRho() const;
 
+
 private:
-// ----------------------------------------------------------------------------
-//                  "hestonModel" Member Variables
-// ----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+//                          "hestonModel" Member Variables
+// -----------------------------------------------------------------------------------
     // Heston Model Parameters
     mutable double V0_;    // Initial volatility
     mutable double kappa_; // Mean reversion speed
