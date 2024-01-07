@@ -405,8 +405,6 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - Review and finalize all project documentation.
 - Ensure consistency and completeness.
 
-### <ins>Phase 9: Share and Showcase</ins> (Estimated Time: 10 hours)
-
 
 &nbsp;
 
@@ -419,8 +417,7 @@ Going beyond the basic implementation, this project showcases an array of advanc
 <a name="impl"></a>
 ## Project Implementation Guide
 
-
-// TO DO // 
+NEVER
 
 &nbsp;
 
@@ -433,12 +430,16 @@ Going beyond the basic implementation, this project showcases an array of advanc
 <a name="i"></a>
 ### Input: 
 
-GraphQL queries, API endpoint, authentication tokens.
+FILL THIS SHIT OUT LATERRRR
+
+&nbsp; 
 
 <a name="o"></a>
 ### Output: 
 
-Processed API responses, distilled data, informative error messages.
+FUCK THIS
+
+&nbsp; 
 
 <a name="err"></a>
 #### __<ins>*Error Handling*</ins>:__
@@ -450,7 +451,7 @@ Processed API responses, distilled data, informative error messages.
 <a name="flow"></a>
 ## Basic Workflow Guide
 
-// TO DO // 
+IDFK
 
 
 &nbsp; 
@@ -463,6 +464,7 @@ Processed API responses, distilled data, informative error messages.
 <a name="plus"></a>
 ## Future Enhancements:
 
+WHAT THE FUCK
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
@@ -498,6 +500,7 @@ Processed API responses, distilled data, informative error messages.
 3. Run the program:
 > - `cmake --build .`
 4. Explore the different features and input modes provided by the program.
+> - Try out the model interactively via CLI, or stream in real data feeds from live API streams.
 5. To clean the project, access the current build directory:
 > - `pwd` (Make sure you're in `build-cmake`; if not, `cd build-cmake`)
 > - `ninja -t clean`
@@ -506,34 +509,6 @@ Processed API responses, distilled data, informative error messages.
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
-------
-
-<a name="guide"></a>
-### Installation Guides:
-
-<a name="webinst"></a>
-#### **Web App:**
-
-<a name="instmac"></a>
-#### **Desktop App (macOS):**
-
-
-<a name="climac"></a>
-##### 1. <ins>Command Line Installation</ins>:
-
-
-<a name="gitmac"></a>
-##### 2. <ins>Github Installation</ins>:
-
-&nbsp;
-
-
-<a name="instwindows"></a>
-#### **Desktop App (Windows):**
-
-&nbsp;
-
-<p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------
 
@@ -549,7 +524,6 @@ Processed API responses, distilled data, informative error messages.
 - Portfolio analysis and optimization for traders and investors.
 
 
-
 &nbsp;
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
@@ -557,21 +531,9 @@ Processed API responses, distilled data, informative error messages.
 <a name="appl"></a>
 ### Practical Applications:
 
+WRITE SHIT HERE
 
 &nbsp;
-
-<p align="right">(<a href="#bs">back to top</a>)</p>
-
----------------------
-
-<a name="misc"></a>
-### <ins>Miscellaneous</ins>:
-
-<a name="est"></a>
-#### <ins>Time Estimate</ins>:
-
-Approximately 40-60 hours
-
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
@@ -590,10 +552,10 @@ Approximately 40-60 hours
 <a name="give"></a>
 ## How to Support Us
 
-We welcome contributions from the community to help improve `graphQLOL` and make it even better.
+We welcome contributions from the community to help improve `black-scholes-cpp` and make it even better.
 
-- Contribute: Encourage developers to actively participate by submitting pull requests, identifying bugs, and suggesting enhancements via GitHub.
-- Donate: Highlight how donations will bolster continuous development, long-term maintenance, and the potential expansion of the library's scope.
+- **Contribute:** Encourage developers to actively participate by submitting pull requests, identifying bugs, and suggesting enhancements via GitHub.
+- **Donate:** Highlight how donations will bolster continuous development, long-term maintenance, and the potential expansion of the library's scope.
 
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
@@ -602,9 +564,9 @@ We welcome contributions from the community to help improve `graphQLOL` and make
 <a name="bye"></a>
 ## Conclusion
 
-`graphQLOL` embodies a robust C++ library, proficiently encapsulating the intricacies of GraphQL integration and enabling seamless communication with the Investopedia trading game API. Through meticulous documentation, strategic design choices, and the potential for AI integration, the project underscores your mastery of software development while making a substantial contribution to the dynamic domain of algorithmic trading and financial analysis.
+WRITE SHIT 
 
-Thank you for choosing `graphQLOL`, and let's embark on this journey of audio conversion excellence together.
+&nbsp;
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
@@ -630,11 +592,9 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/ly
 
 **<ins>Resources</ins>:**
 1. **Online tutorials:** 
-> - "How to build a `GraphQL` server"
-> - "How to `GraphQL`"
-> - "Creating Your First `GraphQL` API"
-2. **Online resources:** GraphQL official documentation, `GraphQL` APIs and clients, `GraphQL` C/C++ Libraries
-3. **GitHub Repos**: `libgraphqlparser`, `cppgraphqlgen`
+> - 
+2. **Online resources:** 
+3. **GitHub Repos**: 
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
@@ -660,24 +620,24 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/ly
 
 
 ## Things to work on:
-1. Reading input from database: SQLite
-2. Reading input from file: Get .CSV samples from Kaggle to test.
+1. Reading input from database: `SQLite`
+2. Reading input from file: Get `.CSV` samples from `Kaggle` to test.
 3. Reading input from external market feeds / APIs. Retrieve Alpha Vantage Rapid API Private Key and finish configuration.
 4. Testing and debugging. 
-5. Finishing optionGreeksModel class implementations.
+5. Finishing `optionGreeksModel` class implementations.
 6. Implementing more advanced functionalities: implied volatility (IV), Heston model, Monte Carlo, etc.
 
 ## Optimizations:
-1. Check all #includes and using directives.
-2. In function "double blackScholesModel::calculateOptionPrice()", can use if-elif-else statement, switch statement, or ternary operator for optionType.
-3. In class blackScholesModel, optionType (i.e. Call vs. Put) can be represented as enum type or char. If latter, does it need to be initialized in ctor?
-4. In function "double blackScholesModel::normalCDF()", should the result be returned via ternary operator or if-else statement?
-5. In the main driver function in main.cpp, should an instance of blackScholesModel using the custom ctor initializing all pricing input variables be used instead of having to use the same getter methods in the driver itself?
-6. In function "double blackScholesModel::normalCDF()", a more efficient approximation can be used. 
-7. In function "inputReader::readInputFromUser()", should validation be accomplished using its two current helper functions or via validateAndSetInputValues()?
+1. Check all `#includes` and using directives.
+2. In function `double blackScholesModel::calculateOptionPrice()`, can use if-elif-else statement, switch statement, or ternary operator for `optionType`.
+3. In class `blackScholesModel`, `optionType` (i.e. Call vs. Put) can be represented as `enum` type or `char`. If latter, does it need to be initialized in ctor?
+4. In function `double blackScholesModel::normalCDF()`, should the result be returned via ternary operator or if-else statement?
+5. In the main driver function in `main.cpp`, should an instance of blackScholesModel using the custom ctor initializing all pricing input variables be used instead of having to use the same getter methods in the driver itself?
+6. In function `double blackScholesModel::normalCDF()`, a more efficient approximation can be used. 
+7. In function `inputReader::readInputFromUser()`, should validation be accomplished using its two current helper functions or via `validateAndSetInputValues()`?
 
 ## Bug fixes:
-1. In function "Program::get_options()", in the default case (i.e. no options are flagged), should figure out how to print invalid command-line argument (int option) to stderr (cerr) for debugging purposes.
+1. In function `Program::get_options()`, in the default case (i.e. no options are flagged), should figure out how to print invalid command-line argument (`int option`) to `stderr` (`cerr`) for debugging purposes.
 
 
 [dr-liangma/BlackScholes_MonteCarlo](https://github.com/dr-liangma/BlackScholes_MonteCarlo/tree/master)
