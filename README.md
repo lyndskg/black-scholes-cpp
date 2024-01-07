@@ -211,32 +211,40 @@ Going beyond the basic implementation, this project showcases an array of advanc
 - [x] ~~From CLI, understand exporting $(PATH)(s) to libcURL in root/.zshrc.~~ ✓
 - [x] ~~Fix Git VS issues w/ SSH/GPG keys (ed25519, RSA) and/or authentication w/ fine-grained PACs~~. ✓
 - [x] ~~Finalize high-level project structure (i.e. where driver goes, basic .cpp/.h division, basic class (and other high-level data structure) organization based on functionality).~~ ✓
+
 - [ ] Handle all inputModes.
    > - [ ] **User Input**: Done, not tested.
    > - [ ] **File Input**: Done, not tested.
    > - [ ] **Database Input**: Haven't started, but know to use SQLite.
    > - [ ]  **External market data feeds / API**s: Haven't started, but have cURL set up. Also using Alpha Vantage Rapid API and already have private key. "Just" need to figure out configuration.
+   
 - [ ] Begin TESTING AND DEBUGGING!
+      
 - [ ] Optimizing code.
    > - Obv some shit will optimize a lot and take barely any time. Some shit will make zero-to-nil difference and take hours. Gotta prioritize.
    > - - Optimization ideas listed below, but some of it is obvious throughout code.
+  
 - [ ] Figure out what additional features to implement.
    > - [x]  ~~Option Greeks (calculating, setting, getting)~~ ✓
    > - [x]  ~~Enhanced Black-Scholes pricing models incorporating option Greeks (constructor, calculating, setting, getting)~~ ✓
    > - [x]   ~~Enhanced Black-Scholes pricing models incorporating implied volatility (constructor, calculating, setting, getting)~~ ✓
+  
    > - [ ] Heston model
-     > - [ ] enhanced Black-Scholes pricing models incorporating Heston model equations
-     > - [ ]  calibration procedure to estimate the Heston model parameters based on market data
-     > - [ ]  volatility surface calculation: calculate the implied volatility surface using the Heston model
+     > - [ ] Enhanced Black-Scholes pricing models incorporating Heston model equations
+     > - [ ]  **Calibration procedure** to estimate the Heston model parameters based on market data
+     > - [ ]  **Volatility surface calculation: c**alculate the implied volatility surface using the Heston model
         > -  By solving the Heston model equations and comparing the model prices with market prices, you can derive the implied volatility at different strikes and maturities, thus constructing the volatility surface.
-     > - [ ]  Greeks calculation: Enhance your project to calculate option Greeks, such as delta, gamma, vega, theta, and rho, using the Heston model.
+     > - [ ]  **Greeks calculation:** Enhance your project to calculate option Greeks, such as delta, gamma, vega, theta, and rho, using the Heston model.
         > - These measures provide valuable insights into the sensitivity of option prices to changes in underlying factors. You can use finite difference methods or other numerical techniques to estimate these sensitivities based on the Heston model equations.
-     > - [ ]  Monte Carlo Simulation: Implement Monte Carlo simulation to generate random paths for both the underlying asset price and volatility based on the Heston model.
-     > - [ ] Historical Volatility Analysis: Incorporate functionality to calculate historical volatility based on historical price data. This can be useful for comparing the implied volatility from the Heston model with realized historical volatility. You can calculate rolling or weighted average volatilities to capture different time horizons.
-     > - [ ] Sensitivity Analysis: Extend your project to perform sensitivity analysis using the Heston model. Explore the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, on option prices and Greeks. This analysis can help assess the model's sensitivity to different market conditions.
-     > - [ ] Visualizations: Enhance your project by adding visualizations to present the results more intuitively. Plot option prices, implied volatility surfaces, Greeks, or other relevant metrics to provide a graphical representation of the Heston model outputs.
+     > - [ ]  **Monte Carlo Simulation:** Implement Monte Carlo simulation to generate random paths for both the underlying asset price and volatility based on the Heston model.
+     > - [ ] **Historical Volatility Analysis:** Incorporate functionality to calculate historical volatility based on historical price data. This can be useful for comparing the implied volatility from the Heston model with realized historical volatility. You can calculate rolling or weighted average volatilities to capture different time horizons.
+     > - [ ] **Sensitivity Analysis:** Extend your project to perform sensitivity analysis using the Heston model. Explore the impact of varying input parameters, such as mean reversion speed, volatility of volatility, and correlation, on option prices and Greeks. This analysis can help assess the model's sensitivity to different market conditions.
+     > - [ ] **Visualizations:** Enhance your project by adding visualizations to present the results more intuitively. Plot option prices, implied volatility surfaces, Greeks, or other relevant metrics to provide a graphical representation of the Heston model outputs.
+   
    - Divided Difference approach
+     
 - Perpetual American Options
+  
 - Matrix Math
 
    
