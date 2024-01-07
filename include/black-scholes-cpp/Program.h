@@ -17,24 +17,26 @@ extern void fast_io_initializer();
 // Declare the fast_io variable as a function pointer
 extern void (*fast_io)();
 
-// ----------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------
 //                      "Program" Class Declarations
-// ----------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------
 
 class Program {
   public:
-/*--------------------------- MEMBER VARIABLES  ------------------------------*/
+/*---------------------------------- MEMBER VARIABLES  -------------------------------------*/
+    
     string inputMode; // Program mode (i.e. USER, FILE, DB, or API)
     static constexpr int MAX_BUFFER_SIZE = 10000;
     
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+/*-------------------------------------  CONSTRUCTORS  -------------------------------------*/
+
     // Default constructor.
     Program();
 
     // TODO: Implement any relevant custom constructors.
 
     
-/*--------------------------- KEY MEMBER FUNCTIONS  ---------------------------*/
+/*---------------------------------- KEY MEMBER FUNCTIONS  ----------------------------------*/
    
     /* Processes the command line arguments.
      
@@ -42,36 +44,37 @@ class Program {
      
        Based on the specified mode, it calls the corresponding functions to read input values
        from different sources (e.g. user input, a file, a database, or an API). */
-    //
+    
     // Time complexity: O(n), where n = # of command line options
     // Space complexity: O(1)
     void get_options(int argc, char* argv[]);
    
     
     // Prints a helpful message about how to use the program for the user when requested.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void printHelp(char* argv[]);
     
     
     // Launches the algorithm by reading input values based on the specified input mode.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void launchAlgo(blackScholesModel* model);
     
     
     // Reads and validates the input mode from the user.
-    //
+    
     // @Return: Returns the validated input mode as a string.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     string readInputMode();
     
     
 private:
+
     // TODO: Implement any/all private and/or protected member variables.
     
 }; // class Program
