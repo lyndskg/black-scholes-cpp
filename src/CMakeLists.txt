@@ -1,4 +1,6 @@
-# CMakeLists.txt for the src directory
+# src/CMakeLists.txt 
+##########################################################################################################
+# CMakeLists.txt for the src directory 
 ##########################################################################################################
 
 # Set the minimum required version of CMake
