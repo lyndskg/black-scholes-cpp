@@ -15,12 +15,12 @@
 using namespace std;
 
 
-// --------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 //           "blackScholesModel" Class Member Function Implementations
-// --------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
 
 
-/*----------------------------------------  CONSTRUCTORS  ------------------------------------------------*/
+/*------------------------------------------  CONSTRUCTORS  -------------------------------------------------*/
 // Default constructor.
 blackScholesModel::blackScholesModel() {
     // Initialize member variables directly.
@@ -63,8 +63,8 @@ blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice,
             K_ = calculateK(d1_);
 }
 
-/*----------------------------------------- KEY MEMBER FUNCTIONS  -----------------------------------------*/
-/*-----------------------------------------       { math }        -----------------------------------------*/
+/*------------------------------------------ KEY MEMBER FUNCTIONS  ------------------------------------------*/
+/*-----------------------------------------       { math }        -------------------------------------------*/
  
 
 // Defines the option pricing function and calculates the option price using the Black-Scholes formula.
@@ -166,7 +166,7 @@ double blackScholesModel::calculateK(double d) const {
 } // calculateK()
 
 
-/*--------------------------------------------  SETTER METHODS  --------------------------------------------*/
+/*--------------------------------------------  SETTER METHODS  ---------------------------------------------*/
 
 // Setter method for the underlying price of the Black-Scholes model.
 void blackScholesModel::setUnderlyingPrice(const double& value) {
@@ -222,7 +222,7 @@ void blackScholesModel::setK(const double& value) const {
 } // setK()
 
 
-/*-------------------------------------------  GETTER METHODS  -------------------------------------------*/
+/*--------------------------------------------  GETTER METHODS  ---------------------------------------------*/
 
 // Getter method for the underlying price of the Black-Scholes model.
 const double& blackScholesModel::getUnderlyingPrice() const {
