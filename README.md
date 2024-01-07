@@ -442,7 +442,7 @@ FUCK THIS
 &nbsp; 
 
 <a name="err"></a>
-#### __<ins>*Error Handling*</ins>:__
+### __<ins>*Error Handling*</ins>:__
 
 &nbsp;
 
@@ -554,8 +554,8 @@ WRITE SHIT HERE
 
 We welcome contributions from the community to help improve `black-scholes-cpp` and make it even better.
 
-- **Contribute:** Encourage developers to actively participate by submitting pull requests, identifying bugs, and suggesting enhancements via GitHub.
-- **Donate:** Highlight how donations will bolster continuous development, long-term maintenance, and the potential expansion of the library's scope.
+- **Contribute:** Don't.
+- **Donate:** DON'T!
 
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
