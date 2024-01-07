@@ -18,10 +18,10 @@ using namespace std;
 
 class optionGreeksModel : public virtual blackScholesModel, public optionGreeks {
   public:
-// --------------------------------------------------------------------------------------
-//                         "optionGreeksModel" Class Declarations
-// --------------------------------------------------------------------------------------
-/*-----------------------------------  CONSTRUCTORS  ----------------------------------*/
+// ------------------------------------------------------------------------------------------------------------
+//                                  "optionGreeksModel" Class Declarations
+// ------------------------------------------------------------------------------------------------------------
+/*----------------------------------------------  CONSTRUCTORS  ---------------------------------------------*/
 
     // Default constructor.
     optionGreeksModel();
@@ -31,7 +31,7 @@ class optionGreeksModel : public virtual blackScholesModel, public optionGreeks 
                       double riskFreeRate, double volatility);
 
 
-/*---------------------------------- KEY MEMBER FUNCTIONS  ------------------------------*/
+/*--------------------------------------------- KEY MEMBER FUNCTIONS  -----------------------------------------*/
     
     // Calculates the number of shares needed to maintain a delta-neutral position --
     // determining the appropriate action (i.e. buy or sell) and executing the corresponding 
@@ -89,7 +89,7 @@ class optionGreeksModel : public virtual blackScholesModel, public optionGreeks 
 
 
 
-/*------------------------------- INTERMEDIATE MEMBER FUNCTIONS  ------------------------------*/
+/*--------------------------------------- INTERMEDIATE MEMBER FUNCTIONS  --------------------------------------*/
     
     
     // Calculates a new Delta value based on 'd1' using implied volatility as an additional
@@ -128,7 +128,7 @@ class optionGreeksModel : public virtual blackScholesModel, public optionGreeks 
     double calculateDeltaAdjWithGammaVega() const;
     
     
-/*-----------------------------------  SETTER METHODS  -------------------------------------*/
+/*--------------------------------------------  SETTER METHODS  ----------------------------------------------*/
     
     // Setter method for the IV-adjusted option price using the Black-Scholes model.
     
@@ -200,7 +200,7 @@ class optionGreeksModel : public virtual blackScholesModel, public optionGreeks 
     
 
     
-/*----------------------------------  GETTER METHODS  ----------------------------------*/
+/*-------------------------------------------  GETTER METHODS  -------------------------------------------*/
     
     // Getter method for the IV-adjusted option price using the Black-Scholes model.
   
@@ -278,10 +278,10 @@ protected:
 
 
 private:
-// ----------------------------------------------------------------------------------------
-//                           "optionGreeks" Member Variables
-// ----------------------------------------------------------------------------------------
-//*------------------------- adjusted option Greeks variables  --------------------------*//
+// ------------------------------------------------------------------------------------------------------------
+//                                    "optionGreeks" Member Variables
+// ------------------------------------------------------------------------------------------------------------
+//*--------------------------------- adjusted option Greeks variables  --------------------------------------*//
     mutable double ivAdjustedDelta_;
     mutable double gammaAdjustedDelta_;
     mutable double vegaAdjustedDelta_;
