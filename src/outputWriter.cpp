@@ -49,6 +49,7 @@ void outputWriter::writeToFile(const string& filename, const string& data) {
         
     // If the file is unable to be opened:
     } else {
+        // Print a helpful message to cerr.
         cerr << "Error: Unable to open file for writing: " << filename << '\n';
     } // if-else
 } // writeToFile()
