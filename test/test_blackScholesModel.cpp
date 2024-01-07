@@ -11,9 +11,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <cassert>
+#include <gtest/gtest.h>
 
-#include "../gtest/gtest.h"
-#include "gtest_main.cpp"
 #include "../include/black-scholes-cpp/blackScholesModel.h"
 #include "../src/blackScholesModel.cpp"
 

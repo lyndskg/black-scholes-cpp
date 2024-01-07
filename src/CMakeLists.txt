@@ -1,4 +1,5 @@
 # CMakeLists.txt for the src directory
+##########################################################################################################
 
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.26)
@@ -10,11 +11,14 @@ cmake_minimum_required(VERSION 3.26)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Set the root directory for the project
 set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+
+# Include default project specifications
 include (${BSM_ROOT}/project-defaults.cmake)
 
-# Add the include directories for Google Test
-include_directories(${GTEST_INCLUDE_DIRS})
+
+##########################################################################################################
 
 # Collect source files
 file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
@@ -23,11 +27,11 @@ file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
 include_directories(src)
 include_directories(include/black-scholes-cpp)
 
-# Add your main application files
-add_executable(bsm main.cpp)
+# Add the main application executable
+add_executable(bsm main.cpp ${SOURCES})
 
-# Link against your library and Google Test
-target_link_libraries(bsm PRIVATE GTest::gtest_main blackScholesLibrary)
+# Link against the BSM library and Google Test
+target_link_libraries(bsm PRIVATE blackScholesLibrary)
 
 # Include directories for the main application
 target_include_directories(bsm PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/black-scholes-cpp)

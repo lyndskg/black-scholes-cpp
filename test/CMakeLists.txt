@@ -1,18 +1,13 @@
 # CMakeLists.txt for the test directory
+##########################################################################################################
 
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.26)
 
-## Set the policy for find_package to use upper-case <PACKAGENAME>_ROOT variables
-#cmake_policy(SET CMP0144 OLD)
-
-set(CMAKE_VERBOSE_MAKEFILE on)
+# Include POSIX threads as a compiler flag to enable threading
 SET(CMAKE_CXX_FLAGS -pthread)
 
-## Set GTest root directory
-#set(GTEST_ROOT "/opt/homebrew/Cellar/googletest/1.14.0" CACHE PATH "Google Test root directory")
-
-# assume built-in pthreads on MacOS
+# Assume built-in pthreads on MacOS
 if(APPLE)
     set(CMAKE_THREAD_LIBS_INIT "-lpthread")
     set(CMAKE_HAVE_THREADS_LIBRARY 1)
@@ -21,7 +16,13 @@ if(APPLE)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
 endif()
 
-# Fetch GTest
+# Include default CMake project specifications
+set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+include (${BSM_ROOT}/project-defaults.cmake)
+
+##########################################################################################################
+
+# Fetch Google Test using FetchContent
 include(FetchContent)
 include(GoogleTest)
 
@@ -31,9 +32,8 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-# Include default CMake project specifications
-set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
-include (${BSM_ROOT}/project-defaults.cmake)
+
+##########################################################################################################
 
 # Add test source files
 file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
@@ -57,6 +57,7 @@ target_include_directories(bsm_test PRIVATE ${GTEST_INCLUDE_DIRS})
 # Link against Google Test, blackScholesLibrary, and other necessary libraries
 target_link_libraries(bsm_test
         PRIVATE
+        GTest::gtest
         GTest::gtest_main
         blackScholesLibrary
         curl
@@ -66,12 +67,16 @@ target_link_libraries(bsm_test
 find_package(Threads REQUIRED)
 target_link_libraries(bsm_test PRIVATE Threads::Threads)
 
+
+##########################################################################################################
+
 # Set up Google Test and CTest
 enable_testing()
 include(CTest)
 
 include_directories(${gtest_INCLUDE_DIRS})
 
+# Discover tests using Google Test
 gtest_discover_tests(bsm_test)
 
 # Add a test to the CTest framework

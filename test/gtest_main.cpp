@@ -3,6 +3,7 @@
 //
 
 #include "../gtest/gtest.h"
+#include "test_blackScholesModel.cpp"
 
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);

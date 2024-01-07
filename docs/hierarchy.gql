@@ -8,6 +8,7 @@ black-scholes-cpp/           # Project root directory
 │   ├── usage.md                     # Library usage guide
 │   ├── troubleshooting.md           # Troubleshooting guide
 │   ├── contribution.md              # Contribution guidelines
+│   ├── Doxyfile                     # Doxygen documentation
 │   └── api_reference.md             # API reference documentation
 ├── gtest/                       # Google Test framework
 ├── include/                     # Directory for header files
@@ -18,7 +19,8 @@ black-scholes-cpp/           # Project root directory
 │   │   ├── optionGreeks.h               # Header file for optionGreeks
 │   │   ├── optionGreeksModel.h          # Header file for optionGreeksModel
 │   │   ├── outputWriter.h               # Header file for outputWriter
-│   │   └── Program.h                    # Header file for Program
+│   │   ├── Program.h                    # Header file for Program
+│   │   └── csv.h                        # Header file (possibly for CSV-related functionality)
 │   └── third_party/                # Header files for third-party libraries
 │       ├── libcurl/                     # libcurl headers
 │       ├── websocketpp/                 # WebSocket++ headers
@@ -32,8 +34,9 @@ black-scholes-cpp/           # Project root directory
 │   ├── optionGreeksModel.cpp           # Source file for optionGreeksModel
 │   ├── outputWriter.cpp                # Source file for outputWriter
 │   ├── Program.cpp                     # Source file for Program
+│   ├── main.cpp                        # Source file for main driver file
 │   └── CMakeLists.txt                  # CMake configuration for the entire src directory
-├── tests/                      # Test directory
+├── test/                      # Test directory
 │   ├── test_blackScholesModel.cpp      # Test file for blackScholesModel
 │   ├── test_hestonModel.cpp            # Test file for hestonModel
 │   ├── test_Program.cpp                # Test file for Program
@@ -41,13 +44,12 @@ black-scholes-cpp/           # Project root directory
 │   ├── test_outputWriter.cpp           # Test file for outputWriter
 │   ├── test_optionGreeks.cpp           # Test file for optionGreeks
 │   ├── test_optionGreeksModel.cpp      # Test file for optionGreeksModel
-│   ├── unit_test_framework.h           # Header file for the unit test framework
-│   └── CMakeLists.txt                  # CMake configuration for the tests directory
+│   ├── gtest_main.cpp                  # Main test file for Google Test
+│   └── CMakeLists.txt                  # CMake configuration for the test directory
 ├── .gitignore                  # Git ignore file to exclude certain files/directories from version control
-├── Makefile                    # Makefile for building the project
-├── csv.h                       # Header file (possibly for CSV-related functionality)
 ├── option_GS_df.csv            # CSV file
-├── main.cpp                    # Main driver file
 ├── CMakeLists.txt              # Top-level CMake configuration
+├── project-defaults.cmake      # Top-level CMake default module configurations
+├── cleanup.cmake               # Custom CMake target for cleaning build direcotry
 ├── xcode_redirect.hpp          # Header file (possibly related to Xcode)
 └── README.md                   # Project README file
