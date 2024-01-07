@@ -7,14 +7,26 @@ cmake_minimum_required(VERSION 3.26)
 # Include POSIX threads as a compiler flag to enable threading
 SET(CMAKE_CXX_FLAGS -pthread)
 
+
 # Assume built-in pthreads on MacOS
+## Check if the current platform is macOS (Apple)
 if(APPLE)
+    ### Set the thread library initialization flag to use "-lpthread"
     set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+
+    ### Indicate that the platform has a threads library
     set(CMAKE_HAVE_THREADS_LIBRARY 1)
+
+    ### Disable the use of Win32 threads
     set(CMAKE_USE_WIN32_THREADS_INIT 0)
+
+    ### Enable the use of pthreads
     set(CMAKE_USE_PTHREADS_INIT 1)
+
+    ### Prefer the pthread flag when compiling
     set(THREADS_PREFER_PTHREAD_FLAG ON)
 endif()
+
 
 # Include default CMake project specifications
 set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
@@ -23,13 +35,21 @@ include (${BSM_ROOT}/project-defaults.cmake)
 ##########################################################################################################
 
 # Fetch Google Test using FetchContent
+
+## Include the FetchContent module, which provides functions for downloading and building  
+## external perojects
 include(FetchContent)
+
+## Include the GoogleTest module, which provides functions related to Google Test integration
 include(GoogleTest)
 
+## Declare the external project 'googletest' using FetchContent_Declare
 FetchContent_Declare(
-        googletest
+        googletest        # Name of the content to be fetched (i.e. Google Test)
         URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
 )
+
+# Make the content (Google Test) available in the build system
 FetchContent_MakeAvailable(googletest)
 
 
