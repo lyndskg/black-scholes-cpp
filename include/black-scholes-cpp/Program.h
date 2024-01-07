@@ -1,6 +1,5 @@
-//
 //  Program.h
-//  black-scholes
+//  black-scholes-cpp
 //
 //  Created by lyndskg on 7/18/23.
 
