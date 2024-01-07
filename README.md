@@ -219,6 +219,9 @@ Going beyond the basic implementation, this project showcases an array of advanc
    > - [ ]  **External market data feeds / API**s: Haven't started, but have cURL set up. Also using Alpha Vantage Rapid API and already have private key. "Just" need to figure out configuration.
    
 - [ ] Begin TESTING AND DEBUGGING!
+
+- [ ] Figure out `CMake` + `Ninja` + `Google Test` stack HOLY FUCK
+  > > - POSIX, multi-threading, parallelization, etc.
       
 - [ ] Optimizing code.
    > - Obv some shit will optimize a lot and take barely any time. Some shit will make zero-to-nil difference and take hours. Gotta prioritize.
