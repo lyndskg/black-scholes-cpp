@@ -14,7 +14,6 @@
 #include <cstring>
 
 
-
 inline char *get_filename_and_move_count(int &optind, char *argv[], int &move_count);
 inline void rotate_argv(int move_count, char *argv[], int &optind, int &argc);
 
