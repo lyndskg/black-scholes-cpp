@@ -605,8 +605,14 @@ Project Link: [https://github.com/lyndskg/black-scholes-cpp](https://github.com/
 > - 
 2. **Online resources:**
 > - **<em>CMake & Google Test framework</em>:** [Google Test's CMake QuickStart Guide](https://google.github.io/googletest/quickstart-cmake.html), [StackOverflow #1](https://stackoverflow.com/questions/54655117/adding-googletest-to-existing-cmake-project), [Stack Overflow #2](https://stackoverflow.com/questions/66181930/how-to-incorporate-unittest-in-cmake-project-structure), [Stack Overflow #3](https://stackoverflow.com/questions/59976311/how-do-i-configure-my-cmake-project-to-run-all-unit-tests)
+> - [POSIX Threading Library](https://www.gnu.org/software/hurd/libpthread.html)
+> - [The Complete C++ Build System: CMake & Ninja Part 1](https://medium.com/@codeinseoul/the-complete-c-build-system-cmake-ninja-part-1-b7309be1a11e)
+> - [CMake Ninja Combo: The Gist](https://www.incredibuild.com/blog/cmake-ninja-combo-the-gist)
+> - [The Ninja build system](https://ninja-build.org/manual.html#_writing_your_own_ninja_files)
 3. **GitHub Repos**:
 > - **<em>CMake & Google Test framework</em>:** [Jamagas](https://github.com/Jamagas/CMake), [TimothyHelton](https://github.com/TimothyHelton/cpp_project_template/tree/master), [DavidAg](https://github.com/davidag/gtestmock-cmake-template/tree/master), [Pyarmak](https://github.com/pyarmak/cmake-gtest-coverage-example), [PhDP](https://github.com/PhDP/cuda-cmake-gtest-gbench-starter/tree/main), [SRombauts](https://github.com/SRombauts/cpp-skeleton/tree/master), [pandreidoru](https://github.com/pandreidoru/cmake_googletest_gcov/tree/master)
+> - [facebook](https://github.com/facebook/yoga/blob/main/tests/CMakeLists.txt)
+> - [Official CMake Git](https://github.com/Kitware/CMake/blob/master/Modules/FindThreads.cmake)
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
