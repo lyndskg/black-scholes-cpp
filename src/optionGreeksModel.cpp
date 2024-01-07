@@ -13,10 +13,10 @@ using namespace std;
 // Include the declaration of the fast_io function
 extern void fast_io();
 
-// ----------------------------------------------------------------------------
-//            "optionGreeksModel" Class Member Function Implementations
-// ----------------------------------------------------------------------------
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+// ----------------------------------------------------------------------------------------------------
+//                  "optionGreeksModel" Class Member Function Implementations
+// ----------------------------------------------------------------------------------------------------
+/*------------------------------------------  CONSTRUCTORS  ------------------------------------------*/
 
 // Default constructor.
 optionGreeksModel::optionGreeksModel() : blackScholesModel(), optionGreeks() {
@@ -26,17 +26,17 @@ optionGreeksModel::optionGreeksModel() : blackScholesModel(), optionGreeks() {
 
 
 // Custom constructor.
-optionGreeksModel::optionGreeksModel(double underlyingPrice, double strikePrice, double timeToExpiration,
-                                     double riskFreeRate, double volatility) :
-                                     blackScholesModel(), optionGreeks(underlyingPrice, strikePrice, timeToExpiration,
-                                                                       riskFreeRate, volatility) {
+optionGreeksModel::optionGreeksModel(double underlyingPrice, double strikePrice, 
+                                     double timeToExpiration, double riskFreeRate, double volatility) :
+                                     blackScholesModel(), optionGreeks(underlyingPrice, strikePrice, 
+                                     timeToExpiration, riskFreeRate, volatility) {
     // Call fast_io to optimize I/O speed
     fast_io();
         
     // TODO: Parameterized constructor implementation.
 }
 
-/*------------------------------ KEY MEMBER FUNCTIONS  ------------------------------*/
+/*------------------------------------- KEY MEMBER FUNCTIONS  -----------------------------------------*/
 
 // Calculates the number of shares needed to maintain a delta-neutral position -- determining
 // the appropriate action (i.e. buy or sell) and executing the corresponding order.
@@ -129,13 +129,15 @@ double optionGreeksModel::calculateOptionPriceWithGamma(double underlyingPrice,
 // Calculates the option price with Vega adjustments, incorporating Delta and Vega values
 // as well as the adjusted Delta.
 double optionGreeksModel::calculateOptionPriceWithVega(double underlyingPrice, double strikePrice,
-                                                       double timeToExpiration, double riskFreeRate) const {
+                                                       double timeToExpiration, double riskFreeRate)
+                                                                                const {
     double delta = getDelta(), vega = getVega();
 
     // Calculate the Vega-adjusted Delta
     double vegaAdjustedDelta = getVegaAdjustedDelta();
     
-    // Calculate the option price using the pricing formula, incorporating Delta, Vega, Vega-adjusted Delta, and other parameters
+    // Calculate the option price using the pricing formula, incorporating Delta, Vega, Vega-adjusted Delta, 
+    // and other parameters
     double optionPriceVega = delta * underlyingPrice - vega * vegaAdjustedDelta + (0.5 * vega * vega);
 
     setOptionPriceVega(optionPriceVega);
@@ -166,14 +168,16 @@ double optionGreeksModel::calculateOptionPriceWithTheta(double underlyingPrice, 
 // Calculates the option price with Gamma and Vega adjustments, incprorating Delta and Gamma values
 // as well as the adjusted Delta.
 double optionGreeksModel::calculateOptionPriceWithGammaVega(double underlyingPrice, double strikePrice,
-                                                            double timeToExpiration, double riskFreeRate) const {
+                                                            double timeToExpiration, double riskFreeRate) 
+                                                            const {
     // Calculate the Delta, Gamma, and Vega values.
     double delta = getDelta(), gamma = getGamma(), vega = getVega();
 
     // Calculate the Gamma- and Vega-adjusted Delta.
     double gammaVegaAdjustedDelta = getGammaVegaAdjustedDelta();
     
-    // Calculate the option price using the pricing formula, incorporating the adjusted Delta, Gamma, Vega, and other parameters
+    // Calculate the option price using the pricing formula, incorporating the adjusted Delta, Gamma, Vega, 
+    // and other parameters
     double optionPriceGammaVega = gammaVegaAdjustedDelta * underlyingPrice + 0.5 * gamma
                                     * (underlyingPrice * underlyingPrice)
                                     - vega * (underlyingPrice * sqrt(timeToExpiration)
@@ -185,7 +189,7 @@ double optionGreeksModel::calculateOptionPriceWithGammaVega(double underlyingPri
 } // calculateOptionPriceWithGammaVega()
 
 
-/*-------------------------- INTERMEDIATE MEMBER FUNCTIONS  -------------------------*/
+/*------------------------------------- INTERMEDIATE MEMBER FUNCTIONS  ----------------------------------------*/
 
 // Calculates the adjusted Delta value, which is the Delta value adjusted by the IV value.
 double optionGreeksModel::calculateDeltaAdjWithIV(double impliedVolatility) const {
@@ -260,7 +264,7 @@ double optionGreeksModel::calculateDeltaAdjWithGammaVega() const {
 } // calculateDeltaAdjWithGammaVega()
 
 
-/*--------------------------  SETTER METHODS  --------------------------*/
+/*--------------------------------------------  SETTER METHODS  ------------------------------------------------*/
 
 // Setter method for the IV-adjusted option price using the Black-Scholes model.
 void optionGreeksModel::setOptionPriceIv(double optionPriceIv) const {
@@ -319,7 +323,7 @@ void optionGreeksModel::setGammaVegaAdjustedDelta(double gammaVegaAdjustedDelta)
 } // setGammaVegaAdjustedDelta()
 
 
-/*--------------------------  GETTER METHODS  --------------------------*/
+/*------------------------------------------  GETTER METHODS  ------------------------------------------*/
 
 
 // Getter method for the IV-adjusted option price using the Black-Scholes model.
