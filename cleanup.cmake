@@ -1,5 +1,7 @@
-# CMake custom target to clean up the project and its working build directory
-## cmake/cleanup.cmake
+# cmake/cleanup.cmake
+##########################################################################################################
+## CMake custom target to clean up the project and its working build directory
+##########################################################################################################
 
 # Clean build artifacts
 
@@ -13,6 +15,8 @@ file(REMOVE_RECURSE "${CMAKE_BINARY_DIR}/test")
 file(REMOVE "${CMAKE_BINARY_DIR}/black_scholes_cpp")
 
 
+##########################################################################################################
+
 # Clean compiled object files and libraries
 
 # Gather a list of generated object files and libraries
@@ -23,6 +27,8 @@ foreach(file ${cmake_generated_files})
     file(REMOVE "${file}")
 endforeach()
 
+
+##########################################################################################################
 
 # Clean compiled executables
 
@@ -42,6 +48,8 @@ foreach(file ${cmake_executables})
     endif()
 endforeach()
 
+
+##########################################################################################################
 
 # Clean CTest artifacts
 
