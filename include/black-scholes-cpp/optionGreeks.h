@@ -12,14 +12,14 @@
 
 #include "blackScholesModel.h"
 
-// ----------------------------------------------------------------------------
-//                  "optionGreeks" Class Declarations
-// ----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
+//                       "optionGreeks" Class Declarations
+// -----------------------------------------------------------------------------------
 
                             /* DERIVED CLASS */
 class optionGreeks : public virtual blackScholesModel {
   public:
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+/*-----------------------------------  CONSTRUCTORS  --------------------------------*/
     // Default constructor.
     optionGreeks();
 
@@ -27,7 +27,7 @@ class optionGreeks : public virtual blackScholesModel {
     optionGreeks(double underlyingPrice, double strikePrice, double timeToExpiration,
                  double riskFreeRate, double volatility);
 
-/*--------------------------  KEY MEMBER FUNCTIONS  --------------------------*/
+/*--------------------------------  KEY MEMBER FUNCTIONS  ----------------------------*/
 
     // Delta measures the change in option price for a unit change in
     // the underlying asset price.
@@ -70,7 +70,8 @@ class optionGreeks : public virtual blackScholesModel {
     // TODO: Implement more member functions for calculating/accessing option Greeks
 
 
-/*--------------------------  SETTER METHODS  --------------------------*/
+
+/*---------------------------------  SETTER METHODS  ---------------------------------*/
 
     // Setter method for the Delta value of option Greeks.
     //
@@ -107,7 +108,8 @@ class optionGreeks : public virtual blackScholesModel {
     void setRho(const double& value) const;
 
 
-/*------------------------------  GETTER METHODS  ------------------------------*/
+
+/*----------------------------------  GETTER METHODS  -----------------------------------*/
 
     // Getter method for the Delta value of option Greeks.
     //
@@ -143,10 +145,11 @@ class optionGreeks : public virtual blackScholesModel {
     // Space complexity: O(1)
     const double& getRho() const;
 
+
   protected:
-// ----------------------------------------------------------------------------
-//                  "optionGreeks" Member Variables
-// ----------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------
+//                            "optionGreeks" Member Variables
+// -------------------------------------------------------------------------------------
     mutable double delta_;
     mutable double gamma_;
     mutable double vega_;
