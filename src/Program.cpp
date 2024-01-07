@@ -22,11 +22,12 @@ void fast_io_initializer() {
 // Initialize the fast_io variable as a function pointer
 void (*fast_io)() = fast_io_initializer;
 
-// ----------------------------------------------------------------------------
-//              "Program" Class Member Function Implementations
-// ----------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
+//                         "Program" Class Member Function Implementations
+// --------------------------------------------------------------------------------------------------
 
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+/*-----------------------------------------  CONSTRUCTORS  -----------------------------------------*/
+
 // Default constructor.
 Program::Program() : inputMode("") {
     // To speed up I/O
@@ -38,7 +39,7 @@ Program::Program() : inputMode("") {
 }
 
 
-/*--------------------------- KEY MEMBER FUNCTIONS  ---------------------------*/
+/*-------------------------------------- KEY MEMBER FUNCTIONS  --------------------------------------*/
 
 // Processes the command line arguments.
 void Program::get_options(int argc, char* argv[]) {
