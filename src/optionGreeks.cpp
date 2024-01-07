@@ -11,11 +11,11 @@
 #include "../include/black-scholes-cpp/blackScholesModel.h"
 
 
-// ----------------------------------------------------------------------------
-//            "optionGreeks" Class Member Function Implementations
-// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
+//                   "optionGreeks" Class Member Function Implementations
+// ----------------------------------------------------------------------------------------------
 
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+/*---------------------------------------  CONSTRUCTORS  ---------------------------------------*/
 // Default constructor.
 optionGreeks::optionGreeks() {
     d1_ = getD1();
@@ -44,7 +44,7 @@ optionGreeks::optionGreeks(double underlyingPrice, double strikePrice, double ti
 } // optionGreeks ctor
 
 
-/*--------------------------  KEY MEMBER FUNCTIONS  --------------------------*/
+/*-----------------------------------  KEY MEMBER FUNCTIONS  -----------------------------------*/
 
 // TODO: IMPLEMENT CALCULATEIV??
 
@@ -112,7 +112,7 @@ double optionGreeks::calculateRho() const {
 } // calculateRho()
 
 
-/*--------------------------  SETTER METHODS  --------------------------*/
+/*-----------------------------------  SETTER METHODS  --------------------------------------*/
 
 // Setter method for the Delta value of option Greeks.
 void optionGreeks::setDelta(const double& value) const {
@@ -144,7 +144,7 @@ void optionGreeks::setRho(const double& value) const {
 } // setRho()
 
 
-/*--------------------------  GETTER METHODS  --------------------------*/
+/*------------------------------------  GETTER METHODS  --------------------------------------*/
 
 // Getter method for the Delta value of option Greeks.
 const double& optionGreeks::getDelta() const {
