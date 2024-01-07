@@ -27,7 +27,7 @@ if(APPLE)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
 endif()
 
-
+# Set the root directory for the project
 set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
 # Include default project specifications
