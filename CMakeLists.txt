@@ -62,7 +62,8 @@ file(GLOB SOURCES "src/*.cpp" "include/black-scholes-cpp/*.h")
 # Check if there are source files before creating the executable
 if(SOURCES)
     # Create the main executable
-    add_executable(black_scholes ${SOURCES})
+    add_executable(black_scholes ${SOURCES}
+            src/optionGreeksModel.cpp)
 
     # Set include directories for the executable
     target_include_directories(black_scholes PRIVATE include/black-scholes-cpp)
@@ -92,6 +93,7 @@ add_library(blackScholesLibrary
         src/outputWriter.cpp
         src/Program.cpp
         src/main.cpp
+        src/optionGreeksModel.cpp
 )
 
 # Add include directories for the library

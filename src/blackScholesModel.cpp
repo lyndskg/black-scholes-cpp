@@ -26,18 +26,18 @@ blackScholesModel::blackScholesModel() {
     // Initialize member variables directly.
     underlyingPrice = 0.0;
     strikePrice = 0.0;
-    riskFreeRate = 0.0;
     timeToExpiration = 0.0;
+    riskFreeRate = 0.0;
     volatility  = 0.0;
     optionType = OptionType::CALL; // Set a default value
 }
 
 // Custom constructor for optionGreeks derived class.
 blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice,
-                                     double riskFreeRate, double timeToExpiration,
+                                     double timeToExpiration, double riskFreeRate,
                                      double volatility) :
         underlyingPrice(underlyingPrice), strikePrice(strikePrice),
-        riskFreeRate(riskFreeRate), timeToExpiration(timeToExpiration),
+        timeToExpiration(timeToExpiration), riskFreeRate(riskFreeRate),
         volatility(volatility), optionType(OptionType::CALL) {
             
             // Calculate and store intermediate variables.
@@ -51,10 +51,10 @@ blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice,
 //
 // Initializes all member functions used in the pricing formula via getter methods.
 // TODO: Finish 
-blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice, double riskFreeRate,
-                  double timeToExpiration, double volatility, OptionType optionType) :
+blackScholesModel::blackScholesModel(double underlyingPrice, double strikePrice, double timeToExpiration,
+                                     double riskFreeRate, double volatility, OptionType optionType) :
         underlyingPrice(underlyingPrice), strikePrice(strikePrice),
-        riskFreeRate(riskFreeRate), timeToExpiration(timeToExpiration),
+        timeToExpiration(timeToExpiration), riskFreeRate(riskFreeRate),
         volatility(volatility), optionType(OptionType::CALL) {
         
             // Calculate and store intermediate variables.

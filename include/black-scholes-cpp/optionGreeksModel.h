@@ -5,8 +5,8 @@
 //  Created by lyndskg on 7/18/23.
 
 
-#ifndef optionGreeksModel_h
-#define optionGreeksModel_h
+#ifndef OPTIONGREEKSMODEL_H
+#define OPTIONGREEKSMODEL_H
 
 #include <stdio.h>
 
@@ -15,7 +15,7 @@
 
 using namespace std;
 
-class optionGreeksModel : public optionGreeks, public virtual blackScholesModel {
+class optionGreeksModel : public virtual blackScholesModel, public optionGreeks {
   public:
 // ----------------------------------------------------------------------------
 //                 "optionGreeksModel" Class Declarations
@@ -26,8 +26,8 @@ class optionGreeksModel : public optionGreeks, public virtual blackScholesModel 
     optionGreeksModel();
     
     // Custom constructor.
-    optionGreeksModel(double underlyingPrice, double strikePrice, double riskFreeRate,
-                      double timeToExpiration, double volatility);
+    optionGreeksModel(double underlyingPrice, double strikePrice, double timeToExpiration,
+                      double riskFreeRate, double volatility);
 
 
 /*------------------------------- KEY MEMBER FUNCTIONS  -----------------------------*/
@@ -291,4 +291,4 @@ private:
     
 }; // class optionGreeksModel
 
-#endif /* optionGreeksModel_h */
+#endif /* OPTIONGREEKSMODEL_H */

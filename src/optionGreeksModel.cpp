@@ -5,10 +5,8 @@
 //  Created by lyndskg on 7/18/23.
 
 #include <iostream>
-#include <cassert>
 
 #include "../include/black-scholes-cpp/optionGreeksModel.h"
-#include "../include/black-scholes-cpp/optionGreeks.h"
 
 using namespace std;
 
@@ -21,16 +19,17 @@ extern void fast_io();
 /*------------------------------  CONSTRUCTORS  ------------------------------*/
 
 // Default constructor.
-optionGreeksModel::optionGreeksModel() : optionGreeks(), blackScholesModel() {
+optionGreeksModel::optionGreeksModel() : blackScholesModel(), optionGreeks() {
     // Call fast_io to optimize I/O speed
     fast_io();
 }
 
 
 // Custom constructor.
-optionGreeksModel::optionGreeksModel(double underlyingPrice, double strikePrice, double riskFreeRate,
-                                     double timeToExpiration, double volatility) :
-    optionGreeks(underlyingPrice, strikePrice, riskFreeRate, timeToExpiration, volatility) {
+optionGreeksModel::optionGreeksModel(double underlyingPrice, double strikePrice, double timeToExpiration,
+                                     double riskFreeRate, double volatility) :
+                                     blackScholesModel(), optionGreeks(underlyingPrice, strikePrice, timeToExpiration,
+                                                                       riskFreeRate, volatility) {
     // Call fast_io to optimize I/O speed
     fast_io();
         
@@ -81,7 +80,7 @@ void optionGreeksModel::performDeltaNeutralHedging(double hedgeRatio) {
 // Calculates the option price taking implied volatility (IV) as an additional input
 // parameter used to re-calculate the Delta value.
 double optionGreeksModel::calculateOptionPriceWithIV(double underlyingPrice, double strikePrice,
-                                                     double timeToMaturity, double riskFreeRate,
+                                                     double timeToExpiration, double riskFreeRate,
                                                      double impliedVolatility) const {
     // Calculate the Delta value using the implied volatility
     double delta = calculateDeltaAdjWithIV(impliedVolatility);
@@ -102,7 +101,7 @@ double optionGreeksModel::calculateOptionPriceWithIV(double underlyingPrice, dou
 }
 
 
-// Calculates the option price with Gamma adjustments, incprorating Delta and Gamma values
+// Calculates the option price with Gamma adjustments, incorporating Delta and Gamma values
 // as well as the adjusted Delta.
 double optionGreeksModel::calculateOptionPriceWithGamma(double underlyingPrice,
                                                         double strikePrice, double timeToExpiration,
@@ -127,11 +126,11 @@ double optionGreeksModel::calculateOptionPriceWithGamma(double underlyingPrice,
 } // calculateOptionPriceWithGamma()
 
 
-// Calculates the option price with Vega adjustments, incprorating Delta and Vega values
+// Calculates the option price with Vega adjustments, incorporating Delta and Vega values
 // as well as the adjusted Delta.
 double optionGreeksModel::calculateOptionPriceWithVega(double underlyingPrice, double strikePrice,
                                                        double timeToExpiration, double riskFreeRate) const {
-   double delta = getDelta(), vega = getVega();
+    double delta = getDelta(), vega = getVega();
 
     // Calculate the Vega-adjusted Delta
     double vegaAdjustedDelta = getVegaAdjustedDelta();
@@ -149,7 +148,7 @@ double optionGreeksModel::calculateOptionPriceWithVega(double underlyingPrice, d
 // Calculates the option price with Theta adjustments, incorporating Delta and Theta values
 // as well as the adjusted Delta.
 double optionGreeksModel::calculateOptionPriceWithTheta(double underlyingPrice, double strikePrice,
-                                     double timeToMaturity, double riskFreeRate) const {
+                                     double timeToExpiration, double riskFreeRate) const {
     double delta = getDelta(), theta = getTheta();
     
     double thetaAdjustedDelta = getThetaAdjustedDelta();
