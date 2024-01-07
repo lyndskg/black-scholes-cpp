@@ -15,9 +15,9 @@ using namespace std;
 // Include the declaration of the fast_io function
 extern void fast_io();
 
-// ----------------------------------------------------------------------------
-//            "outputWrite" Class Member Function Implementations
-// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------
+//                          "outputWrite" Class Member Function Implementations
+// ----------------------------------------------------------------------------------------------------
 
 // Default constructor.
 outputWriter::outputWriter() {
