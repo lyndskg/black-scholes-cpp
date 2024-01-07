@@ -1,6 +1,5 @@
-//
 //  blackScholesModel.h
-//  black-scholes
+//  black-scholes-cpp
 //
 //  Created by lyndskg on 7/12/23.
 
@@ -15,9 +14,9 @@
 using namespace std;
 
 
-// ----------------------------------------------------------------------------
-//                  "blackScholesModel" Class Declarations
-// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
+//                        "blackScholesModel" Class Declarations
+// ----------------------------------------------------------------------------------------
 
 class blackScholesModel {
 //  // Accessible by derived/friend classes:
@@ -28,9 +27,9 @@ class blackScholesModel {
 //        PUT
 //    } optionType;
 //
-// ----------------------------------------------------------------------------
-//                  "blackScholesModel" Member Variables
-// ----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+//                         "blackScholesModel" Member Variables
+// -----------------------------------------------------------------------------------------
 //*--Variables used directly as input values in the Black-Scholes formula.--*/
     double underlyingPrice;
     double strikePrice;
@@ -40,7 +39,7 @@ class blackScholesModel {
 // const string& optionType;
 
     
-//*------------- Intermediate variables in pricing functions. ---------------*//
+//*-------------------- Intermediate variables in pricing functions. ----------------------*//
     mutable double d1_;
     mutable double d2_;
     
@@ -49,24 +48,24 @@ class blackScholesModel {
     mutable double K_; // For normalCDF() calculations.
 
     
-/*------------------------------  HELPER FUNCTIONS  -------------------------------*/
+/*-------------------------------------  HELPER FUNCTIONS  ----------------------------------*/
         
     // Calculates the intermediate variable 'd1'.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     double calculateD1(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const;
 
 
     // Calculates the intermediate variable 'd2'.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     double calculateD2(double underlyingPrice, double strikePrice, double timeToExpiration, double riskFreeRate, double volatility) const;
 
 
     // Calculates the intermediate variable 'K'.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     double calculateK(double d) const;
@@ -79,13 +78,14 @@ class blackScholesModel {
         PUT
     } optionType;
 
+
     // Friend class declaration.
     friend class inputReader;
     friend class optionGreeks;
     friend class optionGreeksModel;
     friend class hestonModel;
 
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+/*--------------------------------------  CONSTRUCTORS  ----------------------------------------*/
     
     // Default constructor.
     blackScholesModel();
@@ -103,13 +103,13 @@ class blackScholesModel {
                       double timeToExpiration, double volatility, OptionType optionType);
     
     
-/*------------------------------ KEY MEMBER FUNCTIONS  ------------------------------*/
+/*------------------------------------- KEY MEMBER FUNCTIONS  -------------------------------------*/
     
     /* Defines the option pricing function and calculates the option price using the
        Black-Scholes formula.
        The function takes in the underlying price, strike price, time to expiration, risk-free rate,
        volatility, and option type as input parameters and returns the calculated option price. */
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     double calculateOptionPrice();
@@ -118,72 +118,72 @@ class blackScholesModel {
     /* Approximates the cumulative distribution function (CDF) of a normal distribution.
        The function calculates an approximation of the CDF of a standard normal distribution
        given a double value 'd' as input. */
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     double normalCDF(double d) const;
 
 
-/*--------------------------------  SETTER METHODS  --------------------------------*/
+/*---------------------------------------  SETTER METHODS  ---------------------------------------*/
 
     // Setter method for the underlying price of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setUnderlyingPrice(const double& value);
     
     
     // Setter method for the strike price of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setStrikePrice(const double& value);
     
     
     // Setter method for the time until expiration of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setTTE(const double& value);
     
     
     // Setter method for the risk-free rate of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setRFR(const double& value);
     
     
     // Setter method for the volatility of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setVolatility(const double& value);
     
     
     // Setter method for the option type of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setOptionType(const OptionType& value);
     
     
     // Setter method for intermediate variable 'd1' of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setD1(const double& value) const;
     
     
     // Setter method for intermediate variable 'd2' of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setD2(const double& value) const;
     
     
     // Setter method for intermediate variable 'K' of the Black-Scholes model.
-    //
+
     // Time complexity: O(1)
     // Space complexity: O(1)
     void setK(const double& value) const;
@@ -192,63 +192,63 @@ class blackScholesModel {
 /*--------------------------------  GETTER METHODS  --------------------------------*/
 
     // Getter method for the underlying price of the Black-Scholes model.
-    //
+
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getUnderlyingPrice() const;
     
     
     // Getter method for the strike price of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getStrikePrice() const;
     
     
     // Getter method for the time until expiration of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getTTE() const;
     
     
     // Getter method for the risk-free rate of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getRFR() const;
 
     
     // Getter method for the volatility of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getVolatility() const;
   
     
     // Getter method for the option type of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     OptionType getOptionType() const;
     
     
     // Getter method for the intermediate variable d1 of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getD1() const;
     
     
     // Getter method for the intermediate variable d2 of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getD2() const;
     
     
     // Getter method for the intermediate variable K of the Black-Scholes model.
-    //
+    
     // Time complexity: O(1)
     // Space complexity: O(1)
     const double& getK() const;
