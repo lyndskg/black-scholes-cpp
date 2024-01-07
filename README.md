@@ -591,7 +591,7 @@ WRITE SHIT
 
 Lyndsey Gu - [@lyndskg](https://twitter.com/lyndskg) - lyndsey.gu@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/lyndskg/graphQLOL)
+Project Link: [https://github.com/lyndskg/black-scholes-cpp](https://github.com/lyndskg/black-scholes-cpp)
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
