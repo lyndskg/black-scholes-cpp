@@ -601,7 +601,8 @@ Project Link: [https://github.com/lyndskg/black-scholes-cpp](https://github.com/
 1. **Online tutorials:** 
 > - 
 2. **Online resources:** 
-3. **GitHub Repos**: 
+3. **GitHub Repos**:
+> - **<em>CMake & Google Test framework</em>:** [Jamagas](https://github.com/Jamagas/CMake), [TimothyHelton](https://github.com/TimothyHelton/cpp_project_template/tree/master), [DavidAg](https://github.com/davidag/gtestmock-cmake-template/tree/master), [Pyarmak](https://github.com/pyarmak/cmake-gtest-coverage-example), [PhDP](https://github.com/PhDP/cuda-cmake-gtest-gbench-starter/tree/main), [SRombauts](https://github.com/SRombauts/cpp-skeleton/tree/master), [pandreidoru](https://github.com/pandreidoru/cmake_googletest_gcov/tree/master)
 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
