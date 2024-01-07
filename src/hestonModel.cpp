@@ -17,10 +17,11 @@ using namespace std;
 // Include the declaration of the fast_io function
 extern void fast_io();
 
-// ----------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------------
 //            "hestonModel" Class Member Function Implementations
-// ----------------------------------------------------------------------------
-/*------------------------------  CONSTRUCTORS  ------------------------------*/
+// ------------------------------------------------------------------------------------------------
+/*----------------------------------------  CONSTRUCTORS  ----------------------------------------*/
 // Default constructor.
 hestonModel::hestonModel() : blackScholesModel() {
     // Call fast_io to optimize I/O speed
@@ -45,7 +46,7 @@ hestonModel::hestonModel(double underlyingPrice, double strikePrice, double risk
     }
 
 
-/*------------------------------ KEY MEMBER FUNCTIONS  ------------------------------*/
+/*------------------------------------- KEY MEMBER FUNCTIONS  ------------------------------------*/
 
 // Calculates the option price using the Heston model with stochastic volatility.
 double hestonModel::calculateOptionPrice() {
@@ -93,7 +94,7 @@ double hestonModel::random_normal() {
 } // random_normal()
 
 
-/*--------------------------  SETTER METHODS  --------------------------*/
+/*--------------------------------------  SETTER METHODS  ---------------------------------------*/
 
 // Setter method for V0.
 void hestonModel::setV0(double value) const {
@@ -125,7 +126,7 @@ void hestonModel::setRho(double value) const {
 } // setRho()
 
 
-/*--------------------------  GETTER METHODS  --------------------------*/
+/*-----------------------------------  GETTER METHODS  -------------------------------------------*/
 
 
 // Getter method for V0.
@@ -161,6 +162,7 @@ const double& hestonModel::getRho() const {
 
 
 // TODO: FIX THIS SHIT
+
 //// Function to generate a random number from a standard normal distribution
 //double hestonModel::random_normal() {
 //    static VSLStreamStatePtr stream;
