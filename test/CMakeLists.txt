@@ -28,8 +28,9 @@ if(APPLE)
 endif()
 
 
-# Include default CMake project specifications
 set(BSM_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/..)
+
+# Include default project specifications
 include (${BSM_ROOT}/project-defaults.cmake)
 
 ##########################################################################################################
