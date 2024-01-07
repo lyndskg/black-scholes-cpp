@@ -9,7 +9,6 @@
 #include <sstream>
 #include <stdexcept> // For exception handling
 #include <string>
-// #include "../include/third_party/fast_io/include/fast_io.h"
 #include <curl/curl.h> // Example library for making HTTP requests
 // Include necessary database libraries
 
@@ -24,6 +23,7 @@
 
 using namespace std;
 
+
 // Include the declaration of the fast_io function
 // TODO: fix later
 // extern void fast_io();
@@ -37,16 +37,17 @@ using namespace std;
 size_t responseCallback(void* contents, size_t size, size_t nmemb, string* response);
 
 
-// ----------------------------------------------------------------------------
-//            "inputReader" Class Member Function Implementations
-// ----------------------------------------------------------------------------
-/*------------------------------ CONSTRUCTORS  -------------------------------*/
+// ------------------------------------------------------------------------------------------------
+//                     "inputReader" Class Member Function Implementations
+// ------------------------------------------------------------------------------------------------
+/*---------------------------------------- CONSTRUCTORS  -----------------------------------------*/
 
 // Default constructor.
 inputReader::inputReader() {
     // Call fast_io to optimize I/O speed
-    // TODO; put in later 
     // fast_io();
+
+    // TODO; put in later 
 } // inputReader()
 
 
