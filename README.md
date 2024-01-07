@@ -600,7 +600,8 @@ Project Link: [https://github.com/lyndskg/black-scholes-cpp](https://github.com/
 **<ins>Resources</ins>:**
 1. **Online tutorials:** 
 > - 
-2. **Online resources:** 
+2. **Online resources:**
+> - **<em>CMake & Google Test framework</em>:** [Google Test's CMake QuickStart Guide](https://google.github.io/googletest/quickstart-cmake.html), [StackOverflow #1](https://stackoverflow.com/questions/54655117/adding-googletest-to-existing-cmake-project), [Stack Overflow #2](https://stackoverflow.com/questions/66181930/how-to-incorporate-unittest-in-cmake-project-structure), [Stack Overflow #3](https://stackoverflow.com/questions/59976311/how-do-i-configure-my-cmake-project-to-run-all-unit-tests)
 3. **GitHub Repos**:
 > - **<em>CMake & Google Test framework</em>:** [Jamagas](https://github.com/Jamagas/CMake), [TimothyHelton](https://github.com/TimothyHelton/cpp_project_template/tree/master), [DavidAg](https://github.com/davidag/gtestmock-cmake-template/tree/master), [Pyarmak](https://github.com/pyarmak/cmake-gtest-coverage-example), [PhDP](https://github.com/PhDP/cuda-cmake-gtest-gbench-starter/tree/main), [SRombauts](https://github.com/SRombauts/cpp-skeleton/tree/master), [pandreidoru](https://github.com/pandreidoru/cmake_googletest_gcov/tree/master)
 
