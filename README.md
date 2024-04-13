@@ -6,7 +6,7 @@
 
 ## SIDE-NOTE: IS BACKTESTING THAT BIG OF A DEAL IN THE FUTURE?
 
-Figure out fast_io shit
+Figure out fast_io 
 
 <p align="center">
   <a href="https://www.linkedin.com/in/lyndsey791/">LinkedIn</a>  |  <a href="https://www.sorry-this-site-doesnt-exist-yet./">Website</a>  |     <a href="https://github.com/lyndskg/">GitHub</a>  |  <a href="#contact">Contact Info</a>
@@ -220,11 +220,11 @@ Going beyond the basic implementation, this project showcases an array of advanc
    
 - [ ] Begin TESTING AND DEBUGGING!
 
-- [ ] Figure out `CMake` + `Ninja` + `Google Test` stack HOLY FUCK
+- [ ] Figure out `CMake` + `Ninja` + `Google Test` stack 
   > > - POSIX, multi-threading, parallelization, etc.
       
 - [ ] Optimizing code.
-   > - Obv some shit will optimize a lot and take barely any time. Some shit will make zero-to-nil difference and take hours. Gotta prioritize.
+   > - Obv some stuff will optimize a lot and take barely any time. Some stuff will make zero-to-nil difference and take hours. Gotta prioritize.
    > - - Optimization ideas listed below, but some of it is obvious throughout code.
   
 - [ ] Figure out what additional features to implement.
@@ -440,14 +440,14 @@ NEVER
 <a name="i"></a>
 ### Input: 
 
-FILL THIS SHIT OUT LATERRRR
+FILL THIS SECTION OUT LATERRRR
 
 &nbsp; 
 
 <a name="o"></a>
 ### Output: 
 
-FUCK THIS
+LATER 
 
 &nbsp; 
 
@@ -474,7 +474,7 @@ IDFK
 <a name="plus"></a>
 ## Future Enhancements:
 
-WHAT THE FUCK
+PROBABLY NONE LEFT 
 <p align="right">(<a href="#bs">back to top</a>)</p>
 
 ---------------------
@@ -541,7 +541,7 @@ WHAT THE FUCK
 <a name="appl"></a>
 ### Practical Applications:
 
-WRITE SHIT HERE
+WRITE HERE
 
 &nbsp;
 
@@ -574,7 +574,7 @@ We welcome contributions from the community to help improve `black-scholes-cpp` 
 <a name="bye"></a>
 ## Conclusion
 
-WRITE SHIT 
+WRITE HERE
 
 &nbsp;
 
@@ -597,7 +597,7 @@ Project Link: [https://github.com/lyndskg/black-scholes-cpp](https://github.com/
 ## Acknowledgments
 
 > Put
-> Shit
+> Stuff
 > Here
 
 **<ins>Resources</ins>:**
